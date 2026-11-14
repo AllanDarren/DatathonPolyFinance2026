@@ -1,0 +1,11 @@
+A copier dans le terminal les credentials:
+aller a:
+https://catalog.us-east-1.prod.workshops.aws/event/dashboard/fr-FR/workshop/30-genai
+aller dans le left sidebar et cliquer sur get aws cli credentials
+les rentrer dans le terminal du projet
+
+puis faire: 
+python -m pip install boto3
+
+puis pour tester run:
+python bedrock.py
