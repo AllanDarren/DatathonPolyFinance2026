@@ -232,15 +232,27 @@ def robert() -> tuple[dict[str, Any], dict[str, Any]]:
     return p["profile"], parse_portfolio(p["sample_portfolio_csv"])
 
 
+def agent_steps(trace: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Tool calls (chosen by the planner or forced), without the code-run steps that follow
+    (what_would_change, governance_review, explain_and_guard)."""
+    return [t for t in trace if t["planner"] != "code"]
+
+
 def test_orchestrator_offline_plan(robert: Any) -> None:
     profile, port = robert
     reg = EvidenceRegistry()
     res = orchestrator.consider(profile, port, {"ticker": "NVDA", "intended_weight": 0.2}, reg, MockClient())
     assert_valid("CoherenceResult", res)
     assert res["verdict"] == "incoherent"
-    tools = [t["tool"] for t in res["agent_trace"]]
-    assert tools == ["check_coherence", "get_position_metrics", "get_calendar_year_return", "get_event_context"]
-    assert all(t["status"] == "ok" and t["evidence_ids"] and t["planner"] == "mock" for t in res["agent_trace"])
+    steps = agent_steps(res["agent_trace"])
+    tools = [t["tool"] for t in steps]
+    assert tools == ["check_coherence", "get_position_metrics", "get_calendar_year_return",
+                     "get_diversification_impact", "get_instrument_risks", "get_event_context"]
+    assert all(t["status"] == "ok" and t["planner"] == "mock" for t in steps)
+    # every tool that computes numbers cites evidence (instrument risks are rule texts, no numbers)
+    assert all(t["evidence_ids"] for t in steps if t["tool"] != "get_instrument_risks")
+    assert [t["tool"] for t in res["agent_trace"][len(steps):]] == ["what_would_change", "governance_review",
+                                                                      "explain_and_guard"]
     for c in res["explanation"]["claims"]:
         assert all(i in reg for i in c["evidence_ids"])
 
@@ -256,9 +268,11 @@ def test_orchestrator_llm_planner_cannot_skip_or_bend_coherence(robert: Any) -> 
     ])
     client = MockClient(planner=lambda s, m, t: next(turns), model_id="planner-model")
     res = orchestrator.consider(profile, port, {"ticker": "NVDA", "intended_weight": 0.2}, EvidenceRegistry(), client)
-    trace = res["agent_trace"]
-    assert [t["tool"] for t in trace] == ["get_position_metrics", "get_calendar_year_return", "check_coherence"]
-    assert trace[-1]["forced"] is True and trace[0]["planner"] == "planner-model"
+    trace = agent_steps(res["agent_trace"])
+    assert [t["tool"] for t in trace] == ["get_position_metrics", "get_calendar_year_return", "check_coherence",
+                                          "get_diversification_impact", "get_instrument_risks"]
+    assert all(t["forced"] for t in trace[2:]) and trace[0]["planner"] == "planner-model"
+    assert not any(t["forced"] for t in trace[:2])
     assert res["verdict"] == "incoherent"  # from the rules
 
 
@@ -274,8 +288,9 @@ def test_orchestrator_records_tool_errors(robert: Any) -> None:
     ])
     client = MockClient(planner=lambda s, m, t: next(turns), model_id="p")
     res = orchestrator.consider(profile, port, {"ticker": "NVDA", "intended_weight": 0.2}, EvidenceRegistry(), client)
-    status = {t["tool"]: t["status"] for t in res["agent_trace"]}
-    assert status == {"check_coherence": "ok", "get_position_metrics": "error", "rm_rf": "error"}
+    status = {t["tool"]: t["status"] for t in agent_steps(res["agent_trace"])}
+    assert status == {"check_coherence": "ok", "get_position_metrics": "error", "rm_rf": "error",
+                      "get_diversification_impact": "ok", "get_instrument_risks": "ok"}
     assert res["metrics"]["position_weight_after"] == 0.2  # the model's 0.9 was ignored
 
 

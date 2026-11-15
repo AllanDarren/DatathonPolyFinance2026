@@ -29,10 +29,13 @@ from core.rules_models import (
     CoherenceRules,
     Condition,
     Glossary,
+    InstrumentRisks,
+    LanguagePolicy,
     LimitsTexts,
     ProfileRules,
     Questionnaire,
     RelevanceRules,
+    SourceTiers,
     Taxonomy,
 )
 
@@ -111,6 +114,9 @@ class RuleSet:
     limits_texts: LimitsTexts
     raw_questionnaire: dict[str, Any]
     fallbacks: tuple[str, ...] = field(default_factory=tuple)
+    instrument_risks: InstrumentRisks | None = None
+    source_tiers: SourceTiers | None = None
+    language_policy: LanguagePolicy | None = None
 
     def category(self, cat_id: str) -> Any:
         return next((c for c in self.taxonomy.categories if c.id == cat_id), None)
@@ -138,6 +144,9 @@ def load_rules() -> RuleSet:
         glossary=loaded["glossary.yaml"][0],  # type: ignore[arg-type]
         limits_texts=loaded["limits_texts.yaml"][0],  # type: ignore[arg-type]
         raw_questionnaire=loaded["questionnaire.yaml"][1],
+        instrument_risks=loaded["instrument_risks.yaml"][0],  # type: ignore[arg-type]
+        source_tiers=loaded["source_tiers.yaml"][0],  # type: ignore[arg-type]
+        language_policy=loaded["language_policy.yaml"][0],  # type: ignore[arg-type]
         fallbacks=tuple(name for name, (_, _, fb) in loaded.items() if fb),
     )
 

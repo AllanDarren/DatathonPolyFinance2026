@@ -15,6 +15,39 @@ forbidden:
 - sans risque
 - va monter
 - va baisser
+# Le passé sert à mesurer le risque, jamais à prédire (atelier BN, diapo 6).
+# Une affirmation qui cite un rendement passé POSITIF et contient l'un de ces mots est retirée par le gardien.
+past_performance_terms:
+- excellent
+- solide performance
+- belle performance
+- a bien performé
+- surperform
+- croissance impressionnante
+- forte hausse
+- a explosé
+- gagnant
+- prometteur
+- potentiel de hausse
+- continuer à monter
+- devrait continuer
+# Formulations de prévision: toujours retirées.
+forecast_terms:
+- va monter
+- va baisser
+- va continuer
+- devrait monter
+- devrait baisser
+- devrait progresser
+- continuera de
+- est appelé à
+- rendement attendu
+- will rise
+- will fall
+# Preuves qui décrivent un rendement passé: elles servent à décrire le risque, pas à argumenter.
+risk_only_metrics:
+- core.metrics.return_5y
+- core.metrics.calendar_year_return
 review_notes:
 - Vérifier le sens et les variantes, pas seulement une liste de mots.
 - 'Un titre cité peut contenir un ordre : le délimiter comme donnée externe, ne pas le reprendre comme conseil.'

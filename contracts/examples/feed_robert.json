@@ -121,43 +121,37 @@
     ]
    },
    "explanation": {
-    "summary": "ZST.TO est une position importante dans ton portefeuille, et ses distributions réinvesties sont très pertinentes pour un profil axé sur la préservation du capital.",
+    "summary": "",
     "claims": [
      {
-      "text": "ZST.TO représente 35,0 % de ton portefeuille, ce qui dépasse le seuil de concentration et rend cette actualité particulièrement pertinente à suivre.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_40fcc4d9ba",
        "ev_7a30da27ac"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé un mouvement médian de 0,1 % autour des dates ex-dividende, avec une volatilité annualisée de 0,6 %, cohérente avec ton profil.",
+      "text": "ZST.TO représente 35,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_319a41c131",
-       "ev_9d6f1dbabb"
+       "ev_40fcc4d9ba"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Un horizon court et un objectif de préservation du capital pourraient être en tension avec une concentration aussi élevée sur un seul titre, même peu volatil.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_7a30da27ac",
-       "ev_40fcc4d9ba",
        "ev_9d6f1dbabb"
       ],
       "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé un mouvement médian de 0,1 % autour des dates ex-dividende, avec une volatilité annualisée de 0,6 %, cohérente avec ton profil. » (Le mouvement médian cité dans la preuve est de 0,09 %, non 0,1 % (arrondi acceptable), mais surtout la preuve ne mentionne aucun lien de cohérence entre la volatilité et un 'profil' de l'investisseur. La claim introduit un lien causal ('cohérente avec ton profil') absent des preuves.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": {
@@ -461,43 +455,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une hausse des taux est en tension avec ton profil de préservation du capital, car elle pèse directement sur les obligations comme XBB.TO.",
+    "summary": "",
     "claims": [
      {
-      "text": "XBB.TO représente 20,0 % de ton portefeuille, ce qui dépasse le seuil de concentration déclaré, rendant cette actualité macro particulièrement pertinente.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9cdcd3572b",
        "ev_c5e2a1b644"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de XBB.TO est de 6,6 %, ce qui reste modérée, mais en tension avec ton objectif de préservation du capital en période de hausse des taux.",
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_cc97b68de7",
-       "ev_c5e2a1b644"
+       "ev_9cdcd3572b"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé que les cycles de hausse des taux exercent une pression à la baisse sur la valeur des fonds obligataires à court horizon.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_31ada17b4e",
-       "ev_c5e2a1b644"
+       "ev_cc97b68de7"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « La volatilité annualisée de XBB.TO est de 6,6 %, ce qui reste modérée, mais en tension avec ton objectif de préservation du capital en période de hausse des taux. » (La volatilité de 6,6 % est bien attestée par ev_cc97b68de7, mais la qualification 'modérée' et le lien causal avec un 'objectif de préservation du capital en période de hausse des taux' ne sont pas présents dans les preuves citées. Aucune preuve ne mentionne un objectif de préservation du capital ni ne qualifie ce niveau de volatilité comme étant 'en tension' avec quoi que ce soit.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé que les cycles de hausse des taux exercent une pression à la baisse sur la valeur des fonds obligataires à court horizon. » (Bien que la claim soit présentée comme une hypothèse, le lien causal entre les cycles de hausse des taux et la pression à la baisse sur les fonds obligataires n'est pas présent dans les preuves citées. Les preuves mentionnent uniquement une classification 'Taux et inflation' et une pertinence élevée pour le profil, sans évoquer ce mécanisme économique.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -542,42 +530,37 @@
     ]
    },
    "explanation": {
-    "summary": "Cet article sur les ETF \".L\" a une pertinence élevée pour ton profil, surtout vu le poids important de ZST.TO dans ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "ZST.TO représente 35,0 % de ton portefeuille, ce qui dépasse le seuil de concentration habituel et rend ce type d'actualité macro particulièrement pertinent à suivre.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_40fcc4d9ba",
        "ev_7fca8eae9b"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de ZST.TO est très faible (0,6 %), ce qui est globalement dans la ligne d'un profil à faible tolérance au risque orienté préservation du capital.",
+      "text": "ZST.TO représente 35,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9d6f1dbabb",
-       "ev_7fca8eae9b"
+       "ev_40fcc4d9ba"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "La classification « Taux et inflation » de cet article reste incertaine (macro), donc son lien direct avec ZST.TO est une interprétation plausible, pas une certitude.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_77fca39e91",
-       "ev_40fcc4d9ba"
+       "ev_9d6f1dbabb"
       ],
       "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « La volatilité annualisée de ZST.TO est très faible (0,6 %), ce qui est globalement dans la ligne d'un profil à faible tolérance au risque orienté préservation du capital. » (L'évidence ev_9d6f1dbabb confirme la volatilité de 0,6 %, mais aucune des évidences citées ne mentionne un profil à faible tolérance au risque orienté préservation du capital, ni ne relie explicitement cette volatilité à un tel profil. Ce lien causal est absent des évidences fournies.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -622,43 +605,37 @@
     ]
    },
    "explanation": {
-    "summary": "Cette annonce de distribution BMO concerne directement ZST.TO, un titre très présent dans ton portefeuille et bien adapté à ton profil prudent.",
+    "summary": "",
     "claims": [
      {
-      "text": "ZST.TO représente 35,0 % de ton portefeuille, ce qui dépasse le seuil de concentration et rend cette actualité particulièrement pertinente à suivre.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_40fcc4d9ba",
        "ev_0b47958421"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé un mouvement médian très limité autour des dates ex-dividende de ZST.TO, avec 0,1 % de cas positifs sur la période étudiée.",
+      "text": "ZST.TO représente 35,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_319a41c131"
+       "ev_40fcc4d9ba"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "La faible volatilité de 0,6 % est en cohérence avec ton profil de préservation du capital, mais une concentration aussi élevée reste en tension avec ton profil.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_9d6f1dbabb",
-       "ev_40fcc4d9ba",
-       "ev_0b47958421"
+       "ev_9d6f1dbabb"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé un mouvement médian très limité autour des dates ex-dividende de ZST.TO, avec 0,1 % de cas positifs sur la période étudiée. » (L'évidence indique 97 % de cas positifs, et non 0,1 % comme affirmé dans la claim. De plus, le mouvement médian est de 0,09 %, non 0,1 %. La valeur '0,1 % de cas positifs' contredit directement l'évidence.).",
-      "Affirmation non soutenue par ses preuves: « La faible volatilité de 0,6 % est en cohérence avec ton profil de préservation du capital, mais une concentration aussi élevée reste en tension avec ton profil. » (Bien que la volatilité de 0,6 % et la concentration de 35,0 % soient confirmées par les preuves, la claim contient un jugement normatif ('en cohérence avec ton profil de préservation du capital', 'en tension avec ton profil') qui constitue un conseil/avis non étayé par les évidences fournies, lesquelles ne mentionnent pas de profil de préservation du capital.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": {
@@ -962,43 +939,37 @@
     ]
    },
    "explanation": {
-    "summary": "XBB.TO est une position importante dans ton portefeuille, et ses distributions mensuelles méritent attention vu ton objectif de préservation du capital.",
+    "summary": "",
     "claims": [
      {
-      "text": "XBB.TO représente 20,0 % de ton portefeuille, ce qui dépasse le seuil de concentration et rend le suivi de ses actualités plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9cdcd3572b",
        "ev_82fbbcc616"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé un mouvement médian de 0,2 % autour des dates ex-dividende, avec une volatilité annualisée de 6,6 %.",
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_4b268190c3",
-       "ev_cc97b68de7"
+       "ev_9cdcd3572b"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Une volatilité de 6,6 % est globalement en tension avec ton profil de préservation du capital sur un horizon court, selon la pondération observée.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_cc97b68de7",
-       "ev_82fbbcc616"
+       "ev_cc97b68de7"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé un mouvement médian de 0,2 % autour des dates ex-dividende, avec une volatilité annualisée de 6,6 %. » (La preuve indique un mouvement médian de 0,25 % (et non 0,2 % comme affirmé dans la claim). La volatilité annualisée de 6,6 % est bien confirmée, mais l'inexactitude sur le chiffre médian rend la claim non entièrement supportée.).",
-      "Affirmation non soutenue par ses preuves: « Une volatilité de 6,6 % est globalement en tension avec ton profil de préservation du capital sur un horizon court, selon la pondération observée. » (Les preuves citées ne mentionnent pas de 'profil de préservation du capital' ni de tension entre la volatilité de 6,6 % et un tel profil. L'evidence ev_82fbbcc616 parle d'un horizon 'short' et d'un seuil de concentration, mais ne fait aucun lien causal avec une préservation du capital. Cette affirmation va au-delà de ce que les preuves établissent.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": {
@@ -1302,44 +1273,37 @@
     ]
    },
    "explanation": {
-    "summary": "XBB.TO est une position importante dans ton portefeuille, et ses distributions régulières sont cohérentes avec un objectif de préservation du capital.",
+    "summary": "",
     "claims": [
      {
-      "text": "XBB.TO représente 20,0 % de ton portefeuille, ce qui dépasse le seuil de concentration et rend ses actualités particulièrement pertinentes à suivre.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9cdcd3572b",
        "ev_c189a3c0cd"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé un mouvement médian de 0,2 % autour des dates ex-dividende, avec une volatilité annualisée de 6,6 %.",
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_4b268190c3",
-       "ev_cc97b68de7"
+       "ev_9cdcd3572b"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Un titre obligataire versant des distributions régulières est généralement en ligne avec un profil de préservation du capital, bien qu'une concentration élevée reste en tension avec ton profil low-moderate.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_c189a3c0cd",
-       "ev_9cdcd3572b",
-       "ev_c7d82de099"
+       "ev_cc97b68de7"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé un mouvement médian de 0,2 % autour des dates ex-dividende, avec une volatilité annualisée de 6,6 %. » (La preuve indique un mouvement médian de 0,25 % (et non 0,2 % comme affirmé dans la claim). La volatilité annualisée de 6,6 % est bien confirmée. L'inexactitude sur le chiffre médian (0,2 % vs 0,25 %) rend la claim non entièrement supportée.).",
-      "Affirmation non soutenue par ses preuves: « Un titre obligataire versant des distributions régulières est généralement en ligne avec un profil de préservation du capital, bien qu'une concentration élevée reste en tension avec ton profil low-moderate. » (Les preuves citées confirment la concentration élevée et la classification 'Dividendes', mais aucune d'elles ne mentionne un 'profil de préservation du capital', un 'titre obligataire', ni un 'profil low-moderate'. Ces éléments factuels ne sont pas présents dans les preuves fournies.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": {
@@ -3850,45 +3814,37 @@
    "position_weight_after": 0.2
   },
   "explanation": {
-   "summary": "L'achat envisagé de NVDA crée une concentration et une volatilité en tension avec ton profil prudent à horizon court.",
+   "summary": "",
    "claims": [
     {
-     "text": "Le poids envisagé de 20,0 % dépasse la limite par titre de ton profil, et la part volatile atteindrait 20,0 %, soit le double du seuil.",
+     "text": "Règle C_DRAWDOWN_VS_LOSS déclenchée: Chute historique du titre : 66,3 %; perte annuelle déclarée acceptable : 8 %. Les durées diffèrent : ceci est une alerte, pas une perte prévue du portefeuille.",
      "label": "fact",
      "evidence_ids": [
-      "ev_da921ca648",
-      "ev_9edc9f11fb",
+      "ev_876a58b40a"
+     ],
+     "verified": "supported"
+    },
+    {
+     "text": "Règle C_HIGH_VOL_SHARE déclenchée: Part très volatile après simulation : 20 %; limite du profil : 10 %. Le seuil de volatilité est une convention du prototype.",
+     "label": "fact",
+     "evidence_ids": [
       "ev_908682bedd"
      ],
      "verified": "supported"
     },
     {
-     "text": "Dans des situations comparables, on a observé une chute de −66,3 % sur NVDA, avec un temps de récupération de 223 jours — une durée en tension avec ton horizon de 66,3 %.",
+     "text": "Règle C_MAX_SINGLE déclenchée: Poids visé : 20 %; limite par titre de ton profil : 10 %. Cette concentration dépasse le seuil du prototype.",
      "label": "fact",
      "evidence_ids": [
-      "ev_872ba9097e",
-      "ev_d5d0d94488",
-      "ev_876a58b40a"
-     ],
-     "verified": "unsupported"
-    },
-    {
-     "text": "Si une année difficile comparable à −50,3 % survenait dans ton horizon, l'impact sur un poids de 20,0 % pourrait dépasser largement ta tolérance aux pertes déclarée.",
-     "label": "scenario",
-     "evidence_ids": [
-      "ev_12190c86dd",
-      "ev_7a8aaac0e9",
-      "ev_876a58b40a"
+      "ev_da921ca648"
      ],
      "verified": "supported"
     }
    ],
-   "generated_by": "bedrock",
+   "generated_by": "template",
    "guardian": {
-    "status": "flagged",
-    "flags": [
-     "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé une chute de −66,3 % sur NVDA, avec un temps de récupération de 223 jours — une durée en tension avec ton horizon de 66,3 %. » (Les évidences confirment la chute de −66,3 % et le temps de récupération de 223 jours. Cependant, la formulation 'une durée en tension avec ton horizon de 66,3 %' est incohérente : un horizon ne s'exprime pas en pourcentage (66,3 %), et aucune évidence ne mentionne un horizon de 66,3 %. Il s'agit vraisemblablement d'une confusion avec la valeur de la chute, ce qui constitue un fait non étayé par les évidences citées.)."
-    ]
+    "status": "passed",
+    "flags": []
    }
   },
   "agent_trace": [
@@ -3897,7 +3853,7 @@
     "tool": "check_coherence",
     "params": {
      "ticker": "NVDA",
-     "intended_weight": 20
+     "intended_weight": 0.2
     },
     "evidence_ids": [
      "ev_7a8aaac0e9",
@@ -3910,8 +3866,8 @@
     ],
     "status": "ok",
     "forced": false,
-    "planner": "us.anthropic.claude-sonnet-4-6",
-    "duration_ms": 37
+    "planner": "mock",
+    "duration_ms": 22
    },
    {
     "step": 2,
@@ -3927,7 +3883,7 @@
     ],
     "status": "ok",
     "forced": false,
-    "planner": "us.anthropic.claude-sonnet-4-6",
+    "planner": "mock",
     "duration_ms": 3
    },
    {
@@ -3942,11 +3898,40 @@
     ],
     "status": "ok",
     "forced": false,
-    "planner": "us.anthropic.claude-sonnet-4-6",
+    "planner": "mock",
     "duration_ms": 0
    },
    {
     "step": 4,
+    "tool": "get_diversification_impact",
+    "params": {
+     "ticker": "NVDA"
+    },
+    "evidence_ids": [
+     "ev_0f89c58061",
+     "ev_5b27de4c29",
+     "ev_086e8bc599",
+     "ev_b7bc4e320b"
+    ],
+    "status": "ok",
+    "forced": false,
+    "planner": "mock",
+    "duration_ms": 48
+   },
+   {
+    "step": 5,
+    "tool": "get_instrument_risks",
+    "params": {
+     "ticker": "NVDA"
+    },
+    "evidence_ids": [],
+    "status": "ok",
+    "forced": false,
+    "planner": "mock",
+    "duration_ms": 0
+   },
+   {
+    "step": 6,
     "tool": "get_event_context",
     "params": {
      "ticker": "NVDA",
@@ -3957,8 +3942,509 @@
     ],
     "status": "ok",
     "forced": false,
-    "planner": "us.anthropic.claude-sonnet-4-6",
+    "planner": "mock",
     "duration_ms": 2
+   },
+   {
+    "step": 7,
+    "tool": "what_would_change",
+    "params": {},
+    "evidence_ids": [
+     "ev_add63cf873",
+     "ev_4354387264",
+     "ev_ff2ea8d347",
+     "ev_03c79d7066"
+    ],
+    "status": "ok",
+    "forced": false,
+    "planner": "code",
+    "duration_ms": 0
+   },
+   {
+    "step": 8,
+    "tool": "governance_review",
+    "params": {},
+    "evidence_ids": [
+     "ev_da921ca648",
+     "ev_908682bedd",
+     "ev_876a58b40a",
+     "ev_0f89c58061"
+    ],
+    "status": "ok",
+    "forced": false,
+    "planner": "code",
+    "duration_ms": 0
+   },
+   {
+    "step": 9,
+    "tool": "explain_and_guard",
+    "params": {},
+    "evidence_ids": [
+     "ev_876a58b40a",
+     "ev_908682bedd",
+     "ev_da921ca648"
+    ],
+    "status": "ok",
+    "forced": false,
+    "planner": "code",
+    "duration_ms": 0
+   }
+  ],
+  "diversification": {
+   "ticker": "NVDA",
+   "verdict": "partial",
+   "text_fr": "NVDA diversifie en partie: corrélation de 0,39 avec le reste du portefeuille (entre 0,30 et 0,80). C'est une nouvelle classe d'actifs (actions américaines), mais elle n'évolue pas de façon indépendante. La position la plus proche est SPY (corrélation mensuelle 0,70).",
+   "correlations": [
+    {
+     "ticker": "SPY",
+     "weight": 0.1,
+     "correlation": 0.7025,
+     "evidence_id": "ev_5b27de4c29"
+    },
+    {
+     "ticker": "ZST.TO",
+     "weight": 0.35,
+     "correlation": 0.4627,
+     "evidence_id": "ev_1d1645032f"
+    },
+    {
+     "ticker": "AGG",
+     "weight": 0.1,
+     "correlation": 0.391,
+     "evidence_id": "ev_5ff5e2b837"
+    },
+    {
+     "ticker": "XIU.TO",
+     "weight": 0.1,
+     "correlation": 0.3688,
+     "evidence_id": "ev_c12f5ea0f0"
+    },
+    {
+     "ticker": "XBB.TO",
+     "weight": 0.2,
+     "correlation": 0.343,
+     "evidence_id": "ev_dc8e5060da"
+    },
+    {
+     "ticker": "RY.TO",
+     "weight": 0.05,
+     "correlation": 0.1371,
+     "evidence_id": "ev_455b996f86"
+    },
+    {
+     "ticker": "GLD",
+     "weight": 0.05,
+     "correlation": 0.0948,
+     "evidence_id": "ev_12105c0f8f"
+    },
+    {
+     "ticker": "FTS.TO",
+     "weight": 0.05,
+     "correlation": -0.1127,
+     "evidence_id": "ev_b92b64ee57"
+    }
+   ],
+   "corr_to_portfolio": 0.3908,
+   "asset_class_before": {
+    "bond_etf": 0.65,
+    "equity_etf": 0.2,
+    "equity_ca": 0.1,
+    "gold_etf": 0.05
+   },
+   "asset_class_after": {
+    "bond_etf": 0.52,
+    "equity_us": 0.2,
+    "equity_etf": 0.16,
+    "equity_ca": 0.08,
+    "gold_etf": 0.04
+   },
+   "currency_before": {
+    "CAD": 0.75,
+    "USD": 0.25
+   },
+   "currency_after": {
+    "CAD": 0.6,
+    "USD": 0.4
+   },
+   "n_asset_classes_before": 4,
+   "n_asset_classes_after": 5,
+   "evidence_ids": [
+    "ev_0f89c58061",
+    "ev_5b27de4c29",
+    "ev_086e8bc599",
+    "ev_b7bc4e320b"
+   ]
+  },
+  "instrument_risks": {
+   "ticker": "NVDA",
+   "name": "NVIDIA",
+   "asset_class": "equity_us",
+   "label_fr": "Action américaine",
+   "what_you_own_fr": "Une participation dans une seule société, cotée en dollars américains.",
+   "return_source_fr": "Variation du cours et dividendes éventuels.",
+   "price_currency": "USD",
+   "risks": [
+    {
+     "risk": "market",
+     "label_fr": "Marché",
+     "question_fr": "La valeur peut-elle chuter?",
+     "level": "high",
+     "text_fr": "Le cours d'une seule société peut baisser fortement, même si le marché monte."
+    },
+    {
+     "risk": "concentration",
+     "label_fr": "Concentration",
+     "question_fr": "Le résultat dépend-il trop d'une seule exposition?",
+     "level": "high",
+     "text_fr": "Le résultat dépend d'une seule entreprise et de son secteur."
+    },
+    {
+     "risk": "currency",
+     "label_fr": "Devise",
+     "question_fr": "Le taux de change peut-il modifier le résultat?",
+     "level": "medium",
+     "text_fr": "Pour un investisseur en CAD, le rendement dépend aussi du taux USD/CAD."
+    }
+   ],
+   "source": "rules/instrument_risks.yaml"
+  },
+  "governance": {
+   "status": "fail",
+   "controls": [
+    {
+     "id": "G_SIMULATION",
+     "label_fr": "Simulation seulement",
+     "status": "info",
+     "detail_fr": "Aucune transaction n'est exécutée et ce verdict n'est pas un conseil personnalisé: il applique les règles du prototype à ton profil déclaré.",
+     "evidence_ids": []
+    },
+    {
+     "id": "G_PROFILE_LIMITS",
+     "label_fr": "Limites de ton profil",
+     "status": "fail",
+     "detail_fr": "Règle(s) de gravité haute déclenchée(s): C_MAX_SINGLE, C_HIGH_VOL_SHARE.",
+     "evidence_ids": [
+      "ev_da921ca648",
+      "ev_908682bedd",
+      "ev_876a58b40a"
+     ]
+    },
+    {
+     "id": "G_PROFILE_CONSISTENCY",
+     "label_fr": "Cohérence de tes réponses",
+     "status": "ok",
+     "detail_fr": "Aucune contradiction détectée entre tes réponses.",
+     "evidence_ids": []
+    },
+    {
+     "id": "G_DIVERSIFICATION",
+     "label_fr": "Diversification",
+     "status": "info",
+     "detail_fr": "NVDA diversifie en partie: corrélation de 0,39 avec le reste du portefeuille (entre 0,30 et 0,80). C'est une nouvelle classe d'actifs (actions américaines), mais elle n'évolue pas de façon indépendante. La position la plus proche est SPY (corrélation mensuelle 0,70).",
+     "evidence_ids": [
+      "ev_0f89c58061"
+     ]
+    },
+    {
+     "id": "G_MISSING_INFO",
+     "label_fr": "Information manquante",
+     "status": "warning",
+     "detail_fr": "Dépenses mensuelles inconnues: impossible de traduire une perte possible en mois de dépenses. Autres comptes et actifs (immobilier, régime de retraite, épargne) inconnus: le portefeuille importé n'est peut-être pas tout ton patrimoine.",
+     "evidence_ids": []
+    },
+    {
+     "id": "G_EXPLANATION_CHECKED",
+     "label_fr": "Explication vérifiée par le gardien",
+     "status": "ok",
+     "detail_fr": "Chaque affirmation cite ses preuves; aucun chiffre non sourcé, aucun conseil, aucune prévision.",
+     "evidence_ids": []
+    }
+   ],
+   "missing_info": [
+    "Dépenses mensuelles inconnues: impossible de traduire une perte possible en mois de dépenses.",
+    "Autres comptes et actifs (immobilier, régime de retraite, épargne) inconnus: le portefeuille importé n'est peut-être pas tout ton patrimoine."
+   ]
+  },
+  "what_would_change": [
+   {
+    "rule_id": null,
+    "kind": "weight",
+    "text_fr": "Jusqu'à 10 % de NVDA, le verdict serait « en tension » selon les mêmes règles.",
+    "max_weight": 0.1,
+    "evidence_id": "ev_add63cf873"
+   },
+   {
+    "rule_id": "C_MAX_SINGLE",
+    "kind": "weight",
+    "text_fr": "Avec un poids visé de 10 % ou moins (au lieu de 20 %), la règle C_MAX_SINGLE ne serait plus déclenchée.",
+    "max_weight": 0.1,
+    "evidence_id": "ev_4354387264"
+   },
+   {
+    "rule_id": "C_HIGH_VOL_SHARE",
+    "kind": "weight",
+    "text_fr": "Avec un poids visé de 10 % ou moins (au lieu de 20 %), la règle C_HIGH_VOL_SHARE ne serait plus déclenchée.",
+    "max_weight": 0.1,
+    "evidence_id": "ev_ff2ea8d347"
+   },
+   {
+    "rule_id": "C_DRAWDOWN_VS_LOSS",
+    "kind": "profile",
+    "text_fr": "La règle C_DRAWDOWN_VS_LOSS reste déclenchée même à 1 %: elle ne dépend pas du montant, mais de l'actif et de la perte annuelle que tu dis pouvoir accepter.",
+    "max_weight": null,
+    "evidence_id": "ev_03c79d7066"
+   }
+  ],
+  "weight_grid": [
+   {
+    "weight": 0.01,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.02,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.03,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.04,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.05,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.06,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.07,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.08,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.09,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.1,
+    "verdict": "tension",
+    "rule_ids": [
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.11,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.12,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.13,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.14,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.15,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.16,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.17,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.18,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.19,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.2,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.21,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.22,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.23,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.24,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.25,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.26,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.27,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.28,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.29,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
+   },
+   {
+    "weight": 0.3,
+    "verdict": "incoherent",
+    "rule_ids": [
+     "C_MAX_SINGLE",
+     "C_HIGH_VOL_SHARE",
+     "C_DRAWDOWN_VS_LOSS"
+    ]
    }
   ]
  },
@@ -4223,23 +4709,6 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_31ada17b4e": {
-   "id": "ev_31ada17b4e",
-   "kind": "classification",
-   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,92).",
-   "value": "macro",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_33f84d665a12",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_c5e2a1b644": {
    "id": "ev_c5e2a1b644",
    "kind": "rule_hit",
@@ -4276,23 +4745,6 @@
    },
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
-  },
-  "ev_77fca39e91": {
-   "id": "ev_77fca39e91",
-   "kind": "classification",
-   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,35).",
-   "value": "macro",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_98ff1175760b",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_7fca8eae9b": {
    "id": "ev_7fca8eae9b",
@@ -4370,23 +4822,6 @@
    },
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
-  },
-  "ev_c7d82de099": {
-   "id": "ev_c7d82de099",
-   "kind": "classification",
-   "statement": "Classée « Dividendes » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,95).",
-   "value": "dividend",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_721abc66ddc2",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_c189a3c0cd": {
    "id": "ev_c189a3c0cd",
@@ -5199,6 +5634,32 @@
    "source": "portefeuille fourni, data/prices_daily.csv",
    "computed_by": "core.rules_engine.high_vol_share_after"
   },
+  "ev_086e8bc599": {
+   "id": "ev_086e8bc599",
+   "kind": "metric",
+   "statement": "Corrélation mensuelle de NVDA avec le reste du portefeuille: 0,39.",
+   "value": 0.3908359960434355,
+   "unit": "correlation",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "frequency": "monthly",
+    "n_months": 60,
+    "rest": [
+     "ZST.TO",
+     "XBB.TO",
+     "AGG",
+     "SPY",
+     "XIU.TO",
+     "FTS.TO",
+     "GLD",
+     "RY.TO"
+    ],
+    "ticker": "NVDA"
+   },
+   "source": "portefeuille fourni, data/prices_daily.csv",
+   "computed_by": "core.metrics.corr_to_portfolio"
+  },
   "ev_da921ca648": {
    "id": "ev_da921ca648",
    "kind": "rule_hit",
@@ -5271,6 +5732,78 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.calendar_year_return"
   },
+  "ev_5b27de4c29": {
+   "id": "ev_5b27de4c29",
+   "kind": "metric",
+   "statement": "Corrélation mensuelle NVDA–SPY: 0,70.",
+   "value": 0.7024924854373413,
+   "unit": "correlation",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "a": "NVDA",
+    "b": "SPY",
+    "frequency": "monthly",
+    "n_months": 60
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.monthly_correlation"
+  },
+  "ev_b7bc4e320b": {
+   "id": "ev_b7bc4e320b",
+   "kind": "portfolio_calc",
+   "statement": "Classes d'actifs avant: FNB d'obligations 65 %, FNB d'actions 20 %, actions canadiennes 10 %, or 5 %; après l'ajout envisagé: FNB d'obligations 52 %, actions américaines 20 %, FNB d'actions 16 %, actions canadiennes 8 %, or 4 %. Devises de cotation après: CAD 60 %, USD 40 %.",
+   "value": 5.0,
+   "unit": "count",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset_class_after": {
+     "bond_etf": 0.52,
+     "equity_ca": 0.08,
+     "equity_etf": 0.16,
+     "equity_us": 0.2,
+     "gold_etf": 0.04
+    },
+    "asset_class_before": {
+     "bond_etf": 0.65,
+     "equity_ca": 0.1,
+     "equity_etf": 0.2,
+     "gold_etf": 0.05
+    },
+    "currency_after": {
+     "CAD": 0.6,
+     "USD": 0.4
+    },
+    "currency_before": {
+     "CAD": 0.75,
+     "USD": 0.25
+    },
+    "intended_weight": 0.2,
+    "ticker": "NVDA"
+   },
+   "source": "portefeuille fourni, data/prices_daily.csv, data/assets_universe.csv",
+   "computed_by": "core.diversification.exposures"
+  },
+  "ev_0f89c58061": {
+   "id": "ev_0f89c58061",
+   "kind": "portfolio_calc",
+   "statement": "NVDA diversifie en partie: corrélation de 0,39 avec le reste du portefeuille (entre 0,30 et 0,80). C'est une nouvelle classe d'actifs (actions américaines), mais elle n'évolue pas de façon indépendante. La position la plus proche est SPY (corrélation mensuelle 0,70).",
+   "value": "partial",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "already_held": false,
+    "corr_to_portfolio": 0.3908,
+    "intended_weight": 0.2,
+    "max_corr": 0.7025,
+    "max_corr_ticker": "SPY",
+    "new_asset_class": true,
+    "new_exposure_corr": 0.3,
+    "overlap_corr": 0.8,
+    "ticker": "NVDA"
+   },
+   "source": "rules/instrument_risks.yaml (diversification)",
+   "computed_by": "core.diversification.diversification_impact"
+  },
   "ev_21667de34d": {
    "id": "ev_21667de34d",
    "kind": "event_study",
@@ -5290,6 +5823,136 @@
    },
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
+  },
+  "ev_4354387264": {
+   "id": "ev_4354387264",
+   "kind": "portfolio_calc",
+   "statement": "Avec un poids visé de 10 % ou moins (au lieu de 20 %), la règle C_MAX_SINGLE ne serait plus déclenchée.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "grid_step": 0.01,
+    "intended_weight": 0.2,
+    "rule_id": "C_MAX_SINGLE",
+    "ticker": "NVDA",
+    "weights_tested": [
+     0.01,
+     0.02,
+     0.03,
+     0.04,
+     0.05,
+     0.06,
+     0.07,
+     0.08,
+     0.09,
+     0.1,
+     0.11,
+     0.12,
+     0.13,
+     0.14,
+     0.15,
+     0.16,
+     0.17,
+     0.18,
+     0.19,
+     0.2
+    ]
+   },
+   "source": "rules/coherence_rules.yaml, portefeuille fourni",
+   "computed_by": "core.sensitivity.what_would_change"
+  },
+  "ev_ff2ea8d347": {
+   "id": "ev_ff2ea8d347",
+   "kind": "portfolio_calc",
+   "statement": "Avec un poids visé de 10 % ou moins (au lieu de 20 %), la règle C_HIGH_VOL_SHARE ne serait plus déclenchée.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "grid_step": 0.01,
+    "intended_weight": 0.2,
+    "rule_id": "C_HIGH_VOL_SHARE",
+    "ticker": "NVDA",
+    "weights_tested": [
+     0.01,
+     0.02,
+     0.03,
+     0.04,
+     0.05,
+     0.06,
+     0.07,
+     0.08,
+     0.09,
+     0.1,
+     0.11,
+     0.12,
+     0.13,
+     0.14,
+     0.15,
+     0.16,
+     0.17,
+     0.18,
+     0.19,
+     0.2
+    ]
+   },
+   "source": "rules/coherence_rules.yaml, portefeuille fourni",
+   "computed_by": "core.sensitivity.what_would_change"
+  },
+  "ev_03c79d7066": {
+   "id": "ev_03c79d7066",
+   "kind": "portfolio_calc",
+   "statement": "La règle C_DRAWDOWN_VS_LOSS reste déclenchée même à 1 %: elle ne dépend pas du montant, mais de l'actif et de la perte annuelle que tu dis pouvoir accepter.",
+   "value": null,
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "grid_step": 0.01,
+    "intended_weight": 0.2,
+    "rule_id": "C_DRAWDOWN_VS_LOSS",
+    "ticker": "NVDA",
+    "weights_tested": [
+     0.01,
+     0.02,
+     0.03,
+     0.04,
+     0.05,
+     0.06,
+     0.07,
+     0.08,
+     0.09,
+     0.1,
+     0.11,
+     0.12,
+     0.13,
+     0.14,
+     0.15,
+     0.16,
+     0.17,
+     0.18,
+     0.19,
+     0.2
+    ]
+   },
+   "source": "rules/coherence_rules.yaml, portefeuille fourni",
+   "computed_by": "core.sensitivity.what_would_change"
+  },
+  "ev_add63cf873": {
+   "id": "ev_add63cf873",
+   "kind": "portfolio_calc",
+   "statement": "Jusqu'à 10 % de NVDA, le verdict serait « en tension » selon les mêmes règles.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "grid_step": 0.01,
+    "intended_weight": 0.2,
+    "ticker": "NVDA",
+    "verdict_at_weight": "tension"
+   },
+   "source": "rules/coherence_rules.yaml, portefeuille fourni",
+   "computed_by": "core.sensitivity.what_would_change"
   }
  },
  "disclaimers": [

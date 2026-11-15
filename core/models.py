@@ -12,7 +12,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.2.0"
+CONTRACT_VERSION = "0.3.0"
 
 RiskTolerance = Literal["low", "low_moderate", "moderate", "high"]
 HorizonBucket = Literal["short", "medium", "long"]
@@ -225,12 +225,94 @@ class ToolCall(Contract):
     error: str | None = None
 
 
+class Correlation(Contract):
+    ticker: str
+    weight: float = Field(ge=0, le=1)
+    correlation: float = Field(ge=-1, le=1)
+    evidence_id: str
+
+
+class DiversificationImpact(Contract):
+    """Diversification analyst: does the asset add a new source of risk or duplicate one?"""
+
+    ticker: str
+    verdict: Literal["new_exposure", "partial", "overlap"]
+    text_fr: str
+    correlations: list[Correlation] = Field(description="Monthly correlation with each other held position, desc.")
+    corr_to_portfolio: float | None
+    asset_class_before: dict[str, float]
+    asset_class_after: dict[str, float]
+    currency_before: dict[str, float]
+    currency_after: dict[str, float]
+    n_asset_classes_before: int = Field(ge=0)
+    n_asset_classes_after: int = Field(ge=0)
+    evidence_ids: list[str]
+
+
+class InstrumentRiskItem(Contract):
+    risk: str
+    label_fr: str
+    question_fr: str
+    level: Literal["low", "medium", "high"]
+    text_fr: str
+
+
+class InstrumentProfile(Contract):
+    """Risk analyst: what you really own with this instrument and the risks to understand (rules text)."""
+
+    ticker: str
+    name: str
+    asset_class: AssetClass
+    label_fr: str
+    what_you_own_fr: str
+    return_source_fr: str
+    price_currency: Currency
+    risks: list[InstrumentRiskItem]
+    source: str
+
+
+class GovernanceControl(Contract):
+    id: str
+    label_fr: str
+    status: Literal["ok", "warning", "fail", "info"]
+    detail_fr: str
+    evidence_ids: list[str]
+
+
+class Governance(Contract):
+    """Governance agent: constraints, simulation boundaries and missing information, made visible."""
+
+    status: Literal["ok", "warning", "fail"]
+    controls: list[GovernanceControl]
+    missing_info: list[str]
+
+
+class WhatWouldChange(Contract):
+    rule_id: str | None = Field(description="Rule concerned; null for the overall verdict")
+    kind: Literal["weight", "profile"]
+    text_fr: str
+    max_weight: float | None
+    evidence_id: str
+
+
+class WeightGridPoint(Contract):
+    weight: float = Field(gt=0, lt=1)
+    verdict: Literal["coherent", "tension", "incoherent"]
+    rule_ids: list[str]
+
+
 class CoherenceResult(Contract):
     verdict: Literal["coherent", "tension", "incoherent"]
     rule_hits: list[RuleHit]
     metrics: CoherenceMetrics
     explanation: Explanation
     agent_trace: list[ToolCall] | None = Field(default=None, description="Optional (v0.2.0): orchestrator tool calls")
+    diversification: DiversificationImpact | None = Field(default=None, description="Optional (v0.3.0)")
+    instrument_risks: InstrumentProfile | None = Field(default=None, description="Optional (v0.3.0)")
+    governance: Governance | None = Field(default=None, description="Optional (v0.3.0)")
+    what_would_change: list[WhatWouldChange] | None = Field(default=None, description="Optional (v0.3.0)")
+    weight_grid: list[WeightGridPoint] | None = Field(
+        default=None, description="Optional (v0.3.0): verdict of the same rules for each tested weight")
 
 
 # --- Feed ------------------------------------------------------------------

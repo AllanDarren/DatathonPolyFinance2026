@@ -1,0 +1,31 @@
+version: 1
+# Fiabilité de la source d'une nouvelle. Comparaison insensible à la casse: le nom de la source
+# contient l'un des motifs. Le premier palier qui correspond gagne. `add` s'ajoute au score de pertinence.
+tiers:
+- id: primary
+  label_fr: Source primaire
+  text_fr: Publié par l'entreprise elle-même, un régulateur ou une banque centrale.
+  add: 0.05
+  patterns: [newswire, business wire, sec.gov, bank of canada, banque du canada, federal reserve, about amazon,
+    microsoft, apple, shopify, enbridge, exxonmobil, amazon web services, nvidia, alphabet, google blog,
+    royal bank, td bank, manulife, cn rail, canadian natural, fortis, couche-tard, constellation software,
+    jpmorgan, johnson & johnson, procter, ishares, blackrock, bmo global, vanguard, state street, investor relations]
+- id: established
+  label_fr: Presse financière établie
+  text_fr: Média financier ou généraliste reconnu.
+  add: 0.0
+  patterns: [reuters, bloomberg, cnbc, wsj, wall street journal, financial times, globe and mail, barron, marketwatch,
+    financial post, la presse, radio-canada, cbc, associated press, ap news, new york times, the guardian, bbc,
+    forbes, fortune, morningstar, yahoo finance, yahoo! finance, the economist, techcrunch, the verge, wired,
+    coindesk, cnn, nbc news, global news, usa today, investing.com, etf.com, ars technica]
+- id: aggregator
+  label_fr: Agrégateur ou blogue d'investissement
+  text_fr: Contenu d'opinion ou généré en masse; à recouper avec une autre source.
+  add: -0.10
+  patterns: [motley fool, marketbeat, simply wall st, benzinga, kalkine, pluang, tradingview, traders union,
+    24/7 wall st, trefis, biggo, gurufocus, moomoo, seeking alpha, zacks, investorplace, insider monkey,
+    tipranks, stock traders daily, quantisnow, ad-hoc-news, mixed news, crypto news, bloomingbit]
+unknown:
+  label_fr: Source non répertoriée
+  text_fr: Source absente de notre liste; fiabilité non évaluée.
+  add: 0.0

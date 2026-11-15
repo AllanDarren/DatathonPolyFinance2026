@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "alphaforge.schema.json",
   "title": "AlphaForgeContract",
-  "description": "AlphaForge AI contracts v0.2.0. Generated from core/models.py; do not edit by hand.",
-  "x-contract-version": "0.2.0",
+  "description": "AlphaForge AI contracts v0.3.0. Generated from core/models.py; do not edit by hand.",
+  "x-contract-version": "0.3.0",
   "anyOf": [
     {
       "$ref": "#/$defs/Profile"
@@ -171,6 +171,72 @@
           ],
           "default": null,
           "description": "Optional (v0.2.0): orchestrator tool calls"
+        },
+        "diversification": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DiversificationImpact"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0)"
+        },
+        "instrument_risks": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/InstrumentProfile"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0)"
+        },
+        "governance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Governance"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0)"
+        },
+        "what_would_change": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/WhatWouldChange"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0)"
+        },
+        "weight_grid": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/WeightGridPoint"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): verdict of the same rules for each tested weight"
         }
       },
       "required": [
@@ -200,6 +266,126 @@
         "intended_weight"
       ],
       "title": "Consideration",
+      "type": "object"
+    },
+    "Correlation": {
+      "additionalProperties": false,
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "weight": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "correlation": {
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        },
+        "evidence_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticker",
+        "weight",
+        "correlation",
+        "evidence_id"
+      ],
+      "title": "Correlation",
+      "type": "object"
+    },
+    "DiversificationImpact": {
+      "additionalProperties": false,
+      "description": "Diversification analyst: does the asset add a new source of risk or duplicate one?",
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "verdict": {
+          "enum": [
+            "new_exposure",
+            "partial",
+            "overlap"
+          ],
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        },
+        "correlations": {
+          "description": "Monthly correlation with each other held position, desc.",
+          "items": {
+            "$ref": "#/$defs/Correlation"
+          },
+          "type": "array"
+        },
+        "corr_to_portfolio": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "asset_class_before": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "asset_class_after": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "currency_before": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "currency_after": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "n_asset_classes_before": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "n_asset_classes_after": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "ticker",
+        "verdict",
+        "text_fr",
+        "correlations",
+        "corr_to_portfolio",
+        "asset_class_before",
+        "asset_class_after",
+        "currency_before",
+        "currency_after",
+        "n_asset_classes_before",
+        "n_asset_classes_after",
+        "evidence_ids"
+      ],
+      "title": "DiversificationImpact",
       "type": "object"
     },
     "ErrorBody": {
@@ -594,6 +780,77 @@
       "title": "FeedResponse",
       "type": "object"
     },
+    "Governance": {
+      "additionalProperties": false,
+      "description": "Governance agent: constraints, simulation boundaries and missing information, made visible.",
+      "properties": {
+        "status": {
+          "enum": [
+            "ok",
+            "warning",
+            "fail"
+          ],
+          "type": "string"
+        },
+        "controls": {
+          "items": {
+            "$ref": "#/$defs/GovernanceControl"
+          },
+          "type": "array"
+        },
+        "missing_info": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "controls",
+        "missing_info"
+      ],
+      "title": "Governance",
+      "type": "object"
+    },
+    "GovernanceControl": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "warning",
+            "fail",
+            "info"
+          ],
+          "type": "string"
+        },
+        "detail_fr": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label_fr",
+        "status",
+        "detail_fr",
+        "evidence_ids"
+      ],
+      "title": "GovernanceControl",
+      "type": "object"
+    },
     "Guardian": {
       "additionalProperties": false,
       "properties": {
@@ -757,6 +1014,101 @@
         "evidence_id"
       ],
       "title": "HistoricalContext",
+      "type": "object"
+    },
+    "InstrumentProfile": {
+      "additionalProperties": false,
+      "description": "Risk analyst: what you really own with this instrument and the risks to understand (rules text).",
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "asset_class": {
+          "enum": [
+            "equity_ca",
+            "equity_us",
+            "bond_etf",
+            "equity_etf",
+            "gold_etf",
+            "crypto"
+          ],
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "what_you_own_fr": {
+          "type": "string"
+        },
+        "return_source_fr": {
+          "type": "string"
+        },
+        "price_currency": {
+          "enum": [
+            "CAD",
+            "USD"
+          ],
+          "type": "string"
+        },
+        "risks": {
+          "items": {
+            "$ref": "#/$defs/InstrumentRiskItem"
+          },
+          "type": "array"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticker",
+        "name",
+        "asset_class",
+        "label_fr",
+        "what_you_own_fr",
+        "return_source_fr",
+        "price_currency",
+        "risks",
+        "source"
+      ],
+      "title": "InstrumentProfile",
+      "type": "object"
+    },
+    "InstrumentRiskItem": {
+      "additionalProperties": false,
+      "properties": {
+        "risk": {
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "question_fr": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk",
+        "label_fr",
+        "question_fr",
+        "level",
+        "text_fr"
+      ],
+      "title": "InstrumentRiskItem",
       "type": "object"
     },
     "NewsClassification": {
@@ -1433,6 +1785,85 @@
         "weight"
       ],
       "title": "Unanalyzed",
+      "type": "object"
+    },
+    "WeightGridPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "weight": {
+          "exclusiveMaximum": 1,
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "verdict": {
+          "enum": [
+            "coherent",
+            "tension",
+            "incoherent"
+          ],
+          "type": "string"
+        },
+        "rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "weight",
+        "verdict",
+        "rule_ids"
+      ],
+      "title": "WeightGridPoint",
+      "type": "object"
+    },
+    "WhatWouldChange": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Rule concerned; null for the overall verdict"
+        },
+        "kind": {
+          "enum": [
+            "weight",
+            "profile"
+          ],
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        },
+        "max_weight": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "kind",
+        "text_fr",
+        "max_weight",
+        "evidence_id"
+      ],
+      "title": "WhatWouldChange",
       "type": "object"
     }
   }

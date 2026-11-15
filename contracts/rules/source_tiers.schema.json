@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "source_tiers.yaml.schema.json",
+  "description": "Format of rules/source_tiers.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "SourceTier": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        },
+        "add": {
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        },
+        "patterns": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label_fr",
+        "text_fr",
+        "add",
+        "patterns"
+      ],
+      "title": "SourceTier",
+      "type": "object"
+    },
+    "UnknownTier": {
+      "additionalProperties": false,
+      "properties": {
+        "label_fr": {
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        },
+        "add": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        }
+      },
+      "required": [
+        "label_fr",
+        "text_fr"
+      ],
+      "title": "UnknownTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "tiers": {
+      "items": {
+        "$ref": "#/$defs/SourceTier"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "unknown": {
+      "$ref": "#/$defs/UnknownTier"
+    }
+  },
+  "required": [
+    "version",
+    "tiers",
+    "unknown"
+  ],
+  "title": "SourceTiers",
+  "type": "object"
+}

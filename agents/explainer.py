@@ -84,9 +84,10 @@ def explain(evidence_ids: list[str], registry: EvidenceRegistry, *, context: str
     drafts = [Draft(template=c["text"], label=c["label"], evidence_ids=list(c["evidence_ids"])) for c in out["claims"]]
     rev = review(drafts, registry, client)
     summary, _, unknown = render_template(out["summary"], registry)
-    from agents.guardian import ADVICE, unsourced_numbers
+    from agents.guardian import ADVICE, policy_problems, unsourced_numbers
 
-    if unknown or ADVICE.search(summary) or unsourced_numbers(summary, [registry.get(i) for i in ids]):  # type: ignore[misc]
+    evs = [registry.get(i) for i in ids]
+    if unknown or ADVICE.search(summary) or unsourced_numbers(summary, evs) or policy_problems(summary, evs):  # type: ignore[arg-type]
         rev.flags.append("Résumé retiré (chiffre non sourcé ou formulation de conseil).")
         summary = ""
     if not rev.claims:

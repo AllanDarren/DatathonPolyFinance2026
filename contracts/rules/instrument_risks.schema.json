@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "instrument_risks.yaml.schema.json",
+  "description": "Format of rules/instrument_risks.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "DiversificationThresholds": {
+      "additionalProperties": false,
+      "properties": {
+        "overlap_corr": {
+          "default": 0.8,
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        },
+        "new_exposure_corr": {
+          "default": 0.3,
+          "maximum": 1,
+          "minimum": -1,
+          "type": "number"
+        }
+      },
+      "title": "DiversificationThresholds",
+      "type": "object"
+    },
+    "InstrumentClass": {
+      "additionalProperties": false,
+      "properties": {
+        "label_fr": {
+          "type": "string"
+        },
+        "what_you_own_fr": {
+          "type": "string"
+        },
+        "return_source_fr": {
+          "type": "string"
+        },
+        "risks": {
+          "items": {
+            "$ref": "#/$defs/InstrumentRisk"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "label_fr",
+        "what_you_own_fr",
+        "return_source_fr",
+        "risks"
+      ],
+      "title": "InstrumentClass",
+      "type": "object"
+    },
+    "InstrumentRisk": {
+      "additionalProperties": false,
+      "properties": {
+        "risk": {
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk",
+        "level",
+        "text_fr"
+      ],
+      "title": "InstrumentRisk",
+      "type": "object"
+    },
+    "RiskType": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "question_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label_fr",
+        "question_fr"
+      ],
+      "title": "RiskType",
+      "type": "object"
+    },
+    "SectorExclusion": {
+      "additionalProperties": false,
+      "properties": {
+        "label_fr": {
+          "type": "string"
+        },
+        "sectors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label_fr",
+        "sectors"
+      ],
+      "title": "SectorExclusion",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "risk_types": {
+      "items": {
+        "$ref": "#/$defs/RiskType"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "asset_classes": {
+      "additionalProperties": {
+        "$ref": "#/$defs/InstrumentClass"
+      },
+      "type": "object"
+    },
+    "diversification": {
+      "$ref": "#/$defs/DiversificationThresholds"
+    },
+    "sector_exclusions": {
+      "additionalProperties": {
+        "$ref": "#/$defs/SectorExclusion"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "risk_types",
+    "asset_classes"
+  ],
+  "title": "InstrumentRisks",
+  "type": "object"
+}

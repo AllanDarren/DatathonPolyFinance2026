@@ -57,7 +57,8 @@ def test_bedrock_outage_degrades_to_rules_and_evidence(robert: Any) -> None:
     assert all(i["explanation"]["summary"] == "" for i in f["items"])  # no invented summary
     coh = f["coherence"]
     assert coh["verdict"] == "incoherent"  # rules still decide
-    assert {t["planner"] for t in coh["agent_trace"]} == {"mock"} and all(t["forced"] for t in coh["agent_trace"])
+    tool_calls = [t for t in coh["agent_trace"] if t["planner"] != "code"]  # code-run steps follow the tool calls
+    assert {t["planner"] for t in tool_calls} == {"mock"} and all(t["forced"] for t in tool_calls)
     assert coh["explanation"]["claims"]
 
 

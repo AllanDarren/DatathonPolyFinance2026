@@ -30,6 +30,45 @@ ADVICE = re.compile(
 NUMBER = re.compile(r"\d+(?:[.,   ]\d+)*")
 
 
+
+def _policy() -> Any:
+    """rules/language_policy.yaml (None if the rules cannot be loaded)."""
+    try:
+        from core.rules_engine import load_rules
+
+        return load_rules().language_policy
+    except Exception:  # noqa: BLE001 - the guardian must never crash on a rules problem
+        return None
+
+
+def _contains(text: str, terms: list[str]) -> list[str]:
+    low = text.lower()
+    return [t for t in terms if t and t.lower() in low]
+
+
+def policy_problems(text: str, evidence: list[dict[str, Any]]) -> list[str]:
+    """Language-policy checks: forecasts, and past returns used as a favourable argument.
+
+    The past measures risk; it never predicts (BN workshop). A claim that cites a positive
+    past return (risk_only_metrics) together with favourable wording is removed.
+    """
+    pol = _policy()
+    if pol is None:
+        return []
+    problems: list[str] = []
+    forecast = _contains(text, pol.forecast_terms)
+    if forecast:
+        problems.append(f"formulation de prévision ({', '.join(forecast)})")
+    forbidden = [t for t in _contains(text, pol.forbidden) if t not in forecast]
+    if forbidden:
+        problems.append(f"vocabulaire interdit ({', '.join(forbidden)})")
+    positive_past = [e for e in evidence if e and e.get("computed_by") in pol.risk_only_metrics
+                     and isinstance(e.get("value"), int | float) and e["value"] > 0]
+    favourable = _contains(text, pol.past_performance_terms)
+    if positive_past and favourable:
+        problems.append("rendement passé présenté comme un argument (le passé mesure le risque, il ne prédit pas)")
+    return problems
+
 @dataclass
 class Draft:
     """A claim before checks: `template` may contain {{ev_id}} markers."""
@@ -80,6 +119,7 @@ def deterministic_check(draft: Draft, registry: EvidenceRegistry) -> tuple[str, 
     if ADVICE.search(text):
         problems.append("formulation de conseil")
     evs = [e for e in (registry.get(i) for i in ids) if e]
+    problems.extend(policy_problems(text, evs))
     stray = unsourced_numbers(text, evs)
     if stray:
         problems.append(f"chiffre(s) non sourcé(s): {', '.join(stray)}")

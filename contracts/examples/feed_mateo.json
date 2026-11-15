@@ -122,43 +122,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une panne chez Microsoft soulève une controverse qui mérite attention, vu le poids de cette position dans ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "MSFT représente 10,0 % de ton portefeuille, et sa volatilité annualisée atteint 28,5 %, ce qui amplifie l'impact potentiel de toute controverse.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_330d01ad79",
-       "ev_561cb2eea0"
+       "ev_44cd0d63c8"
       ],
       "verified": "supported"
      },
      {
-      "text": "Cette nouvelle est classée « Controverses » avec une pertinence élevée pour ton profil 1,00 controversy : elle signale un risque réputationnel, sans prouver une faute.",
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_44cd0d63c8",
-       "ev_943d03df17"
+       "ev_330d01ad79"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé que des controverses structurelles peuvent rester en tension avec un profil équilibré sur un horizon long, selon leur résolution.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_44cd0d63c8",
-       "ev_943d03df17"
+       "ev_561cb2eea0"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Cette nouvelle est classée « Controverses » avec une pertinence élevée pour ton profil 1,00 controversy : elle signale un risque réputationnel, sans prouver une faute. » (La claim affirme que la nouvelle 'signale un risque réputationnel', ce qui est une interprétation non explicitement présente dans les preuves. De plus, la claim contient une formulation normative implicite ('pour ton profil 1,00 controversy') qui mélange des éléments de conseil. Par ailleurs, la preuve ev_44cd0d63c8 mentionne un horizon 'medium', alors que la claim ne précise pas cet horizon, ce qui peut induire en erreur. Enfin, la claim ne mentionne pas la confiance de 0,72 associée à la classification, ce qui constitue une omission factuelle significative.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé que des controverses structurelles peuvent rester en tension avec un profil équilibré sur un horizon long, selon leur résolution. » (La claim est présentée comme une hypothèse comparative ('dans des situations comparables, on a observé'), mais les preuves citées ne contiennent aucune référence à des situations comparables, à un profil équilibré, ni à un horizon long. Les preuves mentionnent un horizon 'medium' et non 'long'. La claim introduit des éléments factuels (observations passées, horizon long, profil équilibré) absents des preuves.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -202,42 +196,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une panne majeure chez Microsoft soulève une controverse qui touche directement ton portefeuille, compte tenu du poids de cette position.",
+    "summary": "",
     "claims": [
      {
-      "text": "MSFT représente 10,0 % de ton portefeuille, ce qui rend cette controverse particulièrement visible dans ton allocation globale.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_330d01ad79",
        "ev_d95f893622"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de MSFT atteint 28,5 %, un niveau en tension avec ton profil modéré sur un horizon de dix ans.",
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
       "label": "fact",
       "evidence_ids": [
        "ev_561cb2eea0"
       ],
-      "verified": "unsupported"
-     },
-     {
-      "text": "Dans des situations comparables, on a observé que des controverses structurelles comme celle-ci — classée avec une confiance de controversy — peuvent peser durablement sur la perception d'un titre, sans que cela prouve une faute avérée.",
-      "label": "hypothesis",
-      "evidence_ids": [
-       "ev_1e3c3943d0",
-       "ev_d95f893622"
-      ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « La volatilité annualisée de MSFT atteint 28,5 %, un niveau en tension avec ton profil modéré sur un horizon de dix ans. » (La volatilité annualisée de 28,5 % est bien confirmée (ev_561cb2eea0), mais la claim ajoute qu'elle est 'en tension avec un profil modéré sur un horizon de dix ans', ce qui constitue un jugement causal/interprétatif absent des preuves citées.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé que des controverses structurelles comme celle-ci — classée avec une confiance de controversy — peuvent peser durablement sur la perception d'un titre, sans que cela prouve une faute avérée. » (La claim affirme que la controverse est classée avec une 'confiance de controversy', mais les preuves indiquent une confiance de 0,72 (ev_1e3c3943d0), pas une 'confiance de controversy'. De plus, l'affirmation que de telles controverses 'peuvent peser durablement sur la perception d'un titre' n'est pas étayée par les preuves citées, même si la claim est présentée comme une hypothèse.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -273,42 +262,37 @@
     ]
    },
    "explanation": {
-    "summary": "Un verdict contre J&J dans une affaire de talc signale une controverse réglementaire et juridique à surveiller pour ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "JNJ représente 5,0 % de ton portefeuille, ce qui rend cette actualité juridique directement pertinente pour toi.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_7bd9bbe26b",
        "ev_5f83201a83"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de JNJ est de 18,1 %, ce qui est en tension avec ton profil modéré lors de controverses judiciaires.",
+      "text": "JNJ représente 5,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_22fc4f7c9c",
-       "ev_5f83201a83"
+       "ev_7bd9bbe26b"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé que des poursuites répétées peuvent peser sur la valorisation d'un titre, sans que cela prouve une faute établie.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de JNJ: 18,1 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_fc070e606d",
-       "ev_5f83201a83"
+       "ev_22fc4f7c9c"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé que des poursuites répétées peuvent peser sur la valorisation d'un titre, sans que cela prouve une faute établie. » (La claim affirme que des poursuites répétées peuvent peser sur la valorisation d'un titre dans des situations comparables, mais aucune des évidences citées ne mentionne d'observations historiques comparables ni d'impact sur la valorisation. Les évidences se limitent à la classification de la nouvelle et à sa pertinence pour le profil, sans fournir de données sur des cas similaires passés.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -344,42 +328,37 @@
     ]
    },
    "explanation": {
-    "summary": "Un déraillement impliquant des matières dangereuses est en tension avec ton profil équilibré, même sans fuite ni incendie confirmés.",
+    "summary": "",
     "claims": [
      {
-      "text": "CNR.TO représente 5,0 % de ton portefeuille, avec une volatilité annualisée de 19,9 %, ce qui amplifie l'impact potentiel de toute controverse réglementaire.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_6fb31fe504",
+       "ev_e507db2a07"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6fb31fe504"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
+      "label": "fact",
+      "evidence_ids": [
        "ev_9382522bf1"
       ],
       "verified": "supported"
-     },
-     {
-      "text": "Cette nouvelle est classée « Réglementation et poursuites » avec une pertinence 1,00 pour ton profil — elle signale une controverse, sans prouver une faute.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_e507db2a07",
-       "ev_a438cef99d"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Dans des situations comparables, on a observé que des enquêtes du TSB peuvent déboucher sur de nouvelles obligations réglementaires, ce qui serait en tension avec un objectif équilibré sur 1,00.",
-      "label": "hypothesis",
-      "evidence_ids": [
-       "ev_e507db2a07",
-       "ev_7780bb64c3"
-      ],
-      "verified": "unsupported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé que des enquêtes du TSB peuvent déboucher sur de nouvelles obligations réglementaires, ce qui serait en tension avec un objectif équilibré sur 1,00. » (L'affirmation selon laquelle des enquêtes du TSB 'peuvent déboucher sur de nouvelles obligations réglementaires' n'est pas étayée par les preuves fournies. Les preuves (ev_e507db2a07 et ev_7780bb64c3) ne mentionnent ni le TSB, ni des situations comparables, ni ce lien causal spécifique. Il s'agit d'un fait non présent dans les preuves citées.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -415,43 +394,37 @@
     ]
    },
    "explanation": {
-    "summary": "Des victoires judiciaires pour JNJ, une actualité réglementaire à surveiller pour ton portefeuille équilibré.",
+    "summary": "",
     "claims": [
      {
-      "text": "JNJ pèse 5,0 % de ton portefeuille, ce qui rend cette actualité réglementaire directement pertinente pour toi.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_7bd9bbe26b",
        "ev_00557385b5"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de JNJ atteint 18,1 %, un niveau en tension avec ton profil modéré sur un horizon long.",
+      "text": "JNJ représente 5,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_22fc4f7c9c",
-       "ev_00557385b5"
+       "ev_7bd9bbe26b"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, des victoires en procès ont pu réduire l'incertitude juridique, sans garantir la fin des litiges futurs.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de JNJ: 18,1 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_10fd0d4f0b",
-       "ev_00557385b5"
+       "ev_22fc4f7c9c"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « La volatilité annualisée de JNJ atteint 18,1 %, un niveau en tension avec ton profil modéré sur un horizon long. » (La volatilité annualisée de 18,1 % est bien confirmée (ev_22fc4f7c9c), mais aucune preuve ne mentionne un 'horizon long' ni ne qualifie ce niveau comme 'en tension avec un profil modéré sur un horizon long'. L'evidence ev_00557385b5 parle d'un horizon 'medium', non 'long'. Ce lien causal et cette qualification ne sont pas étayés par les preuves citées.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, des victoires en procès ont pu réduire l'incertitude juridique, sans garantir la fin des litiges futurs. » (Bien que la claim soit présentée comme une hypothèse, aucune des preuves citées ne mentionne des victoires en procès ni leur effet sur l'incertitude juridique. Les preuves se limitent à une classification de la catégorie 'Réglementation et poursuites' et à une note de pertinence. Le contenu factuel de la comparaison n'est pas présent dans les preuves.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -496,43 +469,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une remontée des taux est en tension avec ton profil équilibré, car les obligations représentent une part significative de ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "XBB.TO représente 20,0 % de ton portefeuille, ce qui dépasse le seuil de concentration déclaré et rend cette actualité macro particulièrement pertinente.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9cdcd3572b",
        "ev_f46ada4788"
       ],
       "verified": "supported"
      },
      {
-      "text": "La volatilité annualisée de XBB.TO est de 6,6 %, un niveau en tension avec ton profil modéré en période de hausse de taux.",
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_cc97b68de7",
-       "ev_f46ada4788"
-      ],
-      "verified": "unsupported"
-     },
-     {
-      "text": "Dans des situations comparables de cycle de hausse, on a observé une pression à la baisse sur la valeur des obligations existantes, ce qui pourrait affecter la composante obligataire de ton portefeuille.",
-      "label": "hypothesis",
-      "evidence_ids": [
-       "ev_31ada17b4e",
        "ev_9cdcd3572b"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cc97b68de7"
+      ],
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « La volatilité annualisée de XBB.TO est de 6,6 %, un niveau en tension avec ton profil modéré en période de hausse de taux. » (La volatilité annualisée de 6,6 % est bien confirmée par ev_cc97b68de7, mais aucune preuve citée ne mentionne une 'tension avec un profil modéré en période de hausse de taux'. Ce lien causal n'est pas présent dans les éléments de preuve fournis.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables de cycle de hausse, on a observé une pression à la baisse sur la valeur des obligations existantes, ce qui pourrait affecter la composante obligataire de ton portefeuille. » (Bien que la claim soit présentée comme une hypothèse, aucune des preuves citées ne mentionne des cycles de hausse de taux, une pression à la baisse sur les obligations existantes, ni des situations comparables historiques. Les preuves se limitent à une classification macro et au poids de XBB.TO dans le portefeuille.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -3684,23 +3651,6 @@
    "source": "portefeuille fourni",
    "computed_by": "core.metrics.top3_concentration"
   },
-  "ev_943d03df17": {
-   "id": "ev_943d03df17",
-   "kind": "classification",
-   "statement": "Classée « Controverses » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,72).",
-   "value": "controversy",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": true,
-    "controversy_type": "safety",
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_41429f518870",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_44cd0d63c8": {
    "id": "ev_44cd0d63c8",
    "kind": "rule_hit",
@@ -3738,23 +3688,6 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_1e3c3943d0": {
-   "id": "ev_1e3c3943d0",
-   "kind": "classification",
-   "statement": "Classée « Controverses » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,72).",
-   "value": "controversy",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": true,
-    "controversy_type": "safety",
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_935a51da996f",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_d95f893622": {
    "id": "ev_d95f893622",
    "kind": "rule_hit",
@@ -3773,23 +3706,6 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_fc070e606d": {
-   "id": "ev_fc070e606d",
-   "kind": "classification",
-   "statement": "Classée « Réglementation et poursuites » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,92).",
-   "value": "regulation_legal",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": true,
-    "controversy_type": "legal",
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_f7b1f638883c",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_5f83201a83": {
    "id": "ev_5f83201a83",
@@ -3827,38 +3743,6 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_7780bb64c3": {
-   "id": "ev_7780bb64c3",
-   "kind": "news_source",
-   "statement": "Nouvelle publiée le 2026-11-11 par CBC.",
-   "value": "n_13066311f8dd",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "is_synthetic": false,
-    "news_id": "n_13066311f8dd",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLWJFWXJvaFpQblJLRGFEeXFlSFc0SWx5ZDRrWmZzNGV3TnNFbU5rcjNaT1czTVdNVC0xNDhWSTBHLVNWRWduV1plY0p1di10ZFA2emxjbDVsX3dJVVJjNHlPVGRaOU16VHRCVU0tUWNScGRtY2FpWXFNUnhWSl9Zd05hYkd3VUN1OHBB?oc=5"
-   },
-   "source": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLWJFWXJvaFpQblJLRGFEeXFlSFc0SWx5ZDRrWmZzNGV3TnNFbU5rcjNaT1czTVdNVC0xNDhWSTBHLVNWRWduV1plY0p1di10ZFA2emxjbDVsX3dJVVJjNHlPVGRaOU16VHRCVU0tUWNScGRtY2FpWXFNUnhWSl9Zd05hYkd3VUN1OHBB?oc=5",
-   "computed_by": "ingest.news"
-  },
-  "ev_a438cef99d": {
-   "id": "ev_a438cef99d",
-   "kind": "classification",
-   "statement": "Classée « Réglementation et poursuites » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,72).",
-   "value": "regulation_legal",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": true,
-    "controversy_type": "safety",
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_13066311f8dd",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_e507db2a07": {
    "id": "ev_e507db2a07",
    "kind": "rule_hit",
@@ -3895,23 +3779,6 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_10fd0d4f0b": {
-   "id": "ev_10fd0d4f0b",
-   "kind": "classification",
-   "statement": "Classée « Réglementation et poursuites » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,72).",
-   "value": "regulation_legal",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": true,
-    "controversy_type": "legal",
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_e37dc71b1ae3",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_00557385b5": {
    "id": "ev_00557385b5",
    "kind": "rule_hit",
@@ -3929,23 +3796,6 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_31ada17b4e": {
-   "id": "ev_31ada17b4e",
-   "kind": "classification",
-   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,92).",
-   "value": "macro",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_33f84d665a12",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_f46ada4788": {
    "id": "ev_f46ada4788",

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "language_policy.yaml.schema.json",
+  "description": "Format of rules/language_policy.yaml (role D). Generated from core/rules_models.py.",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "allowed": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "forbidden": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "past_performance_terms": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "forecast_terms": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "risk_only_metrics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "review_notes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "title": "LanguagePolicy",
+  "type": "object"
+}

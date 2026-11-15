@@ -1,0 +1,75 @@
+version: 1
+source: Atelier finance Banque Nationale (diapos 5 et 8) et AMF; textes du prototype, à relire par D.
+# Risques à comprendre par type d'instrument. Le code les affiche tels quels; aucun chiffre ici.
+risk_types:
+- {id: market, label_fr: Marché, question_fr: "La valeur peut-elle chuter?"}
+- {id: credit, label_fr: Crédit, question_fr: "L'émetteur peut-il ne pas payer?"}
+- {id: liquidity, label_fr: Liquidité, question_fr: "Peut-on vendre au moment voulu?"}
+- {id: rates_inflation, label_fr: Taux et inflation, question_fr: "Le contexte économique réduit-il la valeur?"}
+- {id: currency, label_fr: Devise, question_fr: "Le taux de change peut-il modifier le résultat?"}
+- {id: concentration, label_fr: Concentration, question_fr: "Le résultat dépend-il trop d'une seule exposition?"}
+- {id: custody_technology, label_fr: Garde et technologie, question_fr: "L'actif peut-il être perdu ou bloqué pour une raison technique?"}
+- {id: fees, label_fr: Frais, question_fr: "Les frais réduisent-ils le rendement?"}
+asset_classes:
+  equity_ca:
+    label_fr: Action canadienne
+    what_you_own_fr: Une participation dans une seule société.
+    return_source_fr: Variation du cours et dividendes éventuels.
+    risks:
+    - {risk: market, level: high, text_fr: "Le cours d'une seule société peut baisser fortement, même si le marché monte."}
+    - {risk: concentration, level: high, text_fr: "Le résultat dépend d'une seule entreprise et de son secteur."}
+    - {risk: rates_inflation, level: medium, text_fr: "Les sociétés endettées ou à dividendes réagissent souvent aux taux."}
+  equity_us:
+    label_fr: Action américaine
+    what_you_own_fr: Une participation dans une seule société, cotée en dollars américains.
+    return_source_fr: Variation du cours et dividendes éventuels.
+    risks:
+    - {risk: market, level: high, text_fr: "Le cours d'une seule société peut baisser fortement, même si le marché monte."}
+    - {risk: concentration, level: high, text_fr: "Le résultat dépend d'une seule entreprise et de son secteur."}
+    - {risk: currency, level: medium, text_fr: "Pour un investisseur en CAD, le rendement dépend aussi du taux USD/CAD."}
+  equity_etf:
+    label_fr: FNB d'actions
+    what_you_own_fr: Des parts d'un panier d'actions qui suit un indice.
+    return_source_fr: Rendement des actions détenues, moins les frais.
+    risks:
+    - {risk: market, level: medium, text_fr: "Le panier suit le marché à la baisse comme à la hausse."}
+    - {risk: concentration, level: medium, text_fr: "Certains indices sont dominés par quelques secteurs ou titres (ex. technologie)."}
+    - {risk: fees, level: low, text_fr: "Les frais de gestion réduisent un peu le rendement chaque année."}
+    - {risk: liquidity, level: low, text_fr: "Négocié en bourse; un écart acheteur-vendeur existe."}
+  bond_etf:
+    label_fr: FNB d'obligations
+    what_you_own_fr: Des parts d'un panier de titres de dette (gouvernements, sociétés).
+    return_source_fr: Intérêts reçus et variation du prix des obligations.
+    risks:
+    - {risk: rates_inflation, level: high, text_fr: "Quand les taux montent, le prix des obligations baisse; plus l'échéance est longue, plus l'effet est fort."}
+    - {risk: credit, level: low, text_fr: "Un émetteur peut faire défaut; le risque varie selon le mélange gouvernement/sociétés."}
+    - {risk: market, level: low, text_fr: "Les variations sont en général plus faibles que celles des actions, mais pas nulles."}
+  gold_etf:
+    label_fr: FNB d'or
+    what_you_own_fr: Des parts adossées à de l'or physique.
+    return_source_fr: Variation du prix de l'or uniquement (aucun revenu).
+    risks:
+    - {risk: market, level: medium, text_fr: "Le prix de l'or varie selon la demande et le contexte économique."}
+    - {risk: currency, level: medium, text_fr: "L'or se négocie en USD; le taux de change influence le résultat en CAD."}
+    - {risk: rates_inflation, level: medium, text_fr: "L'or ne verse aucun intérêt; des taux élevés peuvent le rendre moins attrayant."}
+  crypto:
+    label_fr: Cryptoactif
+    what_you_own_fr: Un actif numérique; les droits varient selon le jeton.
+    return_source_fr: Variation de valeur seulement.
+    risks:
+    - {risk: market, level: high, text_fr: "Des baisses de plus de moitié ont déjà été observées sur de courtes périodes."}
+    - {risk: custody_technology, level: high, text_fr: "Perte de clés, piratage ou faillite d'une plateforme peuvent rendre l'actif inaccessible."}
+    - {risk: liquidity, level: medium, text_fr: "La négociation est continue, mais les prix peuvent varier fortement en peu de temps."}
+    - {risk: currency, level: medium, text_fr: "Coté en USD; le taux de change influence le résultat en CAD."}
+# Seuils de l'analyste de diversification (conventions du prototype, corrélations mensuelles sur 5 ans).
+diversification:
+  overlap_corr: 0.80       # corrélation >= ce seuil avec une position détenue: exposition en double
+  new_exposure_corr: 0.30  # corrélation au reste du portefeuille < ce seuil: nouvelle source de risque
+# Exclusions sectorielles du questionnaire -> secteurs de assets_universe.csv.
+sector_exclusions:
+  fossil_fuels:
+    label_fr: Combustibles fossiles
+    sectors: [Energy]
+  tobacco:
+    label_fr: Tabac
+    sectors: []

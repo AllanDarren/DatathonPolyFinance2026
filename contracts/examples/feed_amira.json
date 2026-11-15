@@ -117,44 +117,37 @@
     ]
    },
    "explanation": {
-    "summary": "La montée des dépenses de contre-espionnage dans l'IA soulève des questions stratégiques pour une position concentrée comme NVDA dans ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "NVDA représente 20,0 % du portefeuille analysé, une concentration en tension avec ton profil malgré une tolérance au risque élevée.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,75 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_8e308a24f9",
        "ev_8b3ad73cb7"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé qu'une volatilité annualisée comme celle de 51,9 % amplifie l'impact de chocs stratégiques imprévus sur la valeur.",
-      "label": "hypothesis",
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_44a14ae5be",
        "ev_8e308a24f9"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Si les coûts de protection des secrets commerciaux pesaient durablement sur les marges des acteurs IA, cela pourrait affecter les perspectives de croissance à long terme de ce secteur.",
-      "label": "scenario",
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_0475bdbdc5",
-       "ev_8b3ad73cb7"
+       "ev_44a14ae5be"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « NVDA représente 20,0 % du portefeuille analysé, une concentration en tension avec ton profil malgré une tolérance au risque élevée. » (L'évidence confirme que NVDA représente 20,0 % du portefeuille et que la pertinence est élevée pour le profil, mais aucune évidence ne mentionne une 'tension avec le profil' ni ne qualifie cette concentration comme problématique malgré une tolérance au risque élevée. De plus, la formulation 'malgré une tolérance au risque élevée' introduit un lien causal non présent dans les évidences. Enfin, la claim contient une formulation directive ('en tension avec ton profil') qui n'est pas étayée.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé qu'une volatilité annualisée comme celle de 51,9 % amplifie l'impact de chocs stratégiques imprévus sur la valeur. » (Bien que présentée comme une hypothèse, la claim introduit un lien causal spécifique entre une volatilité de 51,9 % et l'amplification de 'chocs stratégiques imprévus'. Les évidences citées ne mentionnent aucun lien entre la volatilité et des chocs stratégiques, ni aucune observation historique comparable. Ce lien causal n'est pas présent dans les évidences fournies.).",
-      "Affirmation non soutenue par ses preuves: « Si les coûts de protection des secrets commerciaux pesaient durablement sur les marges des acteurs IA, cela pourrait affecter les perspectives de croissance à long terme de ce secteur. » (La claim est présentée comme un scénario, ce qui est acceptable, mais les évidences citées ne font aucune mention des 'coûts de protection des secrets commerciaux' ni de leur impact sur les marges des acteurs IA. Les évidences portent uniquement sur une classification 'Stratégie et prévisions' et sur le poids du portefeuille. Le contenu du scénario n'est pas étayé par les évidences fournies.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -193,42 +186,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une actualité sur la dette croissante de Nscale avant son IPO, potentiellement en tension avec un portefeuille concentré sur la croissance tech.",
+    "summary": "",
     "claims": [
      {
-      "text": "Cette actualité est jugée très pertinente pour ton profil, et la position concernée représente 20,0 % du portefeuille analysé.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,75 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_4ac622af6d",
+       "ev_4ac622af6d"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
        "ev_8e308a24f9"
       ],
       "verified": "supported"
      },
      {
-      "text": "Une dette en hausse avant une IPO est en tension avec ton profil : dans des situations comparables, on a observé une volatilité déjà élevée, comme 51,9 % pour NVDA.",
-      "label": "hypothesis",
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_44a14ae5be",
-       "ev_4ac622af6d"
-      ],
-      "verified": "unsupported"
-     },
-     {
-      "text": "Si la dynamique de dette s'accélère post-IPO, une concentration de 20,0 % dans un actif à volatilité de 51,9 % pourrait amplifier les fluctuations sur ton horizon long.",
-      "label": "scenario",
-      "evidence_ids": [
-       "ev_8e308a24f9",
        "ev_44a14ae5be"
       ],
       "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Une dette en hausse avant une IPO est en tension avec ton profil : dans des situations comparables, on a observé une volatilité déjà élevée, comme 51,9 % pour NVDA. » (Bien que présentée comme hypothèse, la claim établit un lien causal entre une dette en hausse avant une IPO et la tension avec le profil, en s'appuyant sur la volatilité de NVDA (51,9 %). Or, aucune des preuves citées ne mentionne de dette, d'IPO, ni de situations comparables : ev_44a14ae5be ne donne que la volatilité de NVDA, et ev_4ac622af6d ne parle que de pertinence et de poids de base. Le lien causal avancé n'est pas étayé par les évidences.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -267,43 +255,37 @@
     ]
    },
    "explanation": {
-    "summary": "Meta explore un outil interne de marchés prédictifs, une initiative produit structurelle à surveiller pour un profil croissance long terme.",
+    "summary": "",
     "claims": [
      {
-      "text": "Cette actualité est classée « Produits » avec une pertinence élevée pour ton profil, selon 0,90 et product.",
+      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Produits : poids de base 0,70 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_068748bb57",
-       "ev_7090124dc7"
+       "ev_068748bb57"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé qu'une forte volatilité comme 51,9 % peut amplifier les mouvements liés à des annonces produit, en tension avec ton profil.",
-      "label": "hypothesis",
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_44a14ae5be",
        "ev_8e308a24f9"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      },
      {
-      "text": "Si Meta généralisait cet outil au-delà de ses employés, cela pourrait renforcer son positionnement structurel dans l'IA décisionnelle, un scénario cohérent avec un horizon de 0,90.",
-      "label": "scenario",
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_068748bb57",
-       "ev_7090124dc7"
+       "ev_44a14ae5be"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé qu'une forte volatilité comme 51,9 % peut amplifier les mouvements liés à des annonces produit, en tension avec ton profil. » (Les preuves fournissent bien la volatilité de 51,9 % et le poids de 20 % du portefeuille, mais elles n'établissent aucun lien causal entre forte volatilité et amplification des mouvements liés à des annonces produit, ni aucune mention d'une tension avec un profil. Ce lien causal est absent des preuves citées.).",
-      "Affirmation non soutenue par ses preuves: « Si Meta généralisait cet outil au-delà de ses employés, cela pourrait renforcer son positionnement structurel dans l'IA décisionnelle, un scénario cohérent avec un horizon de 0,90. » (Bien que la claim soit présentée comme un scénario, elle introduit des éléments (Meta, généralisation d'un outil, IA décisionnelle) qui sont totalement absents des preuves citées. De plus, l'expression « horizon de 0,90 » est incorrecte : 0,90 désigne une pertinence dans les preuves, non un horizon. Le scénario contredit donc partiellement les preuves.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -341,43 +323,37 @@
     ]
    },
    "explanation": {
-    "summary": "Strategy mise sur une expansion massive du crédit adossé au Bitcoin, un actif déjà très présent dans ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "Bitcoin représente 15,0 % de ton portefeuille, avec une volatilité annualisée de 50,8 %, ce qui est en tension avec ton profil même à tolérance élevée.",
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,75 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_8273ed5bcb",
-       "ev_674a9d529f"
-      ],
-      "verified": "unsupported"
-     },
-     {
-      "text": "Cette actualité est classée « Stratégie et prévisions » avec une pertinence 0,85 pour ton horizon long.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_d10845bae2",
-       "ev_13390f903d"
+       "ev_d10845bae2"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé qu'une expansion rapide du crédit adossé à un actif très volatil peut amplifier les gains comme les pertes sur un horizon long.",
-      "label": "hypothesis",
+      "text": "BTC-USD représente 15,0 % du portefeuille analysé.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f",
-       "ev_d10845bae2"
+       "ev_8273ed5bcb"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « Bitcoin représente 15,0 % de ton portefeuille, avec une volatilité annualisée de 50,8 %, ce qui est en tension avec ton profil même à tolérance élevée. » (Les deux faits chiffrés (15,0 % du portefeuille et volatilité de 50,8 %) sont bien attestés par les preuves. Cependant, l'affirmation que cette situation est « en tension avec ton profil même à tolérance élevée » constitue un jugement normatif/causal qui n'est pas présent dans les preuves citées.).",
-      "Affirmation non soutenue par ses preuves: « Dans des situations comparables, on a observé qu'une expansion rapide du crédit adossé à un actif très volatil peut amplifier les gains comme les pertes sur un horizon long. » (Bien que la claim soit présentée comme une hypothèse comparative, le lien causal entre expansion rapide du crédit adossé à un actif volatil et amplification des gains/pertes n'est pas mentionné dans les preuves citées, qui ne parlent que de volatilité et de pertinence de profil.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -415,44 +391,37 @@
     ]
    },
    "explanation": {
-    "summary": "Une actualité sur la stratégie Bitcoin de Trump Media Group, en tension avec une exposition crypto déjà significative dans ton portefeuille.",
+    "summary": "",
     "claims": [
      {
-      "text": "BTC-USD représente 15,0 % de ton portefeuille, avec une volatilité annualisée de 50,8 %, ce qui est en tension avec ton profil même à tolérance élevée.",
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,75 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_8273ed5bcb",
-       "ev_674a9d529f"
-      ],
-      "verified": "unsupported"
-     },
-     {
-      "text": "Dans des situations comparables, on a observé qu'une concentration structurelle sur un actif très volatile peut amplifier les drawdowns, même sur un horizon long comme le tien 0,85.",
-      "label": "hypothesis",
-      "evidence_ids": [
-       "ev_0765e9eaa9",
-       "ev_674a9d529f"
+       "ev_0765e9eaa9"
       ],
       "verified": "supported"
      },
      {
-      "text": "Si la stratégie Bitcoin de Trump Media Group se détériorait davantage, un scénario de contagion sur le sentiment crypto global pourrait peser sur une position déjà à 15,0 % du portefeuille.",
-      "label": "scenario",
+      "text": "BTC-USD représente 15,0 % du portefeuille analysé.",
+      "label": "fact",
       "evidence_ids": [
-       "ev_8273ed5bcb",
-       "ev_674a9d529f",
-       "ev_1dc129a0b0"
+       "ev_8273ed5bcb"
       ],
-      "verified": "unsupported"
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
-     "status": "flagged",
-     "flags": [
-      "Affirmation non soutenue par ses preuves: « BTC-USD représente 15,0 % de ton portefeuille, avec une volatilité annualisée de 50,8 %, ce qui est en tension avec ton profil même à tolérance élevée. » (Les preuves confirment bien que BTC-USD représente 15,0 % du portefeuille et que sa volatilité annualisée est de 50,8 %. Cependant, l'affirmation selon laquelle cela 'est en tension avec ton profil même à tolérance élevée' constitue un jugement normatif/conseil qui ne figure pas dans les preuves citées. Aucune preuve ne mentionne le profil de l'utilisateur ni une tension avec ce profil.).",
-      "Affirmation non soutenue par ses preuves: « Si la stratégie Bitcoin de Trump Media Group se détériorait davantage, un scénario de contagion sur le sentiment crypto global pourrait peser sur une position déjà à 15,0 % du portefeuille. » (La claim est présentée comme un scénario, ce qui est acceptable. Les données sur les 15,0 % et la volatilité sont bien étayées. Cependant, la mention de 'la stratégie Bitcoin de Trump Media Group' et d'un 'scénario de contagion sur le sentiment crypto global' ne trouve aucun appui dans les preuves citées : ev_1dc129a0b0 ne fournit qu'une date et une source (Yahoo Finance), sans aucun contenu sur Trump Media Group ni sur une contagion crypto. Ces éléments factuels centraux ne sont pas couverts par les preuves.)."
-     ]
+     "status": "passed",
+     "flags": []
     }
    },
    "historical_context": null
@@ -491,37 +460,34 @@
     ]
    },
    "explanation": {
-    "summary": "Les résultats d'Alphabet montrent une dynamique cloud forte, ce qui est en tension avec ton profil croissance sur longue durée via ton exposition NVDA.",
+    "summary": "",
     "claims": [
      {
-      "text": "Cette actualité est classée à pertinence élevée pour ton profil, et NVDA représente 20,0 % du portefeuille analysé, ce qui amplifie son impact potentiel.",
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_92be730876",
+       "ev_92be730876"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
        "ev_8e308a24f9"
       ],
       "verified": "supported"
      },
      {
-      "text": "Dans des situations comparables, on a observé un mouvement médian de NVDA autour de la publication de résultats de −0,7 %, avec une volatilité annualisée de 51,9 %.",
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_21667de34d",
        "ev_44a14ae5be"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Si la croissance cloud d'Alphabet accélère la demande en infrastructure IA, cela pourrait être favorable à l'écosystème dans lequel NVDA évolue — mais ce lien reste une interprétation non prouvée.",
-      "label": "hypothesis",
-      "evidence_ids": [
-       "ev_1ae8e8ab9b",
-       "ev_92be730876"
       ],
       "verified": "supported"
      }
     ],
-    "generated_by": "bedrock",
+    "generated_by": "template",
     "guardian": {
      "status": "passed",
      "flags": []
@@ -2665,23 +2631,6 @@
    "source": "portefeuille fourni",
    "computed_by": "core.metrics.top3_concentration"
   },
-  "ev_0475bdbdc5": {
-   "id": "ev_0475bdbdc5",
-   "kind": "classification",
-   "statement": "Classée « Stratégie et prévisions » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,45).",
-   "value": "strategy_guidance",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_beb2805ac8b9",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_8b3ad73cb7": {
    "id": "ev_8b3ad73cb7",
    "kind": "rule_hit",
@@ -2736,23 +2685,6 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_7090124dc7": {
-   "id": "ev_7090124dc7",
-   "kind": "classification",
-   "statement": "Classée « Produits » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,82).",
-   "value": "product",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_b4c90ea70e73",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
   "ev_068748bb57": {
    "id": "ev_068748bb57",
    "kind": "rule_hit",
@@ -2770,23 +2702,6 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_13390f903d": {
-   "id": "ev_13390f903d",
-   "kind": "classification",
-   "statement": "Classée « Stratégie et prévisions » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,72).",
-   "value": "strategy_guidance",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_168e50f1b549",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_d10845bae2": {
    "id": "ev_d10845bae2",
@@ -2824,21 +2739,6 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_1dc129a0b0": {
-   "id": "ev_1dc129a0b0",
-   "kind": "news_source",
-   "statement": "Nouvelle publiée le 2026-11-14 par Yahoo Finance.",
-   "value": "n_056517dbb2e2",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "is_synthetic": false,
-    "news_id": "n_056517dbb2e2",
-    "url": "https://finance.yahoo.com/markets/crypto/articles/trump-media-group-stares-down-130009593.html?.tsrc=rss"
-   },
-   "source": "https://finance.yahoo.com/markets/crypto/articles/trump-media-group-stares-down-130009593.html?.tsrc=rss",
-   "computed_by": "ingest.news"
-  },
   "ev_0765e9eaa9": {
    "id": "ev_0765e9eaa9",
    "kind": "rule_hit",
@@ -2856,23 +2756,6 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_1ae8e8ab9b": {
-   "id": "ev_1ae8e8ab9b",
-   "kind": "classification",
-   "statement": "Classée « Résultats financiers » (structural) par us.anthropic.claude-sonnet-4-6 (confiance 0,62).",
-   "value": "earnings_results",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_0484f7d53539",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
   },
   "ev_92be730876": {
    "id": "ev_92be730876",

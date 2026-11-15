@@ -196,6 +196,88 @@ class LimitsTexts(RulesModel):
     disclaimers: list[str]
 
 
+# --- instrument_risks.yaml / source_tiers.yaml / language_policy.yaml -------------
+
+RiskLevelText = Literal["low", "medium", "high"]
+
+
+class RiskType(RulesModel):
+    id: str
+    label_fr: str
+    question_fr: str
+
+
+class InstrumentRisk(RulesModel):
+    risk: str
+    level: RiskLevelText
+    text_fr: str
+
+
+class InstrumentClass(RulesModel):
+    label_fr: str
+    what_you_own_fr: str
+    return_source_fr: str
+    risks: list[InstrumentRisk] = Field(min_length=1)
+
+
+class DiversificationThresholds(RulesModel):
+    overlap_corr: float = Field(default=0.8, ge=-1, le=1)
+    new_exposure_corr: float = Field(default=0.3, ge=-1, le=1)
+
+
+class SectorExclusion(RulesModel):
+    label_fr: str
+    sectors: list[str]
+
+
+class InstrumentRisks(RulesModel):
+    version: int
+    source: str | None = None
+    risk_types: list[RiskType] = Field(min_length=1)
+    asset_classes: dict[str, InstrumentClass]
+    diversification: DiversificationThresholds = Field(default_factory=DiversificationThresholds)
+    sector_exclusions: dict[str, SectorExclusion] = Field(default_factory=dict)
+
+    @model_validator(mode="after")
+    def _known_risks(self) -> InstrumentRisks:
+        known = {r.id for r in self.risk_types}
+        for cls_id, cls in self.asset_classes.items():
+            for r in cls.risks:
+                if r.risk not in known:
+                    raise ValueError(f"asset_classes.{cls_id}: risque inconnu '{r.risk}' (absent de risk_types)")
+        return self
+
+
+class SourceTier(RulesModel):
+    id: str
+    label_fr: str
+    text_fr: str
+    add: float = Field(ge=-1, le=1)
+    patterns: list[str] = Field(min_length=1)
+
+
+class UnknownTier(RulesModel):
+    label_fr: str
+    text_fr: str
+    add: float = Field(default=0.0, ge=-1, le=1)
+
+
+class SourceTiers(RulesModel):
+    version: int
+    tiers: list[SourceTier] = Field(min_length=1)
+    unknown: UnknownTier
+
+
+class LanguagePolicy(RulesModel):
+    version: int
+    allowed: list[str] = Field(default_factory=list)
+    forbidden: list[str] = Field(default_factory=list)
+    past_performance_terms: list[str] = Field(default_factory=list)
+    forecast_terms: list[str] = Field(default_factory=list)
+    risk_only_metrics: list[str] = Field(default_factory=list)
+    review_notes: list[str] = Field(default_factory=list)
+
+
 RULE_FILES: dict[str, type[BaseModel]] = {
     "questionnaire.yaml": Questionnaire,
     "profile_rules.yaml": ProfileRules,
@@ -204,5 +286,8 @@ RULE_FILES: dict[str, type[BaseModel]] = {
     "coherence_rules.yaml": CoherenceRules,
     "glossary.yaml": Glossary,
     "limits_texts.yaml": LimitsTexts,
+    "instrument_risks.yaml": InstrumentRisks,
+    "source_tiers.yaml": SourceTiers,
+    "language_policy.yaml": LanguagePolicy,
 }
 PERSONA_MODEL = Profile
