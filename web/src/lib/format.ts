@@ -32,6 +32,13 @@ export function formatDate(iso: string): string {
   return dateFmt.format(d);
 }
 
+const numFmt = new Intl.NumberFormat('fr-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+/** Nombre sans unité (ex. corrélation) -> « 0,91 ». */
+export function formatNum(value: number | null | undefined): string {
+  if (value === null || value === undefined || Number.isNaN(value)) return '—';
+  return numFmt.format(value).replace('-', '−');
+}
+
 /** Valeur d'une preuve, selon son unité. */
 export function formatEvidenceValue(value: number | string | null, unit: string | null): string {
   if (value === null) return '—';

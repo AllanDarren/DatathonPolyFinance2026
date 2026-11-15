@@ -65,7 +65,7 @@ export function Compare() {
   return (
     <div className="compare">
       <header className="dash-head">
-        <h1>{t.compare.title}</h1>
+        <h2>{t.compare.title}</h2>
         <p className="lead">{t.compare.lead}</p>
       </header>
       <div className="panel compare-controls">
@@ -130,6 +130,12 @@ function CompareColumn({ side }: { side: Side }) {
           {p.preferences.avoid_controversies && <li>{t.profile.avoidControversies}</li>}
         </ul>
         {feed.coherence && <VerdictCard result={feed.coherence} />}
+        {feed.coherence?.what_would_change?.[0] && (
+          <p className="small callout">{feed.coherence.what_would_change[0].text_fr}</p>
+        )}
+        {feed.coherence?.diversification && (
+          <p className="small"><strong>{t.agents.diversificationTitle} :</strong> {feed.coherence.diversification.text_fr}</p>
+        )}
         <h3 className="h-small">
           {shown.length} {t.compare.shown} · {feed.hidden.count} {t.compare.hidden}
         </h3>

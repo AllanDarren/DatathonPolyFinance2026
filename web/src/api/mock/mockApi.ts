@@ -3,8 +3,8 @@
 // Les calculs ici NE sont PAS ceux du produit : en mode réel, tout vient de l'API.
 import questionnaireJson from '../../generated/questionnaire.json';
 import type {
-  CoherenceResult, Consideration, Event, Evidence, FeedItem, FeedResponse, Portfolio, Position,
-  Profile, Questionnaire, RelevanceLevel, RiskTolerance, RuleHit, Claim,
+  CoherenceResult, ConfirmedPreferences, Consideration, Event, Evidence, FeedItem, FeedResponse, Portfolio, Position,
+  PreferenceExtraction, PreferenceSuggestion, Profile, Questionnaire, RelevanceLevel, RiskTolerance, RuleHit, Claim,
 } from '../../types/contracts';
 import { UNIVERSE_BY_TICKER } from '../../lib/universe';
 import { formatPct } from '../../lib/format';
@@ -273,6 +273,21 @@ function coherenceMock(profile: Profile, portfolio: Portfolio, c: Consideration,
       summary: `${t.consider.verdicts[verdict]} : ${hits.length} règle(s) en cause.`,
       claims, generated_by: 'template', guardian: { status: 'passed', flags: [] },
     },
+    // v0.3.0 (imitation) : trace des agents et contrôles de gouvernance
+    agent_trace: ['check_coherence', 'get_position_metrics', 'get_diversification_impact', 'get_instrument_risks',
+      'what_would_change', 'governance_review', 'explain_and_guard'].map((tool, i) => ({
+      step: i + 1, tool, params: i < 4 ? { ticker: c.ticker } : {}, evidence_ids: i === 0 ? [evW] : i === 1 ? [evVol, evMdd] : [],
+      status: 'ok' as const, forced: false, planner: i < 4 ? 'mock' : 'code', duration_ms: 0,
+    })),
+    governance: {
+      status: verdict === 'incoherent' ? 'fail' : verdict === 'tension' ? 'warning' : 'ok',
+      controls: [
+        { id: 'G_SIMULATION', label_fr: 'Simulation seulement', status: 'info', detail_fr: 'Aucune transaction; pas un conseil.', evidence_ids: [] },
+        { id: 'G_PROFILE_LIMITS', label_fr: 'Limites de ton profil', status: verdict === 'incoherent' ? 'fail' : verdict === 'tension' ? 'warning' : 'ok',
+          detail_fr: hits.length ? `Règle(s) : ${hits.map((h) => h.rule_id).join(', ')}.` : 'Aucune règle déclenchée.', evidence_ids: [] },
+      ],
+      missing_info: profile.monthly_expenses_cad ? [] : ['Dépenses mensuelles inconnues.'],
+    },
   };
 }
 
@@ -339,11 +354,52 @@ export function buildFeedMock(profile: Profile, portfolio: Portfolio, considerat
   };
 }
 
+// ---------- Note libre (imitation grossière de agents/preferences.py) ----------
+
+const NOTE_RULES: { field: PreferenceSuggestion['field']; value: string | boolean; label_fr: string; re: RegExp }[] = [
+  { field: 'excluded_sectors', value: 'fossil_fuels', label_fr: 'Exclure le secteur : Combustibles fossiles', re: /p[ée]trol\w*|fossile\w*|charbon|pipeline\w*/i },
+  { field: 'excluded_sectors', value: 'tobacco', label_fr: 'Exclure le secteur : Tabac', re: /tabac\w*/i },
+  { field: 'interests', value: 'ai', label_fr: 'Intérêt : intelligence artificielle', re: /\bIA\b|intelligence artificielle/i },
+  { field: 'interests', value: 'crypto', label_fr: 'Intérêt : cryptoactifs', re: /crypto\w*|bitcoin/i },
+  { field: 'interests', value: 'income', label_fr: 'Intérêt : revenus et dividendes', re: /dividende\w*/i },
+  { field: 'avoid_controversies', value: true, label_fr: 'Faire ressortir les controverses (préférence ESG)', re: /controvers\w*|scandale\w*|[ée]thique\w*/i },
+];
+
+function extractPreferencesMock(text: string): PreferenceExtraction {
+  const note = text.replace(/[<>]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300);
+  const suggestions: PreferenceSuggestion[] = [];
+  for (const r of NOTE_RULES) {
+    const m = note.match(r.re);
+    if (m) suggestions.push({ field: r.field, value: r.value, label_fr: r.label_fr, quote: m[0] });
+  }
+  const change = /risque|horizon|retraite|perte/i.test(note);
+  return {
+    note,
+    suggestions,
+    rejected: [],
+    generated_by: 'keywords',
+    mentions_profile_change: change,
+    notice_fr: 'Ces suggestions viennent de ta note. Rien n’est appliqué sans ta confirmation.'
+      + (change ? ' Ta note semble parler de risque ou d’horizon : refais les questions concernées.' : ''),
+  };
+}
+
+function applyConfirmedMock(profile: Profile, c?: ConfirmedPreferences | null): Profile {
+  if (!c) return profile;
+  const p = structuredClone(profile);
+  p.preferences.excluded_sectors = [...new Set([...p.preferences.excluded_sectors, ...(c.excluded_sectors ?? [])])];
+  p.preferences.interests = [...new Set([...p.preferences.interests, ...(c.interests ?? [])])];
+  if (c.avoid_controversies) p.preferences.avoid_controversies = true;
+  p.confirmed_from_note = [...(c.excluded_sectors ?? []), ...(c.interests ?? []), ...(c.avoid_controversies ? ['controverses'] : [])];
+  return p;
+}
+
 export const mockApi: Api = {
   health: () => delay({ status: 'ok', version: 'mock', llm_provider: 'mock' }),
   getQuestionnaire: () => delay(questionnaireJson as Questionnaire),
   getPersonas: () => delay(MOCK_PERSONAS),
-  scoreProfile: async (answers) => delay(scoreProfileMock(answers)),
+  scoreProfile: async (answers, confirmed) => delay(applyConfirmedMock(scoreProfileMock(answers), confirmed)),
+  extractPreferences: async (text) => delay(extractPreferencesMock(text)),
   parsePortfolio: async (csv) => delay(parsePortfolioMock(csv)),
   buildFeed: async (profile, portfolio, consideration) => delay(buildFeedMock(profile, portfolio, consideration), 500),
   getEvents: async (tickers) => delay(eventsFor(tickers)),

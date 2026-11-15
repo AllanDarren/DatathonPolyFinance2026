@@ -24,6 +24,7 @@ export type Profile = {
   monthly_expenses_cad: number | null;
   base_currency: 'CAD';
   inconsistencies: string[];
+  confirmed_from_note?: string[]; // v0.3.0 : préférences tirées de la note libre, confirmées
 };
 
 export type Persona = { id: string; label: string; profile: Profile; sample_portfolio_csv: string };
@@ -114,8 +115,70 @@ export type HistoricalContext = {
   evidence_id: string;
 };
 
+export type Verdict = 'coherent' | 'tension' | 'incoherent';
+
+// v0.3.0 : couche multi-agents (tous les champs sont optionnels)
+export type ToolCall = {
+  step: number;
+  tool: string;
+  params: Record<string, unknown>;
+  evidence_ids: string[];
+  status: 'ok' | 'error';
+  forced: boolean;
+  planner: string; // id du modèle, 'mock' hors ligne, 'code' pour une étape exécutée par le code
+  duration_ms: number;
+  error?: string | null;
+};
+
+export type DiversificationImpact = {
+  ticker: string;
+  verdict: 'new_exposure' | 'partial' | 'overlap';
+  text_fr: string;
+  correlations: { ticker: string; weight: number; correlation: number; evidence_id: string }[];
+  corr_to_portfolio: number | null;
+  asset_class_before: Record<string, number>;
+  asset_class_after: Record<string, number>;
+  currency_before: Record<string, number>;
+  currency_after: Record<string, number>;
+  n_asset_classes_before: number;
+  n_asset_classes_after: number;
+  evidence_ids: string[];
+};
+
+export type InstrumentProfile = {
+  ticker: string;
+  name: string;
+  asset_class: AssetClass;
+  label_fr: string;
+  what_you_own_fr: string;
+  return_source_fr: string;
+  price_currency: 'CAD' | 'USD';
+  risks: { risk: string; label_fr: string; question_fr: string; level: 'low' | 'medium' | 'high'; text_fr: string }[];
+  source: string;
+};
+
+export type GovernanceControl = {
+  id: string;
+  label_fr: string;
+  status: 'ok' | 'warning' | 'fail' | 'info';
+  detail_fr: string;
+  evidence_ids: string[];
+};
+
+export type Governance = { status: 'ok' | 'warning' | 'fail'; controls: GovernanceControl[]; missing_info: string[] };
+
+export type WhatWouldChange = {
+  rule_id: string | null;
+  kind: 'weight' | 'profile';
+  text_fr: string;
+  max_weight: number | null;
+  evidence_id: string;
+};
+
+export type WeightGridPoint = { weight: number; verdict: Verdict; rule_ids: string[] };
+
 export type CoherenceResult = {
-  verdict: 'coherent' | 'tension' | 'incoherent';
+  verdict: Verdict;
   rule_hits: RuleHit[];
   metrics: {
     annualized_vol: number;
@@ -124,6 +187,12 @@ export type CoherenceResult = {
     position_weight_after: number;
   };
   explanation: Explanation;
+  agent_trace?: ToolCall[] | null;
+  diversification?: DiversificationImpact | null;
+  instrument_risks?: InstrumentProfile | null;
+  governance?: Governance | null;
+  what_would_change?: WhatWouldChange[] | null;
+  weight_grid?: WeightGridPoint[] | null;
 };
 
 export type RelevanceLevel = 'high' | 'medium' | 'low';
@@ -147,6 +216,11 @@ export type FeedItem = {
   };
   explanation: Explanation;
   historical_context: HistoricalContext | null;
+  // v0.3.0 : ciblage des nouvelles (optionnel)
+  source_tier?: { id: 'primary' | 'established' | 'aggregator' | 'unknown'; label_fr: string; text_fr: string } | null;
+  cluster?: { size: number; sources: string[]; news_ids: string[] } | null;
+  mention?: 'title' | 'snippet' | 'none' | 'not_applicable' | null;
+  linked_ticker?: string | null;
 };
 
 export type FeedResponse = {
@@ -169,6 +243,23 @@ export type FeedResponse = {
   limits: string[];
 };
 
+// v0.3.0 : note libre -> préférences à confirmer
+export type ConfirmedPreferences = { excluded_sectors?: string[]; interests?: string[]; avoid_controversies?: boolean | null };
+export type PreferenceSuggestion = {
+  field: 'excluded_sectors' | 'interests' | 'avoid_controversies';
+  value: string | boolean;
+  label_fr: string;
+  quote: string;
+};
+export type PreferenceExtraction = {
+  note: string;
+  suggestions: PreferenceSuggestion[];
+  rejected: string[];
+  generated_by: 'bedrock' | 'keywords';
+  mentions_profile_change: boolean;
+  notice_fr: string;
+};
+
 export type ApiError = { error: { code: string; message: string; details?: unknown } };
 
 export type Health = { status: string; version: string; llm_provider: string };
@@ -180,7 +271,7 @@ export type QuestionOption = {
   points?: Record<string, number>;
   sets?: Record<string, unknown>;
 };
-export type Question = { id: string; text: string; help?: string; options: QuestionOption[] };
+export type Question = { id: string; text: string; help?: string; optional?: boolean; options: QuestionOption[] };
 export type Questionnaire = { version: number; questions: Question[] };
 
 // rules/glossary.yaml

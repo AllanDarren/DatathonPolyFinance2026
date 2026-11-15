@@ -31,6 +31,13 @@ export function ProfileResult() {
         <div><dt>{t.profile.excluded}</dt><dd>{p.preferences.excluded_sectors.join(', ') || t.profile.none}</dd></div>
         <div><dt>{t.profile.interests}</dt><dd>{p.preferences.interests.join(', ') || t.profile.none}</dd></div>
       </dl>
+      {p.confirmed_from_note && p.confirmed_from_note.length > 0 && (
+        <div className="callout" role="note">
+          <strong>{t.profile.fromNoteTitle}</strong>
+          <ul>{p.confirmed_from_note.map((x, i) => <li key={i}>{x}</li>)}</ul>
+          <p className="small muted">{t.profile.fromNoteLead}</p>
+        </div>
+      )}
       {p.inconsistencies.length > 0 && (
         <div className="callout callout-warn" role="note">
           <strong><span aria-hidden="true">⚠ </span>{t.profile.inconsistenciesTitle}</strong>

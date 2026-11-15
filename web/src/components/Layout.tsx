@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { IS_MOCK } from '../api/config';
-import { useApp } from '../state/store';
+import { DASHBOARD_TABS, useApp } from '../state/store';
 import { t } from '../strings';
 import { LimitsDrawer } from './LimitsDrawer';
 
@@ -21,11 +21,11 @@ export function Layout({ children }: { children: ReactNode }) {
         </button>
         <nav className="topnav" aria-label="Navigation principale">
           {profile && <span className="who">{profile.label}</span>}
-          {ready && step !== 'dashboard' && (
-            <button type="button" className="btn btn-ghost" onClick={() => go('dashboard')}>{t.nav.dashboard}</button>
+          {ready && !DASHBOARD_TABS.includes(step) && (
+            <button type="button" className="btn btn-ghost" onClick={() => go('feed')}>{t.nav.dashboard}</button>
           )}
-          {ready && step !== 'compare' && (
-            <button type="button" className="btn btn-ghost" onClick={() => go('compare')}>{t.nav.compare}</button>
+          {profile && step !== 'profile' && (
+            <button type="button" className="btn btn-ghost" onClick={() => go('profile')}>{t.nav.profile}</button>
           )}
           <button type="button" className="btn btn-ghost" onClick={() => setLimitsOpen(true)}>{t.nav.limits}</button>
           {step !== 'welcome' && (
