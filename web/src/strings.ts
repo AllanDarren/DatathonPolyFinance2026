@@ -115,6 +115,19 @@ const fr = {
     funnelHigh: 'très pertinentes',
   },
 
+  quality: {
+    title: 'Qualité des données',
+    status: { ok: 'Aucune anomalie détectée', warning: 'Utilisables, avec avertissements', blocking: 'Insuffisantes' },
+    starter: 'Jeu de départ du datathon (vérifié)',
+    onDemand: 'Téléchargé à la demande',
+    coverage: (n: number, a: string, b: string) => `${n} cotations, du ${a} au ${b}`,
+    calendar: 'Calendrier de référence',
+    notes: 'Notes',
+    positionsTitle: 'Qualité des données de tes positions',
+    positionsLead: 'Chaque série de prix passe par les mêmes contrôles avant tout calcul : trous, prix figés, mouvements aberrants, cohérence, change, fractionnements.',
+    asset: 'Titre',
+  },
+
   tabs: {
     label: 'Sections du tableau de bord',
     feed: 'Mes nouvelles',
@@ -246,6 +259,13 @@ const fr = {
     weightAfter: 'Poids après ajout',
     checking: 'Vérification…',
     examples: 'Exemples :',
+    searchLabel: 'Titre (n’importe quelle action, FNB ou crypto cotée en CAD ou en USD)',
+    searchPlaceholder: 'Nom ou symbole : Costco, BCE.TO, NVDA…',
+    verified: 'données vérifiées',
+    onDemand: 'téléchargé à la demande',
+    notSupported: 'non pris en charge',
+    searching: 'Recherche…',
+    emptyTicker: 'Indique un titre.',
     agentsWorking: 'Les agents rassemblent les preuves…',
   },
 
@@ -306,6 +326,9 @@ const fr = {
       INVALID_CSV: 'Le fichier CSV est invalide : il faut deux colonnes, ticker et montant.',
       UNKNOWN_TICKER: 'Un titre est inconnu.',
       LLM_UNAVAILABLE: 'L’IA est indisponible : les règles et les preuves restent affichées.',
+      UNSUPPORTED_ASSET: 'Ce type d’actif n’est pas pris en charge.',
+      INSUFFICIENT_DATA: 'Données insuffisantes pour un verdict fiable.',
+      MARKET_DATA_UNAVAILABLE: 'Données de marché indisponibles pour l’instant. Réessaie dans un moment.',
     } as Record<string, string>,
   },
 

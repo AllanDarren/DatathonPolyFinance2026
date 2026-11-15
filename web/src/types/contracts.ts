@@ -177,6 +177,40 @@ export type WhatWouldChange = {
 
 export type WeightGridPoint = { weight: number; verdict: Verdict; rule_ids: string[] };
 
+// v0.4.0 : contrôle de qualité des données et actifs téléchargés à la demande
+export type QualityReport = {
+  ticker: string;
+  status: 'ok' | 'warning' | 'blocking';
+  origin: 'starter_dataset' | 'on_demand';
+  source: string;
+  retrieved_at: string | null;
+  first_date: string | null;
+  last_date: string | null;
+  n_obs: number;
+  years: number;
+  missing_days: number;
+  missing_share: number;
+  stale_runs: Record<string, unknown>[];
+  outliers: Record<string, unknown>[];
+  ohlc_issues: number;
+  zero_volume_days: number;
+  fx_filled_days: number;
+  odd_splits: Record<string, unknown>[];
+  warnings_fr: string[];
+  notes_fr: string[];
+  reference_calendar: string | null;
+  evidence_id: string;
+};
+
+export type AssetSearchResult = {
+  ticker: string;
+  name: string;
+  exchange: string;
+  quote_type: string;
+  supported: boolean;
+  in_starter_dataset: boolean;
+};
+
 export type CoherenceResult = {
   verdict: Verdict;
   rule_hits: RuleHit[];
@@ -193,6 +227,8 @@ export type CoherenceResult = {
   governance?: Governance | null;
   what_would_change?: WhatWouldChange[] | null;
   weight_grid?: WeightGridPoint[] | null;
+  data_quality?: QualityReport | null;
+  asset_origin?: 'starter_dataset' | 'on_demand' | null;
 };
 
 export type RelevanceLevel = 'high' | 'medium' | 'low';
@@ -241,6 +277,7 @@ export type FeedResponse = {
   evidence: Record<string, Evidence>;
   disclaimers: string[];
   limits: string[];
+  data_quality?: QualityReport[] | null;
 };
 
 // v0.3.0 : note libre -> préférences à confirmer

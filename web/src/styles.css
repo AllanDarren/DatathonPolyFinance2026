@@ -384,3 +384,18 @@ select, input:not([type=radio]):not([type=checkbox]) {
 .note-step textarea { width: 100%; font: inherit; padding: .6rem; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); color: var(--text); resize: vertical; }
 .note-result { margin-top: .75rem; }
 .cta-panel { background: var(--brand-soft); }
+
+/* ---- v0.4.0 : recherche de titres et qualité des données ---- */
+.search-field { flex: 2 1 260px; }
+.search-results { list-style: none; padding: 0; margin: .5rem 0 0; border: 1px solid var(--line); border-radius: 8px; max-height: 260px; overflow-y: auto; }
+.search-results li + li { border-top: 1px solid var(--line); }
+.search-hit { width: 100%; text-align: left; background: var(--surface); color: var(--text); border: 0; padding: .45rem .7rem; cursor: pointer; display: flex; gap: .45rem; align-items: center; flex-wrap: wrap; font: inherit; }
+.search-hit:hover:not(:disabled), .search-hit[aria-pressed="true"] { background: var(--brand-soft); }
+.search-hit:disabled { opacity: .6; cursor: not-allowed; }
+.q-ok { background: var(--ok-bg); color: var(--ok-ink); }
+.q-warning { background: var(--warn-bg); color: var(--warn-ink); }
+.q-blocking { background: var(--bad-bg); color: var(--bad-ink); }
+.q-box-ok { background: var(--ok-bg); color: var(--ok-ink); }
+.q-box-warning { background: var(--warn-bg); color: var(--warn-ink); }
+.q-box-blocking { background: var(--bad-bg); color: var(--bad-ink); }
+.q-dot { display: inline-grid; place-items: center; width: 1.3rem; height: 1.3rem; border-radius: 50%; font-size: .75rem; font-weight: 700; }

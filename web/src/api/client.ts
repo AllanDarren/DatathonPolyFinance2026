@@ -1,6 +1,6 @@
 // Client typé de l'API (endpoints de la section 8). En mode simulé, sert src/api/mock.
 import type {
-  ConfirmedPreferences, Consideration, Event, FeedResponse, Health, Persona, Portfolio, PreferenceExtraction, Profile,
+  AssetSearchResult, ConfirmedPreferences, Consideration, Event, FeedResponse, Health, Persona, Portfolio, PreferenceExtraction, Profile,
   Questionnaire,
 } from '../types/contracts';
 import { API_URL, IS_MOCK } from './config';
@@ -13,6 +13,7 @@ export interface Api {
   getPersonas(): Promise<Persona[]>;
   scoreProfile(answers: Record<string, string>, confirmed?: ConfirmedPreferences | null): Promise<Profile>;
   extractPreferences(text: string): Promise<PreferenceExtraction>;
+  searchAssets(q: string): Promise<AssetSearchResult[]>;
   parsePortfolio(csv: string): Promise<Portfolio>;
   buildFeed(profile: Profile, portfolio: Portfolio, consideration?: Consideration | null): Promise<FeedResponse>;
   getEvents(tickers?: string[]): Promise<Event[]>;
@@ -46,6 +47,7 @@ export const httpApi: Api = {
   scoreProfile: (answers, confirmed) =>
     post('/profile', confirmed ? { answers, confirmed_preferences: confirmed } : { answers }),
   extractPreferences: (text) => post('/preferences/extract', { text }),
+  searchAssets: (q) => request(`/assets/search?q=${encodeURIComponent(q)}`),
   parsePortfolio: (csv) => post('/portfolio/parse', { csv }),
   buildFeed: (profile, portfolio, consideration) =>
     post('/feed', consideration ? { profile, portfolio, consideration } : { profile, portfolio }),

@@ -400,6 +400,13 @@ export const mockApi: Api = {
   getPersonas: () => delay(MOCK_PERSONAS),
   scoreProfile: async (answers, confirmed) => delay(applyConfirmedMock(scoreProfileMock(answers), confirmed)),
   extractPreferences: async (text) => delay(extractPreferencesMock(text)),
+  searchAssets: async (q) => delay(
+    Object.values(UNIVERSE_BY_TICKER)
+      .filter((a) => a.ticker.includes(q.toUpperCase()) || a.name.toLowerCase().includes(q.toLowerCase()))
+      .slice(0, 8)
+      .map((a) => ({ ticker: a.ticker, name: a.name, exchange: '', quote_type: 'STARTER', supported: true, in_starter_dataset: true })),
+    100,
+  ),
   parsePortfolio: async (csv) => delay(parsePortfolioMock(csv)),
   buildFeed: async (profile, portfolio, consideration) => delay(buildFeedMock(profile, portfolio, consideration), 500),
   getEvents: async (tickers) => delay(eventsFor(tickers)),

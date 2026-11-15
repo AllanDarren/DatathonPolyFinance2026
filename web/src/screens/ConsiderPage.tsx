@@ -2,7 +2,7 @@
 // mon objectif, et est-ce que ça diversifie vraiment mon portefeuille? »
 // Le verdict vient des règles; les agents rassemblent les preuves; la gouvernance rend les
 // contrôles visibles; le gardien vérifie l'explication. Jamais de conseil d'achat.
-import { useId, useState, type FormEvent } from 'react';
+import { useEffect, useId, useState, type FormEvent } from 'react';
 import { api } from '../api/client';
 import {
   AgentTimeline, DiversificationView, GovernanceChecks, InstrumentRisksView, WhatWouldChangeView,
@@ -10,10 +10,10 @@ import {
 import { VerdictCard } from '../components/ConsiderPanel';
 import { EvidenceProvider } from '../components/Evidence';
 import { ErrorBox, Skeleton } from '../components/Feedback';
-import { UNIVERSE, UNIVERSE_BY_TICKER } from '../lib/universe';
+import { DataQualityView, QualityBadge } from '../components/DataQuality';
 import { useApp } from '../state/store';
 import { t } from '../strings';
-import type { Consideration } from '../types/contracts';
+import type { AssetSearchResult, Consideration } from '../types/contracts';
 
 const EXAMPLES: Consideration[] = [
   { ticker: 'NVDA', intended_weight: 0.2 },
@@ -30,6 +30,27 @@ export function ConsiderPage() {
   const [formError, setFormError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<unknown>(null);
+  const [results, setResults] = useState<AssetSearchResult[]>([]);
+  const [searching, setSearching] = useState(false);
+
+  // Recherche de n'importe quel titre (délai de frappe) : les 31 actifs vérifiés d'abord.
+  useEffect(() => {
+    const q = ticker.trim();
+    if (q.length < 2 || results.some((r) => r.ticker === q.toUpperCase())) return;
+    let alive = true;
+    const id = setTimeout(() => {
+      setSearching(true);
+      api.searchAssets(q).then(
+        (r) => alive && (setResults(r), setSearching(false)),
+        () => alive && setSearching(false),
+      );
+    }, 300);
+    return () => {
+      alive = false;
+      clearTimeout(id);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ticker]);
 
   async function run(c: Consideration) {
     if (!profile || !portfolio) return;
@@ -50,7 +71,9 @@ export function ConsiderPage() {
     e.preventDefault();
     const tk = ticker.trim().toUpperCase();
     const w = Number(weight.replace(',', '.'));
-    if (!UNIVERSE_BY_TICKER[tk]) return setFormError(t.consider.unknownTicker);
+    if (!tk) return setFormError(t.consider.emptyTicker);
+    const known = results.find((r) => r.ticker === tk);
+    if (known && !known.supported) return setFormError(`${tk} : ${t.consider.notSupported}.`);
     if (!Number.isFinite(w) || w < 1 || w > 99) return setFormError(t.consider.invalidWeight);
     setFormError(null);
     void run({ ticker: tk, intended_weight: w / 100 });
@@ -64,12 +87,15 @@ export function ConsiderPage() {
         <h2 id="consider-title">{t.consider.title}</h2>
         <p className="muted small">{t.consider.lead}</p>
         <form className="consider-form" onSubmit={submit} noValidate>
-          <label>
-            <span>{t.consider.ticker}</span>
-            <input list={listId} value={ticker} onChange={(e) => setTicker(e.target.value)} placeholder="NVDA" autoComplete="off" />
-            <datalist id={listId}>
-              {UNIVERSE.map((a) => <option key={a.ticker} value={a.ticker}>{a.name}</option>)}
-            </datalist>
+          <label className="search-field">
+            <span>{t.consider.searchLabel}</span>
+            <input
+              value={ticker}
+              onChange={(e) => setTicker(e.target.value)}
+              placeholder={t.consider.searchPlaceholder}
+              autoComplete="off"
+              aria-controls={listId}
+            />
           </label>
           <label>
             <span>{t.consider.weight}</span>
@@ -87,6 +113,28 @@ export function ConsiderPage() {
             </button>
           ))}
         </p>
+        {(results.length > 0 || searching) && ticker.trim().length >= 2 && (
+          <ul id={listId} className="search-results" aria-label={t.consider.searchLabel}>
+            {searching && <li className="muted small">{t.consider.searching}</li>}
+            {results.map((r) => (
+              <li key={r.ticker}>
+                <button
+                  type="button"
+                  className="search-hit"
+                  disabled={!r.supported}
+                  onClick={() => setTicker(r.ticker)}
+                  aria-pressed={ticker.trim().toUpperCase() === r.ticker}
+                >
+                  <span className="ticker">{r.ticker}</span> {r.name}
+                  <span className="muted small"> {r.exchange}</span>
+                  <span className={`badge ${r.in_starter_dataset ? 'tier-primary' : r.supported ? 'badge-cluster' : 'tier-aggregator'}`}>
+                    {r.in_starter_dataset ? t.consider.verified : r.supported ? t.consider.onDemand : t.consider.notSupported}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
         {formError && <p className="form-error" role="alert">{formError}</p>}
       </section>
 
@@ -97,12 +145,18 @@ export function ConsiderPage() {
         <EvidenceProvider evidence={considerFeed.evidence}>
           <div className="consider-result">
             <div className="consider-main">
+              {res.data_quality && (
+                <p className="small">
+                  <QualityBadge q={res.data_quality} /> {t.quality.status[res.data_quality.status]}
+                </p>
+              )}
               <VerdictCard result={res} ticker={consideration.ticker} />
               {res.what_would_change && (
                 <WhatWouldChangeView changes={res.what_would_change} grid={res.weight_grid} current={consideration.intended_weight} />
               )}
               {res.diversification && <DiversificationView d={res.diversification} />}
               {res.instrument_risks && <InstrumentRisksView r={res.instrument_risks} />}
+              {res.data_quality && <DataQualityView q={res.data_quality} />}
             </div>
             <div className="consider-side">
               {res.governance && <GovernanceChecks governance={res.governance} />}
