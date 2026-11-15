@@ -1,0 +1,744 @@
+{
+  "generated_at": "2026-11-14T00:00:00Z",
+  "data_as_of": "2026-11-12",
+  "news_as_of": "2026-11-13",
+  "profile": {
+    "profile_id": "mateo",
+    "label": "Mateo, 41 ans, gestionnaire des opérations",
+    "source": "persona_preset",
+    "age": 41,
+    "horizon_years": 10,
+    "horizon_bucket": "medium",
+    "risk_tolerance": "moderate",
+    "max_acceptable_loss_pct": 0.2,
+    "objective": "balanced",
+    "experience": "intermediate",
+    "preferences": {
+      "avoid_controversies": true,
+      "excluded_sectors": [
+        "Energy"
+      ],
+      "interests": [
+        "ESG"
+      ]
+    },
+    "limits": {
+      "max_single_position": 0.15,
+      "max_high_vol_share": 0.25
+    },
+    "monthly_expenses_cad": 4500,
+    "base_currency": "CAD",
+    "inconsistencies": []
+  },
+  "portfolio_summary": {
+    "top_positions": [
+      {
+        "ticker": "ESGV",
+        "amount": 25000.0,
+        "weight": 0.25,
+        "asset_class": "equity_etf",
+        "price_currency": "USD",
+        "in_universe": true
+      },
+      {
+        "ticker": "XBB.TO",
+        "amount": 20000.0,
+        "weight": 0.2,
+        "asset_class": "bond_etf",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "XIU.TO",
+        "amount": 15000.0,
+        "weight": 0.15,
+        "asset_class": "equity_etf",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "CNR.TO",
+        "amount": 8000.0,
+        "weight": 0.08,
+        "asset_class": "equity_ca",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "JNJ",
+        "amount": 7000.0,
+        "weight": 0.07,
+        "asset_class": "equity_us",
+        "price_currency": "USD",
+        "in_universe": true
+      }
+    ],
+    "asset_class_weights": {
+      "equity_etf": 0.4,
+      "bond_etf": 0.2,
+      "equity_ca": 0.14,
+      "equity_us": 0.19,
+      "gold_etf": 0.07
+    },
+    "high_vol_share": 0,
+    "top3_concentration": 0.6
+  },
+  "items": [
+    {
+      "news_id": "n_syn_004",
+      "title": "Enbridge visée par une poursuite environnementale après une fuite sur un pipeline",
+      "url": "https://example.org/synthetic/n_syn_004",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-09T16:20:00Z",
+      "tickers": [
+        "ENB.TO"
+      ],
+      "is_synthetic": true,
+      "category": "controversy",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.8,
+        "level": "high",
+        "shown": true,
+        "position_weight": 0.06,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_CONTROVERSY",
+            "text": "Catégorie Controverse: pertinence 0.40 pour un horizon medium.",
+            "delta": 0.4
+          },
+          {
+            "rule_id": "R_PREF_CONTROVERSY",
+            "text": "Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.",
+            "delta": 0.4
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Controverse: pertinence high pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Controverse ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_004",
+              "ev_005"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.80, niveau high.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_006"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "ENB.TO représente 6,0 % de ton portefeuille, avec une volatilité annualisée de 16,1 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_007",
+              "ev_008"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Une controverse peut peser sur la réputation de l'entreprise sur plusieurs années.",
+            "label": "hypothesis",
+            "evidence_ids": [
+              "ev_005"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_009",
+      "title": "Exxon Mobil fait face à des critiques d'actionnaires sur ses objectifs climatiques",
+      "url": "https://example.org/synthetic/n_syn_009",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-07T18:00:00Z",
+      "tickers": [
+        "XOM"
+      ],
+      "is_synthetic": true,
+      "category": "controversy",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.8,
+        "level": "high",
+        "shown": true,
+        "position_weight": 0.05,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_CONTROVERSY",
+            "text": "Catégorie Controverse: pertinence 0.40 pour un horizon medium.",
+            "delta": 0.4
+          },
+          {
+            "rule_id": "R_PREF_CONTROVERSY",
+            "text": "Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.",
+            "delta": 0.4
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Controverse: pertinence high pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Controverse ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_012",
+              "ev_013"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.80, niveau high.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_014"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "XOM représente 5,0 % de ton portefeuille, avec une volatilité annualisée de 26,7 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_015",
+              "ev_016"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Une controverse peut peser sur la réputation de l'entreprise sur plusieurs années.",
+            "label": "hypothesis",
+            "evidence_ids": [
+              "ev_013"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_012",
+      "title": "Johnson & Johnson publie ses résultats du troisième trimestre",
+      "url": "https://example.org/synthetic/n_syn_012",
+      "source": "Exemple fictif",
+      "published_at": "2026-10-14T11:00:00Z",
+      "tickers": [
+        "JNJ"
+      ],
+      "is_synthetic": true,
+      "category": "earnings_results",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.5,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.07,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_EARNINGS_RESULTS",
+            "text": "Catégorie Résultats financiers: pertinence 0.50 pour un horizon medium.",
+            "delta": 0.5
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Résultats financiers: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Résultats financiers ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_017",
+              "ev_018"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.50, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_019"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "JNJ représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 18,1 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_020",
+              "ev_021"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_001",
+      "title": "La Banque du Canada maintient son taux directeur et signale une pause prolongée",
+      "url": "https://example.org/synthetic/n_syn_001",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-10T14:00:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.45,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.45 pour un horizon medium.",
+            "delta": 0.45
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_001",
+              "ev_002"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.45, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_008",
+      "title": "L'inflation américaine ralentit à 2,6 % sur un an en octobre",
+      "url": "https://example.org/synthetic/n_syn_008",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-12T13:30:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.45,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.45 pour un horizon medium.",
+            "delta": 0.45
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_009",
+              "ev_010"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.45, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_011"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    }
+  ],
+  "hidden": {
+    "count": 1,
+    "by_reason": [
+      {
+        "reason": "Bruit de court terme pour ton horizon",
+        "count": 1
+      }
+    ]
+  },
+  "coherence": null,
+  "events": [
+    {
+      "id": "evt_boc_2026_12_09",
+      "type": "rate_decision",
+      "scope": "macro",
+      "tickers": [],
+      "date": "2026-12-09",
+      "title": "Décision de taux de la Banque du Canada",
+      "is_estimated": true,
+      "source": "Calendrier public de la Banque du Canada (à confirmer)",
+      "retrieved_at": "2026-11-13T12:00:00Z"
+    }
+  ],
+  "evidence": {
+    "ev_001": {
+      "id": "ev_001",
+      "kind": "news_source",
+      "statement": "Nouvelle « La Banque du Canada maintient son taux directeur et signale … » (exemple fictif).",
+      "value": "n_syn_001",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_002": {
+      "id": "ev_002",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_003": {
+      "id": "ev_003",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.45 (low).",
+      "value": 0.45,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_004": {
+      "id": "ev_004",
+      "kind": "news_source",
+      "statement": "Nouvelle « Enbridge visée par une poursuite environnementale après une … » (exemple fictif).",
+      "value": "n_syn_004",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_004"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_005": {
+      "id": "ev_005",
+      "kind": "classification",
+      "statement": "Classée « Controverse » (structural).",
+      "value": "controversy",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_004",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_006": {
+      "id": "ev_006",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.80 (high).",
+      "value": 0.8,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_CONTROVERSY",
+          "R_PREF_CONTROVERSY"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_007": {
+      "id": "ev_007",
+      "kind": "portfolio_calc",
+      "statement": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "value": 0.06,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "ENB.TO",
+        "amount": 6000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_008": {
+      "id": "ev_008",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "value": 0.160933,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "ENB.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_009": {
+      "id": "ev_009",
+      "kind": "news_source",
+      "statement": "Nouvelle « L'inflation américaine ralentit à 2,6 % sur un an en octobre… » (exemple fictif).",
+      "value": "n_syn_008",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_010": {
+      "id": "ev_010",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_011": {
+      "id": "ev_011",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.45 (low).",
+      "value": 0.45,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_012": {
+      "id": "ev_012",
+      "kind": "news_source",
+      "statement": "Nouvelle « Exxon Mobil fait face à des critiques d'actionnaires sur ses… » (exemple fictif).",
+      "value": "n_syn_009",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_009"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_013": {
+      "id": "ev_013",
+      "kind": "classification",
+      "statement": "Classée « Controverse » (structural).",
+      "value": "controversy",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_009",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_014": {
+      "id": "ev_014",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.80 (high).",
+      "value": 0.8,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_CONTROVERSY",
+          "R_PREF_CONTROVERSY"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_015": {
+      "id": "ev_015",
+      "kind": "portfolio_calc",
+      "statement": "XOM représente 5,0 % du portefeuille analysé.",
+      "value": 0.05,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "XOM",
+        "amount": 5000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_016": {
+      "id": "ev_016",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de XOM: 26,7 %.",
+      "value": 0.26692,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "XOM",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_017": {
+      "id": "ev_017",
+      "kind": "news_source",
+      "statement": "Nouvelle « Johnson & Johnson publie ses résultats du troisième trimestr… » (exemple fictif).",
+      "value": "n_syn_012",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_012"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_018": {
+      "id": "ev_018",
+      "kind": "classification",
+      "statement": "Classée « Résultats financiers » (structural).",
+      "value": "earnings_results",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_012",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_019": {
+      "id": "ev_019",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.50 (medium).",
+      "value": 0.5,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_EARNINGS_RESULTS"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_020": {
+      "id": "ev_020",
+      "kind": "portfolio_calc",
+      "statement": "JNJ représente 7,0 % du portefeuille analysé.",
+      "value": 0.07,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "JNJ",
+        "amount": 7000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_021": {
+      "id": "ev_021",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de JNJ: 18,1 %.",
+      "value": 0.180967,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "JNJ",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    }
+  },
+  "disclaimers": [
+    "Simulation éducative: ce n'est pas un conseil financier personnalisé.",
+    "Aucune transaction réelle n'est effectuée."
+  ],
+  "limits": [
+    "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie.",
+    "Biais du survivant: les 31 actifs ont été choisis en 2026.",
+    "Un contexte historique n'est pas une prévision.",
+    "Les nouvelles de cet exemple sont fictives (exemple fictif)."
+  ]
+}

@@ -1,0 +1,17 @@
+[project]
+name = "alphaforge"
+version = "0.1.0"
+description = "AlphaForge AI - PolyFinances Datathon 2026 (simulation, not financial advice)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: needs network/AWS (deselect with -m 'not integration')"]
+addopts = "-m 'not integration'"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

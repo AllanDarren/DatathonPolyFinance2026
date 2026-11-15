@@ -1,0 +1,1356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "alphaforge.schema.json",
+  "title": "AlphaForgeContract",
+  "description": "AlphaForge AI contracts v0.1.0. Generated from core/models.py; do not edit by hand.",
+  "x-contract-version": "0.1.0",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/Profile"
+    },
+    {
+      "$ref": "#/$defs/Persona"
+    },
+    {
+      "$ref": "#/$defs/Position"
+    },
+    {
+      "$ref": "#/$defs/Portfolio"
+    },
+    {
+      "$ref": "#/$defs/Consideration"
+    },
+    {
+      "$ref": "#/$defs/NewsRecord"
+    },
+    {
+      "$ref": "#/$defs/Event"
+    },
+    {
+      "$ref": "#/$defs/Evidence"
+    },
+    {
+      "$ref": "#/$defs/Claim"
+    },
+    {
+      "$ref": "#/$defs/Explanation"
+    },
+    {
+      "$ref": "#/$defs/RuleHit"
+    },
+    {
+      "$ref": "#/$defs/HistoricalContext"
+    },
+    {
+      "$ref": "#/$defs/CoherenceResult"
+    },
+    {
+      "$ref": "#/$defs/FeedItem"
+    },
+    {
+      "$ref": "#/$defs/FeedResponse"
+    },
+    {
+      "$ref": "#/$defs/ProfileRequest"
+    },
+    {
+      "$ref": "#/$defs/PortfolioParseRequest"
+    },
+    {
+      "$ref": "#/$defs/FeedRequest"
+    },
+    {
+      "$ref": "#/$defs/ErrorResponse"
+    },
+    {
+      "$ref": "#/$defs/Health"
+    }
+  ],
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "description": "Rendered text: the code replaced every {{ev_id}} marker",
+          "type": "string"
+        },
+        "label": {
+          "enum": [
+            "fact",
+            "hypothesis",
+            "scenario"
+          ],
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "verified": {
+          "enum": [
+            "supported",
+            "unsupported",
+            "not_checked"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "label",
+        "evidence_ids",
+        "verified"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "CoherenceMetrics": {
+      "additionalProperties": false,
+      "properties": {
+        "annualized_vol": {
+          "type": "number"
+        },
+        "max_drawdown": {
+          "type": "number"
+        },
+        "worst_calendar_year_return": {
+          "type": "number"
+        },
+        "position_weight_after": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "annualized_vol",
+        "max_drawdown",
+        "worst_calendar_year_return",
+        "position_weight_after"
+      ],
+      "title": "CoherenceMetrics",
+      "type": "object"
+    },
+    "CoherenceResult": {
+      "additionalProperties": false,
+      "properties": {
+        "verdict": {
+          "enum": [
+            "coherent",
+            "tension",
+            "incoherent"
+          ],
+          "type": "string"
+        },
+        "rule_hits": {
+          "items": {
+            "$ref": "#/$defs/RuleHit"
+          },
+          "type": "array"
+        },
+        "metrics": {
+          "$ref": "#/$defs/CoherenceMetrics"
+        },
+        "explanation": {
+          "$ref": "#/$defs/Explanation"
+        }
+      },
+      "required": [
+        "verdict",
+        "rule_hits",
+        "metrics",
+        "explanation"
+      ],
+      "title": "CoherenceResult",
+      "type": "object"
+    },
+    "Consideration": {
+      "additionalProperties": false,
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "intended_weight": {
+          "description": "Target portfolio share after the addition",
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "type": "number"
+        }
+      },
+      "required": [
+        "ticker",
+        "intended_weight"
+      ],
+      "title": "Consideration",
+      "type": "object"
+    },
+    "ErrorBody": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "description": "e.g. INVALID_CSV, UNKNOWN_TICKER, LLM_UNAVAILABLE",
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "ErrorBody",
+      "type": "object"
+    },
+    "ErrorResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "$ref": "#/$defs/ErrorBody"
+        }
+      },
+      "required": [
+        "error"
+      ],
+      "title": "ErrorResponse",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "earnings",
+            "dividend_ex_date",
+            "rate_decision",
+            "cpi_release",
+            "other"
+          ],
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "ticker",
+            "macro"
+          ],
+          "type": "string"
+        },
+        "tickers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "date": {
+          "description": "YYYY-MM-DD",
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "is_estimated": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string"
+        },
+        "retrieved_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "scope",
+        "tickers",
+        "date",
+        "title",
+        "is_estimated",
+        "source",
+        "retrieved_at"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "e.g. 'ev_001'",
+          "pattern": "^ev_[0-9a-z_]+$",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "metric",
+            "rule_hit",
+            "classification",
+            "event_study",
+            "portfolio_calc",
+            "news_source"
+          ],
+          "type": "string"
+        },
+        "statement": {
+          "description": "Short factual sentence",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "as_of": {
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        "source": {
+          "description": "File, snapshot or URL",
+          "type": "string"
+        },
+        "computed_by": {
+          "description": "e.g. core.metrics.max_drawdown",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "statement",
+        "value",
+        "unit",
+        "as_of",
+        "inputs",
+        "source",
+        "computed_by"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "type": "array"
+        },
+        "generated_by": {
+          "enum": [
+            "bedrock",
+            "template"
+          ],
+          "type": "string"
+        },
+        "guardian": {
+          "$ref": "#/$defs/Guardian"
+        }
+      },
+      "required": [
+        "summary",
+        "claims",
+        "generated_by",
+        "guardian"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "FeedItem": {
+      "additionalProperties": false,
+      "properties": {
+        "news_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "published_at": {
+          "type": "string"
+        },
+        "tickers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "is_synthetic": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string"
+        },
+        "horizon_relevance": {
+          "enum": [
+            "structural",
+            "macro_context",
+            "short_term_noise"
+          ],
+          "type": "string"
+        },
+        "relevance": {
+          "$ref": "#/$defs/Relevance"
+        },
+        "explanation": {
+          "$ref": "#/$defs/Explanation"
+        },
+        "historical_context": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HistoricalContext"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "news_id",
+        "title",
+        "url",
+        "source",
+        "published_at",
+        "tickers",
+        "is_synthetic",
+        "category",
+        "horizon_relevance",
+        "relevance",
+        "explanation",
+        "historical_context"
+      ],
+      "title": "FeedItem",
+      "type": "object"
+    },
+    "FeedRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "profile": {
+          "$ref": "#/$defs/Profile"
+        },
+        "portfolio": {
+          "$ref": "#/$defs/Portfolio"
+        },
+        "consideration": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Consideration"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "profile",
+        "portfolio"
+      ],
+      "title": "FeedRequest",
+      "type": "object"
+    },
+    "FeedResponse": {
+      "additionalProperties": false,
+      "properties": {
+        "generated_at": {
+          "type": "string"
+        },
+        "data_as_of": {
+          "type": "string"
+        },
+        "news_as_of": {
+          "type": "string"
+        },
+        "profile": {
+          "$ref": "#/$defs/Profile"
+        },
+        "portfolio_summary": {
+          "$ref": "#/$defs/PortfolioSummary"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/FeedItem"
+          },
+          "type": "array"
+        },
+        "hidden": {
+          "$ref": "#/$defs/Hidden"
+        },
+        "coherence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CoherenceResult"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Present only if a consideration was given"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "type": "array"
+        },
+        "evidence": {
+          "additionalProperties": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "description": "Every cited evidence, by id",
+          "type": "object"
+        },
+        "disclaimers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "limits": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "generated_at",
+        "data_as_of",
+        "news_as_of",
+        "profile",
+        "portfolio_summary",
+        "items",
+        "hidden",
+        "coherence",
+        "events",
+        "evidence",
+        "disclaimers",
+        "limits"
+      ],
+      "title": "FeedResponse",
+      "type": "object"
+    },
+    "Guardian": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "flagged",
+            "not_run"
+          ],
+          "type": "string"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "flags"
+      ],
+      "title": "Guardian",
+      "type": "object"
+    },
+    "Health": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "ok",
+            "degraded"
+          ],
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "llm_provider": {
+          "enum": [
+            "mock",
+            "bedrock"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "version",
+        "llm_provider"
+      ],
+      "title": "Health",
+      "type": "object"
+    },
+    "Hidden": {
+      "additionalProperties": false,
+      "properties": {
+        "count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "by_reason": {
+          "items": {
+            "$ref": "#/$defs/HiddenReason"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "count",
+        "by_reason"
+      ],
+      "title": "Hidden",
+      "type": "object"
+    },
+    "HiddenReason": {
+      "additionalProperties": false,
+      "properties": {
+        "reason": {
+          "type": "string"
+        },
+        "count": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "reason",
+        "count"
+      ],
+      "title": "HiddenReason",
+      "type": "object"
+    },
+    "HistoricalContext": {
+      "additionalProperties": false,
+      "properties": {
+        "event_type": {
+          "enum": [
+            "earnings",
+            "dividend_ex_date",
+            "rate_decision",
+            "cpi_release",
+            "other"
+          ],
+          "type": "string"
+        },
+        "asset": {
+          "type": "string"
+        },
+        "window": {
+          "description": "e.g. day before to +5 trading days",
+          "type": "string"
+        },
+        "n_events": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "median_return": {
+          "type": "number"
+        },
+        "p10": {
+          "type": "number"
+        },
+        "p90": {
+          "type": "number"
+        },
+        "share_positive": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "events": {
+          "items": {
+            "$ref": "#/$defs/PastEvent"
+          },
+          "type": "array"
+        },
+        "caveats": {
+          "description": "Mandatory: sample, overlap, survivorship, not a forecast",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidence_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_type",
+        "asset",
+        "window",
+        "n_events",
+        "median_return",
+        "p10",
+        "p90",
+        "share_positive",
+        "events",
+        "caveats",
+        "evidence_id"
+      ],
+      "title": "HistoricalContext",
+      "type": "object"
+    },
+    "NewsClassification": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "description": "Category id from rules/taxonomy.yaml",
+          "type": "string"
+        },
+        "horizon_relevance": {
+          "description": "Comes from the taxonomy, not the model",
+          "enum": [
+            "structural",
+            "macro_context",
+            "short_term_noise"
+          ],
+          "type": "string"
+        },
+        "controversy": {
+          "type": "boolean"
+        },
+        "controversy_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "model_id": {
+          "type": "string"
+        },
+        "prompt_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "horizon_relevance",
+        "controversy",
+        "controversy_type",
+        "confidence",
+        "model_id",
+        "prompt_version"
+      ],
+      "title": "NewsClassification",
+      "type": "object"
+    },
+    "NewsRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "published_at": {
+          "description": "ISO 8601",
+          "type": "string"
+        },
+        "snippet": {
+          "anyOf": [
+            {
+              "maxLength": 300,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "tickers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "is_synthetic": {
+          "type": "boolean"
+        },
+        "retrieved_at": {
+          "type": "string"
+        },
+        "classification": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NewsClassification"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "source",
+        "url",
+        "published_at",
+        "tickers",
+        "is_synthetic",
+        "retrieved_at"
+      ],
+      "title": "NewsRecord",
+      "type": "object"
+    },
+    "PastEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "type": "string"
+        },
+        "return": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "date",
+        "return"
+      ],
+      "title": "PastEvent",
+      "type": "object"
+    },
+    "Persona": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "profile": {
+          "$ref": "#/$defs/Profile"
+        },
+        "sample_portfolio_csv": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "profile",
+        "sample_portfolio_csv"
+      ],
+      "title": "Persona",
+      "type": "object"
+    },
+    "Portfolio": {
+      "additionalProperties": false,
+      "properties": {
+        "base_currency": {
+          "const": "CAD",
+          "type": "string"
+        },
+        "total_amount": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "positions": {
+          "items": {
+            "$ref": "#/$defs/Position"
+          },
+          "type": "array"
+        },
+        "unanalyzed": {
+          "$ref": "#/$defs/Unanalyzed"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "base_currency",
+        "total_amount",
+        "positions",
+        "unanalyzed",
+        "warnings"
+      ],
+      "title": "Portfolio",
+      "type": "object"
+    },
+    "PortfolioParseRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "csv": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "csv"
+      ],
+      "title": "PortfolioParseRequest",
+      "type": "object"
+    },
+    "PortfolioSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "top_positions": {
+          "items": {
+            "$ref": "#/$defs/Position"
+          },
+          "type": "array"
+        },
+        "asset_class_weights": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "high_vol_share": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "top3_concentration": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "top_positions",
+        "asset_class_weights",
+        "high_vol_share",
+        "top3_concentration"
+      ],
+      "title": "PortfolioSummary",
+      "type": "object"
+    },
+    "Position": {
+      "additionalProperties": false,
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "amount": {
+          "description": "Amount in CAD",
+          "minimum": 0,
+          "type": "number"
+        },
+        "weight": {
+          "description": "Share of the analyzed total",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "asset_class": {
+          "enum": [
+            "equity_ca",
+            "equity_us",
+            "bond_etf",
+            "equity_etf",
+            "gold_etf",
+            "crypto"
+          ],
+          "type": "string"
+        },
+        "price_currency": {
+          "enum": [
+            "CAD",
+            "USD"
+          ],
+          "type": "string"
+        },
+        "in_universe": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ticker",
+        "amount",
+        "weight",
+        "asset_class",
+        "price_currency",
+        "in_universe"
+      ],
+      "title": "Position",
+      "type": "object"
+    },
+    "Preferences": {
+      "additionalProperties": false,
+      "properties": {
+        "avoid_controversies": {
+          "type": "boolean"
+        },
+        "excluded_sectors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "interests": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "avoid_controversies",
+        "excluded_sectors",
+        "interests"
+      ],
+      "title": "Preferences",
+      "type": "object"
+    },
+    "Profile": {
+      "additionalProperties": false,
+      "description": "Investor profile computed by rules (never by the LLM).",
+      "properties": {
+        "profile_id": {
+          "description": "'amira' | 'mateo' | 'robert' | 'custom'",
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "persona_preset",
+            "questionnaire"
+          ],
+          "type": "string"
+        },
+        "age": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "horizon_years": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "horizon_bucket": {
+          "description": "short <= 5, medium 6 to 12, long > 12",
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "type": "string"
+        },
+        "risk_tolerance": {
+          "enum": [
+            "low",
+            "low_moderate",
+            "moderate",
+            "high"
+          ],
+          "type": "string"
+        },
+        "max_acceptable_loss_pct": {
+          "description": "Acceptable annual loss, fraction",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "objective": {
+          "enum": [
+            "capital_preservation",
+            "income",
+            "balanced",
+            "growth"
+          ],
+          "type": "string"
+        },
+        "experience": {
+          "enum": [
+            "beginner",
+            "intermediate",
+            "advanced"
+          ],
+          "type": "string"
+        },
+        "preferences": {
+          "$ref": "#/$defs/Preferences"
+        },
+        "limits": {
+          "$ref": "#/$defs/ProfileLimits"
+        },
+        "monthly_expenses_cad": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "base_currency": {
+          "const": "CAD",
+          "type": "string"
+        },
+        "inconsistencies": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "profile_id",
+        "label",
+        "source",
+        "horizon_years",
+        "horizon_bucket",
+        "risk_tolerance",
+        "max_acceptable_loss_pct",
+        "objective",
+        "experience",
+        "preferences",
+        "limits",
+        "monthly_expenses_cad",
+        "base_currency",
+        "inconsistencies"
+      ],
+      "title": "Profile",
+      "type": "object"
+    },
+    "ProfileLimits": {
+      "additionalProperties": false,
+      "properties": {
+        "max_single_position": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "max_high_vol_share": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "max_single_position",
+        "max_high_vol_share"
+      ],
+      "title": "ProfileLimits",
+      "type": "object"
+    },
+    "ProfileRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "answers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "answers"
+      ],
+      "title": "ProfileRequest",
+      "type": "object"
+    },
+    "Relevance": {
+      "additionalProperties": false,
+      "properties": {
+        "score": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "level": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        "shown": {
+          "type": "boolean"
+        },
+        "position_weight": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "rule_hits": {
+          "items": {
+            "$ref": "#/$defs/RuleHit"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "score",
+        "level",
+        "shown",
+        "position_weight",
+        "rule_hits"
+      ],
+      "title": "Relevance",
+      "type": "object"
+    },
+    "RuleHit": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "delta": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "observed": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limit": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "severity": {
+          "anyOf": [
+            {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "rule_id",
+        "text"
+      ],
+      "title": "RuleHit",
+      "type": "object"
+    },
+    "Unanalyzed": {
+      "additionalProperties": false,
+      "properties": {
+        "tickers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "weight": {
+          "description": "Share of the total amount outside the universe",
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "tickers",
+        "weight"
+      ],
+      "title": "Unanalyzed",
+      "type": "object"
+    }
+  }
+}

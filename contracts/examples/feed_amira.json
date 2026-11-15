@@ -1,0 +1,1017 @@
+{
+  "generated_at": "2026-11-14T00:00:00Z",
+  "data_as_of": "2026-11-12",
+  "news_as_of": "2026-11-13",
+  "profile": {
+    "profile_id": "amira",
+    "label": "Amira, 26 ans, ingénieure logiciel",
+    "source": "persona_preset",
+    "age": 26,
+    "horizon_years": 20,
+    "horizon_bucket": "long",
+    "risk_tolerance": "high",
+    "max_acceptable_loss_pct": 0.35,
+    "objective": "growth",
+    "experience": "intermediate",
+    "preferences": {
+      "avoid_controversies": false,
+      "excluded_sectors": [],
+      "interests": [
+        "IA",
+        "technologie",
+        "crypto"
+      ]
+    },
+    "limits": {
+      "max_single_position": 0.25,
+      "max_high_vol_share": 0.6
+    },
+    "monthly_expenses_cad": 3500,
+    "base_currency": "CAD",
+    "inconsistencies": []
+  },
+  "portfolio_summary": {
+    "top_positions": [
+      {
+        "ticker": "NVDA",
+        "amount": 20000.0,
+        "weight": 0.2,
+        "asset_class": "equity_us",
+        "price_currency": "USD",
+        "in_universe": true
+      },
+      {
+        "ticker": "QQQ",
+        "amount": 18000.0,
+        "weight": 0.18,
+        "asset_class": "equity_etf",
+        "price_currency": "USD",
+        "in_universe": true
+      },
+      {
+        "ticker": "SHOP.TO",
+        "amount": 12000.0,
+        "weight": 0.12,
+        "asset_class": "equity_ca",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "BTC-USD",
+        "amount": 12000.0,
+        "weight": 0.12,
+        "asset_class": "crypto",
+        "price_currency": "USD",
+        "in_universe": true
+      },
+      {
+        "ticker": "MSFT",
+        "amount": 10000.0,
+        "weight": 0.1,
+        "asset_class": "equity_us",
+        "price_currency": "USD",
+        "in_universe": true
+      }
+    ],
+    "asset_class_weights": {
+      "equity_us": 0.37,
+      "equity_etf": 0.26,
+      "equity_ca": 0.19,
+      "crypto": 0.18
+    },
+    "high_vol_share": 0.64,
+    "top3_concentration": 0.5
+  },
+  "items": [
+    {
+      "news_id": "n_syn_002",
+      "title": "NVIDIA publie des résultats trimestriels supérieurs aux attentes, portés par les centres de données",
+      "url": "https://example.org/synthetic/n_syn_002",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-12T21:30:00Z",
+      "tickers": [
+        "NVDA"
+      ],
+      "is_synthetic": true,
+      "category": "earnings_results",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.65,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.2,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_EARNINGS_RESULTS",
+            "text": "Catégorie Résultats financiers: pertinence 0.45 pour un horizon long.",
+            "delta": 0.45
+          },
+          {
+            "rule_id": "R_POS_WEIGHT_20",
+            "text": "Position de 20 % ou plus du portefeuille.",
+            "delta": 0.2,
+            "observed": 0.2,
+            "limit": 0.2
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Résultats financiers: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Résultats financiers ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_004",
+              "ev_005"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.65, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_006"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "NVDA représente 20,0 % de ton portefeuille, avec une volatilité annualisée de 51,9 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_007",
+              "ev_008"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_006",
+      "title": "Shopify dévoile de nouveaux outils d'IA pour les marchands",
+      "url": "https://example.org/synthetic/n_syn_006",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-08T15:00:00Z",
+      "tickers": [
+        "SHOP.TO"
+      ],
+      "is_synthetic": true,
+      "category": "product",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.55,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.12,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_PRODUCT",
+            "text": "Catégorie Produit: pertinence 0.45 pour un horizon long.",
+            "delta": 0.45
+          },
+          {
+            "rule_id": "R_POS_WEIGHT_10",
+            "text": "Position de 10 % ou plus du portefeuille.",
+            "delta": 0.1,
+            "observed": 0.12,
+            "limit": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Produit: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Produit ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_009",
+              "ev_010"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.55, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_011"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "SHOP.TO représente 12,0 % de ton portefeuille, avec une volatilité annualisée de 64,4 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_012",
+              "ev_013"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_013",
+      "title": "Microsoft annonce de nouveaux investissements massifs dans l'infrastructure d'IA",
+      "url": "https://example.org/synthetic/n_syn_013",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-05T13:00:00Z",
+      "tickers": [
+        "MSFT"
+      ],
+      "is_synthetic": true,
+      "category": "product",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.55,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.1,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_PRODUCT",
+            "text": "Catégorie Produit: pertinence 0.45 pour un horizon long.",
+            "delta": 0.45
+          },
+          {
+            "rule_id": "R_POS_WEIGHT_10",
+            "text": "Position de 10 % ou plus du portefeuille.",
+            "delta": 0.1,
+            "observed": 0.1,
+            "limit": 0.1
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Produit: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Produit ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_017",
+              "ev_018"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.55, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_019"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "MSFT représente 10,0 % de ton portefeuille, avec une volatilité annualisée de 28,5 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_020",
+              "ev_021"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_014",
+      "title": "Constellation Software publie ses résultats trimestriels",
+      "url": "https://example.org/synthetic/n_syn_014",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-04T21:00:00Z",
+      "tickers": [
+        "CSU.TO"
+      ],
+      "is_synthetic": true,
+      "category": "earnings_results",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.45,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.07,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_EARNINGS_RESULTS",
+            "text": "Catégorie Résultats financiers: pertinence 0.45 pour un horizon long.",
+            "delta": 0.45
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Résultats financiers: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Résultats financiers ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_022",
+              "ev_023"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.45, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_024"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "CSU.TO représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 30,5 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_025",
+              "ev_026"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_001",
+      "title": "La Banque du Canada maintient son taux directeur et signale une pause prolongée",
+      "url": "https://example.org/synthetic/n_syn_001",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-10T14:00:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.35,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.35 pour un horizon long.",
+            "delta": 0.35
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_001",
+              "ev_002"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.35, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_008",
+      "title": "L'inflation américaine ralentit à 2,6 % sur un an en octobre",
+      "url": "https://example.org/synthetic/n_syn_008",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-12T13:30:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.35,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.35 pour un horizon long.",
+            "delta": 0.35
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_014",
+              "ev_015"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.35, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_016"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_015",
+      "title": "Tesla rappelle des véhicules en raison d'un problème de sécurité logicielle",
+      "url": "https://example.org/synthetic/n_syn_015",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-03T15:00:00Z",
+      "tickers": [
+        "TSLA"
+      ],
+      "is_synthetic": true,
+      "category": "controversy",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.35,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.07,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_CONTROVERSY",
+            "text": "Catégorie Controverse: pertinence 0.35 pour un horizon long.",
+            "delta": 0.35
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Controverse: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Controverse ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_027",
+              "ev_028"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.35, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_029"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "TSLA représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 59,6 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_030",
+              "ev_031"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Une controverse peut peser sur la réputation de l'entreprise sur plusieurs années.",
+            "label": "hypothesis",
+            "evidence_ids": [
+              "ev_028"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    }
+  ],
+  "hidden": {
+    "count": 3,
+    "by_reason": [
+      {
+        "reason": "Bruit de court terme pour ton horizon",
+        "count": 3
+      }
+    ]
+  },
+  "coherence": null,
+  "events": [
+    {
+      "id": "evt_boc_2026_12_09",
+      "type": "rate_decision",
+      "scope": "macro",
+      "tickers": [],
+      "date": "2026-12-09",
+      "title": "Décision de taux de la Banque du Canada",
+      "is_estimated": true,
+      "source": "Calendrier public de la Banque du Canada (à confirmer)",
+      "retrieved_at": "2026-11-13T12:00:00Z"
+    }
+  ],
+  "evidence": {
+    "ev_001": {
+      "id": "ev_001",
+      "kind": "news_source",
+      "statement": "Nouvelle « La Banque du Canada maintient son taux directeur et signale … » (exemple fictif).",
+      "value": "n_syn_001",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_002": {
+      "id": "ev_002",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_003": {
+      "id": "ev_003",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.35 (low).",
+      "value": 0.35,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_004": {
+      "id": "ev_004",
+      "kind": "news_source",
+      "statement": "Nouvelle « NVIDIA publie des résultats trimestriels supérieurs aux atte… » (exemple fictif).",
+      "value": "n_syn_002",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_002"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_005": {
+      "id": "ev_005",
+      "kind": "classification",
+      "statement": "Classée « Résultats financiers » (structural).",
+      "value": "earnings_results",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_002",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_006": {
+      "id": "ev_006",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.65 (medium).",
+      "value": 0.65,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_EARNINGS_RESULTS",
+          "R_POS_WEIGHT_20"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_007": {
+      "id": "ev_007",
+      "kind": "portfolio_calc",
+      "statement": "NVDA représente 20,0 % du portefeuille analysé.",
+      "value": 0.2,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "amount": 20000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_008": {
+      "id": "ev_008",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de NVDA: 51,9 %.",
+      "value": 0.519384,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_009": {
+      "id": "ev_009",
+      "kind": "news_source",
+      "statement": "Nouvelle « Shopify dévoile de nouveaux outils d'IA pour les marchands… » (exemple fictif).",
+      "value": "n_syn_006",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_006"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_010": {
+      "id": "ev_010",
+      "kind": "classification",
+      "statement": "Classée « Produit » (structural).",
+      "value": "product",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_006",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_011": {
+      "id": "ev_011",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.55 (medium).",
+      "value": 0.55,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_PRODUCT",
+          "R_POS_WEIGHT_10"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_012": {
+      "id": "ev_012",
+      "kind": "portfolio_calc",
+      "statement": "SHOP.TO représente 12,0 % du portefeuille analysé.",
+      "value": 0.12,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "SHOP.TO",
+        "amount": 12000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_013": {
+      "id": "ev_013",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de SHOP.TO: 64,4 %.",
+      "value": 0.644418,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "SHOP.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_014": {
+      "id": "ev_014",
+      "kind": "news_source",
+      "statement": "Nouvelle « L'inflation américaine ralentit à 2,6 % sur un an en octobre… » (exemple fictif).",
+      "value": "n_syn_008",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_015": {
+      "id": "ev_015",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_016": {
+      "id": "ev_016",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.35 (low).",
+      "value": 0.35,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_017": {
+      "id": "ev_017",
+      "kind": "news_source",
+      "statement": "Nouvelle « Microsoft annonce de nouveaux investissements massifs dans l… » (exemple fictif).",
+      "value": "n_syn_013",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_013"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_018": {
+      "id": "ev_018",
+      "kind": "classification",
+      "statement": "Classée « Produit » (structural).",
+      "value": "product",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_013",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_019": {
+      "id": "ev_019",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.55 (medium).",
+      "value": 0.55,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_PRODUCT",
+          "R_POS_WEIGHT_10"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_020": {
+      "id": "ev_020",
+      "kind": "portfolio_calc",
+      "statement": "MSFT représente 10,0 % du portefeuille analysé.",
+      "value": 0.1,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "MSFT",
+        "amount": 10000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_021": {
+      "id": "ev_021",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de MSFT: 28,5 %.",
+      "value": 0.284509,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "MSFT",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_022": {
+      "id": "ev_022",
+      "kind": "news_source",
+      "statement": "Nouvelle « Constellation Software publie ses résultats trimestriels… » (exemple fictif).",
+      "value": "n_syn_014",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_014"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_023": {
+      "id": "ev_023",
+      "kind": "classification",
+      "statement": "Classée « Résultats financiers » (structural).",
+      "value": "earnings_results",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_014",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_024": {
+      "id": "ev_024",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.45 (low).",
+      "value": 0.45,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_EARNINGS_RESULTS"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_025": {
+      "id": "ev_025",
+      "kind": "portfolio_calc",
+      "statement": "CSU.TO représente 7,0 % du portefeuille analysé.",
+      "value": 0.07,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "CSU.TO",
+        "amount": 7000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_026": {
+      "id": "ev_026",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de CSU.TO: 30,5 %.",
+      "value": 0.305275,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "CSU.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_027": {
+      "id": "ev_027",
+      "kind": "news_source",
+      "statement": "Nouvelle « Tesla rappelle des véhicules en raison d'un problème de sécu… » (exemple fictif).",
+      "value": "n_syn_015",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_015"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_028": {
+      "id": "ev_028",
+      "kind": "classification",
+      "statement": "Classée « Controverse » (structural).",
+      "value": "controversy",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_015",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_029": {
+      "id": "ev_029",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.35 (low).",
+      "value": 0.35,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_CONTROVERSY"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_030": {
+      "id": "ev_030",
+      "kind": "portfolio_calc",
+      "statement": "TSLA représente 7,0 % du portefeuille analysé.",
+      "value": 0.07,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "TSLA",
+        "amount": 7000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_031": {
+      "id": "ev_031",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de TSLA: 59,6 %.",
+      "value": 0.595584,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "TSLA",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    }
+  },
+  "disclaimers": [
+    "Simulation éducative: ce n'est pas un conseil financier personnalisé.",
+    "Aucune transaction réelle n'est effectuée."
+  ],
+  "limits": [
+    "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie.",
+    "Biais du survivant: les 31 actifs ont été choisis en 2026.",
+    "Un contexte historique n'est pas une prévision.",
+    "Les nouvelles de cet exemple sont fictives (exemple fictif)."
+  ]
+}
