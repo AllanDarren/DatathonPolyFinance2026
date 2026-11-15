@@ -31,7 +31,7 @@ def previous_cache() -> dict[tuple[str, str], dict[str, Any]]:
 
 
 def run(limit: int | None = None, workers: int = 4) -> dict[str, Any]:
-    news = snapshots.load_snapshot("news")
+    news = snapshots.load_snapshot("news")  # raises DataError if absent (run make ingest first)
     assert news is not None
     records = news["records"][:limit] if limit else news["records"]
     clf = Classifier(get_client(), rules_engine.load_rules().taxonomy, previous_cache())

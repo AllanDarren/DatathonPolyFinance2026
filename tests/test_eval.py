@@ -9,8 +9,9 @@ import pytest
 from core import rules_engine as engine
 from tools import run_eval
 
-LABELS = """id,title,ticker,category,controversy,horizon_relevance,expected_relevance_robert,expected_relevance_amira,expected_relevance_mateo,is_synthetic,notes
-1,NVIDIA reports record quarterly earnings,NVDA,earnings_results,false,structural,,,,true,
+HEADER = ("id,title,ticker,category,controversy,horizon_relevance,expected_relevance_robert,"
+          "expected_relevance_amira,expected_relevance_mateo,is_synthetic,notes\n")
+LABELS = HEADER + """1,NVIDIA reports record quarterly earnings,NVDA,earnings_results,false,structural,,,,true,
 2,Royal Bank raises its dividend by 4%,RY.TO,dividend,false,structural,,,,true,
 3,Enbridge hit by lawsuit after pipeline spill,ENB.TO,controversy,true,structural,,,,true,
 4,Bank of Canada holds its key interest rate,,macro_rates,false,macro_context,,,,true,
