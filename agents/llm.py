@@ -123,6 +123,7 @@ class BedrockClient:
             raise LLMUnavailableError("BEDROCK_MODEL_ID et BEDROCK_REGION doivent être définis (voir docs/AWS_STATUS.md).")
         self.max_attempts = max_attempts
         self.max_tokens = max_tokens
+        self.use_temperature = True  # temperature 0 when the model accepts it (reproducibility)
         if client is None:
             import boto3
             from botocore.config import Config
@@ -135,13 +136,19 @@ class BedrockClient:
     def _call(self, **kwargs: Any) -> dict[str, Any]:
         last: Exception | None = None
         for attempt in range(self.max_attempts):
+            inference: dict[str, Any] = {"maxTokens": self.max_tokens}
+            if self.use_temperature:
+                inference["temperature"] = 0
             try:
-                return dict(self._client.converse(modelId=self.model_id,
-                                                  inferenceConfig={"temperature": 0, "maxTokens": self.max_tokens},
-                                                  **kwargs))
+                return dict(self._client.converse(modelId=self.model_id, inferenceConfig=inference, **kwargs))
             except Exception as exc:  # noqa: BLE001 - botocore errors vary; all mean "unavailable"
                 last = exc
-                code = getattr(exc, "response", {}).get("Error", {}).get("Code", "")
+                err = getattr(exc, "response", {}).get("Error", {})
+                code, message = err.get("Code", ""), str(err.get("Message", "")).lower()
+                if code == "ValidationException" and "temperature" in message and self.use_temperature:
+                    # Some models reject `temperature` (e.g. claude-haiku-5-5): retry once without it.
+                    self.use_temperature = False
+                    continue
                 if code in ("ValidationException", "AccessDeniedException", "ResourceNotFoundException"):
                     break  # not transient
                 time.sleep(0.5 * (attempt + 1))

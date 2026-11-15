@@ -91,9 +91,10 @@ def test_online_path_is_fast(personas: dict) -> None:
     assert time.perf_counter() - start < 10
 
 
-def test_mock_mode_is_disclosed_in_limits(personas: dict) -> None:
+def test_classification_mode_is_disclosed_in_limits(personas: dict) -> None:
     f = feed_for(personas["robert"])
-    assert any("mots-clés" in lim for lim in f["limits"])
+    mock = snapshots.load_snapshot("classified_news")["report"]["model_id"] == "mock-keywords"
+    assert any("mots-clés" in lim for lim in f["limits"]) is mock
     assert f["disclaimers"]
 
 

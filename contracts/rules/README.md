@@ -28,7 +28,7 @@ Champs lisibles:
   `risk_tolerance`, `max_acceptable_loss_pct`, `objective`, `experience`, `age`,
   `preferences.avoid_controversies`, `preferences.excluded_sectors`, `preferences.interests`,
   `limits.max_single_position`, `limits.max_high_vol_share`, `monthly_expenses_cad`;
-- pertinence: `item.category`, `item.horizon_relevance`, `item.controversy`, `item.controversy_type`,
+- pertinence: `position_weight` (alias de `position.weight`), `item.category`, `item.horizon_relevance`, `item.controversy`, `item.controversy_type`,
   `position.weight`, `position.asset_class`, `position.sector` (secteur de `data/assets_universe.csv`,
   en anglais, ex.: `Energy`), `position.is_high_vol`, `position.annualized_vol`, `position.held`;
 - cohérence: métriques de `core/METRICS.md` (section « Métriques des règles de cohérence »).

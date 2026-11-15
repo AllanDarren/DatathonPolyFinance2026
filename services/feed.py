@@ -182,6 +182,9 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
     snap = snapshots.load_snapshot("classified_news", required=False)
     records = snap["records"] if snap else []
     held = {p["ticker"] for p in portfolio["positions"]}
+    known = {c.id for c in fb.rules.taxonomy.categories}
+    stale = [r for r in records if r.get("classification") and r["classification"]["category"] not in known]
+    records = [r for r in records if r not in stale]
     selected, unclassified = _select_news(records, held)
     hidden: dict[str, int] = {}
     scored = []
@@ -194,6 +197,9 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
         scored.append((rec, pos, rel))
     if unclassified:
         hidden["Nouvelle non classée"] = unclassified
+    n_stale = sum(1 for r in stale if held.intersection(r["tickers"]))
+    if n_stale:
+        hidden["Classement obsolète (taxonomie modifiée depuis le classement)"] = n_stale
     scored.sort(key=lambda x: (-x[2]["score"], _neg_date(x[0]["published_at"]), x[0]["id"]))
     kept, per_topic = [], {}
     for rec, pos, rel in scored:

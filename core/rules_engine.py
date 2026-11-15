@@ -56,11 +56,15 @@ COHERENCE_METRICS: dict[str, str] = {
     "asset_class": "text",
     "high_vol_share_after": "fraction",
     "top3_concentration_after": "fraction",
+    # Section-10 names, read as the portfolio after the considered addition in coherence rules.
+    "high_vol_share": "fraction",
+    "top3_concentration": "fraction",
     "crypto_share_after": "fraction",
     "corr_to_portfolio": "correlation",
 }
 # Paths a relevance condition may read (besides profile.*).
 RELEVANCE_FIELDS = {
+    "position_weight",  # section-10 name, alias of position.weight
     "item.category", "item.horizon_relevance", "item.controversy", "item.controversy_type", "item.tickers",
     "position.ticker", "position.weight", "position.asset_class", "position.sector", "position.is_high_vol",
     "position.annualized_vol", "position.held",
@@ -187,7 +191,13 @@ def resolve_path(ctx: dict[str, Any], path: str) -> Any:
 
 
 def _compare(left: Any, op: str, right: Any) -> bool:
-    if left is _MISSING or right is _MISSING or left is None:
+    if left is _MISSING or right is _MISSING:
+        return False
+    if left is None or right is None:  # explicit null only supports equality tests
+        if op == "==":
+            return left is right
+        if op == "!=":
+            return left is not right
         return False
     try:
         if op == "==":
@@ -381,7 +391,7 @@ def score_relevance(profile: dict[str, Any], classification: dict[str, Any], pos
                          "observed": round(weight, 6), "limit": tier.min_weight})
             score += tier.add
             break
-    ctx = {"profile": profile, "item": classification, "position": pos}
+    ctx = {"profile": profile, "item": classification, "position": pos, "position_weight": weight}
     for mod in rr.modifiers:
         res = evaluate(mod.when, ctx)
         if res.ok:
@@ -481,6 +491,8 @@ def coherence_metrics(profile: dict[str, Any], portfolio: dict[str, Any], ticker
                           computed_by=f"core.rules_engine.{name}")
         vals[name] = value
         ev[name] = registry.add(e)
+    vals["high_vol_share"], ev["high_vol_share"] = vals["high_vol_share_after"], ev["high_vol_share_after"]
+    vals["top3_concentration"], ev["top3_concentration"] = vals["top3_concentration_after"], ev["top3_concentration_after"]
     if any(p["ticker"] != ticker for p in portfolio.get("positions", [])):
         put("corr_to_portfolio", metrics.corr_to_portfolio(portfolio, ticker))
     return vals, ev
