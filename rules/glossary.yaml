@@ -1,0 +1,91 @@
+terms:
+- id: risk_tolerance
+  term: Tolérance au risque
+  definition_fr: 'Capacité déclarée à supporter une baisse. Exemple : une baisse de 8 % te préoccupe.'
+- id: horizon
+  term: Horizon
+  definition_fr: 'Durée avant un besoin important d’argent. Exemple : un projet dans quatre ans.'
+- id: volatility
+  term: Volatilité
+  definition_fr: 'Ampleur des variations des rendements, pas perte maximale. Exemple fictif : un titre varie fortement
+    chaque jour.'
+- id: drawdown
+  term: Perte maximale historique
+  definition_fr: 'Pire baisse d’un sommet au creux suivant. Exemple fictif : de 100 à 70 donne −30 %.'
+- id: recovery
+  term: Temps de récupération
+  definition_fr: 'Durée nécessaire pour retrouver un ancien sommet. Exemple fictif : un sommet reste non retrouvé
+    à la fin des données.'
+- id: return
+  term: Rendement
+  definition_fr: 'Variation relative de valeur sur une période. Exemple fictif : de 100 à 110 donne +10 %.'
+- id: adjusted_price
+  term: Prix ajusté
+  definition_fr: 'Prix corrigé des distributions et fractionnements selon le fournisseur. Exemple : utiliser adj_close
+    pour les rendements.'
+- id: dividend
+  term: Dividende
+  definition_fr: 'Distribution d’une entreprise à ses actionnaires. Exemple fictif : un versement de 1 CAD par action,
+    non garanti.'
+- id: etf
+  term: FNB
+  definition_fr: 'Fonds négocié en bourse regroupant des placements. Exemple : un FNB obligataire détient plusieurs
+    obligations.'
+- id: bond
+  term: Obligation
+  definition_fr: 'Prêt à un émetteur dont la valeur peut varier. Exemple : sa valeur peut baisser quand les taux
+    montent.'
+- id: equity
+  term: Action
+  definition_fr: 'Part du capital d’une entreprise. Exemple : détenir un titre de l’univers du projet.'
+- id: crypto
+  term: Cryptoactif
+  definition_fr: 'Actif numérique soumis à des risques spécifiques. Exemple : BTC-USD est coté en dollars américains.'
+- id: diversification
+  term: Diversification
+  definition_fr: 'Répartition entre expositions différentes. Exemple : deux FNB très similaires diversifient peu
+    entre eux.'
+- id: concentration
+  term: Concentration
+  definition_fr: 'Part importante réunie dans peu de positions. Exemple fictif : trois lignes représentent 80 %
+    du total.'
+- id: weight
+  term: Poids
+  definition_fr: 'Montant d’une position divisé par le total pertinent. Exemple fictif : 5 000 sur 100 000 donne
+    5 %.'
+- id: correlation
+  term: Corrélation
+  definition_fr: 'Mesure des variations communes de deux séries; aucune causalité démontrée. Exemple : deux FNB
+    peuvent souvent varier ensemble.'
+- id: fx
+  term: Change
+  definition_fr: 'Valeur d’une devise dans une autre. Exemple fictif : 1 USD vaut 1,35 CAD.'
+- id: inflation
+  term: Inflation
+  definition_fr: 'Variation d’un indice de prix. Exemple fictif : passer de 100 à 103 correspond à 3 %.'
+- id: esg
+  term: ESG
+  definition_fr: 'Environnement, social et gouvernance. Exemple : vouloir éviter les controverses ne constitue pas
+    une certification ESG.'
+- id: controversy
+  term: Controverse
+  definition_fr: 'Incident ou allégation à vérifier dans une source. Exemple fictif : une enquête annoncée ne prouve
+    pas une faute.'
+- id: evidence
+  term: Preuve traçable
+  definition_fr: 'Donnée avec entrées, date, source et méthode. Exemple : poids calculé à partir du CSV.'
+- id: fact
+  term: Fait
+  definition_fr: 'Énoncé directement soutenu par une preuve disponible. Exemple fictif : le CSV contient une position
+    de 5 000 CAD.'
+- id: hypothesis
+  term: Hypothèse
+  definition_fr: 'Interprétation incertaine annoncée comme telle. Exemple : ce sujet pourrait intéresser une personne
+    attirée par l’IA.'
+- id: scenario
+  term: Scénario
+  definition_fr: 'Situation supposée et explicitement fictive. Exemple : simuler une position de 20 % en NVDA.'
+- id: percentile
+  term: Centile
+  definition_fr: 'Valeur de rang dans un échantillon. Exemple : p10 est le dixième centile des événements passés,
+    pas une borne future.'

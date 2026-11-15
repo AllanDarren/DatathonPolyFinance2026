@@ -1,0 +1,112 @@
+version: 1
+categories:
+- id: earnings_results
+  label_fr: Résultats financiers
+  definition: Publication de résultats réalisés trimestriels ou annuels. Une prévision seule appartient à strategy_guidance.
+  horizon_relevance: structural
+  examples:
+  - NVDA publie ses résultats trimestriels
+  - RY.TO présente son bénéfice annuel
+  - MSFT annonce ses revenus trimestriels
+- id: dividend
+  label_fr: Dividendes
+  definition: Annonce, modification, suspension ou date de détachement d’un dividende.
+  horizon_relevance: structural
+  examples:
+  - FTS.TO annonce son dividende trimestriel
+  - RY.TO relève son dividende
+  - ENB.TO précise la date de détachement
+- id: strategy_guidance
+  label_fr: Stratégie et prévisions
+  definition: Objectifs futurs, plan stratégique, dépenses ou prévisions de l’entreprise; exclut les résultats réalisés
+    seuls.
+  horizon_relevance: structural
+  examples:
+  - NVDA présente son plan de capacités de production
+  - MSFT révise ses prévisions annuelles
+  - SHOP.TO annonce une réorganisation stratégique
+- id: regulation_legal
+  label_fr: Réglementation et poursuites
+  definition: Règle officielle, enquête d’autorité, décision judiciaire ou poursuite formelle. Prioritaire sur controversy
+    si l’acte officiel est le sujet principal.
+  horizon_relevance: structural
+  examples:
+  - GOOGL fait l’objet d’une procédure antitrust
+  - Une autorité ouvre une enquête sur TD.TO
+  - Un nouveau cadre légal vise les plateformes crypto
+- id: controversy
+  label_fr: Controverses
+  definition: Allégation sourcée ou incident environnemental, social, de gouvernance ou de sécurité sans acte officiel
+    principal. Pas une preuve de culpabilité.
+  horizon_relevance: structural
+  examples:
+  - Un rapport critique les pratiques sociales de TSLA
+  - Un incident environnemental est signalé chez XOM
+  - Des actionnaires contestent la gouvernance de SHOP.TO
+- id: management_change
+  label_fr: Direction
+  definition: Nomination, départ ou succession d’un dirigeant.
+  horizon_relevance: structural
+  examples:
+  - AAPL annonce la succession de sa direction
+  - CNR.TO nomme une nouvelle dirigeante
+  - MFC.TO annonce le départ de son directeur financier
+- id: merger_acquisition
+  label_fr: Fusions et acquisitions
+  definition: Projet annoncé ou réalisation d’achat, de fusion ou de cession. Une rumeur non confirmée reste rumor_hype.
+  horizon_relevance: structural
+  examples:
+  - AMZN annonce un projet d’acquisition
+  - ATD.TO confirme une cession d’actifs
+  - CSU.TO finalise une acquisition
+- id: macro
+  label_fr: Taux et inflation
+  definition: Décision de banque centrale ou publication macroéconomique; contexte collectif et non prédiction du
+    prix d’un titre.
+  horizon_relevance: macro_context
+  examples:
+  - La Banque du Canada annonce sa décision de taux
+  - Une publication mesure l’inflation canadienne
+  - La Fed communique sa décision de taux
+- id: analyst_opinion
+  label_fr: Avis d’analystes
+  definition: Opinion, recommandation ou objectif de cours attribué à un analyste; ce n’est pas un fait sur un rendement
+    futur.
+  horizon_relevance: short_term_noise
+  examples:
+  - Un analyste révise son objectif de cours pour NVDA
+  - Une banque modifie son avis sur RY.TO
+  - Un analyste commente les perspectives de QQQ
+- id: daily_price
+  label_fr: Variation du jour
+  definition: Mouvement de prix du jour sans nouveau fait structurel principal. Si un fait est le sujet principal,
+    utiliser sa catégorie.
+  horizon_relevance: short_term_noise
+  examples:
+  - NVDA progresse pendant la séance
+  - SPY termine la journée en baisse
+  - BTC-USD fluctue dans la matinée
+- id: rumor_hype
+  label_fr: Rumeur et engouement
+  definition: Spéculation non confirmée ou popularité sur les réseaux. Ne jamais transformer le titre en fait avéré.
+  horizon_relevance: short_term_noise
+  examples:
+  - Une rumeur non confirmée circule sur TSLA
+  - ETH-USD suscite un engouement sur les réseaux
+  - Des internautes spéculent sur une acquisition par AAPL
+- id: product
+  label_fr: Produits
+  definition: Lancement, évolution ou retrait de produit ou service. Un incident de sécurité relève de controversy
+    ou regulation_legal.
+  horizon_relevance: structural
+  examples:
+  - NVDA présente une nouvelle puce pour l’IA
+  - AAPL dévoile une gamme de produits
+  - MSFT lance un nouveau service infonuagique
+controversy_types:
+- environmental
+- social
+- governance
+- legal
+- safety
+- other

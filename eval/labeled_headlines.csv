@@ -1,0 +1,31 @@
+id,title,ticker,category,controversy,horizon_relevance,expected_relevance_robert,expected_relevance_amira,expected_relevance_mateo,is_synthetic,notes
+syn_001,NVDA publie ses résultats trimestriels,NVDA,earnings_results,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_002,RY.TO présente son bénéfice annuel,RY.TO,earnings_results,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_003,MSFT annonce ses revenus trimestriels,MSFT,earnings_results,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_004,FTS.TO annonce son dividende trimestriel,FTS.TO,dividend,false,structural,high,medium,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_005,RY.TO relève son dividende,RY.TO,dividend,false,structural,high,medium,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_006,ENB.TO précise la date de détachement,ENB.TO,dividend,false,structural,high,medium,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_007,NVDA présente son plan de capacités de production,NVDA,strategy_guidance,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_008,NVDA révise ses prévisions annuelles,NVDA,strategy_guidance,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_009,NVDA annonce une réorganisation stratégique,NVDA,strategy_guidance,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_010,GOOGL fait l’objet d’une procédure antitrust,GOOGL,regulation_legal,true,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_011,Une autorité ouvre une enquête sur TD.TO,TD.TO,regulation_legal,true,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_012,Un nouveau cadre légal vise les plateformes crypto,BTC-USD,regulation_legal,false,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_013,Un rapport critique les pratiques sociales de TSLA,TSLA,controversy,true,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_014,Un incident environnemental est signalé chez XOM,XOM,controversy,true,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_015,Des actionnaires contestent la gouvernance de SHOP.TO,SHOP.TO,controversy,true,structural,high,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_016,AAPL annonce la succession de sa direction,AAPL,management_change,false,structural,medium,medium,medium,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_017,CNR.TO nomme une nouvelle dirigeante,CNR.TO,management_change,false,structural,medium,medium,medium,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_018,MFC.TO annonce le départ de son directeur financier,MFC.TO,management_change,false,structural,medium,medium,medium,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_019,AMZN annonce un projet d’acquisition,AMZN,merger_acquisition,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_020,ATD.TO confirme une cession d’actifs,ATD.TO,merger_acquisition,false,structural,medium,high,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_021,La Banque du Canada annonce sa décision de taux,SPY,macro,false,macro_context,high,medium,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_022,Une publication mesure l’inflation canadienne,SPY,macro,false,macro_context,high,medium,high,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_023,Un analyste révise son objectif de cours pour NVDA,NVDA,analyst_opinion,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_024,Une banque modifie son avis sur RY.TO,RY.TO,analyst_opinion,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_025,NVDA progresse pendant la séance,NVDA,daily_price,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_026,SPY termine la journée en baisse,SPY,daily_price,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_027,Une rumeur non confirmée circule sur TSLA,TSLA,rumor_hype,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_028,ETH-USD suscite un engouement sur les réseaux,ETH-USD,rumor_hype,false,short_term_noise,low,low,low,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_029,NVDA présente une nouvelle puce pour l’IA,NVDA,product,false,structural,medium,high,medium,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.
+syn_030,NVDA lance un nouveau service logiciel,NVDA,product,false,structural,medium,high,medium,true,Titre fictif. Poids commun 0.10; ne décrit pas les portefeuilles des personas.

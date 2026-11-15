@@ -1,0 +1,21 @@
+profile_id: robert
+label: Robert — préservation à court horizon
+source: persona_preset
+age: 59
+horizon_years: 4
+horizon_bucket: short
+risk_tolerance: low_moderate
+max_acceptable_loss_pct: 0.08
+objective: capital_preservation
+experience: beginner
+preferences:
+  avoid_controversies: false
+  excluded_sectors: []
+  interests:
+  - income
+limits:
+  max_single_position: 0.1
+  max_high_vol_share: 0.1
+monthly_expenses_cad: null
+base_currency: CAD
+inconsistencies: []

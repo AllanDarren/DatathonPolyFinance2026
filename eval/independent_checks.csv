@@ -1,0 +1,11 @@
+id,description,method,input_a,input_b,reference_value,unit,source,is_synthetic
+V01,Poids NVDA Amira,weight,20000,100000,0.2,fraction,rules/personas/amira_portfolio.csv,true
+V02,Poids ZST Robert,weight,35000,100000,0.35,fraction,rules/personas/robert_portfolio.csv,true
+V03,Poids ESGV Mateo,weight,30000,100000,0.3,fraction,rules/personas/mateo_portfolio.csv,true
+V04,Part crypto Amira,weight,25000,100000,0.25,fraction,rules/personas/amira_portfolio.csv,true
+V05,Poids top3 Amira,weight,50000,100000,0.5,fraction,rules/personas/amira_portfolio.csv,true
+V06,Part obligations Robert,weight,65000,100000,0.65,fraction,rules/personas/robert_portfolio.csv,true
+V07,Rendement exemple prix 100 puis 82,return,82,100,-0.18,fraction,exemple arithmetique fictif,true
+V08,Chute exemple sommet 120 creux 84,drawdown,84,120,-0.3,fraction,exemple arithmetique fictif,true
+V09,Inflation exemple indices 100 puis 119,inflation,119,100,0.19,fraction,exemple arithmetique fictif,true
+V10,Volatilite exemple ecart-type quotidien 0.01,volatility,0.01,252,0.15874507866387544,fraction,exemple arithmetique fictif,true

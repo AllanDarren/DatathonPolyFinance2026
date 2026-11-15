@@ -1,0 +1,60 @@
+version: 1
+verdict:
+  incoherent_if_high_at_least: 1
+  tension_if_medium_at_least: 1
+rules:
+- id: C_MAX_SINGLE
+  severity: high
+  when:
+  - metric: position_weight_after
+    op: '>'
+    limit_from: profile.limits.max_single_position
+  text_fr: 'Poids visé : {observed}; limite par titre de ton profil : {limit}. Cette concentration dépasse le seuil
+    du prototype.'
+- id: C_HIGH_VOL_SHARE
+  severity: high
+  when:
+  - metric: high_vol_share
+    op: '>'
+    limit_from: profile.limits.max_high_vol_share
+  text_fr: 'Part très volatile après simulation : {observed}; limite du profil : {limit}. Le seuil de volatilité
+    est une convention du prototype.'
+- id: C_DRAWDOWN_VS_LOSS
+  severity: medium
+  when:
+  - metric: max_drawdown_abs
+    op: '>'
+    limit_from: profile.max_acceptable_loss_pct
+  text_fr: 'Chute historique du titre : {observed}; perte annuelle déclarée acceptable : {limit}. Les durées diffèrent
+    : ceci est une alerte, pas une perte prévue du portefeuille.'
+- id: C_CRYPTO_LOW
+  severity: high
+  when:
+  - metric: asset_class
+    op: ==
+    value: crypto
+  - field: profile.risk_tolerance
+    op: in
+    value:
+    - low
+    - low_moderate
+  text_fr: 'Classe simulée : {observed}; profils concernés : {limit}. Une exposition crypto entre en conflit avec
+    cette politique prudente du prototype.'
+- id: C_TOP3_CONCENTRATION
+  severity: medium
+  when:
+  - metric: top3_concentration
+    op: '>'
+    value: 0.75
+  text_fr: 'Poids cumulé des trois plus grosses positions après simulation : {observed}; seuil de vigilance : {limit}.'
+- id: C_UNRECOVERED_SHORT
+  severity: medium
+  when:
+  - metric: recovery_days
+    op: ==
+    value: null
+  - field: profile.horizon_years
+    op: <=
+    value: 5
+  text_fr: Le sommet de référence n’a pas été retrouvé avant la fin des données; ton horizon est de cinq ans ou
+    moins. Aucun délai futur de récupération ne peut être déduit.

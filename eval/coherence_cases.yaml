@@ -1,0 +1,73 @@
+version: 1
+is_synthetic: true
+cases:
+- id: robert_nvda_20
+  profile_id: robert
+  consideration:
+    ticker: NVDA
+    intended_weight: 0.2
+  metrics:
+    position_weight_after: 0.2
+    high_vol_share: 0.2
+    max_drawdown_abs: 0.66
+    top3_concentration: 0.55
+    asset_class: equity_us
+    recovery_days: 300
+  expected_verdict: incoherent
+  expected_rule_ids:
+  - C_MAX_SINGLE
+  - C_HIGH_VOL_SHARE
+  - C_DRAWDOWN_VS_LOSS
+- id: amira_nvda_20
+  profile_id: amira
+  consideration:
+    ticker: NVDA
+    intended_weight: 0.2
+  metrics:
+    position_weight_after: 0.2
+    high_vol_share: 0.55
+    max_drawdown_abs: 0.66
+    top3_concentration: 0.55
+    asset_class: equity_us
+    recovery_days: 300
+  expected_verdict: tension
+  expected_rule_ids:
+  - C_DRAWDOWN_VS_LOSS
+- id: amira_all_high_vol
+  profile_id: amira
+  metrics:
+    position_weight_after: 0.2
+    high_vol_share: 1.0
+    max_drawdown_abs: 0.66
+    top3_concentration: 0.6
+    asset_class: equity_us
+    recovery_days: 300
+  expected_verdict: incoherent
+  expected_rule_ids:
+  - C_HIGH_VOL_SHARE
+  - C_DRAWDOWN_VS_LOSS
+- id: robert_crypto
+  profile_id: robert
+  metrics:
+    position_weight_after: 0.05
+    high_vol_share: 0.05
+    max_drawdown_abs: 0.76
+    top3_concentration: 0.5
+    asset_class: crypto
+    recovery_days: 300
+  expected_verdict: incoherent
+  expected_rule_ids:
+  - C_DRAWDOWN_VS_LOSS
+  - C_CRYPTO_LOW
+- id: robert_unrecovered
+  profile_id: robert
+  metrics:
+    position_weight_after: 0.05
+    high_vol_share: 0.05
+    max_drawdown_abs: 0.05
+    top3_concentration: 0.5
+    asset_class: equity_us
+    recovery_days: null
+  expected_verdict: tension
+  expected_rule_ids:
+  - C_UNRECOVERED_SHORT

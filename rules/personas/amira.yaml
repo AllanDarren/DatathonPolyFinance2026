@@ -1,0 +1,23 @@
+profile_id: amira
+label: Amira — croissance à long terme
+source: persona_preset
+age: 26
+horizon_years: 20
+horizon_bucket: long
+risk_tolerance: high
+max_acceptable_loss_pct: 0.35
+objective: growth
+experience: advanced
+preferences:
+  avoid_controversies: false
+  excluded_sectors: []
+  interests:
+  - ai
+  - emerging_technology
+  - crypto
+limits:
+  max_single_position: 0.25
+  max_high_vol_share: 0.6
+monthly_expenses_cad: null
+base_currency: CAD
+inconsistencies: []

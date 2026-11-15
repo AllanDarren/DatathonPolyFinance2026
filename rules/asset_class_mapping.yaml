@@ -1,0 +1,19 @@
+version: 1
+source: assets_universe.csv
+mappings:
+- starter_asset_class: equity
+  currency: CAD
+  contract_asset_class: equity_ca
+- starter_asset_class: equity
+  currency: USD
+  contract_asset_class: equity_us
+- starter_asset_class: etf_equity
+  contract_asset_class: equity_etf
+- starter_asset_class: etf_bond
+  contract_asset_class: bond_etf
+- starter_asset_class: etf_commodity
+  sector: Gold
+  contract_asset_class: gold_etf
+- starter_asset_class: crypto
+  contract_asset_class: crypto
+unknown_policy: reject_unmapped_class

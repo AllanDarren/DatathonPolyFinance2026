@@ -1,0 +1,22 @@
+profile_id: mateo
+label: Mateo — équilibre et préférences éthiques
+source: persona_preset
+age: 41
+horizon_years: 10
+horizon_bucket: medium
+risk_tolerance: moderate
+max_acceptable_loss_pct: 0.15
+objective: balanced
+experience: intermediate
+preferences:
+  avoid_controversies: true
+  excluded_sectors:
+  - fossil_fuels
+  interests:
+  - esg
+limits:
+  max_single_position: 0.15
+  max_high_vol_share: 0.25
+monthly_expenses_cad: null
+base_currency: CAD
+inconsistencies: []
