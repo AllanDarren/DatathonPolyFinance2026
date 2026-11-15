@@ -44,7 +44,7 @@ export function DashboardShell({ tab }: { tab: Step }) {
   return (
     <div className="dashboard">
       <header className="dash-head">
-        <h1>{t.dashboard.title} — {profile.label}</h1>
+        <h1>{t.dashboard.title}</h1>
         {feed && <p className="muted small">{t.dashboard.asOf(formatDate(feed.data_as_of), formatDate(feed.news_as_of))}</p>}
       </header>
       <nav className="tabs" aria-label={t.tabs.label}>

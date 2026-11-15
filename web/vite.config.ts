@@ -12,5 +12,6 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['./src/test/setup.ts'],
+    env: { VITE_MOCK: '1' }, // le faux backend ne sert qu'aux tests
   },
 });

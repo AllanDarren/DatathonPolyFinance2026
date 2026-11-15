@@ -5,7 +5,6 @@ const fr = {
   appName: 'AlphaForge AI',
   tagline: 'Moins d’information, plus de pertinence.',
   disclaimer: 'Simulation éducative — pas un conseil financier.',
-  mockBanner: 'Mode simulé : données d’exemple, aucun appel à l’API.',
   syntheticBadge: 'exemple fictif',
 
   nav: {
@@ -14,6 +13,8 @@ const fr = {
     compare: 'Comparer deux profils',
     dashboard: 'Tableau de bord',
     profile: 'Mon profil',
+    noProfile: 'Aucun profil',
+    dashboardLocked: 'Choisis un profil et un portefeuille d’abord',
     back: 'Retour',
   },
 
