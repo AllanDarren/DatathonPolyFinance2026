@@ -1,0 +1,990 @@
+{
+  "generated_at": "2026-11-14T00:00:00Z",
+  "data_as_of": "2026-11-12",
+  "news_as_of": "2026-11-13",
+  "profile": {
+    "profile_id": "robert",
+    "label": "Robert, 59 ans, proche de la retraite",
+    "source": "persona_preset",
+    "age": 59,
+    "horizon_years": 4,
+    "horizon_bucket": "short",
+    "risk_tolerance": "low_moderate",
+    "max_acceptable_loss_pct": 0.1,
+    "objective": "capital_preservation",
+    "experience": "intermediate",
+    "preferences": {
+      "avoid_controversies": false,
+      "excluded_sectors": [],
+      "interests": [
+        "dividendes"
+      ]
+    },
+    "limits": {
+      "max_single_position": 0.1,
+      "max_high_vol_share": 0.1
+    },
+    "monthly_expenses_cad": 5000,
+    "base_currency": "CAD",
+    "inconsistencies": []
+  },
+  "portfolio_summary": {
+    "top_positions": [
+      {
+        "ticker": "XBB.TO",
+        "amount": 25000.0,
+        "weight": 0.25,
+        "asset_class": "bond_etf",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "ZST.TO",
+        "amount": 20000.0,
+        "weight": 0.2,
+        "asset_class": "bond_etf",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "XIU.TO",
+        "amount": 15000.0,
+        "weight": 0.15,
+        "asset_class": "equity_etf",
+        "price_currency": "CAD",
+        "in_universe": true
+      },
+      {
+        "ticker": "SPY",
+        "amount": 15000.0,
+        "weight": 0.15,
+        "asset_class": "equity_etf",
+        "price_currency": "USD",
+        "in_universe": true
+      },
+      {
+        "ticker": "FTS.TO",
+        "amount": 8000.0,
+        "weight": 0.08,
+        "asset_class": "equity_ca",
+        "price_currency": "CAD",
+        "in_universe": true
+      }
+    ],
+    "asset_class_weights": {
+      "bond_etf": 0.5,
+      "equity_etf": 0.3,
+      "equity_ca": 0.2
+    },
+    "high_vol_share": 0,
+    "top3_concentration": 0.6
+  },
+  "items": [
+    {
+      "news_id": "n_syn_001",
+      "title": "La Banque du Canada maintient son taux directeur et signale une pause prolongée",
+      "url": "https://example.org/synthetic/n_syn_001",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-10T14:00:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.7,
+        "level": "high",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.70 pour un horizon short.",
+            "delta": 0.7
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence high pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_001",
+              "ev_002"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.70, niveau high.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_003"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_008",
+      "title": "L'inflation américaine ralentit à 2,6 % sur un an en octobre",
+      "url": "https://example.org/synthetic/n_syn_008",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-12T13:30:00Z",
+      "tickers": [],
+      "is_synthetic": true,
+      "category": "macro_rates",
+      "horizon_relevance": "macro_context",
+      "relevance": {
+        "score": 0.7,
+        "level": "high",
+        "shown": true,
+        "position_weight": 0.0,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_MACRO_RATES",
+            "text": "Catégorie Taux et inflation: pertinence 0.70 pour un horizon short.",
+            "delta": 0.7
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Taux et inflation: pertinence high pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Taux et inflation ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_015",
+              "ev_016"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.70, niveau high.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_017"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_003",
+      "title": "Royal Bank of Canada annonce une hausse de 4 % de son dividende trimestriel",
+      "url": "https://example.org/synthetic/n_syn_003",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-11T11:00:00Z",
+      "tickers": [
+        "RY.TO"
+      ],
+      "is_synthetic": true,
+      "category": "dividend",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.6,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.07,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_DIVIDEND",
+            "text": "Catégorie Dividende: pertinence 0.60 pour un horizon short.",
+            "delta": 0.6
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Dividende: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Dividende ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_004",
+              "ev_005"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.60, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_006"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "RY.TO représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 15,5 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_007",
+              "ev_008"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Dans des situations comparables (20 dates ex-dividende), le mouvement médian a été de 0,47 %; ce n'est pas une prévision.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_009"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": {
+        "event_type": "dividend_ex_date",
+        "asset": "RY.TO",
+        "window": "veille à +5 jours de bourse",
+        "n_events": 20,
+        "median_return": 0.004736,
+        "p10": -0.014146,
+        "p90": 0.021428,
+        "share_positive": 0.75,
+        "events": [
+          {
+            "date": "2022-01-25",
+            "return": 0.019628
+          },
+          {
+            "date": "2022-04-22",
+            "return": -0.043095
+          },
+          {
+            "date": "2022-07-25",
+            "return": 0.020598
+          },
+          {
+            "date": "2022-10-25",
+            "return": 0.022635
+          },
+          {
+            "date": "2023-01-25",
+            "return": 0.017638
+          },
+          {
+            "date": "2023-04-24",
+            "return": 0.003956
+          },
+          {
+            "date": "2023-07-25",
+            "return": 0.000153
+          },
+          {
+            "date": "2023-10-25",
+            "return": 0.015867
+          },
+          {
+            "date": "2024-01-24",
+            "return": 0.005515
+          },
+          {
+            "date": "2024-04-24",
+            "return": -0.013626
+          },
+          {
+            "date": "2024-07-25",
+            "return": 0.023145
+          },
+          {
+            "date": "2024-10-24",
+            "return": -0.000175
+          },
+          {
+            "date": "2025-01-27",
+            "return": 0.015475
+          },
+          {
+            "date": "2025-04-24",
+            "return": 0.021294
+          },
+          {
+            "date": "2025-07-24",
+            "return": -0.010007
+          },
+          {
+            "date": "2025-10-27",
+            "return": 0.000584
+          },
+          {
+            "date": "2026-01-26",
+            "return": -0.018825
+          },
+          {
+            "date": "2026-04-23",
+            "return": 0.001544
+          },
+          {
+            "date": "2026-07-27",
+            "return": 0.000546
+          },
+          {
+            "date": "2026-10-26",
+            "return": 0.013999
+          }
+        ],
+        "caveats": [
+          "Échantillon limité.",
+          "Les fenêtres peuvent chevaucher d'autres événements.",
+          "Biais du survivant: actif choisi en 2026.",
+          "Ce n'est pas une prévision."
+        ],
+        "evidence_id": "ev_009"
+      }
+    },
+    {
+      "news_id": "n_syn_010",
+      "title": "Fortis confirme ses prévisions d'investissement sur cinq ans",
+      "url": "https://example.org/synthetic/n_syn_010",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-06T12:00:00Z",
+      "tickers": [
+        "FTS.TO"
+      ],
+      "is_synthetic": true,
+      "category": "earnings_results",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.5,
+        "level": "medium",
+        "shown": true,
+        "position_weight": 0.08,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_EARNINGS_RESULTS",
+            "text": "Catégorie Résultats financiers: pertinence 0.50 pour un horizon short.",
+            "delta": 0.5
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Résultats financiers: pertinence medium pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Résultats financiers ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_018",
+              "ev_019"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.50, niveau medium.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_020"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "FTS.TO représente 8,0 % de ton portefeuille, avec une volatilité annualisée de 14,7 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_021",
+              "ev_022"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    },
+    {
+      "news_id": "n_syn_004",
+      "title": "Enbridge visée par une poursuite environnementale après une fuite sur un pipeline",
+      "url": "https://example.org/synthetic/n_syn_004",
+      "source": "Exemple fictif",
+      "published_at": "2026-11-09T16:20:00Z",
+      "tickers": [
+        "ENB.TO"
+      ],
+      "is_synthetic": true,
+      "category": "controversy",
+      "horizon_relevance": "structural",
+      "relevance": {
+        "score": 0.4,
+        "level": "low",
+        "shown": true,
+        "position_weight": 0.05,
+        "rule_hits": [
+          {
+            "rule_id": "R_BASE_CONTROVERSY",
+            "text": "Catégorie Controverse: pertinence 0.40 pour un horizon short.",
+            "delta": 0.4
+          }
+        ]
+      },
+      "explanation": {
+        "summary": "Controverse: pertinence low pour ton profil.",
+        "claims": [
+          {
+            "text": "Cette nouvelle est classée « Controverse ».",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_010",
+              "ev_011"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Son score de pertinence pour ton profil est 0.40, niveau low.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_012"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "ENB.TO représente 5,0 % de ton portefeuille, avec une volatilité annualisée de 16,1 % sur 5 ans.",
+            "label": "fact",
+            "evidence_ids": [
+              "ev_013",
+              "ev_014"
+            ],
+            "verified": "supported"
+          },
+          {
+            "text": "Une controverse peut peser sur la réputation de l'entreprise sur plusieurs années.",
+            "label": "hypothesis",
+            "evidence_ids": [
+              "ev_011"
+            ],
+            "verified": "supported"
+          }
+        ],
+        "generated_by": "template",
+        "guardian": {
+          "status": "passed",
+          "flags": []
+        }
+      },
+      "historical_context": null
+    }
+  ],
+  "hidden": {
+    "count": 2,
+    "by_reason": [
+      {
+        "reason": "Bruit de court terme pour ton horizon",
+        "count": 2
+      }
+    ]
+  },
+  "coherence": {
+    "verdict": "incoherent",
+    "rule_hits": [
+      {
+        "rule_id": "C_MAX_SINGLE",
+        "severity": "high",
+        "observed": 0.2,
+        "limit": 0.1,
+        "text": "Cette position dépasserait la limite de 10 % par titre prévue pour ton profil (valeur: 20 %)."
+      },
+      {
+        "rule_id": "C_DRAWDOWN_VS_LOSS",
+        "severity": "medium",
+        "observed": 0.6634,
+        "limit": 0.1,
+        "text": "La pire chute historique de ce titre (66 %) dépasse la perte que tu dis pouvoir accepter (10 %)."
+      },
+      {
+        "rule_id": "C_HIGH_VOL_SHARE",
+        "severity": "high",
+        "observed": 0.2,
+        "limit": 0.1,
+        "text": "La part d'actifs très volatils dépasserait la limite de 10 % prévue pour ton profil."
+      }
+    ],
+    "metrics": {
+      "annualized_vol": 0.519384,
+      "max_drawdown": -0.663351,
+      "worst_calendar_year_return": -0.502646,
+      "position_weight_after": 0.2
+    },
+    "explanation": {
+      "summary": "Demande incohérente avec ton profil: NVDA à 20 %.",
+      "claims": [
+        {
+          "text": "À 20 %, NVDA dépasserait la limite de 10 % par titre de ton profil.",
+          "label": "fact",
+          "evidence_ids": [
+            "ev_026",
+            "ev_027"
+          ],
+          "verified": "supported"
+        },
+        {
+          "text": "Sur 5 ans, NVDA a connu une chute maximale de -66,3 % et un rendement de -50,3 % en 2022.",
+          "label": "fact",
+          "evidence_ids": [
+            "ev_024",
+            "ev_025"
+          ],
+          "verified": "supported"
+        },
+        {
+          "text": "Sa volatilité annualisée (51,9 %) le classe parmi les actifs très volatils.",
+          "label": "fact",
+          "evidence_ids": [
+            "ev_023"
+          ],
+          "verified": "supported"
+        },
+        {
+          "text": "Avec un horizon de 4 ans, une chute de cette ampleur pourrait ne pas être récupérée à temps.",
+          "label": "scenario",
+          "evidence_ids": [
+            "ev_024"
+          ],
+          "verified": "supported"
+        }
+      ],
+      "generated_by": "template",
+      "guardian": {
+        "status": "passed",
+        "flags": []
+      }
+    }
+  },
+  "events": [
+    {
+      "id": "evt_boc_2026_12_09",
+      "type": "rate_decision",
+      "scope": "macro",
+      "tickers": [],
+      "date": "2026-12-09",
+      "title": "Décision de taux de la Banque du Canada",
+      "is_estimated": true,
+      "source": "Calendrier public de la Banque du Canada (à confirmer)",
+      "retrieved_at": "2026-11-13T12:00:00Z"
+    }
+  ],
+  "evidence": {
+    "ev_001": {
+      "id": "ev_001",
+      "kind": "news_source",
+      "statement": "Nouvelle « La Banque du Canada maintient son taux directeur et signale … » (exemple fictif).",
+      "value": "n_syn_001",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_002": {
+      "id": "ev_002",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_001",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_003": {
+      "id": "ev_003",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.70 (high).",
+      "value": 0.7,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_004": {
+      "id": "ev_004",
+      "kind": "news_source",
+      "statement": "Nouvelle « Royal Bank of Canada annonce une hausse de 4 % de son divide… » (exemple fictif).",
+      "value": "n_syn_003",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_003"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_005": {
+      "id": "ev_005",
+      "kind": "classification",
+      "statement": "Classée « Dividende » (structural).",
+      "value": "dividend",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_003",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_006": {
+      "id": "ev_006",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.60 (medium).",
+      "value": 0.6,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_DIVIDEND"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_007": {
+      "id": "ev_007",
+      "kind": "portfolio_calc",
+      "statement": "RY.TO représente 7,0 % du portefeuille analysé.",
+      "value": 0.07,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "RY.TO",
+        "amount": 7000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_008": {
+      "id": "ev_008",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de RY.TO: 15,5 %.",
+      "value": 0.154667,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "RY.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_009": {
+      "id": "ev_009",
+      "kind": "event_study",
+      "statement": "20 dates ex-dividende passées de RY.TO: médiane 0,47 % de la veille à +5 jours de bourse.",
+      "value": 0.004736,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "RY.TO",
+        "event_type": "dividend_ex_date",
+        "window": "t-1 → t+5 jours de bourse"
+      },
+      "source": "data/corporate_actions.csv, data/prices_daily.csv",
+      "computed_by": "core.event_study.historical_context"
+    },
+    "ev_010": {
+      "id": "ev_010",
+      "kind": "news_source",
+      "statement": "Nouvelle « Enbridge visée par une poursuite environnementale après une … » (exemple fictif).",
+      "value": "n_syn_004",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_004"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_011": {
+      "id": "ev_011",
+      "kind": "classification",
+      "statement": "Classée « Controverse » (structural).",
+      "value": "controversy",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_004",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_012": {
+      "id": "ev_012",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.40 (low).",
+      "value": 0.4,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_CONTROVERSY"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_013": {
+      "id": "ev_013",
+      "kind": "portfolio_calc",
+      "statement": "ENB.TO représente 5,0 % du portefeuille analysé.",
+      "value": 0.05,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "ENB.TO",
+        "amount": 5000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_014": {
+      "id": "ev_014",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "value": 0.160933,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "ENB.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_015": {
+      "id": "ev_015",
+      "kind": "news_source",
+      "statement": "Nouvelle « L'inflation américaine ralentit à 2,6 % sur un an en octobre… » (exemple fictif).",
+      "value": "n_syn_008",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_016": {
+      "id": "ev_016",
+      "kind": "classification",
+      "statement": "Classée « Taux et inflation » (macro_context).",
+      "value": "macro_rates",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_008",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_017": {
+      "id": "ev_017",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.70 (high).",
+      "value": 0.7,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_MACRO_RATES"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_018": {
+      "id": "ev_018",
+      "kind": "news_source",
+      "statement": "Nouvelle « Fortis confirme ses prévisions d'investissement sur cinq ans… » (exemple fictif).",
+      "value": "n_syn_010",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_010"
+      },
+      "source": "contracts/examples (synthetic)",
+      "computed_by": "tools.build_examples"
+    },
+    "ev_019": {
+      "id": "ev_019",
+      "kind": "classification",
+      "statement": "Classée « Résultats financiers » (structural).",
+      "value": "earnings_results",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "news_id": "n_syn_010",
+        "prompt_version": "classifier_v0"
+      },
+      "source": "synthetic",
+      "computed_by": "agents.classifier (mock)"
+    },
+    "ev_020": {
+      "id": "ev_020",
+      "kind": "rule_hit",
+      "statement": "Score de pertinence 0.50 (medium).",
+      "value": 0.5,
+      "unit": "score",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "R_BASE_EARNINGS_RESULTS"
+        ]
+      },
+      "source": "rules/relevance_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.score_relevance"
+    },
+    "ev_021": {
+      "id": "ev_021",
+      "kind": "portfolio_calc",
+      "statement": "FTS.TO représente 8,0 % du portefeuille analysé.",
+      "value": 0.08,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "FTS.TO",
+        "amount": 8000,
+        "total": 100000.0
+      },
+      "source": "portefeuille fourni",
+      "computed_by": "core.portfolio.position_weight"
+    },
+    "ev_022": {
+      "id": "ev_022",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de FTS.TO: 14,7 %.",
+      "value": 0.147143,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "FTS.TO",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_023": {
+      "id": "ev_023",
+      "kind": "metric",
+      "statement": "Volatilité annualisée de NVDA: 51,9 %.",
+      "value": 0.519384,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "window": "2021-11-12/2026-11-12",
+        "days_per_year": 252
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.annualized_vol"
+    },
+    "ev_024": {
+      "id": "ev_024",
+      "kind": "metric",
+      "statement": "Perte maximale de NVDA sur 5 ans: -66,3 %.",
+      "value": -0.663351,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "window": "2021-11-12/2026-11-12"
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.max_drawdown"
+    },
+    "ev_025": {
+      "id": "ev_025",
+      "kind": "metric",
+      "statement": "Rendement de NVDA en 2022: -50,3 %.",
+      "value": -0.502646,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "year": 2022
+      },
+      "source": "data/prices_daily.csv",
+      "computed_by": "core.metrics.calendar_year_return"
+    },
+    "ev_026": {
+      "id": "ev_026",
+      "kind": "portfolio_calc",
+      "statement": "Poids de NVDA après l'ajout envisagé: 20,0 %.",
+      "value": 0.2,
+      "unit": "fraction",
+      "as_of": "2026-11-12",
+      "inputs": {
+        "ticker": "NVDA",
+        "intended_weight": 0.2
+      },
+      "source": "consideration",
+      "computed_by": "core.metrics.position_weight_after"
+    },
+    "ev_027": {
+      "id": "ev_027",
+      "kind": "rule_hit",
+      "statement": "Règles de cohérence déclenchées: C_MAX_SINGLE, C_DRAWDOWN_VS_LOSS, C_HIGH_VOL_SHARE.",
+      "value": "incoherent",
+      "unit": null,
+      "as_of": "2026-11-12",
+      "inputs": {
+        "rule_ids": [
+          "C_MAX_SINGLE",
+          "C_DRAWDOWN_VS_LOSS",
+          "C_HIGH_VOL_SHARE"
+        ]
+      },
+      "source": "rules/coherence_rules.yaml (provisoire)",
+      "computed_by": "core.rules_engine.check_coherence"
+    }
+  },
+  "disclaimers": [
+    "Simulation éducative: ce n'est pas un conseil financier personnalisé.",
+    "Aucune transaction réelle n'est effectuée."
+  ],
+  "limits": [
+    "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie.",
+    "Biais du survivant: les 31 actifs ont été choisis en 2026.",
+    "Un contexte historique n'est pas une prévision.",
+    "Les nouvelles de cet exemple sont fictives (exemple fictif)."
+  ]
+}
