@@ -4443,7 +4443,7 @@
     "status": "ok",
     "forced": false,
     "planner": "mock",
-    "duration_ms": 3
+    "duration_ms": 2
    },
    {
     "step": 4,
@@ -4460,7 +4460,7 @@
     "status": "ok",
     "forced": false,
     "planner": "mock",
-    "duration_ms": 109
+    "duration_ms": 79
    },
    {
     "step": 5,

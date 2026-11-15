@@ -1,0 +1,23 @@
+version: 1
+# Actifs hors des 31 du jeu de départ, téléchargés à la demande (ingest/market.py, source yfinance).
+# La classe d'actif est déduite par ces règles; tout ce qui n'est pas couvert est refusé avec un message clair.
+supported_currencies: [CAD, USD]       # conversion en CAD disponible seulement pour ces devises
+history_start: '2021-11-12'            # même fenêtre que le jeu de départ
+equity_by_currency:
+  CAD: equity_ca
+  USD: equity_us
+etf:
+  bond_markers: [bond, fixed income, treasur, obligat, municipal, credit, aggregate]
+  gold_markers: [gold, ' or ']
+  other_commodity_supported: false     # matières premières autres que l'or : refusées (pas de règle de risque)
+  default: equity_etf
+crypto: crypto
+unsupported_fr:
+  MUTUALFUND: Fonds commun de placement — son prix est calculé une fois par jour, hors bourse; non pris en charge.
+  INDEX: Un indice ne s'achète pas directement; cherche un FNB qui le suit.
+  OPTION: Les options sont hors du périmètre de cette simulation.
+  FUTURE: Les contrats à terme sont hors du périmètre de cette simulation.
+  CURRENCY: Les devises sont hors du périmètre de cette simulation.
+  COMMODITY_ETF: Ce FNB de matières premières (autre que l'or) n'a pas de profil de risque dans nos règles.
+  CURRENCY_NOT_SUPPORTED: Seuls les titres cotés en CAD ou en USD sont pris en charge (conversion en CAD).
+  NOT_FOUND: Aucun titre coté ne correspond à ce symbole.

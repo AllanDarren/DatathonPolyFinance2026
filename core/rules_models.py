@@ -289,6 +289,23 @@ class DataQualityRules(RulesModel):
     reference_calendars: dict[str, str]
 
 
+class OnDemandEtf(RulesModel):
+    bond_markers: list[str]
+    gold_markers: list[str]
+    other_commodity_supported: bool = False
+    default: str = "equity_etf"
+
+
+class OnDemandAssets(RulesModel):
+    version: int
+    supported_currencies: list[str] = Field(min_length=1)
+    history_start: str
+    equity_by_currency: dict[str, str]
+    etf: OnDemandEtf
+    crypto: str = "crypto"
+    unsupported_fr: dict[str, str]
+
+
 RULE_FILES: dict[str, type[BaseModel]] = {
     "questionnaire.yaml": Questionnaire,
     "profile_rules.yaml": ProfileRules,
@@ -301,5 +318,6 @@ RULE_FILES: dict[str, type[BaseModel]] = {
     "source_tiers.yaml": SourceTiers,
     "language_policy.yaml": LanguagePolicy,
     "data_quality.yaml": DataQualityRules,
+    "on_demand_assets.yaml": OnDemandAssets,
 }
 PERSONA_MODEL = Profile

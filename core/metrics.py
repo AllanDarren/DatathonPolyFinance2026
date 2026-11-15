@@ -56,7 +56,7 @@ def _memo(fn: Callable[..., Any]) -> Callable[..., Any]:
 
 def _check_ticker(ticker: str) -> None:
     if ticker not in data.load_universe().index:
-        raise AlphaForgeError("UNKNOWN_TICKER", f"{ticker} ne fait pas partie des 31 actifs analysés.",
+        raise AlphaForgeError("UNKNOWN_TICKER", f"{ticker} n'est pas chargé (ni dans le jeu de départ, ni téléchargé).",
                               details={"ticker": ticker})
 
 
@@ -81,6 +81,9 @@ def trading_days_per_year(ticker: str) -> int:
 
 def _ev(kind: str, statement: str, value: Any, unit: str | None, inputs: dict[str, Any], fn: str,
         source: str = PRICES_SRC) -> dict[str, Any]:
+    extra = data.extra_asset(str(inputs.get("ticker", "")))
+    if extra is not None:  # downloaded on demand: cite the real source and retrieval date
+        source = str(extra["meta"].get("source", "yfinance"))
     return make_evidence(kind=kind, statement=statement, value=value, unit=unit, as_of=data.data_as_of(),
                          inputs=inputs, source=source, computed_by=f"core.metrics.{fn}")
 

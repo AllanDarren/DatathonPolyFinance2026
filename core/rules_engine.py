@@ -29,6 +29,7 @@ from core.rules_models import (
     CoherenceRules,
     Condition,
     DataQualityRules,
+    OnDemandAssets,
     Glossary,
     InstrumentRisks,
     LanguagePolicy,
@@ -120,6 +121,7 @@ class RuleSet:
     source_tiers: SourceTiers | None = None
     language_policy: LanguagePolicy | None = None
     data_quality: DataQualityRules | None = None
+    on_demand: OnDemandAssets | None = None
 
     def category(self, cat_id: str) -> Any:
         return next((c for c in self.taxonomy.categories if c.id == cat_id), None)
@@ -151,6 +153,7 @@ def load_rules() -> RuleSet:
         source_tiers=loaded["source_tiers.yaml"][0],  # type: ignore[arg-type]
         language_policy=loaded["language_policy.yaml"][0],  # type: ignore[arg-type]
         data_quality=loaded["data_quality.yaml"][0],  # type: ignore[arg-type]
+        on_demand=loaded["on_demand_assets.yaml"][0],  # type: ignore[arg-type]
         fallbacks=tuple(name for name, (_, _, fb) in loaded.items() if fb),
     )
 

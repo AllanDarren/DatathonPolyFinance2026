@@ -76,7 +76,8 @@ _UNIVERSE_WITH_EXTRAS: dict[int, pd.DataFrame] = {}
 MAX_EXTRAS = 64
 
 
-def register_extra_asset(ticker: str, meta: dict[str, Any], prices: pd.DataFrame, quality: dict[str, Any]) -> None:
+def register_extra_asset(ticker: str, meta: dict[str, Any], prices: pd.DataFrame, quality: dict[str, Any],
+                         dividends: pd.DataFrame | None = None) -> None:
     """Add an asset downloaded on demand. `meta`: name, sector, market, asset_class, price_currency,
     source, retrieved_at. `prices`: same columns as prices_daily.csv (one ticker)."""
     if ticker in _load_starter_universe().index:
@@ -85,7 +86,8 @@ def register_extra_asset(ticker: str, meta: dict[str, Any], prices: pd.DataFrame
         _EXTRAS.pop(next(iter(_EXTRAS)))
     df = prices.copy()
     df["date"] = pd.to_datetime(df["date"])
-    _EXTRAS[ticker] = {"meta": dict(meta), "prices": df.sort_values("date").reset_index(drop=True), "quality": quality}
+    _EXTRAS[ticker] = {"meta": dict(meta), "prices": df.sort_values("date").reset_index(drop=True), "quality": quality,
+                       "actions": dividends if dividends is not None else pd.DataFrame()}
     _UNIVERSE_WITH_EXTRAS.clear()
     _VERSION[0] += 1
 
@@ -216,8 +218,17 @@ def fx_rate_on(date: str | pd.Timestamp) -> float:
     return float(fx_rates_on(pd.DatetimeIndex([pd.Timestamp(date)])).iloc[0])
 
 
-@cache
 def load_corporate_actions() -> pd.DataFrame:
+    """Dividends and splits of the starter dataset, plus those downloaded with on-demand assets."""
+    base = _load_starter_corporate_actions()
+    extra = [e["actions"] for e in _EXTRAS.values() if not e["actions"].empty]
+    if not extra:
+        return base
+    return pd.concat([base, *extra], ignore_index=True).sort_values(["ticker", "ex_date"]).reset_index(drop=True)
+
+
+@cache
+def _load_starter_corporate_actions() -> pd.DataFrame:
     df = _read_csv("corporate_actions.csv")
     df["ex_date"] = pd.to_datetime(df["ex_date"], format="%Y-%m-%d")
     df["value"] = pd.to_numeric(df["value"], errors="raise")
@@ -240,7 +251,8 @@ def data_as_of() -> str:
 
 def clear_caches() -> None:
     """For tests that switch DATA_DIR."""
-    for fn in (_load_starter_universe, load_prices, _starter_price_series, load_fx, load_corporate_actions, load_macro):
+    for fn in (_load_starter_universe, load_prices, _starter_price_series, load_fx, _load_starter_corporate_actions,
+               load_macro):
         fn.cache_clear()
     _EXTRAS.clear()
     _UNIVERSE_WITH_EXTRAS.clear()

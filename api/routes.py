@@ -129,6 +129,13 @@ def _events(query: dict[str, str], _b: Any) -> Response:
     return Response(200, _services().get_events(tickers))
 
 
+def _search(query: dict[str, str], _b: Any) -> Response:
+    q = query.get("q", "")
+    if len(q) > 60:
+        raise ApiError(400, "INVALID_REQUEST", "Recherche trop longue (60 caractères au plus).")
+    return Response(200, _services().search_assets(q))
+
+
 Handler = Callable[[dict[str, str], Any], Response]
 
 # (method, path) -> (handler, has_json_body)
@@ -140,6 +147,7 @@ ROUTES: dict[tuple[str, str], tuple[Handler, bool]] = {
     ("POST", "/portfolio/parse"): (_portfolio, True),
     ("POST", "/feed"): (_feed, True),
     ("POST", "/preferences/extract"): (_preferences, True),
+    ("GET", "/assets/search"): (_search, False),
     ("GET", "/events"): (_events, False),
 }
 PATHS = {p for _, p in ROUTES}

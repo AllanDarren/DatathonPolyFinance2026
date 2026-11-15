@@ -303,6 +303,15 @@ class WeightGridPoint(Contract):
     rule_ids: list[str]
 
 
+class AssetSearchResult(Contract):
+    ticker: str
+    name: str
+    exchange: str
+    quote_type: str = Field(description="STARTER for the 31 verified assets, else Yahoo quoteType")
+    supported: bool
+    in_starter_dataset: bool
+
+
 class QualityReport(Contract):
     """Data-quality gate of one asset (core/quality.py). No verdict is computed on 'blocking' data."""
 
@@ -514,4 +523,6 @@ TOP_LEVEL: tuple[type[BaseModel], ...] = (
     Health,
     PreferenceExtractRequest,
     PreferenceExtraction,
+    AssetSearchResult,
+    QualityReport,
 )

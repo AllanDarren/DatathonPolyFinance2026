@@ -35,6 +35,7 @@ __all__ = [
     "build_feed",
     "get_events",
     "extract_preferences",
+    "search_assets",
 ]
 
 
@@ -94,7 +95,20 @@ def build_feed(profile: dict[str, Any], portfolio: dict[str, Any],
     """Profile x portfolio (x consideration) -> FeedResponse (real pipeline)."""
     from services.feed import build_feed as _build_feed
 
+    ticker = str((consideration or {}).get("ticker", "")).strip().upper()
+    if ticker and not _data.is_starter(ticker):
+        from ingest.market import ensure_asset  # network only here, only for a ticker outside the starter set
+
+        ensure_asset(ticker)
+        consideration = {**consideration, "ticker": ticker}  # type: ignore[dict-item]
     return _build_feed(profile, portfolio, consideration)
+
+
+def search_assets(query: str) -> list[dict[str, Any]]:
+    """Any listed asset by name or symbol (the 31 verified assets first)."""
+    from ingest.market import search_assets as _search
+
+    return _search(query)
 
 
 def get_events(tickers: list[str] | None = None) -> list[dict[str, Any]]:

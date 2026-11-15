@@ -73,9 +73,49 @@
     },
     {
       "$ref": "#/$defs/PreferenceExtraction"
+    },
+    {
+      "$ref": "#/$defs/AssetSearchResult"
+    },
+    {
+      "$ref": "#/$defs/QualityReport"
     }
   ],
   "$defs": {
+    "AssetSearchResult": {
+      "additionalProperties": false,
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "exchange": {
+          "type": "string"
+        },
+        "quote_type": {
+          "description": "STARTER for the 31 verified assets, else Yahoo quoteType",
+          "type": "string"
+        },
+        "supported": {
+          "type": "boolean"
+        },
+        "in_starter_dataset": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ticker",
+        "name",
+        "exchange",
+        "quote_type",
+        "supported",
+        "in_starter_dataset"
+      ],
+      "title": "AssetSearchResult",
+      "type": "object"
+    },
     "Claim": {
       "additionalProperties": false,
       "properties": {

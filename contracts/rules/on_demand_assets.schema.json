@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "on_demand_assets.yaml.schema.json",
+  "description": "Format of rules/on_demand_assets.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "OnDemandEtf": {
+      "additionalProperties": false,
+      "properties": {
+        "bond_markers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "gold_markers": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "other_commodity_supported": {
+          "default": false,
+          "type": "boolean"
+        },
+        "default": {
+          "type": "string",
+          "default": "equity_etf"
+        }
+      },
+      "required": [
+        "bond_markers",
+        "gold_markers"
+      ],
+      "title": "OnDemandEtf",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "supported_currencies": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "history_start": {
+      "type": "string"
+    },
+    "equity_by_currency": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "etf": {
+      "$ref": "#/$defs/OnDemandEtf"
+    },
+    "crypto": {
+      "default": "crypto",
+      "type": "string"
+    },
+    "unsupported_fr": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "supported_currencies",
+    "history_start",
+    "equity_by_currency",
+    "etf",
+    "unsupported_fr"
+  ],
+  "title": "OnDemandAssets",
+  "type": "object"
+}
