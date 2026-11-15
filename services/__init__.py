@@ -76,16 +76,12 @@ def parse_portfolio(csv_text: str) -> dict[str, Any]:
     return _portfolio.parse_portfolio(csv_text)
 
 
-def build_feed(
-    profile: dict[str, Any], portfolio: dict[str, Any], consideration: dict[str, Any] | None = None
-) -> dict[str, Any]:
-    """A0 stub: returns the example feed of the matching persona (Mateo by default)."""
-    pid = profile.get("profile_id") if isinstance(profile, dict) else None
-    name = f"feed_{pid}.json" if pid in ("robert", "amira", "mateo") else "feed_mateo.json"
-    feed = _copy(_example(name))
-    if consideration is None:
-        feed["coherence"] = None
-    return feed
+def build_feed(profile: dict[str, Any], portfolio: dict[str, Any],
+               consideration: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Profile x portfolio (x consideration) -> FeedResponse (real pipeline)."""
+    from services.feed import build_feed as _build_feed
+
+    return _build_feed(profile, portfolio, consideration)
 
 
 def get_events(tickers: list[str] | None = None) -> list[dict[str, Any]]:

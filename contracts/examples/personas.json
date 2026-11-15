@@ -1,99 +1,99 @@
 [
-  {
-    "id": "robert",
-    "label": "Robert, 59 ans, proche de la retraite",
-    "profile": {
-      "profile_id": "robert",
-      "label": "Robert, 59 ans, proche de la retraite",
-      "source": "persona_preset",
-      "age": 59,
-      "horizon_years": 4,
-      "horizon_bucket": "short",
-      "risk_tolerance": "low_moderate",
-      "max_acceptable_loss_pct": 0.1,
-      "objective": "capital_preservation",
-      "experience": "intermediate",
-      "preferences": {
-        "avoid_controversies": false,
-        "excluded_sectors": [],
-        "interests": [
-          "dividendes"
-        ]
-      },
-      "limits": {
-        "max_single_position": 0.1,
-        "max_high_vol_share": 0.1
-      },
-      "monthly_expenses_cad": 5000,
-      "base_currency": "CAD",
-      "inconsistencies": []
-    },
-    "sample_portfolio_csv": "ticker,montant\nZST.TO,20000\nXBB.TO,25000\nXIU.TO,15000\nSPY,15000\nFTS.TO,8000\nRY.TO,7000\nENB.TO,5000\nAGG,5000\n"
+ {
+  "id": "robert",
+  "label": "Robert, 59 ans, proche de la retraite",
+  "profile": {
+   "profile_id": "robert",
+   "label": "Robert, 59 ans, proche de la retraite",
+   "source": "persona_preset",
+   "age": 59,
+   "horizon_years": 4.0,
+   "horizon_bucket": "short",
+   "risk_tolerance": "low_moderate",
+   "max_acceptable_loss_pct": 0.1,
+   "objective": "capital_preservation",
+   "experience": "intermediate",
+   "preferences": {
+    "avoid_controversies": false,
+    "excluded_sectors": [],
+    "interests": [
+     "dividendes"
+    ]
+   },
+   "limits": {
+    "max_single_position": 0.1,
+    "max_high_vol_share": 0.1
+   },
+   "monthly_expenses_cad": 5000.0,
+   "base_currency": "CAD",
+   "inconsistencies": []
   },
-  {
-    "id": "amira",
-    "label": "Amira, 26 ans, ingénieure logiciel",
-    "profile": {
-      "profile_id": "amira",
-      "label": "Amira, 26 ans, ingénieure logiciel",
-      "source": "persona_preset",
-      "age": 26,
-      "horizon_years": 20,
-      "horizon_bucket": "long",
-      "risk_tolerance": "high",
-      "max_acceptable_loss_pct": 0.35,
-      "objective": "growth",
-      "experience": "intermediate",
-      "preferences": {
-        "avoid_controversies": false,
-        "excluded_sectors": [],
-        "interests": [
-          "IA",
-          "technologie",
-          "crypto"
-        ]
-      },
-      "limits": {
-        "max_single_position": 0.25,
-        "max_high_vol_share": 0.6
-      },
-      "monthly_expenses_cad": 3500,
-      "base_currency": "CAD",
-      "inconsistencies": []
-    },
-    "sample_portfolio_csv": "ticker,montant\nNVDA,20000\nQQQ,20000\nSHOP.TO,10000\nBTC-USD,10000\nMSFT,10000\nXIU.TO,10000\nCSU.TO,6000\nETH-USD,5000\nTSLA,5000\nGLD,4000\n"
+  "sample_portfolio_csv": "ticker,montant\nZST.TO,20000\nXBB.TO,25000\nXIU.TO,15000\nSPY,15000\nFTS.TO,8000\nRY.TO,7000\nENB.TO,5000\nAGG,5000\n"
+ },
+ {
+  "id": "amira",
+  "label": "Amira, 26 ans, ingénieure logiciel",
+  "profile": {
+   "profile_id": "amira",
+   "label": "Amira, 26 ans, ingénieure logiciel",
+   "source": "persona_preset",
+   "age": 26,
+   "horizon_years": 20.0,
+   "horizon_bucket": "long",
+   "risk_tolerance": "high",
+   "max_acceptable_loss_pct": 0.35,
+   "objective": "growth",
+   "experience": "intermediate",
+   "preferences": {
+    "avoid_controversies": false,
+    "excluded_sectors": [],
+    "interests": [
+     "IA",
+     "technologie",
+     "crypto"
+    ]
+   },
+   "limits": {
+    "max_single_position": 0.25,
+    "max_high_vol_share": 0.6
+   },
+   "monthly_expenses_cad": 3500.0,
+   "base_currency": "CAD",
+   "inconsistencies": []
   },
-  {
-    "id": "mateo",
-    "label": "Mateo, 41 ans, gestionnaire des opérations",
-    "profile": {
-      "profile_id": "mateo",
-      "label": "Mateo, 41 ans, gestionnaire des opérations",
-      "source": "persona_preset",
-      "age": 41,
-      "horizon_years": 10,
-      "horizon_bucket": "medium",
-      "risk_tolerance": "moderate",
-      "max_acceptable_loss_pct": 0.2,
-      "objective": "balanced",
-      "experience": "intermediate",
-      "preferences": {
-        "avoid_controversies": true,
-        "excluded_sectors": [
-          "Energy"
-        ],
-        "interests": [
-          "ESG"
-        ]
-      },
-      "limits": {
-        "max_single_position": 0.15,
-        "max_high_vol_share": 0.25
-      },
-      "monthly_expenses_cad": 4500,
-      "base_currency": "CAD",
-      "inconsistencies": []
-    },
-    "sample_portfolio_csv": "ticker,montant\nESGV,25000\nXBB.TO,20000\nXIU.TO,15000\nCNR.TO,8000\nJNJ,7000\nPG,7000\nGLD,7000\nENB.TO,6000\nXOM,5000\n"
-  }
+  "sample_portfolio_csv": "ticker,montant\nNVDA,20000\nQQQ,20000\nSHOP.TO,10000\nBTC-USD,10000\nMSFT,10000\nXIU.TO,10000\nCSU.TO,6000\nETH-USD,5000\nTSLA,5000\nGLD,4000\n"
+ },
+ {
+  "id": "mateo",
+  "label": "Mateo, 41 ans, gestionnaire des opérations",
+  "profile": {
+   "profile_id": "mateo",
+   "label": "Mateo, 41 ans, gestionnaire des opérations",
+   "source": "persona_preset",
+   "age": 41,
+   "horizon_years": 10.0,
+   "horizon_bucket": "medium",
+   "risk_tolerance": "moderate",
+   "max_acceptable_loss_pct": 0.2,
+   "objective": "balanced",
+   "experience": "intermediate",
+   "preferences": {
+    "avoid_controversies": true,
+    "excluded_sectors": [
+     "Energy"
+    ],
+    "interests": [
+     "ESG"
+    ]
+   },
+   "limits": {
+    "max_single_position": 0.15,
+    "max_high_vol_share": 0.25
+   },
+   "monthly_expenses_cad": 4500.0,
+   "base_currency": "CAD",
+   "inconsistencies": []
+  },
+  "sample_portfolio_csv": "ticker,montant\nESGV,25000\nXBB.TO,20000\nXIU.TO,15000\nCNR.TO,8000\nJNJ,7000\nPG,7000\nGLD,7000\nENB.TO,6000\nXOM,5000\n"
+ }
 ]
