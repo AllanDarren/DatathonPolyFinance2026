@@ -71,3 +71,7 @@ Utilisables dans `rules/coherence_rules.yaml` (`metric: …`), calculées pour l
 | `corr_to_portfolio` | Corrélation mensuelle (CAD) avec le portefeuille actuel | nombre |
 
 Portefeuille après l'ajout: les montants des autres positions restent fixes et la position envisagée est portée à `intended_weight` du nouveau total.
+
+## Contexte historique (`core/event_study.py`)
+
+`historical_context(event_type, asset)`: rendement `adj_close` (devise de cotation) de la clôture de la veille de l'événement à la clôture du 5e jour de bourse après le premier jour de bourse à partir de l'événement (fenêtre t−1 → t+5, jours de cotation propres à l'actif). Médiane, p10, p90 (percentiles linéaires), part de cas positifs, liste des événements. Refus sous 8 événements (« données insuffisantes »). Mentions obligatoires: échantillon, chevauchements (comptés), biais du survivant, « pas une prévision »; pour les dates ex-dividende, neutralisation par les prix ajustés. Dates: instantané `data/snapshots/events_*.json` (résultats et dividendes par titre; décisions de taux de la Fed ou de la Banque du Canada via `macro_source`).
