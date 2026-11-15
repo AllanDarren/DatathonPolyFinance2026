@@ -326,6 +326,20 @@ class Relevance(Contract):
     rule_hits: list[RuleHit]
 
 
+class SourceTierInfo(Contract):
+    id: Literal["primary", "established", "aggregator", "unknown"]
+    label_fr: str
+    text_fr: str
+
+
+class NewsCluster(Contract):
+    """Same event reported by several outlets, shown as one card."""
+
+    size: int = Field(ge=1)
+    sources: list[str]
+    news_ids: list[str]
+
+
 class FeedItem(Contract):
     news_id: str
     title: str
@@ -339,6 +353,12 @@ class FeedItem(Contract):
     relevance: Relevance
     explanation: Explanation
     historical_context: HistoricalContext | None
+    source_tier: SourceTierInfo | None = Field(default=None, description="Optional (v0.3.0): source reliability")
+    cluster: NewsCluster | None = Field(default=None, description="Optional (v0.3.0): same event, several sources")
+    mention: Literal["title", "snippet", "none", "not_applicable"] | None = Field(
+        default=None, description="Optional (v0.3.0): does the headline name the held company?")
+    linked_ticker: str | None = Field(
+        default=None, description="Optional (v0.3.0): held position the item is linked to (e.g. bond ETF for macro)")
 
 
 class PortfolioSummary(Contract):

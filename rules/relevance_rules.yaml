@@ -79,6 +79,47 @@ modifiers:
     limit_from: profile.limits.max_single_position
   add: 0.1
   text_fr: Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.
+# Ciblage des nouvelles (core/news_targeting.py): fiabilité de la source, mention de l'entreprise,
+# événement repris par plusieurs sources, sensibilité des obligations aux taux.
+- id: R_SOURCE_PRIMARY
+  when:
+  - field: item.source_tier
+    op: ==
+    value: primary
+  add: 0.05
+  text_fr: Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.
+- id: R_SOURCE_AGGREGATOR
+  when:
+  - field: item.source_tier
+    op: ==
+    value: aggregator
+  add: -0.1
+  text_fr: Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.
+- id: R_MENTION_PASSING
+  when:
+  - field: item.mention
+    op: ==
+    value: none
+  add: -0.15
+  text_fr: Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être
+    indirect.
+- id: R_MULTI_SOURCE
+  when:
+  - field: item.cluster_size
+    op: '>='
+    value: 3
+  add: 0.05
+  text_fr: Plusieurs sources rapportent ce même événement (regroupées en une seule carte).
+- id: R_RATES_BOND
+  when:
+  - field: item.category
+    op: ==
+    value: macro
+  - field: position.asset_class
+    op: ==
+    value: bond_etf
+  add: 0.1
+  text_fr: Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.
 thresholds:
   show: 0.35
   high: 0.7

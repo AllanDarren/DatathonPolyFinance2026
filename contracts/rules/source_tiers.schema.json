@@ -7,6 +7,11 @@
       "additionalProperties": false,
       "properties": {
         "id": {
+          "enum": [
+            "primary",
+            "established",
+            "aggregator"
+          ],
           "type": "string"
         },
         "label_fr": {
@@ -14,11 +19,6 @@
         },
         "text_fr": {
           "type": "string"
-        },
-        "add": {
-          "maximum": 1,
-          "minimum": -1,
-          "type": "number"
         },
         "patterns": {
           "items": {
@@ -32,7 +32,6 @@
         "id",
         "label_fr",
         "text_fr",
-        "add",
         "patterns"
       ],
       "title": "SourceTier",
@@ -46,12 +45,6 @@
         },
         "text_fr": {
           "type": "string"
-        },
-        "add": {
-          "default": 0.0,
-          "maximum": 1,
-          "minimum": -1,
-          "type": "number"
         }
       },
       "required": [

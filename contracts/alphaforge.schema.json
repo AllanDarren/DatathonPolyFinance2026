@@ -652,6 +652,60 @@
               "type": "null"
             }
           ]
+        },
+        "source_tier": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTierInfo"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): source reliability"
+        },
+        "cluster": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NewsCluster"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): same event, several sources"
+        },
+        "mention": {
+          "anyOf": [
+            {
+              "enum": [
+                "title",
+                "snippet",
+                "none",
+                "not_applicable"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): does the headline name the held company?"
+        },
+        "linked_ticker": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): held position the item is linked to (e.g. bond ETF for macro)"
         }
       },
       "required": [
@@ -1162,6 +1216,35 @@
         "prompt_version"
       ],
       "title": "NewsClassification",
+      "type": "object"
+    },
+    "NewsCluster": {
+      "additionalProperties": false,
+      "description": "Same event reported by several outlets, shown as one card.",
+      "properties": {
+        "size": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "sources": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "news_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "size",
+        "sources",
+        "news_ids"
+      ],
+      "title": "NewsCluster",
       "type": "object"
     },
     "NewsRecord": {
@@ -1697,6 +1780,33 @@
         "text"
       ],
       "title": "RuleHit",
+      "type": "object"
+    },
+    "SourceTierInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "primary",
+            "established",
+            "aggregator",
+            "unknown"
+          ],
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label_fr",
+        "text_fr"
+      ],
+      "title": "SourceTierInfo",
       "type": "object"
     },
     "ToolCall": {

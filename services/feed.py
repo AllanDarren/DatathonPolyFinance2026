@@ -23,6 +23,7 @@ from core import rules_engine as engine
 from core.errors import AlphaForgeError
 from core.evidence import EvidenceRegistry, format_num, make_evidence
 from core.models import Consideration, Portfolio, Profile
+from core.news_targeting import cluster, is_rates_related, mention, source_tier
 
 MAX_ITEMS = 30
 MAX_LLM_ITEMS = 6
@@ -102,10 +103,28 @@ class FeedBuilder:
         pos = max(self.portfolio["positions"], key=lambda p: p["weight"], default=None)
         return pos["ticker"] if pos else None
 
+    def largest_bond(self) -> str | None:
+        bonds = [p for p in self.portfolio["positions"] if p["asset_class"] == "bond_etf" and p.get("in_universe", True)]
+        return max(bonds, key=lambda p: p["weight"])["ticker"] if bonds else None
+
     def score(self, rec: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
-        """-> (position context, relevance). Pure rules, no evidence yet."""
+        """-> (position context, relevance). Pure rules, no evidence yet.
+
+        The item seen by the rules = classification + targeting signals (source tier,
+        company mention, cluster size). A macro headline with no held ticker is linked
+        to the largest bond ETF held, since rates move bond prices (rule R_RATES_BOND).
+        """
         pos = engine.position_context(self.portfolio, rec["tickers"], self.threshold)
-        return pos, engine.score_relevance(self.profile, rec["classification"], pos, self.rules)
+        bond = self.largest_bond()
+        if not pos.get("held") and rec["classification"]["category"] == "macro" and bond and is_rates_related(rec):
+            # linked, not held by this headline: no position-weight bonus, only R_RATES_BOND
+            pos = {**engine.position_context(self.portfolio, [bond], self.threshold), "weight": 0.0}
+        tier = source_tier(rec["source"], self.rules.source_tiers)
+        named = mention(rec, pos["ticker"]) if pos.get("held") and pos["ticker"] in rec["tickers"] else "not_applicable"
+        item = {**rec["classification"], "tickers": rec["tickers"], "source_tier": tier["id"], "mention": named,
+                "cluster_size": (rec.get("_cluster") or {}).get("size", 1)}
+        rec["_targeting"] = {"source_tier": tier, "mention": named}
+        return pos, engine.score_relevance(self.profile, item, pos, self.rules)
 
     def item(self, rec: dict[str, Any], pos: dict[str, Any], rel: dict[str, Any]) -> tuple[dict[str, Any], list[str]]:
         """-> (FeedItem without explanation, evidence ids for the explanation). Registers evidence."""
@@ -149,6 +168,8 @@ class FeedBuilder:
             "category": c["category"], "horizon_relevance": c["horizon_relevance"],
             "relevance": {k: rel[k] for k in ("score", "level", "shown", "position_weight", "rule_hits")},
             "explanation": None, "historical_context": hist[0] if hist else None,
+            "source_tier": rec["_targeting"]["source_tier"], "mention": rec["_targeting"]["mention"],
+            "cluster": rec.get("_cluster"), "linked_ticker": pos.get("ticker") if pos.get("held") else None,
         }
         return item, ids
 
@@ -187,6 +208,11 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
     records = [r for r in records if r not in stale]
     selected, unclassified = _select_news(records, held)
     hidden: dict[str, int] = {}
+    tiers = {r["id"]: source_tier(r["source"], fb.rules.source_tiers)["id"] for r in selected}
+    n_before = len(selected)
+    selected = cluster(selected, tiers)  # one card per event (copies: snapshot records stay untouched)
+    if n_before > len(selected):
+        hidden["Même événement rapporté par plusieurs sources (regroupé en une carte)"] = n_before - len(selected)
     scored = []
     for rec in selected:
         pos, rel = fb.score(rec)

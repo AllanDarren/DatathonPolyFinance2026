@@ -69,6 +69,7 @@ COHERENCE_METRICS: dict[str, str] = {
 RELEVANCE_FIELDS = {
     "position_weight",  # section-10 name, alias of position.weight
     "item.category", "item.horizon_relevance", "item.controversy", "item.controversy_type", "item.tickers",
+    "item.source_tier", "item.mention", "item.cluster_size",
     "position.ticker", "position.weight", "position.asset_class", "position.sector", "position.is_high_vol",
     "position.annualized_vol", "position.held",
 }

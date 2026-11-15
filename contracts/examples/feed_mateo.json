@@ -155,17 +155,34 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 2,
+    "sources": [
+     "Barron's",
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_41429f518870",
+     "n_935a51da996f"
+    ]
+   },
+   "linked_ticker": "MSFT"
   },
   {
-   "news_id": "n_935a51da996f",
-   "title": "Why the Microsoft Outage Came at the Worst Possible Time for the Stock",
-   "url": "https://finance.yahoo.com/m/c3b17798-d74b-3497-bb15-94efbfc03af4/why-the-microsoft-outage-came.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-14T15:05:00Z",
+   "news_id": "n_6a4289e3ad79",
+   "title": "Microsoft says services fully restored after global disruption",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA3MXdCOTVkSGdrczlVUXJ6ZVFoNjFQTWJfcG9EcTUzcnpfVjRUSHpQY1hKZVlsd1d4dDV5M3FZXzZ5LWZvVHVkOURESm5yN0ExQ1R6cS1Vb0t1aXo4SXdPXzVPck1jejZIR2c?oc=5",
+   "source": "Global News",
+   "published_at": "2026-11-14T14:45:09Z",
    "tickers": [
-    "MSFT",
-    "NVDA"
+    "MSFT"
    ],
    "is_synthetic": false,
    "category": "controversy",
@@ -202,7 +219,7 @@
       "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
       "label": "fact",
       "evidence_ids": [
-       "ev_d95f893622"
+       "ev_99f140a251"
       ],
       "verified": "supported"
      },
@@ -229,7 +246,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Global News"
+    ],
+    "news_ids": [
+     "n_6a4289e3ad79"
+    ]
+   },
+   "linked_ticker": "MSFT"
   },
   {
    "news_id": "n_f7b1f638883c",
@@ -295,73 +328,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_13066311f8dd",
-   "title": "TSB investigates Alberta train derailment involving dangerous goods, but no reported leaks or fires",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLWJFWXJvaFpQblJLRGFEeXFlSFc0SWx5ZDRrWmZzNGV3TnNFbU5rcjNaT1czTVdNVC0xNDhWSTBHLVNWRWduV1plY0p1di10ZFA2emxjbDVsX3dJVVJjNHlPVGRaOU16VHRCVU0tUWNScGRtY2FpWXFNUnhWSl9Zd05hYkd3VUN1OHBB?oc=5",
-   "source": "CBC",
-   "published_at": "2026-11-11T22:38:34Z",
-   "tickers": [
-    "CNR.TO"
-   ],
-   "is_synthetic": false,
-   "category": "regulation_legal",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 1.0,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_REGULATION_LEGAL",
-      "text": "Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium.",
-      "delta": 0.7
-     },
-     {
-      "rule_id": "R_PREF_CONTROVERSY",
-      "text": "Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
-      "delta": 0.4
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Mesothelioma Guide"
+    ],
+    "news_ids": [
+     "n_f7b1f638883c"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_e507db2a07"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_6fb31fe504"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_9382522bf1"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_e37dc71b1ae3",
@@ -427,7 +410,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_e37dc71b1ae3"
+    ]
+   },
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_33f84d665a12",
@@ -442,7 +441,7 @@
    "category": "macro",
    "horizon_relevance": "macro_context",
    "relevance": {
-    "score": 0.95,
+    "score": 1.0,
     "level": "high",
     "shown": true,
     "position_weight": 0.2,
@@ -465,6 +464,11 @@
       "delta": 0.1,
       "observed": 0.2,
       "limit": 0.15
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
      }
     ]
    },
@@ -472,10 +476,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
       "label": "fact",
       "evidence_ids": [
-       "ev_f46ada4788"
+       "ev_a9f018eff8"
       ],
       "verified": "supported"
      },
@@ -502,44 +506,56 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "The Globe and Mail"
+    ],
+    "news_ids": [
+     "n_33f84d665a12"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
   },
   {
-   "news_id": "n_aecff1352f37",
-   "title": "BlackRock Canada (TSX:XEI): What Do Monthly iShares Distributions Show?",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRFlNblpCQzltUHZfWEpYUXpWU2QwYldSQklaR1dDSXg3eFNnTVF0T0tzTmFaWU0xN3U2TFFtT2YtS1RvTTd5TzNLc1lieXRoVjk0NHByVUpzV3JTR3AxWFhrSFVfYmRPN3Y0bFM3NWlNakc3ZFFhdF96VEtweWFaXzVEMU9ySEptVVF1cThyd19GWFJwMjI4Z1dwYTZ5Z1E?oc=5",
-   "source": "Kalkine Media",
-   "published_at": "2026-10-21T07:00:00Z",
+   "news_id": "n_13066311f8dd",
+   "title": "TSB investigates Alberta train derailment involving dangerous goods, but no reported leaks or fires",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLWJFWXJvaFpQblJLRGFEeXFlSFc0SWx5ZDRrWmZzNGV3TnNFbU5rcjNaT1czTVdNVC0xNDhWSTBHLVNWRWduV1plY0p1di10ZFA2emxjbDVsX3dJVVJjNHlPVGRaOU16VHRCVU0tUWNScGRtY2FpWXFNUnhWSl9Zd05hYkd3VUN1OHBB?oc=5",
+   "source": "CBC",
+   "published_at": "2026-11-11T22:38:34Z",
    "tickers": [
-    "XBB.TO"
+    "CNR.TO"
    ],
    "is_synthetic": false,
-   "category": "dividend",
+   "category": "regulation_legal",
    "horizon_relevance": "structural",
    "relevance": {
-    "score": 0.9,
+    "score": 0.95,
     "level": "high",
     "shown": true,
-    "position_weight": 0.2,
+    "position_weight": 0.05,
     "rule_hits": [
      {
-      "rule_id": "R_BASE_DIVIDEND",
-      "text": "Catégorie Dividendes : poids de base 0,60 pour un horizon medium.",
-      "delta": 0.6
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium.",
+      "delta": 0.7
      },
      {
-      "rule_id": "R_POS_WEIGHT_20",
-      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
-      "delta": 0.2,
-      "observed": 0.2,
-      "limit": 0.2
+      "rule_id": "R_PREF_CONTROVERSY",
+      "text": "Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
+      "delta": 0.4
      },
      {
-      "rule_id": "R_CONCENTRATION",
-      "text": "Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
-      "delta": 0.1,
-      "observed": 0.2,
-      "limit": 0.15
+      "rule_id": "R_MENTION_PASSING",
+      "text": "Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
+      "delta": -0.15
      }
     ]
    },
@@ -547,26 +563,26 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute. Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
       "label": "fact",
       "evidence_ids": [
-       "ev_0ddd2682bc"
+       "ev_6ac9abf9ce"
       ],
       "verified": "supported"
      },
      {
-      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
+      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9cdcd3572b"
+       "ev_6fb31fe504"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_cc97b68de7"
+       "ev_9382522bf1"
       ],
       "verified": "supported"
      }
@@ -577,266 +593,23 @@
      "flags": []
     }
    },
-   "historical_context": {
-    "event_type": "dividend_ex_date",
-    "asset": "XBB.TO",
-    "window": "veille de l'événement à +5 jours de bourse",
-    "n_events": 60,
-    "median_return": 0.002495,
-    "p10": -0.007159,
-    "p90": 0.014475,
-    "share_positive": 0.65,
-    "events": [
-     {
-      "date": "2021-11-23",
-      "return": 0.012155
-     },
-     {
-      "date": "2021-12-30",
-      "return": -0.018174
-     },
-     {
-      "date": "2022-01-25",
-      "return": -0.003102
-     },
-     {
-      "date": "2022-02-22",
-      "return": 0.015068
-     },
-     {
-      "date": "2022-03-25",
-      "return": 0.001574
-     },
-     {
-      "date": "2022-04-25",
-      "return": -0.005802
-     },
-     {
-      "date": "2022-05-24",
-      "return": -0.00078
-     },
-     {
-      "date": "2022-06-24",
-      "return": 0.010112
-     },
-     {
-      "date": "2022-07-25",
-      "return": 0.006251
-     },
-     {
-      "date": "2022-08-25",
-      "return": -0.00413
-     },
-     {
-      "date": "2022-09-23",
-      "return": -0.007038
-     },
-     {
-      "date": "2022-10-25",
-      "return": 0.027861
-     },
-     {
-      "date": "2022-11-21",
-      "return": 0.018183
-     },
-     {
-      "date": "2022-12-29",
-      "return": 0.013823
-     },
-     {
-      "date": "2023-01-25",
-      "return": 0.005635
-     },
-     {
-      "date": "2023-02-22",
-      "return": 0.006605
-     },
-     {
-      "date": "2023-03-22",
-      "return": -0.001826
-     },
-     {
-      "date": "2023-04-24",
-      "return": -0.003939
-     },
-     {
-      "date": "2023-05-24",
-      "return": 0.004698
-     },
-     {
-      "date": "2023-06-26",
-      "return": 0.005163
-     },
-     {
-      "date": "2023-07-25",
-      "return": -0.003659
-     },
-     {
-      "date": "2023-08-25",
-      "return": 0.01129
-     },
-     {
-      "date": "2023-09-25",
-      "return": -0.005611
-     },
-     {
-      "date": "2023-10-25",
-      "return": 0.007719
-     },
-     {
-      "date": "2023-11-21",
-      "return": 0.009004
-     },
-     {
-      "date": "2023-12-28",
-      "return": -0.012298
-     },
-     {
-      "date": "2024-01-25",
-      "return": 0.021348
-     },
-     {
-      "date": "2024-02-23",
-      "return": 0.008195
-     },
-     {
-      "date": "2024-03-22",
-      "return": -0.005281
-     },
-     {
-      "date": "2024-04-24",
-      "return": 0.001334
-     },
-     {
-      "date": "2024-05-22",
-      "return": -0.011097
-     },
-     {
-      "date": "2024-06-25",
-      "return": -0.014105
-     },
-     {
-      "date": "2024-07-26",
-      "return": 0.026593
-     },
-     {
-      "date": "2024-08-27",
-      "return": 0.004157
-     },
-     {
-      "date": "2024-09-24",
-      "return": 0.002375
-     },
-     {
-      "date": "2024-10-28",
-      "return": 0.004941
-     },
-     {
-      "date": "2024-11-21",
-      "return": 0.013902
-     },
-     {
-      "date": "2024-12-30",
-      "return": 0.001736
-     },
-     {
-      "date": "2025-01-28",
-      "return": 0.014411
-     },
-     {
-      "date": "2025-02-25",
-      "return": 0.015047
-     },
-     {
-      "date": "2025-03-26",
-      "return": 0.009425
-     },
-     {
-      "date": "2025-04-25",
-      "return": 0.002444
-     },
-     {
-      "date": "2025-05-22",
-      "return": 0.013917
-     },
-     {
-      "date": "2025-06-25",
-      "return": -0.004637
-     },
-     {
-      "date": "2025-07-28",
-      "return": 0.009332
-     },
-     {
-      "date": "2025-08-26",
-      "return": 0.005382
-     },
-     {
-      "date": "2025-09-24",
-      "return": 0.000703
-     },
-     {
-      "date": "2025-10-28",
-      "return": -0.004878
-     },
-     {
-      "date": "2025-11-19",
-      "return": 0.009181
-     },
-     {
-      "date": "2025-12-30",
-      "return": 0.000709
-     },
-     {
-      "date": "2026-01-27",
-      "return": -0.002826
-     },
-     {
-      "date": "2026-02-24",
-      "return": -0.004557
-     },
-     {
-      "date": "2026-03-26",
-      "return": 0.000358
-     },
-     {
-      "date": "2026-04-27",
-      "return": -0.008906
-     },
-     {
-      "date": "2026-05-21",
-      "return": 0.011535
-     },
-     {
-      "date": "2026-06-25",
-      "return": -0.003856
-     },
-     {
-      "date": "2026-07-28",
-      "return": 0.002546
-     },
-     {
-      "date": "2026-08-26",
-      "return": -0.008252
-     },
-     {
-      "date": "2026-09-24",
-      "return": 0.000403
-     },
-     {
-      "date": "2026-10-27",
-      "return": 0.003715
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "none",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "CBC"
     ],
-    "caveats": [
-     "Échantillon limité: 60 dates ex-dividende sur une seule période de 5 ans.",
-     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
-     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
-     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
-     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
-    ],
-    "evidence_id": "ev_4b268190c3"
-   }
+    "news_ids": [
+     "n_13066311f8dd"
+    ]
+   },
+   "linked_ticker": "CNR.TO"
   },
   {
    "news_id": "n_721abc66ddc2",
@@ -851,7 +624,7 @@
    "category": "dividend",
    "horizon_relevance": "structural",
    "relevance": {
-    "score": 0.9,
+    "score": 0.95,
     "level": "high",
     "shown": true,
     "position_weight": 0.2,
@@ -874,6 +647,11 @@
       "delta": 0.1,
       "observed": 0.2,
       "limit": 0.15
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
      }
     ]
    },
@@ -881,10 +659,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
       "label": "fact",
       "evidence_ids": [
-       "ev_d7cb7eea03"
+       "ev_76a471b1e5"
       ],
       "verified": "supported"
      },
@@ -1170,14 +948,297 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_4b268190c3"
-   }
+   },
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "GlobeNewswire"
+    ],
+    "news_ids": [
+     "n_721abc66ddc2"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
   },
   {
-   "news_id": "n_222dcd288498",
-   "title": "Insight Enterprises Inc (NSIT) (Q3 2026) Earnings Call Highlights: AI-Driven Demand Fuels 34% ...",
-   "url": "https://finance.yahoo.com/technology/ai/articles/insight-enterprises-inc-nsit-q3-010120715.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-14T01:01:20Z",
+   "news_id": "n_98ff1175760b",
+   "title": "All you need to know about accumulating “.L” ETFs as a Canadian investor",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40YmtpYmJKYW9EcmVtZVBFOEt1UWdxOFdSVndxaDhld0RtaVBjYnBDbXlMT25SWUZ2ZXZMclB2QU9scTRfQ2NpampHclpCd1FwS1c3SWZ4Nml0RUkxQ3VNWGNBUFlQd0RZMWtIZkNjZE8?oc=5",
+   "source": "MoneySense",
+   "published_at": "2026-11-04T08:00:00Z",
+   "tickers": [
+    "ZST.TO"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.15,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.15,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_e942d367fc"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ZST.TO représente 15,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cd7f1d23eb"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9d6f1dbabb"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "MoneySense"
+    ],
+    "news_ids": [
+     "n_98ff1175760b"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
+  },
+  {
+   "news_id": "n_2daa3794c36f",
+   "title": "Lumen and Microsoft expand collaboration to co-sell enterprise AI-ready networks",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOb3FNSGwyLVlBeXJWZHR3MG1sWklORnp0RE0tYW5YM1E4elBvSkQwcXllZllNT2dsN3pUR244anVjSmhFVjVYbTJxUGpiNzhPRkpjS1hQLUk0d2VOcjk0UWRMZ3R1cEo0S1VGbkJFOEZ5VTc0ckxEZW5mZnNoVXgwY2pWSkFFdmlVQjZ2X0RGbEM0VC1VUTIzbG5YRjQtOFRyWHhjNWU0Q3NVUGl3VDN1RUQ2Ni1rRHNacTVhMkVsRTkycTRz?oc=5",
+   "source": "Microsoft Source",
+   "published_at": "2026-11-02T08:00:00Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "merger_acquisition",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGER_ACQUISITION",
+      "text": "Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_43bd3c7fa9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Microsoft Source"
+    ],
+    "news_ids": [
+     "n_2daa3794c36f"
+    ]
+   },
+   "linked_ticker": "MSFT"
+  },
+  {
+   "news_id": "n_c9707a12eac3",
+   "title": "Microsoft announces debt offerings",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQa1BYWDZLbEU3b3A1cjV1bGNhaHVTSll5aXpUeGxkZzJqa0g1YkVSaWtQdVlzWkZHSnVyZ2gwYmxGekRERXdUZ2QtVXpjeDNCbklENWs4X2I5X0tvSUpKV2hZYXdGTXR4REt4MWFWdzV3VzU4dnlkUDU0ejI1TkhZMnBKdVhjaUQtTEE?oc=5",
+   "source": "Microsoft Source",
+   "published_at": "2026-10-29T07:00:00Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "strategy_guidance",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
+      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b7a94d3f84"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Microsoft Source"
+    ],
+    "news_ids": [
+     "n_c9707a12eac3"
+    ]
+   },
+   "linked_ticker": "MSFT"
+  },
+  {
+   "news_id": "n_95ea72a635d4",
+   "title": "Microsoft announces first quarter results",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPY09UTTZ3dWNGdzdXRGZsYlFMWlVyZFBRR2dWR3JaVUJwbGhlSXVpRzQ2Zjd5S29ld3pHb2duV2tHMlJJWGM4NFQyRXFqQnhBeHZzalZGOUtGWmxXTUJzb09IMm5HYkZJU1Uzb3c2YXZtUklhZjdjWUZnNktaQ0JHZ0VhMmRrV1JiUzdZX1UtMFdqY2c?oc=5",
+   "source": "Microsoft Source",
+   "published_at": "2026-10-28T07:00:00Z",
    "tickers": [
     "MSFT"
    ],
@@ -1185,7 +1246,7 @@
    "category": "earnings_results",
    "horizon_relevance": "structural",
    "relevance": {
-    "score": 0.75,
+    "score": 0.8,
     "level": "high",
     "shown": true,
     "position_weight": 0.1,
@@ -1201,6 +1262,11 @@
       "delta": 0.1,
       "observed": 0.1,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
      }
     ]
    },
@@ -1208,10 +1274,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
       "label": "fact",
       "evidence_ids": [
-       "ev_31ce19f568"
+       "ev_007e078a45"
       ],
       "verified": "supported"
      },
@@ -1336,85 +1402,387 @@
      "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
     ],
     "evidence_id": "ev_1cdeace33b"
-   }
+   },
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Microsoft Source"
+    ],
+    "news_ids": [
+     "n_95ea72a635d4"
+    ]
+   },
+   "linked_ticker": "MSFT"
   },
   {
-   "news_id": "n_8354479774e7",
-   "title": "Nscale reports ballooning debt and need for more as IPO approaches",
-   "url": "https://www.axios.com/2026/11/13/nscale-ipo-debt-nvidia-jensen-huang#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
+   "news_id": "n_aecff1352f37",
+   "title": "BlackRock Canada (TSX:XEI): What Do Monthly iShares Distributions Show?",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRFlNblpCQzltUHZfWEpYUXpWU2QwYldSQklaR1dDSXg3eFNnTVF0T0tzTmFaWU0xN3U2TFFtT2YtS1RvTTd5TzNLc1lieXRoVjk0NHByVUpzV3JTR3AxWFhrSFVfYmRPN3Y0bFM3NWlNakc3ZFFhdF96VEtweWFaXzVEMU9ySEptVVF1cThyd19GWFJwMjI4Z1dwYTZ5Z1E?oc=5",
+   "source": "Kalkine Media",
+   "published_at": "2026-10-21T07:00:00Z",
+   "tickers": [
+    "XBB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividendes : poids de base 0,60 pour un horizon medium.",
+      "delta": 0.6
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_CONCENTRATION",
+      "text": "Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "delta": 0.1,
+      "observed": 0.2,
+      "limit": 0.15
+     },
+     {
+      "rule_id": "R_SOURCE_AGGREGATOR",
+      "text": "Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "delta": -0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cca3b9ebab"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9cdcd3572b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cc97b68de7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "XBB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 60,
+    "median_return": 0.002495,
+    "p10": -0.007159,
+    "p90": 0.014475,
+    "share_positive": 0.65,
+    "events": [
+     {
+      "date": "2021-11-23",
+      "return": 0.012155
+     },
+     {
+      "date": "2021-12-30",
+      "return": -0.018174
+     },
+     {
+      "date": "2022-01-25",
+      "return": -0.003102
+     },
+     {
+      "date": "2022-02-22",
+      "return": 0.015068
+     },
+     {
+      "date": "2022-03-25",
+      "return": 0.001574
+     },
+     {
+      "date": "2022-04-25",
+      "return": -0.005802
+     },
+     {
+      "date": "2022-05-24",
+      "return": -0.00078
+     },
+     {
+      "date": "2022-06-24",
+      "return": 0.010112
+     },
+     {
+      "date": "2022-07-25",
+      "return": 0.006251
+     },
+     {
+      "date": "2022-08-25",
+      "return": -0.00413
+     },
+     {
+      "date": "2022-09-23",
+      "return": -0.007038
+     },
+     {
+      "date": "2022-10-25",
+      "return": 0.027861
+     },
+     {
+      "date": "2022-11-21",
+      "return": 0.018183
+     },
+     {
+      "date": "2022-12-29",
+      "return": 0.013823
+     },
+     {
+      "date": "2023-01-25",
+      "return": 0.005635
+     },
+     {
+      "date": "2023-02-22",
+      "return": 0.006605
+     },
+     {
+      "date": "2023-03-22",
+      "return": -0.001826
+     },
+     {
+      "date": "2023-04-24",
+      "return": -0.003939
+     },
+     {
+      "date": "2023-05-24",
+      "return": 0.004698
+     },
+     {
+      "date": "2023-06-26",
+      "return": 0.005163
+     },
+     {
+      "date": "2023-07-25",
+      "return": -0.003659
+     },
+     {
+      "date": "2023-08-25",
+      "return": 0.01129
+     },
+     {
+      "date": "2023-09-25",
+      "return": -0.005611
+     },
+     {
+      "date": "2023-10-25",
+      "return": 0.007719
+     },
+     {
+      "date": "2023-11-21",
+      "return": 0.009004
+     },
+     {
+      "date": "2023-12-28",
+      "return": -0.012298
+     },
+     {
+      "date": "2024-01-25",
+      "return": 0.021348
+     },
+     {
+      "date": "2024-02-23",
+      "return": 0.008195
+     },
+     {
+      "date": "2024-03-22",
+      "return": -0.005281
+     },
+     {
+      "date": "2024-04-24",
+      "return": 0.001334
+     },
+     {
+      "date": "2024-05-22",
+      "return": -0.011097
+     },
+     {
+      "date": "2024-06-25",
+      "return": -0.014105
+     },
+     {
+      "date": "2024-07-26",
+      "return": 0.026593
+     },
+     {
+      "date": "2024-08-27",
+      "return": 0.004157
+     },
+     {
+      "date": "2024-09-24",
+      "return": 0.002375
+     },
+     {
+      "date": "2024-10-28",
+      "return": 0.004941
+     },
+     {
+      "date": "2024-11-21",
+      "return": 0.013902
+     },
+     {
+      "date": "2024-12-30",
+      "return": 0.001736
+     },
+     {
+      "date": "2025-01-28",
+      "return": 0.014411
+     },
+     {
+      "date": "2025-02-25",
+      "return": 0.015047
+     },
+     {
+      "date": "2025-03-26",
+      "return": 0.009425
+     },
+     {
+      "date": "2025-04-25",
+      "return": 0.002444
+     },
+     {
+      "date": "2025-05-22",
+      "return": 0.013917
+     },
+     {
+      "date": "2025-06-25",
+      "return": -0.004637
+     },
+     {
+      "date": "2025-07-28",
+      "return": 0.009332
+     },
+     {
+      "date": "2025-08-26",
+      "return": 0.005382
+     },
+     {
+      "date": "2025-09-24",
+      "return": 0.000703
+     },
+     {
+      "date": "2025-10-28",
+      "return": -0.004878
+     },
+     {
+      "date": "2025-11-19",
+      "return": 0.009181
+     },
+     {
+      "date": "2025-12-30",
+      "return": 0.000709
+     },
+     {
+      "date": "2026-01-27",
+      "return": -0.002826
+     },
+     {
+      "date": "2026-02-24",
+      "return": -0.004557
+     },
+     {
+      "date": "2026-03-26",
+      "return": 0.000358
+     },
+     {
+      "date": "2026-04-27",
+      "return": -0.008906
+     },
+     {
+      "date": "2026-05-21",
+      "return": 0.011535
+     },
+     {
+      "date": "2026-06-25",
+      "return": -0.003856
+     },
+     {
+      "date": "2026-07-28",
+      "return": 0.002546
+     },
+     {
+      "date": "2026-08-26",
+      "return": -0.008252
+     },
+     {
+      "date": "2026-09-24",
+      "return": 0.000403
+     },
+     {
+      "date": "2026-10-27",
+      "return": 0.003715
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 60 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_4b268190c3"
+   },
+   "source_tier": {
+    "id": "aggregator",
+    "label_fr": "Agrégateur ou blogue d'investissement",
+    "text_fr": "Contenu d'opinion ou généré en masse; à recouper avec une autre source."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Kalkine Media"
+    ],
+    "news_ids": [
+     "n_aecff1352f37"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
+  },
+  {
+   "news_id": "n_de43023eed7d",
+   "title": "She Moves $500,000 Into Municipal Bonds amid ‘Rare Opportunity’, Expecting Every Dollar of Interest to Stay Tax-Free. The IRS Counts That Interest When It Taxes Her Social Security, Pushing $16,900 More of Her Benefits Into Taxable Income",
+   "url": "https://247wallst.com/personal-finance/social-security/2026/11/14/she-moves-500000-into-municipal-bonds-amid-rare-opportunity-expecting-every-dollar-of-interest-to-stay-tax-free-the-irs-counts-that-interest-when-it-taxes-her-social-security-pushing-16900/?.tsrc=rss",
    "source": "Yahoo Finance",
-   "published_at": "2026-11-13T22:54:56Z",
+   "published_at": "2026-11-14T14:46:43Z",
    "tickers": [
-    "MSFT",
-    "NVDA"
-   ],
-   "is_synthetic": false,
-   "category": "strategy_guidance",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
-      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_dfdb7ac887"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "MSFT représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_330d01ad79"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de MSFT: 28,5 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_561cb2eea0"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_37380a3966a9",
-   "title": "As a crippling outage causes chaos in Japan, the fax gains favor",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQN3plSzVHSU50WVhlYTFwVTg2a0RQYjR3OWkwRzVJa0xSb2VrejU5eWNJZm11UWczdDRRNENqRVl2WHEzSUNLWV8tOE5uTFV1bmp0RnRmOTYtYlhzN2ZZUEtMZDgwTno0SkFFTW82Ny1LdVZ4Z1ZFd2paMmI5WVV4V0tWNVM?oc=5",
-   "source": "The Japan Times",
-   "published_at": "2026-11-13T05:54:00Z",
-   "tickers": [
-    "MSFT"
+    "JPM"
    ],
    "is_synthetic": false,
    "category": "macro",
@@ -1423,7 +1791,7 @@
     "score": 0.75,
     "level": "high",
     "shown": true,
-    "position_weight": 0.1,
+    "position_weight": 0.0,
     "rule_hits": [
      {
       "rule_id": "R_BASE_MACRO",
@@ -1431,11 +1799,9 @@
       "delta": 0.65
      },
      {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
      }
     ]
    },
@@ -1443,26 +1809,26 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
       "label": "fact",
       "evidence_ids": [
-       "ev_7a8a9df030"
+       "ev_118699dedc"
       ],
       "verified": "supported"
      },
      {
-      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_330d01ad79"
+       "ev_9cdcd3572b"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_561cb2eea0"
+       "ev_cc97b68de7"
       ],
       "verified": "supported"
      }
@@ -1473,88 +1839,30 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_2e5346ee7094",
-   "title": "Blue Wave, Red Ink: Election Impacts on the AI Trade",
-   "url": "https://finance.yahoo.com/technology/ai/articles/blue-wave-red-ink-election-223914781.html",
-   "source": "etf.com",
-   "published_at": "2026-11-12T22:39:14Z",
-   "tickers": [
-    "AGG",
-    "AMZN",
-    "MSFT",
-    "NVDA",
-    "QQQ",
-    "SPY",
-    "TLT"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_de43023eed7d"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_611a862f10"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "MSFT représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_330d01ad79"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de MSFT: 28,5 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_561cb2eea0"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "XBB.TO"
   },
   {
-   "news_id": "n_03105b3e41fd",
-   "title": "From AI ambition to business impact",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWkxfLWdZYVJqUG9iWEFSSEZrQWs5ZTN6ZU5VbUxPQTI4aVlvRXhZMV9pVWZDamtWcjdWdTd2RnpWc3VrT2lnY3dKVEE4VVFiU1p1bkdSM292NlRHaHlYZFUyc2ZBbzNaZEhnVHdYa3p5ay1VY1E4cDVBQTkyZlFIZ1VpYVlxUlE?oc=5",
-   "source": "The Official Microsoft Blog",
-   "published_at": "2026-11-12T17:04:04Z",
+   "news_id": "n_d6fc92e6537c",
+   "title": "AI buildout hits snag as Google and Microsoft put off raising capex forecasts",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pM0RNUDRnMFJXZkRoZG5ZdVVXRHozTUtidUxjMXdKbFBHVW9hTjg1NlFPcFcwLTZCQzM3cTRQYnpzRE1LQ3pNUkpxQmN1OEdnN25fZGhNUDlMZ0w0VW5kUGdoWWd4ZDFWNlZBTHFQaVpDd3B2M01UN3ZrcWzSAYIBQVVfeXFMUDhDNzNOa204RlZoNUNMTUZnWEVNY0RVbmtlNjQwc0N6YU0wWlhla29xRE5GRkhZbmwxRjEwNE9lZ2VoaG9mU0loVVJGaEprdmY2TkE3U1luNlE3Q2g2VmJVSlZkQ0RPYVdpSGYzV1lSMFZzZmRjU2lFanhOUThXUzZGZw?oc=5",
+   "source": "CNBC",
+   "published_at": "2026-10-29T07:00:00Z",
    "tickers": [
     "MSFT"
    ],
@@ -1588,7 +1896,7 @@
       "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_d004c7fe22"
+       "ev_0580b8a639"
       ],
       "verified": "supported"
      },
@@ -1615,279 +1923,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_98ff1175760b",
-   "title": "All you need to know about accumulating “.L” ETFs as a Canadian investor",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE40YmtpYmJKYW9EcmVtZVBFOEt1UWdxOFdSVndxaDhld0RtaVBjYnBDbXlMT25SWUZ2ZXZMclB2QU9scTRfQ2NpampHclpCd1FwS1c3SWZ4Nml0RUkxQ3VNWGNBUFlQd0RZMWtIZkNjZE8?oc=5",
-   "source": "MoneySense",
-   "published_at": "2026-11-04T08:00:00Z",
-   "tickers": [
-    "ZST.TO"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.15,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.15,
-      "limit": 0.1
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "CNBC"
+    ],
+    "news_ids": [
+     "n_d6fc92e6537c"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_05103827c0"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "ZST.TO représente 15,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_cd7f1d23eb"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_9d6f1dbabb"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_2daa3794c36f",
-   "title": "Lumen and Microsoft expand collaboration to co-sell enterprise AI-ready networks",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOb3FNSGwyLVlBeXJWZHR3MG1sWklORnp0RE0tYW5YM1E4elBvSkQwcXllZllNT2dsN3pUR244anVjSmhFVjVYbTJxUGpiNzhPRkpjS1hQLUk0d2VOcjk0UWRMZ3R1cEo0S1VGbkJFOEZ5VTc0ckxEZW5mZnNoVXgwY2pWSkFFdmlVQjZ2X0RGbEM0VC1VUTIzbG5YRjQtOFRyWHhjNWU0Q3NVUGl3VDN1RUQ2Ni1rRHNacTVhMkVsRTkycTRz?oc=5",
-   "source": "Microsoft Source",
-   "published_at": "2026-11-02T08:00:00Z",
-   "tickers": [
-    "MSFT"
-   ],
-   "is_synthetic": false,
-   "category": "merger_acquisition",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MERGER_ACQUISITION",
-      "text": "Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_06115ba1cb"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "MSFT représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_330d01ad79"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de MSFT: 28,5 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_561cb2eea0"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_0858ca8d516a",
-   "title": "What CAE Inc. (TSX:CAE) is changing through its transformation programme as an S&P/TSX 60 Index member",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPR3dxOW9sSVJjcVNKZm9UNF83UDNsTWZmcHhiQ0hWbXdUVjliQW9RWkpRYzQ0cWppNEVhdk05aXBFZEhaQ0FWZS1mMWJBQVJCWTVSMzVLVENxamxIWV9adThCb1BIR09wN01vd1ZkQnBwNWpneUM3bTdQWFRFU2RFZ0NseDlZQzlKTVpLUUN6OFRJYklrSmQ1TWdTMGdpbElDUGtEOEZWc2FJSmNCZVoza3VsSWg3Mjl5dTJ2ZGdGYXpvSzRYZTlTR0RhWnU?oc=5",
-   "source": "kalkine.ca",
-   "published_at": "2026-10-28T07:00:00Z",
-   "tickers": [
-    "XIU.TO"
-   ],
-   "is_synthetic": false,
-   "category": "strategy_guidance",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
-      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_3e79035ca6"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "XIU.TO représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_cecd3fe2fa"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de XIU.TO: 13,1 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_f06aeb651a"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_42baafb10a62",
-   "title": "How acquisitions and recurring revenue shape Descartes Systems Group Inc. (TSX:DSG), an S&P/TSX Composite Index constituent",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOeHZnUWRfQ0ozNmcyU28xNEZKM1FQNjhGbHV3MjktOEJlV3VFbHVHLVgyTnJhSGxlMWc2NEJJUnNseDktckJReGlmS1JwNHgxWVFQMTRGYjBGeGpvck5zWngtc0RHVVJGamYycEpmNG83Zl9UT1JrbUlvYTQya0pTd1QwcXJLclFWSGx4V1JxMVl2UTVkbV8wNWpHUElUZGVKeXpwV1R3OFE1THo1MVNQaDZYZkZJNXAwRkNxSnp5VG5QbllyTjJMWlZsd1JTXzhrdU1hX01OalhfaXAxMWw1SWpSSDU4dw?oc=5",
-   "source": "kalkine.ca",
-   "published_at": "2026-10-28T07:00:00Z",
-   "tickers": [
-    "XIU.TO"
-   ],
-   "is_synthetic": false,
-   "category": "strategy_guidance",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
-      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_67656031fe"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "XIU.TO représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_cecd3fe2fa"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de XIU.TO: 13,1 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_f06aeb651a"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "MSFT"
   },
   {
    "news_id": "n_5435dfff6bfd",
@@ -2053,7 +2105,23 @@
      "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
     ],
     "evidence_id": "ev_1cdeace33b"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "CNBC"
+    ],
+    "news_ids": [
+     "n_5435dfff6bfd"
+    ]
+   },
+   "linked_ticker": "MSFT"
   },
   {
    "news_id": "n_550cb099f125",
@@ -2121,7 +2189,105 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Reuters"
+    ],
+    "news_ids": [
+     "n_550cb099f125"
+    ]
+   },
+   "linked_ticker": "MSFT"
+  },
+  {
+   "news_id": "n_8db06364067c",
+   "title": "Small business snapshot: San Jose",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5",
+   "source": "JPMorganChase",
+   "published_at": "2026-11-14T05:20:38Z",
+   "tickers": [
+    "JPM"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.0,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c7f5f5350e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,35).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0bcc8daafd"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Nouvelle publiée le 2026-11-14 par JPMorganChase.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_67d9bfa909"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "JPMorganChase"
+    ],
+    "news_ids": [
+     "n_8db06364067c"
+    ]
+   },
+   "linked_ticker": null
   },
   {
    "news_id": "n_a401771ebf72",
@@ -2448,7 +2614,105 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_319a41c131"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo! Finance Canada"
+    ],
+    "news_ids": [
+     "n_a401771ebf72"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
+  },
+  {
+   "news_id": "n_6d7aeaaf5448",
+   "title": "From AI to Manufacturing: How J&J in Switzerland engages with academia",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNHlTVkdKRjgwMjA2QVBQRmxPalFoNWFlWmcyN2tiYjhuTWlKSkZRcWNOVDB1RDhRU3FLeTFqRlJZRDdEQTVIdVAydEgwM0cyZUN5MEpvX3hEWjluV1pCdkZVcnJEZEJLM0hhWTh5VjFJcEdpVGo5VVhpV0N4X2J2cWoyNVU2ZGNEamwzR3pMVzh0dmZKTVRzeEF6RVNuNDN3QzVTQlg1VQ?oc=5",
+   "source": "Johnson & Johnson",
+   "published_at": "2026-11-12T11:56:05Z",
+   "tickers": [
+    "JNJ"
+   ],
+   "is_synthetic": false,
+   "category": "strategy_guidance",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
+      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_016ea35ed1"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "JNJ représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7bd9bbe26b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de JNJ: 18,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_22fc4f7c9c"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Johnson & Johnson"
+    ],
+    "news_ids": [
+     "n_6d7aeaaf5448"
+    ]
+   },
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_236bcbc919f9",
@@ -2509,7 +2773,289 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_236bcbc919f9"
+    ]
+   },
+   "linked_ticker": "GLD"
+  },
+  {
+   "news_id": "n_694944ac5699",
+   "title": "What Canadian National Railway (CNI) Said on Its Q3 Earnings Call",
+   "url": "https://www.marketbeat.com/instant-alerts/transcript-what-canadian-national-railway-cni-said-on-its-q3-earnings-call-2026-10-30/?utm_source=yahoofinance&utm_medium=yahoofinance&.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-10-30T07:00:00Z",
+   "tickers": [
+    "CNR.TO"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_MULTI_SOURCE",
+      "text": "Plusieurs sources rapportent ce même événement (regroupées en une seule carte).",
+      "delta": 0.05,
+      "observed": 3,
+      "limit": 3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Plusieurs sources rapportent ce même événement (regroupées en une seule carte).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_dc1316788f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6fb31fe504"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9382522bf1"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "CNR.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": -0.007753,
+    "p10": -0.042795,
+    "p90": 0.035471,
+    "share_positive": 0.45,
+    "events": [
+     {
+      "date": "2022-01-25",
+      "return": 0.013738
+     },
+     {
+      "date": "2022-04-26",
+      "return": -0.040863
+     },
+     {
+      "date": "2022-07-26",
+      "return": 0.067119
+     },
+     {
+      "date": "2022-10-25",
+      "return": 0.033096
+     },
+     {
+      "date": "2023-01-24",
+      "return": -0.041979
+     },
+     {
+      "date": "2023-04-24",
+      "return": -0.025101
+     },
+     {
+      "date": "2023-07-25",
+      "return": 0.01289
+     },
+     {
+      "date": "2023-10-24",
+      "return": 0.013819
+     },
+     {
+      "date": "2024-01-23",
+      "return": -0.003983
+     },
+     {
+      "date": "2024-04-23",
+      "return": -0.057001
+     },
+     {
+      "date": "2024-07-23",
+      "return": -0.050137
+     },
+     {
+      "date": "2024-10-22",
+      "return": -0.011522
+     },
+     {
+      "date": "2025-01-30",
+      "return": -0.028969
+     },
+     {
+      "date": "2025-05-01",
+      "return": 0.05685
+     },
+     {
+      "date": "2025-07-22",
+      "return": -0.037649
+     },
+     {
+      "date": "2025-10-31",
+      "return": 0.021141
+     },
+     {
+      "date": "2026-01-30",
+      "return": 0.017478
+     },
+     {
+      "date": "2026-04-29",
+      "return": -0.028088
+     },
+     {
+      "date": "2026-07-24",
+      "return": -0.030829
+     },
+     {
+      "date": "2026-10-30",
+      "return": 0.008809
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_8d68cd8695"
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 3,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_694944ac5699",
+     "n_6472c27222f9",
+     "n_3c7dc7bfa562"
+    ]
+   },
+   "linked_ticker": "CNR.TO"
+  },
+  {
+   "news_id": "n_6792493d9bea",
+   "title": "Johnson & Johnson to Host Enterprise Business Review",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQnZucEpGUThtMmM0TnV1NmpqdkhfMm1Rdm83V2RlYnhUdHRrMk81a0hmbVoxWGlMaW5PU3NZb1NsZ3V3VTBIM0xtSkJ5bHM0TVRBalF1TS1iWUR4OHVwUVNRU29PZWhxMGFXVTM3dkprNWM4OElpS1UxenkyeU1iYVozNUN1MkxfbzYxQWU5azBGSWtBWWtSQ0tNU3M2VGNwbm1HTG54RGNNVHM?oc=5",
+   "source": "Business Wire",
+   "published_at": "2026-10-27T07:00:00Z",
+   "tickers": [
+    "JNJ"
+   ],
+   "is_synthetic": false,
+   "category": "strategy_guidance",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
+      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6943f9ba22"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "JNJ représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7bd9bbe26b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de JNJ: 18,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_22fc4f7c9c"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Business Wire"
+    ],
+    "news_ids": [
+     "n_6792493d9bea"
+    ]
+   },
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_8e4966ce6bc3",
@@ -2836,7 +3382,23 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_319a41c131"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_8e4966ce6bc3"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
   },
   {
    "news_id": "n_2364e982aadd",
@@ -2897,68 +3459,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_0b3d04295c92",
-   "title": "Behind the Rising US Bond Yields: Traders Bet on Fed Hikes in December and January, a Blow to Trump",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObk5rVHR4NHdpRnpxQnFHWS1rdlhTb1hLLTJRQnVJR3pwSkF0RlFXdjgwbk9IdjF4MkxFWUYwalZzMEJDb2JBUC13TDVDeVlpUm5tb01MMHBrOF9JWkdDT2stX0JhN2Z2SlhyMkV3WmNzUlRlMFROeU1JV3dYeHlvZklTSWhTbG5oclFuZnBZN0VqN2h2aFpWaGFjNHhKRmlGSmxTejl4Y0c0T1V4SVc3U3JvbnBpUXljRnh0eGdHR2d5ODQ5Y3FzY2pPZTdDWExmdGNLdm5paVBHLXJHTVlnSGwtdnRFUQ?oc=5",
-   "source": "Benzinga",
-   "published_at": "2026-11-14T17:30:07Z",
-   "tickers": [
-    "SPY"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.65,
-    "level": "medium",
-    "shown": true,
-    "position_weight": 0.0,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Crypto Briefing"
+    ],
+    "news_ids": [
+     "n_2364e982aadd"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_7ded57b509"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,92).",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_b7ec563267"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Nouvelle publiée le 2026-11-14 par Benzinga.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_353f09555d"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": null
   },
   {
    "news_id": "n_de61fc7dd8c4",
@@ -3019,166 +3536,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_dfae9c0b7e7e",
-   "title": "GH Research Reports Third Quarter 2026 Financial Results and Provides Business Update",
-   "url": "https://finance.yahoo.com/healthcare/articles/gh-research-reports-third-quarter-130000375.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-13T13:00:00Z",
-   "tickers": [
-    "JNJ"
-   ],
-   "is_synthetic": false,
-   "category": "earnings_results",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.65,
-    "level": "medium",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_EARNINGS_RESULTS",
-      "text": "Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_de61fc7dd8c4"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_2a4989af5b"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "JNJ représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_7bd9bbe26b"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de JNJ: 18,1 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_22fc4f7c9c"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": {
-    "event_type": "earnings",
-    "asset": "JNJ",
-    "window": "veille de l'événement à +5 jours de bourse",
-    "n_events": 20,
-    "median_return": 0.00923,
-    "p10": -0.030148,
-    "p90": 0.05266,
-    "share_positive": 0.65,
-    "events": [
-     {
-      "date": "2022-01-25",
-      "return": 0.048537
-     },
-     {
-      "date": "2022-04-19",
-      "return": 0.039514
-     },
-     {
-      "date": "2022-07-19",
-      "return": -0.003157
-     },
-     {
-      "date": "2022-10-18",
-      "return": 0.024731
-     },
-     {
-      "date": "2023-01-24",
-      "return": -0.029054
-     },
-     {
-      "date": "2023-04-18",
-      "return": -0.002957
-     },
-     {
-      "date": "2023-07-20",
-      "return": 0.094179
-     },
-     {
-      "date": "2023-10-17",
-      "return": -0.039993
-     },
-     {
-      "date": "2024-01-23",
-      "return": -0.022774
-     },
-     {
-      "date": "2024-04-16",
-      "return": 0.013348
-     },
-     {
-      "date": "2024-07-17",
-      "return": 0.034898
-     },
-     {
-      "date": "2024-10-15",
-      "return": 0.011448
-     },
-     {
-      "date": "2025-01-22",
-      "return": 0.02025
-     },
-     {
-      "date": "2025-04-15",
-      "return": 0.006608
-     },
-     {
-      "date": "2025-07-16",
-      "return": 0.089773
-     },
-     {
-      "date": "2025-10-14",
-      "return": 0.005134
-     },
-     {
-      "date": "2026-01-21",
-      "return": 0.043582
-     },
-     {
-      "date": "2026-04-14",
-      "return": -0.049588
-     },
-     {
-      "date": "2026-07-15",
-      "return": 0.007012
-     },
-     {
-      "date": "2026-10-13",
-      "return": -0.01657
-     }
-    ],
-    "caveats": [
-     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
-     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
-     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
-     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
-    ],
-    "evidence_id": "ev_56e2c846a8"
-   }
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_4cea217c2d2c",
@@ -3239,7 +3613,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_4cea217c2d2c"
+    ]
+   },
+   "linked_ticker": "GLD"
   },
   {
    "news_id": "n_60727a322759",
@@ -3300,68 +3690,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_d342cd339155",
-   "title": "Tracy Robinson to Address the 26th Annual Scotiabank Transportation and Industrials Conference on November 18",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/tracy-robinson-address-26th-annual-140000605.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-12T14:00:00Z",
-   "tickers": [
-    "CNR.TO"
-   ],
-   "is_synthetic": false,
-   "category": "strategy_guidance",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.65,
-    "level": "medium",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_STRATEGY_GUIDANCE",
-      "text": "Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-      "delta": 0.65
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "MedTech Dive"
+    ],
+    "news_ids": [
+     "n_60727a322759"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_8c4377d188"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_6fb31fe504"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_9382522bf1"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "JNJ"
   },
   {
    "news_id": "n_2f0fd82ca02d",
@@ -3422,7 +3767,189 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Limerick's Live 95"
+    ],
+    "news_ids": [
+     "n_2f0fd82ca02d"
+    ]
+   },
+   "linked_ticker": "JNJ"
+  },
+  {
+   "news_id": "n_95f1710f96a9",
+   "title": "Strathcona, CN Railway plan crude-by-rail link",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9FTk5qdVhlbHBDd3l4eTdGWHFqS3VERmVybkpMNzd1clRXTGNLcFJTYkprMWlfdEIwSU9MM0dPb1RUSXlLODBuTWZvSHZjMEJnWTFHdHZZSUozNkRVLWVyTzQyWkNBVS1GaC0w?oc=5",
+   "source": "Transport Topics",
+   "published_at": "2026-11-10T21:45:00Z",
+   "tickers": [
+    "CNR.TO"
+   ],
+   "is_synthetic": false,
+   "category": "merger_acquisition",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGER_ACQUISITION",
+      "text": "Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium.",
+      "delta": 0.65
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c67574b951"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "CNR.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6fb31fe504"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9382522bf1"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Transport Topics"
+    ],
+    "news_ids": [
+     "n_95f1710f96a9"
+    ]
+   },
+   "linked_ticker": "CNR.TO"
+  },
+  {
+   "news_id": "n_d674931065b5",
+   "title": "Northern Trust and Microsoft Frontier Company collaborate to transform client onboarding through AI",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxORVJ4ekk2TjktQWlLU2pLUzRIMFVXYmtfaWM5VUtDTktvdjVRaFdma195QkRVRGFrNW9vN2REektTOVluNVgtZGk0RUZlczc5Tms5QllQRHVIZDNyb04tb09ORU9vdEN6di0xenJyeFk0THh6MWEyRE9YdTBrcDRYS0pyS1F2UEhjTG1CQVp2cFRaZVFfZTh1LURZWU9zVDg1TkdJYVA4aVRKZnhudjRmVURfc193cGJTaWcyZEpiS2NxOGpJX25MNl8wR21KaGRva0lsX0htOTJpd25VMGc?oc=5",
+   "source": "Microsoft Source",
+   "published_at": "2026-11-09T16:15:53Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "product",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_PRODUCT",
+      "text": "Catégorie Produits : poids de base 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Produits : poids de base 0,50 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_2c79b0f68e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Microsoft Source"
+    ],
+    "news_ids": [
+     "n_d674931065b5"
+    ]
+   },
+   "linked_ticker": "MSFT"
   }
  ],
  "hidden": {
@@ -3430,15 +3957,19 @@
   "by_reason": [
    {
     "reason": "Sujet déjà couvert par une nouvelle plus pertinente",
-    "count": 168
+    "count": 157
    },
    {
     "reason": "Bruit de court terme pour ton horizon",
-    "count": 130
+    "count": 122
    },
    {
     "reason": "Au-delà des 30 nouvelles les plus pertinentes",
-    "count": 34
+    "count": 36
+   },
+   {
+    "reason": "Même événement rapporté par plusieurs sources (regroupé en une carte)",
+    "count": 17
    },
    {
     "reason": "Nouvelle non classée",
@@ -3688,8 +4219,8 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_d95f893622": {
-   "id": "ev_d95f893622",
+  "ev_99f140a251": {
+   "id": "ev_99f140a251",
    "kind": "rule_hit",
    "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
    "value": 1.0,
@@ -3697,7 +4228,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_935a51da996f",
+    "news_id": "n_6a4289e3ad79",
     "rule_ids": [
      "R_BASE_CONTROVERSY",
      "R_POS_WEIGHT_10",
@@ -3743,42 +4274,6 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_e507db2a07": {
-   "id": "ev_e507db2a07",
-   "kind": "rule_hit",
-   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.",
-   "value": 1.0,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_13066311f8dd",
-    "rule_ids": [
-     "R_BASE_REGULATION_LEGAL",
-     "R_PREF_CONTROVERSY"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_9382522bf1": {
-   "id": "ev_9382522bf1",
-   "kind": "metric",
-   "statement": "Volatilité annualisée de CNR.TO: 19,9 %.",
-   "value": 0.19863278939612558,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "currency": "CAD",
-    "days_per_year": 252,
-    "n_returns": 1254,
-    "returns": "daily adj_close",
-    "ticker": "CNR.TO",
-    "window": "2021-11-12/2026-11-12"
-   },
-   "source": "data/prices_daily.csv",
-   "computed_by": "core.metrics.annualized_vol"
-  },
   "ev_00557385b5": {
    "id": "ev_00557385b5",
    "kind": "rule_hit",
@@ -3797,11 +4292,11 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_f46ada4788": {
-   "id": "ev_f46ada4788",
+  "ev_a9f018eff8": {
+   "id": "ev_a9f018eff8",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
-   "value": 0.95,
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+   "value": 1.0,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
@@ -3810,7 +4305,8 @@
     "rule_ids": [
      "R_BASE_MACRO",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_RATES_BOND"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -3834,20 +4330,58 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_0ddd2682bc": {
-   "id": "ev_0ddd2682bc",
+  "ev_6ac9abf9ce": {
+   "id": "ev_6ac9abf9ce",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
-   "value": 0.9,
+   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,70 pour un horizon medium. Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute. Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
+   "value": 0.95,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_aecff1352f37",
+    "news_id": "n_13066311f8dd",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_PREF_CONTROVERSY",
+     "R_MENTION_PASSING"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_9382522bf1": {
+   "id": "ev_9382522bf1",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de CNR.TO: 19,9 %.",
+   "value": 0.19863278939612558,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "CNR.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_76a471b1e5": {
+   "id": "ev_76a471b1e5",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.95,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_721abc66ddc2",
     "rule_ids": [
      "R_BASE_DIVIDEND",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_SOURCE_PRIMARY"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -3873,38 +4407,95 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_d7cb7eea03": {
-   "id": "ev_d7cb7eea03",
+  "ev_e942d367fc": {
+   "id": "ev_e942d367fc",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
-   "value": 0.9,
+   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+   "value": 0.85,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_721abc66ddc2",
+    "news_id": "n_98ff1175760b",
     "rule_ids": [
-     "R_BASE_DIVIDEND",
-     "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_BASE_MACRO",
+     "R_POS_WEIGHT_10",
+     "R_RATES_BOND"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_31ce19f568": {
-   "id": "ev_31ce19f568",
+  "ev_9d6f1dbabb": {
+   "id": "ev_9d6f1dbabb",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de ZST.TO: 0,6 %.",
+   "value": 0.005568051043071253,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "ZST.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_43bd3c7fa9": {
+   "id": "ev_43bd3c7fa9",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.8,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_222dcd288498",
+    "news_id": "n_2daa3794c36f",
+    "rule_ids": [
+     "R_BASE_MERGER_ACQUISITION",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_PRIMARY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_b7a94d3f84": {
+   "id": "ev_b7a94d3f84",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_c9707a12eac3",
+    "rule_ids": [
+     "R_BASE_STRATEGY_GUIDANCE",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_PRIMARY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_007e078a45": {
+   "id": "ev_007e078a45",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_95ea72a635d4",
     "rule_ids": [
      "R_BASE_EARNINGS_RESULTS",
-     "R_POS_WEIGHT_10"
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_PRIMARY"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -3930,62 +4521,46 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_dfdb7ac887": {
-   "id": "ev_dfdb7ac887",
+  "ev_cca3b9ebab": {
+   "id": "ev_cca3b9ebab",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,60 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+   "value": 0.8,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_8354479774e7",
+    "news_id": "n_aecff1352f37",
     "rule_ids": [
-     "R_BASE_STRATEGY_GUIDANCE",
-     "R_POS_WEIGHT_10"
+     "R_BASE_DIVIDEND",
+     "R_POS_WEIGHT_20",
+     "R_CONCENTRATION",
+     "R_SOURCE_AGGREGATOR"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_7a8a9df030": {
-   "id": "ev_7a8a9df030",
+  "ev_118699dedc": {
+   "id": "ev_118699dedc",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
    "value": 0.75,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_37380a3966a9",
-    "rule_ids": [
-     "R_BASE_MACRO",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_611a862f10": {
-   "id": "ev_611a862f10",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_2e5346ee7094",
+    "news_id": "n_de43023eed7d",
     "rule_ids": [
      "R_BASE_MACRO",
-     "R_POS_WEIGHT_10"
+     "R_RATES_BOND"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_d004c7fe22": {
-   "id": "ev_d004c7fe22",
+  "ev_0580b8a639": {
+   "id": "ev_0580b8a639",
    "kind": "rule_hit",
    "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
    "value": 0.75,
@@ -3993,115 +4568,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "medium",
-    "news_id": "n_03105b3e41fd",
-    "rule_ids": [
-     "R_BASE_STRATEGY_GUIDANCE",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_05103827c0": {
-   "id": "ev_05103827c0",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_98ff1175760b",
-    "rule_ids": [
-     "R_BASE_MACRO",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_9d6f1dbabb": {
-   "id": "ev_9d6f1dbabb",
-   "kind": "metric",
-   "statement": "Volatilité annualisée de ZST.TO: 0,6 %.",
-   "value": 0.005568051043071253,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "currency": "CAD",
-    "days_per_year": 252,
-    "n_returns": 1254,
-    "returns": "daily adj_close",
-    "ticker": "ZST.TO",
-    "window": "2021-11-12/2026-11-12"
-   },
-   "source": "data/prices_daily.csv",
-   "computed_by": "core.metrics.annualized_vol"
-  },
-  "ev_06115ba1cb": {
-   "id": "ev_06115ba1cb",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_2daa3794c36f",
-    "rule_ids": [
-     "R_BASE_MERGER_ACQUISITION",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_3e79035ca6": {
-   "id": "ev_3e79035ca6",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_0858ca8d516a",
-    "rule_ids": [
-     "R_BASE_STRATEGY_GUIDANCE",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_f06aeb651a": {
-   "id": "ev_f06aeb651a",
-   "kind": "metric",
-   "statement": "Volatilité annualisée de XIU.TO: 13,1 %.",
-   "value": 0.13062769328794735,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "currency": "CAD",
-    "days_per_year": 252,
-    "n_returns": 1254,
-    "returns": "daily adj_close",
-    "ticker": "XIU.TO",
-    "window": "2021-11-12/2026-11-12"
-   },
-   "source": "data/prices_daily.csv",
-   "computed_by": "core.metrics.annualized_vol"
-  },
-  "ev_67656031fe": {
-   "id": "ev_67656031fe",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_42baafb10a62",
+    "news_id": "n_d6fc92e6537c",
     "rule_ids": [
      "R_BASE_STRATEGY_GUIDANCE",
      "R_POS_WEIGHT_10"
@@ -4146,6 +4613,56 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
+  "ev_67d9bfa909": {
+   "id": "ev_67d9bfa909",
+   "kind": "news_source",
+   "statement": "Nouvelle publiée le 2026-11-14 par JPMorganChase.",
+   "value": "n_8db06364067c",
+   "unit": null,
+   "as_of": "2026-11-15",
+   "inputs": {
+    "is_synthetic": false,
+    "news_id": "n_8db06364067c",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5"
+   },
+   "source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5",
+   "computed_by": "ingest.news"
+  },
+  "ev_0bcc8daafd": {
+   "id": "ev_0bcc8daafd",
+   "kind": "classification",
+   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,35).",
+   "value": "macro",
+   "unit": null,
+   "as_of": "2026-11-15",
+   "inputs": {
+    "controversy": false,
+    "controversy_type": null,
+    "model_id": "us.anthropic.claude-sonnet-4-6",
+    "news_id": "n_8db06364067c",
+    "prompt_version": "classifier_v1+tx240b40"
+   },
+   "source": "data/snapshots/classified_news",
+   "computed_by": "agents.classifier"
+  },
+  "ev_c7f5f5350e": {
+   "id": "ev_c7f5f5350e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_8db06364067c",
+    "rule_ids": [
+     "R_BASE_MACRO",
+     "R_SOURCE_PRIMARY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
   "ev_1b6baca764": {
    "id": "ev_1b6baca764",
    "kind": "rule_hit",
@@ -4184,6 +4701,24 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
+  "ev_016ea35ed1": {
+   "id": "ev_016ea35ed1",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_6d7aeaaf5448",
+    "rule_ids": [
+     "R_BASE_STRATEGY_GUIDANCE",
+     "R_SOURCE_PRIMARY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
   "ev_42e0c5b4ec": {
    "id": "ev_42e0c5b4ec",
    "kind": "rule_hit",
@@ -4218,6 +4753,62 @@
    },
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_dc1316788f": {
+   "id": "ev_dc1316788f",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium. Plusieurs sources rapportent ce même événement (regroupées en une seule carte).",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_694944ac5699",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_MULTI_SOURCE"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_8d68cd8695": {
+   "id": "ev_8d68cd8695",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-01-25 au 2026-10-30), le mouvement médian de CNR.TO de la veille à +5 jours de bourse a été de −0,78 % (p10 −4,3 %, p90 3,5 %, 45 % de cas positifs).",
+   "value": -0.007752938737970783,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "CNR.TO",
+    "event_type": "earnings",
+    "from": "2022-01-25",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-30",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_6943f9ba22": {
+   "id": "ev_6943f9ba22",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_6792493d9bea",
+    "rule_ids": [
+     "R_BASE_STRATEGY_GUIDANCE",
+     "R_SOURCE_PRIMARY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
   },
   "ev_ad050dc0c5": {
    "id": "ev_ad050dc0c5",
@@ -4286,55 +4877,6 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_353f09555d": {
-   "id": "ev_353f09555d",
-   "kind": "news_source",
-   "statement": "Nouvelle publiée le 2026-11-14 par Benzinga.",
-   "value": "n_0b3d04295c92",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "is_synthetic": false,
-    "news_id": "n_0b3d04295c92",
-    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObk5rVHR4NHdpRnpxQnFHWS1rdlhTb1hLLTJRQnVJR3pwSkF0RlFXdjgwbk9IdjF4MkxFWUYwalZzMEJDb2JBUC13TDVDeVlpUm5tb01MMHBrOF9JWkdDT2stX0JhN2Z2SlhyMkV3WmNzUlRlMFROeU1JV3dYeHlvZklTSWhTbG5oclFuZnBZN0VqN2h2aFpWaGFjNHhKRmlGSmxTejl4Y0c0T1V4SVc3U3JvbnBpUXljRnh0eGdHR2d5ODQ5Y3FzY2pPZTdDWExmdGNLdm5paVBHLXJHTVlnSGwtdnRFUQ?oc=5"
-   },
-   "source": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObk5rVHR4NHdpRnpxQnFHWS1rdlhTb1hLLTJRQnVJR3pwSkF0RlFXdjgwbk9IdjF4MkxFWUYwalZzMEJDb2JBUC13TDVDeVlpUm5tb01MMHBrOF9JWkdDT2stX0JhN2Z2SlhyMkV3WmNzUlRlMFROeU1JV3dYeHlvZklTSWhTbG5oclFuZnBZN0VqN2h2aFpWaGFjNHhKRmlGSmxTejl4Y0c0T1V4SVc3U3JvbnBpUXljRnh0eGdHR2d5ODQ5Y3FzY2pPZTdDWExmdGNLdm5paVBHLXJHTVlnSGwtdnRFUQ?oc=5",
-   "computed_by": "ingest.news"
-  },
-  "ev_b7ec563267": {
-   "id": "ev_b7ec563267",
-   "kind": "classification",
-   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,92).",
-   "value": "macro",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_0b3d04295c92",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
-  "ev_7ded57b509": {
-   "id": "ev_7ded57b509",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation : poids de base 0,65 pour un horizon medium.",
-   "value": 0.65,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_0b3d04295c92",
-    "rule_ids": [
-     "R_BASE_MACRO"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
   "ev_1d48c5b1e4": {
    "id": "ev_1d48c5b1e4",
    "kind": "rule_hit",
@@ -4351,43 +4893,6 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_2a4989af5b": {
-   "id": "ev_2a4989af5b",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers : poids de base 0,65 pour un horizon medium.",
-   "value": 0.65,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_dfae9c0b7e7e",
-    "rule_ids": [
-     "R_BASE_EARNINGS_RESULTS"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_56e2c846a8": {
-   "id": "ev_56e2c846a8",
-   "kind": "event_study",
-   "statement": "Sur 20 publications de résultats (2022-01-25 au 2026-10-13), le mouvement médian de JNJ de la veille à +5 jours de bourse a été de 0,92 % (p10 −3,0 %, p90 5,3 %, 65 % de cas positifs).",
-   "value": 0.009229966542477985,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "asset": "JNJ",
-    "event_type": "earnings",
-    "from": "2022-01-25",
-    "macro_source": null,
-    "n_events": 20,
-    "prices": "adj_close (listing currency)",
-    "to": "2026-10-13",
-    "window": "t-1 -> t+5 trading days"
-   },
-   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
-   "computed_by": "core.event_study.historical_context"
   },
   "ev_3c0c3b7875": {
    "id": "ev_3c0c3b7875",
@@ -4423,23 +4928,6 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_8c4377d188": {
-   "id": "ev_8c4377d188",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Stratégie et prévisions : poids de base 0,65 pour un horizon medium.",
-   "value": 0.65,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "medium",
-    "news_id": "n_d342cd339155",
-    "rule_ids": [
-     "R_BASE_STRATEGY_GUIDANCE"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
   "ev_e32364191c": {
    "id": "ev_e32364191c",
    "kind": "rule_hit",
@@ -4452,6 +4940,42 @@
     "news_id": "n_2f0fd82ca02d",
     "rule_ids": [
      "R_BASE_CONTROVERSY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_c67574b951": {
+   "id": "ev_c67574b951",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions : poids de base 0,65 pour un horizon medium.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_95f1710f96a9",
+    "rule_ids": [
+     "R_BASE_MERGER_ACQUISITION"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_2c79b0f68e": {
+   "id": "ev_2c79b0f68e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Produits : poids de base 0,50 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_d674931065b5",
+    "rule_ids": [
+     "R_BASE_PRODUCT",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_PRIMARY"
     ]
    },
    "source": "rules/relevance_rules.yaml",

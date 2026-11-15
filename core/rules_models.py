@@ -249,17 +249,15 @@ class InstrumentRisks(RulesModel):
 
 
 class SourceTier(RulesModel):
-    id: str
+    id: Literal["primary", "established", "aggregator"]
     label_fr: str
     text_fr: str
-    add: float = Field(ge=-1, le=1)
     patterns: list[str] = Field(min_length=1)
 
 
 class UnknownTier(RulesModel):
     label_fr: str
     text_fr: str
-    add: float = Field(default=0.0, ge=-1, le=1)
 
 
 class SourceTiers(RulesModel):

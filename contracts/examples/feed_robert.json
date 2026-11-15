@@ -413,7 +413,207 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_319a41c131"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo! Finance Canada"
+    ],
+    "news_ids": [
+     "n_a401771ebf72"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
+  },
+  {
+   "news_id": "n_2e5346ee7094",
+   "title": "Blue Wave, Red Ink: Election Impacts on the AI Trade",
+   "url": "https://finance.yahoo.com/technology/ai/articles/blue-wave-red-ink-election-223914781.html",
+   "source": "etf.com",
+   "published_at": "2026-11-12T22:39:14Z",
+   "tickers": [
+    "AGG",
+    "AMZN",
+    "MSFT",
+    "NVDA",
+    "QQQ",
+    "SPY",
+    "TLT"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 1.0,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cdd957fcd3"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "AGG représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7bf8665e36"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de AGG: 6,2 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bb39883be7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "etf.com"
+    ],
+    "news_ids": [
+     "n_2e5346ee7094"
+    ]
+   },
+   "linked_ticker": "AGG"
+  },
+  {
+   "news_id": "n_2055c73afb2d",
+   "title": "He Has $100,000 in His Federal Retirement Bond Fund as Treasury Yields Hit 5%. Another 1-Point Rise Could Cost Him $6,000. A Different Fund Protects His Principal",
+   "url": "https://247wallst.com/personal-finance/2026/11/12/he-has-100000-in-his-federal-retirement-bond-fund-as-treasury-yields-hit-5-another-1-point-rise-could-cost-him-6000-a-different-fund-protects-his-principal/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-12T21:33:01Z",
+   "tickers": [
+    "AGG"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 1.0,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_45f899b9b5"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "AGG représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7bf8665e36"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de AGG: 6,2 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bb39883be7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_2055c73afb2d"
+    ]
+   },
+   "linked_ticker": "AGG"
   },
   {
    "news_id": "n_33f84d665a12",
@@ -451,6 +651,11 @@
       "delta": 0.1,
       "observed": 0.2,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
      }
     ]
    },
@@ -458,10 +663,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
       "label": "fact",
       "evidence_ids": [
-       "ev_c5e2a1b644"
+       "ev_be2eaf64d0"
       ],
       "verified": "supported"
      },
@@ -488,7 +693,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "The Globe and Mail"
+    ],
+    "news_ids": [
+     "n_33f84d665a12"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
   },
   {
    "news_id": "n_98ff1175760b",
@@ -526,6 +747,11 @@
       "delta": 0.1,
       "observed": 0.35,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
      }
     ]
    },
@@ -533,10 +759,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
       "label": "fact",
       "evidence_ids": [
-       "ev_7fca8eae9b"
+       "ev_f6015ba60b"
       ],
       "verified": "supported"
      },
@@ -563,7 +789,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "MoneySense"
+    ],
+    "news_ids": [
+     "n_98ff1175760b"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
   },
   {
    "news_id": "n_8e4966ce6bc3",
@@ -897,7 +1139,23 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_319a41c131"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_8e4966ce6bc3"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
   },
   {
    "news_id": "n_aecff1352f37",
@@ -935,6 +1193,11 @@
       "delta": 0.1,
       "observed": 0.2,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_AGGREGATOR",
+      "text": "Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "delta": -0.1
      }
     ]
    },
@@ -942,10 +1205,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
       "label": "fact",
       "evidence_ids": [
-       "ev_82fbbcc616"
+       "ev_20de176e93"
       ],
       "verified": "supported"
      },
@@ -1231,7 +1494,23 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_4b268190c3"
-   }
+   },
+   "source_tier": {
+    "id": "aggregator",
+    "label_fr": "Agrégateur ou blogue d'investissement",
+    "text_fr": "Contenu d'opinion ou généré en masse; à recouper avec une autre source."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Kalkine Media"
+    ],
+    "news_ids": [
+     "n_aecff1352f37"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
   },
   {
    "news_id": "n_721abc66ddc2",
@@ -1269,6 +1548,11 @@
       "delta": 0.1,
       "observed": 0.2,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
      }
     ]
    },
@@ -1276,10 +1560,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+      "text": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
       "label": "fact",
       "evidence_ids": [
-       "ev_c189a3c0cd"
+       "ev_13fcadb287"
       ],
       "verified": "supported"
      },
@@ -1565,16 +1849,32 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_4b268190c3"
-   }
+   },
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "GlobeNewswire"
+    ],
+    "news_ids": [
+     "n_721abc66ddc2"
+    ]
+   },
+   "linked_ticker": "XBB.TO"
   },
   {
-   "news_id": "n_0b3d04295c92",
-   "title": "Behind the Rising US Bond Yields: Traders Bet on Fed Hikes in December and January, a Blow to Trump",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxObk5rVHR4NHdpRnpxQnFHWS1rdlhTb1hLLTJRQnVJR3pwSkF0RlFXdjgwbk9IdjF4MkxFWUYwalZzMEJDb2JBUC13TDVDeVlpUm5tb01MMHBrOF9JWkdDT2stX0JhN2Z2SlhyMkV3WmNzUlRlMFROeU1JV3dYeHlvZklTSWhTbG5oclFuZnBZN0VqN2h2aFpWaGFjNHhKRmlGSmxTejl4Y0c0T1V4SVc3U3JvbnBpUXljRnh0eGdHR2d5ODQ5Y3FzY2pPZTdDWExmdGNLdm5paVBHLXJHTVlnSGwtdnRFUQ?oc=5",
-   "source": "Benzinga",
-   "published_at": "2026-11-14T17:30:07Z",
+   "news_id": "n_de43023eed7d",
+   "title": "She Moves $500,000 Into Municipal Bonds amid ‘Rare Opportunity’, Expecting Every Dollar of Interest to Stay Tax-Free. The IRS Counts That Interest When It Taxes Her Social Security, Pushing $16,900 More of Her Benefits Into Taxable Income",
+   "url": "https://247wallst.com/personal-finance/social-security/2026/11/14/she-moves-500000-into-municipal-bonds-amid-rare-opportunity-expecting-every-dollar-of-interest-to-stay-tax-free-the-irs-counts-that-interest-when-it-taxes-her-social-security-pushing-16900/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T14:46:43Z",
    "tickers": [
-    "SPY"
+    "JPM"
    ],
    "is_synthetic": false,
    "category": "macro",
@@ -1583,7 +1883,7 @@
     "score": 0.95,
     "level": "high",
     "shown": true,
-    "position_weight": 0.1,
+    "position_weight": 0.0,
     "rule_hits": [
      {
       "rule_id": "R_BASE_MACRO",
@@ -1591,11 +1891,9 @@
       "delta": 0.85
      },
      {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
+      "rule_id": "R_RATES_BOND",
+      "text": "Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+      "delta": 0.1
      }
     ]
    },
@@ -1603,26 +1901,26 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
       "label": "fact",
       "evidence_ids": [
-       "ev_95fa1ffaf9"
+       "ev_1d2d7c7055"
       ],
       "verified": "supported"
      },
      {
-      "text": "SPY représente 10,0 % du portefeuille analysé.",
+      "text": "ZST.TO représente 35,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_4f6aca848d"
+       "ev_40fcc4d9ba"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de SPY: 17,3 %.",
+      "text": "Volatilité annualisée de ZST.TO: 0,6 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_68887d11bb"
+       "ev_9d6f1dbabb"
       ],
       "verified": "supported"
      }
@@ -1633,7 +1931,23 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_de43023eed7d"
+    ]
+   },
+   "linked_ticker": "ZST.TO"
   },
   {
    "news_id": "n_ede7a5e46532",
@@ -1702,20 +2016,31 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_ede7a5e46532"
+    ]
+   },
+   "linked_ticker": "SPY"
   },
   {
-   "news_id": "n_2e5346ee7094",
-   "title": "Blue Wave, Red Ink: Election Impacts on the AI Trade",
-   "url": "https://finance.yahoo.com/technology/ai/articles/blue-wave-red-ink-election-223914781.html",
-   "source": "etf.com",
-   "published_at": "2026-11-12T22:39:14Z",
+   "news_id": "n_9eda3efd6feb",
+   "title": "Kevin Warsh’s Fed Will Vote on Rates Only 7 Times in 2027",
+   "url": "https://247wallst.com/investing/2026/11/13/kevin-warshs-fed-will-vote-on-rates-only-7-times-in-2027/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T17:13:00Z",
    "tickers": [
-    "AGG",
-    "AMZN",
-    "MSFT",
-    "NVDA",
-    "QQQ",
     "SPY",
     "TLT"
    ],
@@ -1749,23 +2074,23 @@
       "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
       "label": "fact",
       "evidence_ids": [
-       "ev_47f541fe28"
+       "ev_1de73ae47b"
       ],
       "verified": "supported"
      },
      {
-      "text": "AGG représente 10,0 % du portefeuille analysé.",
+      "text": "SPY représente 10,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_7bf8665e36"
+       "ev_4f6aca848d"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de AGG: 6,2 %.",
+      "text": "Volatilité annualisée de SPY: 17,3 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_bb39883be7"
+       "ev_68887d11bb"
       ],
       "verified": "supported"
      }
@@ -1776,25 +2101,41 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_9eda3efd6feb"
+    ]
+   },
+   "linked_ticker": "SPY"
   },
   {
-   "news_id": "n_2055c73afb2d",
-   "title": "He Has $100,000 in His Federal Retirement Bond Fund as Treasury Yields Hit 5%. Another 1-Point Rise Could Cost Him $6,000. A Different Fund Protects His Principal",
-   "url": "https://247wallst.com/personal-finance/2026/11/12/he-has-100000-in-his-federal-retirement-bond-fund-as-treasury-yields-hit-5-another-1-point-rise-could-cost-him-6000-a-different-fund-protects-his-principal/?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-12T21:33:01Z",
+   "news_id": "n_8db06364067c",
+   "title": "Small business snapshot: San Jose",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5",
+   "source": "JPMorganChase",
+   "published_at": "2026-11-14T05:20:38Z",
    "tickers": [
-    "AGG"
+    "JPM"
    ],
    "is_synthetic": false,
    "category": "macro",
    "horizon_relevance": "macro_context",
    "relevance": {
-    "score": 0.95,
+    "score": 0.9,
     "level": "high",
     "shown": true,
-    "position_weight": 0.1,
+    "position_weight": 0.0,
     "rule_hits": [
      {
       "rule_id": "R_BASE_MACRO",
@@ -1802,11 +2143,9 @@
       "delta": 0.85
      },
      {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
      }
     ]
    },
@@ -1814,26 +2153,26 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
       "label": "fact",
       "evidence_ids": [
-       "ev_c1e21265f7"
+       "ev_77e1998007"
       ],
       "verified": "supported"
      },
      {
-      "text": "AGG représente 10,0 % du portefeuille analysé.",
+      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,35).",
       "label": "fact",
       "evidence_ids": [
-       "ev_7bf8665e36"
+       "ev_0bcc8daafd"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de AGG: 6,2 %.",
+      "text": "Nouvelle publiée le 2026-11-14 par JPMorganChase.",
       "label": "fact",
       "evidence_ids": [
-       "ev_bb39883be7"
+       "ev_67d9bfa909"
       ],
       "verified": "supported"
      }
@@ -1844,7 +2183,331 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "JPMorganChase"
+    ],
+    "news_ids": [
+     "n_8db06364067c"
+    ]
+   },
+   "linked_ticker": null
+  },
+  {
+   "news_id": "n_2364e982aadd",
+   "title": "US government holds about $20 billion in Bitcoin and Ether",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE02S1VXNDZBQ293ZGVRM1NaM0dOa1lRVDRqQ19Fd3ItWlRDS0JtV1F2ZUJvUm1IQ0t0Yl9uLTJaLXFCeExTWXVzUktOTVR5bk5BQWxHZXVfSEo3bDBvUnFVN3hJdFlDUXM1djhaTGxHcFYxQTA?oc=5",
+   "source": "Crypto Briefing",
+   "published_at": "2026-11-14T20:35:47Z",
+   "tickers": [
+    "ETH-USD"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.0,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_ae10dc1111"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,62).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0b9350eb36"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Nouvelle publiée le 2026-11-14 par Crypto Briefing.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_14369b71c8"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Crypto Briefing"
+    ],
+    "news_ids": [
+     "n_2364e982aadd"
+    ]
+   },
+   "linked_ticker": null
+  },
+  {
+   "news_id": "n_4cea217c2d2c",
+   "title": "Gold Prices Plunge as Fed Rate Hike Fears Intensify",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-plunge-fed-rate-194427220.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-12T19:44:27Z",
+   "tickers": [
+    "GLD"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_e6b7642808"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "GLD représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a3f83fab9a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de GLD: 19,2 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_94a3aa5485"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_4cea217c2d2c"
+    ]
+   },
+   "linked_ticker": "GLD"
+  },
+  {
+   "news_id": "n_2394794fd630",
+   "title": "The World’s Debt Is at Record Levels. 6 Ways to Protect Your Portfolio.",
+   "url": "https://finance.yahoo.com/m/4cc5943c-b287-3103-8682-52f032f50e55/the-world%E2%80%99s-debt-is-at-record.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-06T11:00:00Z",
+   "tickers": [
+    "GLD"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7d3a062543"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "GLD représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a3f83fab9a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de GLD: 19,2 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_94a3aa5485"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_2394794fd630"
+    ]
+   },
+   "linked_ticker": "GLD"
+  },
+  {
+   "news_id": "n_222e5352ce17",
+   "title": "RBC Royal Bank announces change to prime rate",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcWdaa050eFMzUDd5MFZvaUpaT3I3d2s2WDlyYTBuYjdGX3dLRXMyQ3FTdmJqN0VBVkdseGJqeHlGc2FIOE9YN05YSTNheXhpSHIxRXFYWElkUUxzTjFLcWRBNW5wa0Y0M0I2dGo1MHEtMXpiaktfWmFIUTh4R0ZHSktKV0hCOWM?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "published_at": "2026-10-28T07:00:00Z",
+   "tickers": [
+    "RY.TO"
+   ],
+   "is_synthetic": false,
+   "category": "macro",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d4f90e819b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "RY.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0489cb6f53"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de RY.TO: 15,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_80872c3c45"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo! Finance Canada"
+    ],
+    "news_ids": [
+     "n_222e5352ce17"
+    ]
+   },
+   "linked_ticker": "RY.TO"
   },
   {
    "news_id": "n_9374f4985c34",
@@ -1859,7 +2522,7 @@
    "category": "dividend",
    "horizon_relevance": "structural",
    "relevance": {
-    "score": 0.9,
+    "score": 0.8,
     "level": "high",
     "shown": true,
     "position_weight": 0.1,
@@ -1875,6 +2538,11 @@
       "delta": 0.1,
       "observed": 0.1,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_AGGREGATOR",
+      "text": "Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "delta": -0.1
      }
     ]
    },
@@ -1882,10 +2550,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
       "label": "fact",
       "evidence_ids": [
-       "ev_5965278015"
+       "ev_ab12f8f210"
       ],
       "verified": "supported"
      },
@@ -2011,7 +2679,452 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_cacc0e5382"
-   }
+   },
+   "source_tier": {
+    "id": "aggregator",
+    "label_fr": "Agrégateur ou blogue d'investissement",
+    "text_fr": "Contenu d'opinion ou généré en masse; à recouper avec une autre source."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "24/7 Wall St."
+    ],
+    "news_ids": [
+     "n_9374f4985c34"
+    ]
+   },
+   "linked_ticker": "SPY"
+  },
+  {
+   "news_id": "n_350727b33b34",
+   "title": "Gold.com Keeps Dividend Steady Despite Revenue Drop",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gold-com-keeps-dividend-steady-190209926.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-05T19:02:09Z",
+   "tickers": [
+    "GLD"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "delta": 0.8
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_790da5bf63"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "GLD représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a3f83fab9a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de GLD: 19,2 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_94a3aa5485"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_350727b33b34"
+    ]
+   },
+   "linked_ticker": "GLD"
+  },
+  {
+   "news_id": "n_be244f9497d5",
+   "title": "Fortis Extends Its Dividend Growth Streak to 53 Years",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPd3VKenlHRDEyZXp4WmxDZ2JyRHJUWXd6M2hZMnZDY3RTYnpLeFhhdHU1YnMtLWNyRnRSenpUZGdPWjJacFZmNVlTc3hLTXFmT3dZdEIwemlDWXVVZHJjQnRwNGY1eXNBNnJiYWMzZElGLUlSOXJka1A2OXVPczZJY3Nvd1ZiQUJqNThtWlJzVQ?oc=5",
+   "source": "Yahoo! Finance Canada",
+   "published_at": "2026-11-04T08:00:00Z",
+   "tickers": [
+    "FTS.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "delta": 0.8
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_3b2d23a14c"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "FTS.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bd0858cd3f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de FTS.TO: 14,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_eb2d7b71a7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "FTS.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.002101,
+    "p10": -0.016415,
+    "p90": 0.022655,
+    "share_positive": 0.6,
+    "events": [
+     {
+      "date": "2021-11-16",
+      "return": 0.011538
+     },
+     {
+      "date": "2022-02-14",
+      "return": -0.015471
+     },
+     {
+      "date": "2022-05-16",
+      "return": 0.04155
+     },
+     {
+      "date": "2022-08-18",
+      "return": -0.024908
+     },
+     {
+      "date": "2022-11-16",
+      "return": 0.029353
+     },
+     {
+      "date": "2023-02-14",
+      "return": 0.002993
+     },
+     {
+      "date": "2023-05-16",
+      "return": -0.041066
+     },
+     {
+      "date": "2023-08-18",
+      "return": 0.001218
+     },
+     {
+      "date": "2023-11-16",
+      "return": 0.001425
+     },
+     {
+      "date": "2024-02-15",
+      "return": 0.02191
+     },
+     {
+      "date": "2024-05-16",
+      "return": -0.014459
+     },
+     {
+      "date": "2024-08-20",
+      "return": -0.009077
+     },
+     {
+      "date": "2024-11-18",
+      "return": 0.021187
+     },
+     {
+      "date": "2025-02-18",
+      "return": 0.002777
+     },
+     {
+      "date": "2025-05-16",
+      "return": 0.012918
+     },
+     {
+      "date": "2025-08-19",
+      "return": -0.004551
+     },
+     {
+      "date": "2025-11-17",
+      "return": -0.001789
+     },
+     {
+      "date": "2026-02-17",
+      "return": 0.013936
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.021493
+     },
+     {
+      "date": "2026-08-19",
+      "return": -0.013996
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_29e120de1d"
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo! Finance Canada"
+    ],
+    "news_ids": [
+     "n_be244f9497d5"
+    ]
+   },
+   "linked_ticker": "FTS.TO"
+  },
+  {
+   "news_id": "n_7e95bcc615ad",
+   "title": "4 Companies Just Raised Their Dividends. Which Payout Has the Most Room to Grow?",
+   "url": "https://247wallst.com/investing/2026/11/03/4-companies-just-raised-their-dividends-which-payout-has-the-most-room-to-grow/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-03T20:47:45Z",
+   "tickers": [
+    "FTS.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "delta": 0.8
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b2c81eb3a0"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "FTS.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bd0858cd3f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de FTS.TO: 14,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_eb2d7b71a7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "FTS.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.002101,
+    "p10": -0.016415,
+    "p90": 0.022655,
+    "share_positive": 0.6,
+    "events": [
+     {
+      "date": "2021-11-16",
+      "return": 0.011538
+     },
+     {
+      "date": "2022-02-14",
+      "return": -0.015471
+     },
+     {
+      "date": "2022-05-16",
+      "return": 0.04155
+     },
+     {
+      "date": "2022-08-18",
+      "return": -0.024908
+     },
+     {
+      "date": "2022-11-16",
+      "return": 0.029353
+     },
+     {
+      "date": "2023-02-14",
+      "return": 0.002993
+     },
+     {
+      "date": "2023-05-16",
+      "return": -0.041066
+     },
+     {
+      "date": "2023-08-18",
+      "return": 0.001218
+     },
+     {
+      "date": "2023-11-16",
+      "return": 0.001425
+     },
+     {
+      "date": "2024-02-15",
+      "return": 0.02191
+     },
+     {
+      "date": "2024-05-16",
+      "return": -0.014459
+     },
+     {
+      "date": "2024-08-20",
+      "return": -0.009077
+     },
+     {
+      "date": "2024-11-18",
+      "return": 0.021187
+     },
+     {
+      "date": "2025-02-18",
+      "return": 0.002777
+     },
+     {
+      "date": "2025-05-16",
+      "return": 0.012918
+     },
+     {
+      "date": "2025-08-19",
+      "return": -0.004551
+     },
+     {
+      "date": "2025-11-17",
+      "return": -0.001789
+     },
+     {
+      "date": "2026-02-17",
+      "return": 0.013936
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.021493
+     },
+     {
+      "date": "2026-08-19",
+      "return": -0.013996
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_29e120de1d"
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "snippet",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_7e95bcc615ad"
+    ]
+   },
+   "linked_ticker": "FTS.TO"
   },
   {
    "news_id": "n_f540e6a6c776",
@@ -2026,7 +3139,7 @@
    "category": "dividend",
    "horizon_relevance": "structural",
    "relevance": {
-    "score": 0.9,
+    "score": 0.8,
     "level": "high",
     "shown": true,
     "position_weight": 0.1,
@@ -2042,6 +3155,11 @@
       "delta": 0.1,
       "observed": 0.1,
       "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_AGGREGATOR",
+      "text": "Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "delta": -0.1
      }
     ]
    },
@@ -2049,10 +3167,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
       "label": "fact",
       "evidence_ids": [
-       "ev_9346de8761"
+       "ev_458be80d60"
       ],
       "verified": "supported"
      },
@@ -2338,822 +3456,23 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_7f64ebcdf8"
-   }
-  },
-  {
-   "news_id": "n_2364e982aadd",
-   "title": "US government holds about $20 billion in Bitcoin and Ether",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE02S1VXNDZBQ293ZGVRM1NaM0dOa1lRVDRqQ19Fd3ItWlRDS0JtV1F2ZUJvUm1IQ0t0Yl9uLTJaLXFCeExTWXVzUktOTVR5bk5BQWxHZXVfSEo3bDBvUnFVN3hJdFlDUXM1djhaTGxHcFYxQTA?oc=5",
-   "source": "Crypto Briefing",
-   "published_at": "2026-11-14T20:35:47Z",
-   "tickers": [
-    "ETH-USD"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.0,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
+   },
+   "source_tier": {
+    "id": "aggregator",
+    "label_fr": "Agrégateur ou blogue d'investissement",
+    "text_fr": "Contenu d'opinion ou généré en masse; à recouper avec une autre source."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Moomoo"
+    ],
+    "news_ids": [
+     "n_f540e6a6c776"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_ae10dc1111"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,62).",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_0b9350eb36"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Nouvelle publiée le 2026-11-14 par Crypto Briefing.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_14369b71c8"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_353c586d93b9",
-   "title": "Why Tech and Crypto Sold Off After the Blue Wave",
-   "url": "https://www.entrepreneur.com/business-news/tech/why-tech-and-crypto-sold-off-after-the-blue-wave?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-14T15:00:00Z",
-   "tickers": [
-    "BTC-USD"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.0,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_8cf4911fbb"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,62).",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_2a9018a7de"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Nouvelle publiée le 2026-11-14 par Yahoo Finance.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_7e312c3851"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_4cea217c2d2c",
-   "title": "Gold Prices Plunge as Fed Rate Hike Fears Intensify",
-   "url": "https://finance.yahoo.com/markets/commodities/articles/gold-prices-plunge-fed-rate-194427220.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-12T19:44:27Z",
-   "tickers": [
-    "GLD"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_e6b7642808"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "GLD représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_a3f83fab9a"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de GLD: 19,2 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_94a3aa5485"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_7a8bdca0a6b3",
-   "title": "The 2026 Canadian Federal Budget: A Guide to Grants and Funding Opportunities for Businesses",
-   "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPNTdpZ194WFVia0pLN2plM1F5eEJXZkhKLVIzSVUtTUVMcU1rTkRuRjZiXzNITFJhb29BLXhuNDNPS2VHajduVXBaT0tmdm5nUkZWNFdkaWYzeWwyR2s2MkVlUThJLTdjeHlraGdYQkZEek5SZkRqR0JNdEFuREJaaW5rc3RxN2M5ODZndnRTdmNHTGFnUng0ZFlJelkyWFVnRjVScll3eHd2ZXlBbWxkWnBXVnJmN1ZKNWRnRHB6bGNydjM3RzQwXzF4OXhVNGdZV0VicDJsclBHQlpra3FBTGVVb3pIdFdXcUFQbV9hUmdmdmdmSWpITGZKSERKc3FkSFB3MmZBWEFPeUNfRGtjRjQzQ09lN1dxSzdvcA?oc=5",
-   "source": "Royal Bank",
-   "published_at": "2026-11-10T22:44:16Z",
-   "tickers": [
-    "RY.TO"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_d9647ecfb5"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "RY.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_0489cb6f53"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de RY.TO: 15,5 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_80872c3c45"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_2394794fd630",
-   "title": "The World’s Debt Is at Record Levels. 6 Ways to Protect Your Portfolio.",
-   "url": "https://finance.yahoo.com/m/4cc5943c-b287-3103-8682-52f032f50e55/the-world%E2%80%99s-debt-is-at-record.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-06T11:00:00Z",
-   "tickers": [
-    "GLD"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_7d3a062543"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "GLD représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_a3f83fab9a"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de GLD: 19,2 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_94a3aa5485"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_124ba93fbb0b",
-   "title": "AGG ETF holders in CA, NY, CT may lose state ta...",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMHEyTnFzTnJtQ3JEUURoS2VWekZneG41VC1aaTQ5NFBKZjFSbU1VMGRuLVNRcF9KYXJPNUtWUGtLa1p2MkhOR0ZtcEVyQmpUNmRCRzRoRlRiQ2o2TEtiVTVqd2Rjdk5rNUlqUVVWSHVNTzZNMHR4UHMtdHA5TlQ1R0hfNFlPWm5ycnN2N3BPTDdUTlBrRjZVag?oc=5",
-   "source": "Pluang",
-   "published_at": "2026-10-30T21:25:36Z",
-   "tickers": [
-    "AGG"
-   ],
-   "is_synthetic": false,
-   "category": "regulation_legal",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_REGULATION_LEGAL",
-      "text": "Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
-      "delta": 0.75
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_bf73fb2698"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "AGG représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_7bf8665e36"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de AGG: 6,2 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_bb39883be7"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_222e5352ce17",
-   "title": "RBC Royal Bank announces change to prime rate",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcWdaa050eFMzUDd5MFZvaUpaT3I3d2s2WDlyYTBuYjdGX3dLRXMyQ3FTdmJqN0VBVkdseGJqeHlGc2FIOE9YN05YSTNheXhpSHIxRXFYWElkUUxzTjFLcWRBNW5wa0Y0M0I2dGo1MHEtMXpiaktfWmFIUTh4R0ZHSktKV0hCOWM?oc=5",
-   "source": "Yahoo! Finance Canada",
-   "published_at": "2026-10-28T07:00:00Z",
-   "tickers": [
-    "RY.TO"
-   ],
-   "is_synthetic": false,
-   "category": "macro",
-   "horizon_relevance": "macro_context",
-   "relevance": {
-    "score": 0.85,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_MACRO",
-      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "delta": 0.85
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_d4f90e819b"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "RY.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_0489cb6f53"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de RY.TO: 15,5 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_80872c3c45"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_2e55d23a112c",
-   "title": "What $10,000 in Fortis Could Pay Now After Years of Dividend Growth",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcWc0TW5OWXR0bU1lUktNejdrUzdrQk1hbEpKVlUxc1JEa0g3QlZock9rcS1wSGlnNXFUMUV1X3FrWl82WE1UcnMwcTkwQ0wxVjlzd0NKMVZlbGZKdFYwVFE1d0VGZUlUcVpkNFVwTy1BYzhPRllXNmtqZlhhc3ZtMHE3cUJGZWhKVUNpMlNkSmVtY0V4VjhtNG16WEVhT3hqRTZB?oc=5",
-   "source": "The Motley Fool Canada",
-   "published_at": "2026-11-13T21:30:00Z",
-   "tickers": [
-    "FTS.TO"
-   ],
-   "is_synthetic": false,
-   "category": "dividend",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.8,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_DIVIDEND",
-      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "delta": 0.8
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_0741e2a6c5"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "FTS.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_bd0858cd3f"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de FTS.TO: 14,7 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_eb2d7b71a7"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": {
-    "event_type": "dividend_ex_date",
-    "asset": "FTS.TO",
-    "window": "veille de l'événement à +5 jours de bourse",
-    "n_events": 20,
-    "median_return": 0.002101,
-    "p10": -0.016415,
-    "p90": 0.022655,
-    "share_positive": 0.6,
-    "events": [
-     {
-      "date": "2021-11-16",
-      "return": 0.011538
-     },
-     {
-      "date": "2022-02-14",
-      "return": -0.015471
-     },
-     {
-      "date": "2022-05-16",
-      "return": 0.04155
-     },
-     {
-      "date": "2022-08-18",
-      "return": -0.024908
-     },
-     {
-      "date": "2022-11-16",
-      "return": 0.029353
-     },
-     {
-      "date": "2023-02-14",
-      "return": 0.002993
-     },
-     {
-      "date": "2023-05-16",
-      "return": -0.041066
-     },
-     {
-      "date": "2023-08-18",
-      "return": 0.001218
-     },
-     {
-      "date": "2023-11-16",
-      "return": 0.001425
-     },
-     {
-      "date": "2024-02-15",
-      "return": 0.02191
-     },
-     {
-      "date": "2024-05-16",
-      "return": -0.014459
-     },
-     {
-      "date": "2024-08-20",
-      "return": -0.009077
-     },
-     {
-      "date": "2024-11-18",
-      "return": 0.021187
-     },
-     {
-      "date": "2025-02-18",
-      "return": 0.002777
-     },
-     {
-      "date": "2025-05-16",
-      "return": 0.012918
-     },
-     {
-      "date": "2025-08-19",
-      "return": -0.004551
-     },
-     {
-      "date": "2025-11-17",
-      "return": -0.001789
-     },
-     {
-      "date": "2026-02-17",
-      "return": 0.013936
-     },
-     {
-      "date": "2026-05-15",
-      "return": 0.021493
-     },
-     {
-      "date": "2026-08-19",
-      "return": -0.013996
-     }
-    ],
-    "caveats": [
-     "Échantillon limité: 20 dates ex-dividende sur une seule période de 5 ans.",
-     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
-     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
-     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
-     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
-    ],
-    "evidence_id": "ev_29e120de1d"
-   }
-  },
-  {
-   "news_id": "n_6f54407e760d",
-   "title": "An Ideal TSX Dividend Stock for Consistent TFSA Passive Income",
-   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZjlDc25lRDFoZ0wtN1Q5WmtvU1lBdXBwQldVOHE2M28tNDlkQmhIamc5M3c0bmU3S1N5ZXg4UjhUc3ltZmVjRzE3N2pWRVNQMkp0WExkOVp1VEVadzZ1VUpPRG9DeHJaWE10dW9WWW1FQ3pXX3ZsT3o1ZmgydFhhNXlldGg5WG1YZUxaQQ?oc=5",
-   "source": "Yahoo! Finance Canada",
-   "published_at": "2026-11-06T15:30:00Z",
-   "tickers": [
-    "FTS.TO"
-   ],
-   "is_synthetic": false,
-   "category": "dividend",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.8,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_DIVIDEND",
-      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "delta": 0.8
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_c7dcbdc565"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "FTS.TO représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_bd0858cd3f"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de FTS.TO: 14,7 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_eb2d7b71a7"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": {
-    "event_type": "dividend_ex_date",
-    "asset": "FTS.TO",
-    "window": "veille de l'événement à +5 jours de bourse",
-    "n_events": 20,
-    "median_return": 0.002101,
-    "p10": -0.016415,
-    "p90": 0.022655,
-    "share_positive": 0.6,
-    "events": [
-     {
-      "date": "2021-11-16",
-      "return": 0.011538
-     },
-     {
-      "date": "2022-02-14",
-      "return": -0.015471
-     },
-     {
-      "date": "2022-05-16",
-      "return": 0.04155
-     },
-     {
-      "date": "2022-08-18",
-      "return": -0.024908
-     },
-     {
-      "date": "2022-11-16",
-      "return": 0.029353
-     },
-     {
-      "date": "2023-02-14",
-      "return": 0.002993
-     },
-     {
-      "date": "2023-05-16",
-      "return": -0.041066
-     },
-     {
-      "date": "2023-08-18",
-      "return": 0.001218
-     },
-     {
-      "date": "2023-11-16",
-      "return": 0.001425
-     },
-     {
-      "date": "2024-02-15",
-      "return": 0.02191
-     },
-     {
-      "date": "2024-05-16",
-      "return": -0.014459
-     },
-     {
-      "date": "2024-08-20",
-      "return": -0.009077
-     },
-     {
-      "date": "2024-11-18",
-      "return": 0.021187
-     },
-     {
-      "date": "2025-02-18",
-      "return": 0.002777
-     },
-     {
-      "date": "2025-05-16",
-      "return": 0.012918
-     },
-     {
-      "date": "2025-08-19",
-      "return": -0.004551
-     },
-     {
-      "date": "2025-11-17",
-      "return": -0.001789
-     },
-     {
-      "date": "2026-02-17",
-      "return": 0.013936
-     },
-     {
-      "date": "2026-05-15",
-      "return": 0.021493
-     },
-     {
-      "date": "2026-08-19",
-      "return": -0.013996
-     }
-    ],
-    "caveats": [
-     "Échantillon limité: 20 dates ex-dividende sur une seule période de 5 ans.",
-     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
-     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
-     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
-     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
-    ],
-    "evidence_id": "ev_29e120de1d"
-   }
-  },
-  {
-   "news_id": "n_350727b33b34",
-   "title": "Gold.com Keeps Dividend Steady Despite Revenue Drop",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/gold-com-keeps-dividend-steady-190209926.html?.tsrc=rss",
-   "source": "Yahoo Finance",
-   "published_at": "2026-11-05T19:02:09Z",
-   "tickers": [
-    "GLD"
-   ],
-   "is_synthetic": false,
-   "category": "dividend",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.8,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.05,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_DIVIDEND",
-      "text": "Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "delta": 0.8
-     }
-    ]
-   },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_790da5bf63"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "GLD représente 5,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_a3f83fab9a"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de GLD: 19,2 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_94a3aa5485"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "AGG"
   },
   {
    "news_id": "n_8042418ceddc",
@@ -3313,7 +3632,23 @@
      "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
     ],
     "evidence_id": "ev_d014ffe673"
-   }
+   },
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_8042418ceddc"
+    ]
+   },
+   "linked_ticker": "RY.TO"
   },
   {
    "news_id": "n_f055b0170c0c",
@@ -3381,20 +3716,36 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_f055b0170c0c"
+    ]
+   },
+   "linked_ticker": "SPY"
   },
   {
-   "news_id": "n_d343b39f5881",
-   "title": "More than a dozen private companies lend workers to Major Projects Office: document",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQY2UxOFk1UXlWSE83ZXlISVV3Z1ZWWUREZ0czM2EtTi1FaEpZbW5JeHBLN0xHVEpiS2dRc1MtajJCaDg1MF9VOUxkZHA0akNBR3lPa0t4SUlsa2F0TEdOZzJTS2NWYlVIWG5aQTFWLTUtelpKRkRoMTBjQkEtU1NsNkdPYzR5LXFfZ19fOERFSi11QQ?oc=5",
-   "source": "CBC",
-   "published_at": "2026-11-10T22:55:31Z",
+   "news_id": "n_7a8bdca0a6b3",
+   "title": "The 2026 Canadian Federal Budget: A Guide to Grants and Funding Opportunities for Businesses",
+   "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPNTdpZ194WFVia0pLN2plM1F5eEJXZkhKLVIzSVUtTUVMcU1rTkRuRjZiXzNITFJhb29BLXhuNDNPS2VHajduVXBaT0tmdm5nUkZWNFdkaWYzeWwyR2s2MkVlUThJLTdjeHlraGdYQkZEek5SZkRqR0JNdEFuREJaaW5rc3RxN2M5ODZndnRTdmNHTGFnUng0ZFlJelkyWFVnRjVScll3eHd2ZXlBbWxkWnBXVnJmN1ZKNWRnRHB6bGNydjM3RzQwXzF4OXhVNGdZV0VicDJsclBHQlpra3FBTGVVb3pIdFdXcUFQbV9hUmdmdmdmSWpITGZKSERKc3FkSFB3MmZBWEFPeUNfRGtjRjQzQ09lN1dxSzdvcA?oc=5",
+   "source": "Royal Bank",
+   "published_at": "2026-11-10T22:44:16Z",
    "tickers": [
     "RY.TO"
    ],
    "is_synthetic": false,
-   "category": "regulation_legal",
-   "horizon_relevance": "structural",
+   "category": "macro",
+   "horizon_relevance": "macro_context",
    "relevance": {
     "score": 0.75,
     "level": "high",
@@ -3402,9 +3753,19 @@
     "position_weight": 0.05,
     "rule_hits": [
      {
-      "rule_id": "R_BASE_REGULATION_LEGAL",
-      "text": "Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
-      "delta": 0.75
+      "rule_id": "R_BASE_MACRO",
+      "text": "Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+      "delta": 0.85
+     },
+     {
+      "rule_id": "R_SOURCE_PRIMARY",
+      "text": "Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
+      "delta": 0.05
+     },
+     {
+      "rule_id": "R_MENTION_PASSING",
+      "text": "Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
+      "delta": -0.15
      }
     ]
    },
@@ -3412,10 +3773,10 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main. Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
       "label": "fact",
       "evidence_ids": [
-       "ev_6c87330a8b"
+       "ev_349576d1d3"
       ],
       "verified": "supported"
      },
@@ -3442,75 +3803,23 @@
      "flags": []
     }
    },
-   "historical_context": null
-  },
-  {
-   "news_id": "n_7dd3029dd3ef",
-   "title": "Semiconductor Rally Defies Nvidia Scandal; Hot CPI; CoreWeave Earnings Ahead",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbjNFazBYMDRTSmphS0ZlS0xBZ0xvN1g4Wms5amVIQUYwQUtOSlhIb0x0YzdHWXhTT3VrUkk0bXltN0I4ZE5XTjU4MHEyQ2Z2NjBCRFFLYVo0Y3ZXdGtfNGV0eG5qemd0Y19fRW1LVUxOUFZzTFRKaUtTRXVrRnZHbVF0cThLNGlmNE5YSTc0cVdEdFpuNldXNE0xX2M3WnhHR1lITlVmXy13REY2QjZhRTNGM0M2WEpjajFJempQSQ?oc=5",
-   "source": "Benzinga",
-   "published_at": "2026-11-10T21:00:21Z",
-   "tickers": [
-    "SPY"
-   ],
-   "is_synthetic": false,
-   "category": "controversy",
-   "horizon_relevance": "structural",
-   "relevance": {
-    "score": 0.75,
-    "level": "high",
-    "shown": true,
-    "position_weight": 0.1,
-    "rule_hits": [
-     {
-      "rule_id": "R_BASE_CONTROVERSY",
-      "text": "Catégorie Controverses : poids de base 0,65 pour un horizon short.",
-      "delta": 0.65
-     },
-     {
-      "rule_id": "R_POS_WEIGHT_10",
-      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
-      "delta": 0.1,
-      "observed": 0.1,
-      "limit": 0.1
-     }
+   "historical_context": null,
+   "source_tier": {
+    "id": "primary",
+    "label_fr": "Source primaire",
+    "text_fr": "Publié par l'entreprise elle-même, un régulateur ou une banque centrale."
+   },
+   "mention": "none",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Royal Bank"
+    ],
+    "news_ids": [
+     "n_7a8bdca0a6b3"
     ]
    },
-   "explanation": {
-    "summary": "",
-    "claims": [
-     {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_bd16d11c6f"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "SPY représente 10,0 % du portefeuille analysé.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_4f6aca848d"
-      ],
-      "verified": "supported"
-     },
-     {
-      "text": "Volatilité annualisée de SPY: 17,3 %.",
-      "label": "fact",
-      "evidence_ids": [
-       "ev_68887d11bb"
-      ],
-      "verified": "supported"
-     }
-    ],
-    "generated_by": "template",
-    "guardian": {
-     "status": "passed",
-     "flags": []
-    }
-   },
-   "historical_context": null
+   "linked_ticker": "RY.TO"
   },
   {
    "news_id": "n_236bcbc919f9",
@@ -3571,16 +3880,32 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Yahoo Finance"
+    ],
+    "news_ids": [
+     "n_236bcbc919f9"
+    ]
+   },
+   "linked_ticker": "GLD"
   },
   {
-   "news_id": "n_c97ac55de31d",
-   "title": "Royal Bank of Canada restricts third-party AI agents from banking channels",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxON0VRSHVVRFgwN20xeF9KYXJUalFBOFZzNGo3TVo0dEhQODZmczRWRHZqNVdIazB3ZmFJNmdKbVFja29vTll0ekFTT1Y1YmJlQmYxNG9CbGcyeWIzeEFBNy14ZWpSZThaWFcwN3B3ZVlRcEpxd0lBUWpaNHN1TXlxNmI2Y0JvQm9xVW9WcHE0ald4dw?oc=5",
-   "source": "Retail Banker International",
-   "published_at": "2026-10-29T07:00:00Z",
+   "news_id": "n_124ba93fbb0b",
+   "title": "AGG ETF holders in CA, NY, CT may lose state ta...",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMHEyTnFzTnJtQ3JEUURoS2VWekZneG41VC1aaTQ5NFBKZjFSbU1VMGRuLVNRcF9KYXJPNUtWUGtLa1p2MkhOR0ZtcEVyQmpUNmRCRzRoRlRiQ2o2TEtiVTVqd2Rjdk5rNUlqUVVWSHVNTzZNMHR4UHMtdHA5TlQ1R0hfNFlPWm5ycnN2N3BPTDdUTlBrRjZVag?oc=5",
+   "source": "Pluang",
+   "published_at": "2026-10-30T21:25:36Z",
    "tickers": [
-    "RY.TO"
+    "AGG"
    ],
    "is_synthetic": false,
    "category": "regulation_legal",
@@ -3589,12 +3914,24 @@
     "score": 0.75,
     "level": "high",
     "shown": true,
-    "position_weight": 0.05,
+    "position_weight": 0.1,
     "rule_hits": [
      {
       "rule_id": "R_BASE_REGULATION_LEGAL",
       "text": "Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
       "delta": 0.75
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_SOURCE_AGGREGATOR",
+      "text": "Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+      "delta": -0.1
      }
     ]
    },
@@ -3602,26 +3939,26 @@
     "summary": "",
     "claims": [
      {
-      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
       "label": "fact",
       "evidence_ids": [
-       "ev_2c3ae66c65"
+       "ev_1ed32ee4a0"
       ],
       "verified": "supported"
      },
      {
-      "text": "RY.TO représente 5,0 % du portefeuille analysé.",
+      "text": "AGG représente 10,0 % du portefeuille analysé.",
       "label": "fact",
       "evidence_ids": [
-       "ev_0489cb6f53"
+       "ev_7bf8665e36"
       ],
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de RY.TO: 15,5 %.",
+      "text": "Volatilité annualisée de AGG: 6,2 %.",
       "label": "fact",
       "evidence_ids": [
-       "ev_80872c3c45"
+       "ev_bb39883be7"
       ],
       "verified": "supported"
      }
@@ -3632,14 +3969,30 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "aggregator",
+    "label_fr": "Agrégateur ou blogue d'investissement",
+    "text_fr": "Contenu d'opinion ou généré en masse; à recouper avec une autre source."
+   },
+   "mention": "not_applicable",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Pluang"
+    ],
+    "news_ids": [
+     "n_124ba93fbb0b"
+    ]
+   },
+   "linked_ticker": "AGG"
   },
   {
-   "news_id": "n_eb120861e9a1",
-   "title": "Jump for joy: Nelson group draws hopscotches downtown",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdTBINVVEaktuRko5WjJoUmRCcm9jaV96SGJEeklSaS1WcGpyemt5YkRfNWE5dFF2WXZYSnJxNTdLVjR4RGRHamtLanVVVXljU2ZJQUZkRXVZVi1NaVhib3pfUDdvc0xrdV9OVVl6SURUbUNWazNoeXY4MmJIY2FSZ0ZPNW1QZEFLUkphNGpkYw?oc=5",
-   "source": "Trail Times",
-   "published_at": "2026-11-14T12:39:41Z",
+   "news_id": "n_0e2fb8d56293",
+   "title": "EXCLUSIVE Royal Bank of Canada eliminates climate, ESG roles amid reorganization, sources say",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSkV1dE11Z2F6WDRTOVhSRFo4clZpTWFhY3FYWEVWZ216VERxYkJhc2ZvRnFVaWdETWx3SGdMUVFZVmNENm1lRk4xMFBOMktpVXhXclJtZlZjc3lZQ2VvZW1VZHIxVHl6Yk8zVHhxWlVWWkFVd3ZsV0ZjRDRMaFFSVmRYR1JCOXJCanJYTEZadTdZNExOd1ktUXA3RzcxRjVwMS1mWS16QXVBQTQ2SktCdy1Sd0lRS2x2alE0OUNvZDFwUmFqWWstZUJNNA?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-11-13T01:29:05Z",
    "tickers": [
     "RY.TO"
    ],
@@ -3666,7 +4019,7 @@
       "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
       "label": "fact",
       "evidence_ids": [
-       "ev_693b36b4e9"
+       "ev_0f467fc2ab"
       ],
       "verified": "supported"
      },
@@ -3693,14 +4046,107 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Reuters"
+    ],
+    "news_ids": [
+     "n_0e2fb8d56293"
+    ]
+   },
+   "linked_ticker": "RY.TO"
   },
   {
-   "news_id": "n_377c610fedaa",
-   "title": "Making waves: Eastern suburbs locals fight beachfront high-rise",
-   "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOSGRpZkZvOXhGMDNqWDQ5dnNvQzlSdEo4RjNUZ184dkR2SzFWZ2VGaWRuMTRMUzlSZ053NkxhRTlFcmd3bWxoTkNaYVcySTE4aXpteng0dWNaVG0zZE1CUlowNzdUU0xRbzJ3NXdZbDZZUVYydF91VldFVGJxdHpFLUJoT3dQWTFaZWxsU1pRR1V0SFpIRWIzS3NLUEItMjlTNm9Qd0NqbmRKak54SGMwUEF0aUVlNUUySDRGNVpnYmRqNDRxVl9uek5Mc3EwWWVQNlQ1VWJCSjZlY0RPNlcxM1NnWFhTU1ctS0Q1R05jSld5c3QyX0tkVHhVTkNER25FcTBJZmlXUXV2LVd4VGtDVENZaVJ1UFRZblY5OG1UWQ?oc=5",
-   "source": "The Daily Telegraph",
-   "published_at": "2026-11-13T02:21:43Z",
+   "news_id": "n_6b3a4e3433fb",
+   "title": "RBC cuts high-level climate finance jobs in unit restructuring",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaGppaTVXZk1XX1N2WFctdmtjRlR5TXdRc0RKNkhlOF8wUHZmRlFyRmtnRTlvYlJiUDNuVlJtR3dHd0R6MlBDX19mbEZqUzdkeHN4dnhncTNPY19JS004cFBaR2RPYkltUW9DaUJzWndhZkNzWEhNTURWWVJJRlk5dzRyTjhIYlhnY1J1NUtvbWRHdHRFQnpNYkJXZ0hmUEdjWjhVRy1EZy03Y3pfLWZITF93?oc=5",
+   "source": "The Globe and Mail",
+   "published_at": "2026-11-12T21:30:11Z",
+   "tickers": [
+    "RY.TO"
+   ],
+   "is_synthetic": false,
+   "category": "controversy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_CONTROVERSY",
+      "text": "Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+      "delta": 0.65
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c797e11281"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "RY.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0489cb6f53"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de RY.TO: 15,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_80872c3c45"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "established",
+    "label_fr": "Presse financière établie",
+    "text_fr": "Média financier ou généraliste reconnu."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "The Globe and Mail"
+    ],
+    "news_ids": [
+     "n_6b3a4e3433fb"
+    ]
+   },
+   "linked_ticker": "RY.TO"
+  },
+  {
+   "news_id": "n_81a45c69d42e",
+   "title": "Fortis Games appears to have closed with over 400 staff likely affected",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN19OWXMxb0RqTkstWVYtbktkQU5TRlloQ2w0UUNRYkRUUEVwWmV1OTY2R2FSVnFpcUhnQ3dYVkVnZ0F1R01KMndIZUxJbG5tTjZFdl9kaDBveHhDOWx5cVlkdnRmLTBTNHp5VTFRSWJna1BEOERNRFliWTRxa2MxaUFYWE02dXk3N0xFaGI2NGhkM3psSXFMQ09ybHM?oc=5",
+   "source": "Mobilegamer.biz",
+   "published_at": "2026-11-11T11:25:39Z",
    "tickers": [
     "FTS.TO"
    ],
@@ -3727,7 +4173,7 @@
       "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
       "label": "fact",
       "evidence_ids": [
-       "ev_2f1aff14c4"
+       "ev_66495b0b95"
       ],
       "verified": "supported"
      },
@@ -3754,7 +4200,100 @@
      "flags": []
     }
    },
-   "historical_context": null
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Mobilegamer.biz"
+    ],
+    "news_ids": [
+     "n_81a45c69d42e"
+    ]
+   },
+   "linked_ticker": "FTS.TO"
+  },
+  {
+   "news_id": "n_8e69c8793e5c",
+   "title": "Publisher Fortis Games closes its doors, leading to up to 440 job losses",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVnd2UE1lNGhLLUozY2Z3WTc3WnlZeWw5SlIzMTlrRmhHS3pRdEt6N2hqSGJxYmQwSUlKaUFOMWlNSVdsdlI2LXBZa0NReE1FZV9HSS1NUGJQd1Q2UHJBWHJ1OGlNVGEwY0oxZ2syNDRaZUVvLUZDQW9pQl9SMW5PWFdfOUs3dUVEMERyWndTTnBadGJpZnRDM0s1a1poZnAtZDhWVFhZNGJna1dIVkNPaHM0N0k1bnVsdk1RUDF3?oc=5",
+   "source": "Instant Gaming News",
+   "published_at": "2026-11-11T10:05:27Z",
+   "tickers": [
+    "FTS.TO"
+   ],
+   "is_synthetic": false,
+   "category": "controversy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_CONTROVERSY",
+      "text": "Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+      "delta": 0.65
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_4b8aaf5214"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "FTS.TO représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bd0858cd3f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de FTS.TO: 14,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_eb2d7b71a7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null,
+   "source_tier": {
+    "id": "unknown",
+    "label_fr": "Source non répertoriée",
+    "text_fr": "Source absente de notre liste; fiabilité non évaluée."
+   },
+   "mention": "title",
+   "cluster": {
+    "size": 1,
+    "sources": [
+     "Instant Gaming News"
+    ],
+    "news_ids": [
+     "n_8e69c8793e5c"
+    ]
+   },
+   "linked_ticker": "FTS.TO"
   }
  ],
  "hidden": {
@@ -3762,19 +4301,23 @@
   "by_reason": [
    {
     "reason": "Bruit de court terme pour ton horizon",
-    "count": 181
+    "count": 176
    },
    {
     "reason": "Sujet déjà couvert par une nouvelle plus pertinente",
-    "count": 94
+    "count": 76
    },
    {
     "reason": "Au-delà des 30 nouvelles les plus pertinentes",
     "count": 24
    },
    {
+    "reason": "Même événement rapporté par plusieurs sources (regroupé en une carte)",
+    "count": 18
+   },
+   {
     "reason": "Pertinence trop faible pour ton profil",
-    "count": 8
+    "count": 13
    },
    {
     "reason": "Nouvelle non classée",
@@ -3867,7 +4410,7 @@
     "status": "ok",
     "forced": false,
     "planner": "mock",
-    "duration_ms": 22
+    "duration_ms": 37
    },
    {
     "step": 2,
@@ -3916,7 +4459,7 @@
     "status": "ok",
     "forced": false,
     "planner": "mock",
-    "duration_ms": 48
+    "duration_ms": 44
    },
    {
     "step": 5,
@@ -3943,7 +4486,7 @@
     "status": "ok",
     "forced": false,
     "planner": "mock",
-    "duration_ms": 2
+    "duration_ms": 1
    },
    {
     "step": 7,
@@ -4709,10 +5252,66 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_c5e2a1b644": {
-   "id": "ev_c5e2a1b644",
+  "ev_cdd957fcd3": {
+   "id": "ev_cdd957fcd3",
    "kind": "rule_hit",
-   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+   "value": 1.0,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_2e5346ee7094",
+    "rule_ids": [
+     "R_BASE_MACRO",
+     "R_POS_WEIGHT_10",
+     "R_RATES_BOND"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_bb39883be7": {
+   "id": "ev_bb39883be7",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de AGG: 6,2 %.",
+   "value": 0.06158641837217983,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "AGG",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_45f899b9b5": {
+   "id": "ev_45f899b9b5",
+   "kind": "rule_hit",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+   "value": 1.0,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_2055c73afb2d",
+    "rule_ids": [
+     "R_BASE_MACRO",
+     "R_POS_WEIGHT_10",
+     "R_RATES_BOND"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_be2eaf64d0": {
+   "id": "ev_be2eaf64d0",
+   "kind": "rule_hit",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
    "value": 1.0,
    "unit": "score",
    "as_of": "2026-11-12",
@@ -4722,7 +5321,8 @@
     "rule_ids": [
      "R_BASE_MACRO",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_RATES_BOND"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -4746,10 +5346,10 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_7fca8eae9b": {
-   "id": "ev_7fca8eae9b",
+  "ev_f6015ba60b": {
+   "id": "ev_f6015ba60b",
    "kind": "rule_hit",
-   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
    "value": 1.0,
    "unit": "score",
    "as_of": "2026-11-12",
@@ -4759,7 +5359,8 @@
     "rule_ids": [
      "R_BASE_MACRO",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_RATES_BOND"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -4784,10 +5385,10 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_82fbbcc616": {
-   "id": "ev_82fbbcc616",
+  "ev_20de176e93": {
+   "id": "ev_20de176e93",
    "kind": "rule_hit",
-   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
    "value": 1.0,
    "unit": "score",
    "as_of": "2026-11-12",
@@ -4797,7 +5398,8 @@
     "rule_ids": [
      "R_BASE_DIVIDEND",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_SOURCE_AGGREGATOR"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -4823,10 +5425,10 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_c189a3c0cd": {
-   "id": "ev_c189a3c0cd",
+  "ev_13fcadb287": {
+   "id": "ev_13fcadb287",
    "kind": "rule_hit",
-   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.",
+   "statement": "Pertinence 1,00 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 20 % de ton portefeuille. Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
    "value": 1.0,
    "unit": "score",
    "as_of": "2026-11-12",
@@ -4836,14 +5438,33 @@
     "rule_ids": [
      "R_BASE_DIVIDEND",
      "R_POS_WEIGHT_20",
-     "R_CONCENTRATION"
+     "R_CONCENTRATION",
+     "R_SOURCE_PRIMARY"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_95fa1ffaf9": {
-   "id": "ev_95fa1ffaf9",
+  "ev_1d2d7c7055": {
+   "id": "ev_1d2d7c7055",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Tu détiens un FNB d'obligations — les décisions de taux et l'inflation influencent directement son prix.",
+   "value": 0.95,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_de43023eed7d",
+    "rule_ids": [
+     "R_BASE_MACRO",
+     "R_RATES_BOND"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_ec6bfddf97": {
+   "id": "ev_ec6bfddf97",
    "kind": "rule_hit",
    "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
    "value": 0.95,
@@ -4851,7 +5472,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_0b3d04295c92",
+    "news_id": "n_ede7a5e46532",
     "rule_ids": [
      "R_BASE_MACRO",
      "R_POS_WEIGHT_10"
@@ -4878,8 +5499,8 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_ec6bfddf97": {
-   "id": "ev_ec6bfddf97",
+  "ev_1de73ae47b": {
+   "id": "ev_1de73ae47b",
    "kind": "rule_hit",
    "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
    "value": 0.95,
@@ -4887,7 +5508,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_ede7a5e46532",
+    "news_id": "n_9eda3efd6feb",
     "rule_ids": [
      "R_BASE_MACRO",
      "R_POS_WEIGHT_10"
@@ -4896,135 +5517,55 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_47f541fe28": {
-   "id": "ev_47f541fe28",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.95,
-   "unit": "score",
-   "as_of": "2026-11-12",
+  "ev_67d9bfa909": {
+   "id": "ev_67d9bfa909",
+   "kind": "news_source",
+   "statement": "Nouvelle publiée le 2026-11-14 par JPMorganChase.",
+   "value": "n_8db06364067c",
+   "unit": null,
+   "as_of": "2026-11-15",
    "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_2e5346ee7094",
-    "rule_ids": [
-     "R_BASE_MACRO",
-     "R_POS_WEIGHT_10"
-    ]
+    "is_synthetic": false,
+    "news_id": "n_8db06364067c",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5"
    },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
+   "source": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPb0owd1RrSTV5QmNsa2JPTlVUQzB2bDBlbzNCN2ozYXJrd3IzY0VCOC1jVjlYazBnVVlpbkNKZE5tQ29uMkRVRzMwbHFFTHJHQjNpWUtnQUs2UXRPLUt3elFuSnItLUg1b0gtUkFHSUVxNk5CSXpkclVLQ0FnV19QYzZwcDRWTFVIeU5UUzBaekNsTnBSamVFTlNMT2l5VnBiN2hlRDIzbEJMV1A3UVlMZWZYbVdURnpxZ0lGQg?oc=5",
+   "computed_by": "ingest.news"
   },
-  "ev_bb39883be7": {
-   "id": "ev_bb39883be7",
-   "kind": "metric",
-   "statement": "Volatilité annualisée de AGG: 6,2 %.",
-   "value": 0.06158641837217983,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
+  "ev_0bcc8daafd": {
+   "id": "ev_0bcc8daafd",
+   "kind": "classification",
+   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,35).",
+   "value": "macro",
+   "unit": null,
+   "as_of": "2026-11-15",
    "inputs": {
-    "currency": "USD",
-    "days_per_year": 252,
-    "n_returns": 1254,
-    "returns": "daily adj_close",
-    "ticker": "AGG",
-    "window": "2021-11-12/2026-11-12"
+    "controversy": false,
+    "controversy_type": null,
+    "model_id": "us.anthropic.claude-sonnet-4-6",
+    "news_id": "n_8db06364067c",
+    "prompt_version": "classifier_v1+tx240b40"
    },
-   "source": "data/prices_daily.csv",
-   "computed_by": "core.metrics.annualized_vol"
+   "source": "data/snapshots/classified_news",
+   "computed_by": "agents.classifier"
   },
-  "ev_c1e21265f7": {
-   "id": "ev_c1e21265f7",
+  "ev_77e1998007": {
+   "id": "ev_77e1998007",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,95 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.95,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_2055c73afb2d",
-    "rule_ids": [
-     "R_BASE_MACRO",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_5965278015": {
-   "id": "ev_5965278015",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
+   "statement": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main.",
    "value": 0.9,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_9374f4985c34",
+    "news_id": "n_8db06364067c",
     "rule_ids": [
-     "R_BASE_DIVIDEND",
-     "R_POS_WEIGHT_10"
+     "R_BASE_MACRO",
+     "R_SOURCE_PRIMARY"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_cacc0e5382": {
-   "id": "ev_cacc0e5382",
-   "kind": "event_study",
-   "statement": "Sur 20 dates ex-dividende (2021-12-17 au 2026-09-18), le mouvement médian de SPY de la veille à +5 jours de bourse a été de 0,34 % (p10 −3,7 %, p90 3,0 %, 60 % de cas positifs).",
-   "value": 0.0034161371066039337,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "asset": "SPY",
-    "event_type": "dividend_ex_date",
-    "from": "2021-12-17",
-    "macro_source": null,
-    "n_events": 20,
-    "prices": "adj_close (listing currency)",
-    "to": "2026-09-18",
-    "window": "t-1 -> t+5 trading days"
-   },
-   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
-   "computed_by": "core.event_study.historical_context"
-  },
-  "ev_9346de8761": {
-   "id": "ev_9346de8761",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,90 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.9,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_f540e6a6c776",
-    "rule_ids": [
-     "R_BASE_DIVIDEND",
-     "R_POS_WEIGHT_10"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_7f64ebcdf8": {
-   "id": "ev_7f64ebcdf8",
-   "kind": "event_study",
-   "statement": "Sur 60 dates ex-dividende (2021-12-01 au 2026-11-02), le mouvement médian de AGG de la veille à +5 jours de bourse a été de −0,19 % (p10 −1,1 %, p90 1,0 %, 42 % de cas positifs).",
-   "value": -0.0019252869384103755,
-   "unit": "fraction",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "asset": "AGG",
-    "event_type": "dividend_ex_date",
-    "from": "2021-12-01",
-    "macro_source": null,
-    "n_events": 60,
-    "prices": "adj_close (listing currency)",
-    "to": "2026-11-02",
-    "window": "t-1 -> t+5 trading days"
-   },
-   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
-   "computed_by": "core.event_study.historical_context"
   },
   "ev_14369b71c8": {
    "id": "ev_14369b71c8",
@@ -5075,55 +5616,6 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_7e312c3851": {
-   "id": "ev_7e312c3851",
-   "kind": "news_source",
-   "statement": "Nouvelle publiée le 2026-11-14 par Yahoo Finance.",
-   "value": "n_353c586d93b9",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "is_synthetic": false,
-    "news_id": "n_353c586d93b9",
-    "url": "https://www.entrepreneur.com/business-news/tech/why-tech-and-crypto-sold-off-after-the-blue-wave?.tsrc=rss"
-   },
-   "source": "https://www.entrepreneur.com/business-news/tech/why-tech-and-crypto-sold-off-after-the-blue-wave?.tsrc=rss",
-   "computed_by": "ingest.news"
-  },
-  "ev_2a9018a7de": {
-   "id": "ev_2a9018a7de",
-   "kind": "classification",
-   "statement": "Classée « Taux et inflation » (macro_context) par us.anthropic.claude-sonnet-4-6 (confiance 0,62).",
-   "value": "macro",
-   "unit": null,
-   "as_of": "2026-11-15",
-   "inputs": {
-    "controversy": false,
-    "controversy_type": null,
-    "model_id": "us.anthropic.claude-sonnet-4-6",
-    "news_id": "n_353c586d93b9",
-    "prompt_version": "classifier_v1+tx240b40"
-   },
-   "source": "data/snapshots/classified_news",
-   "computed_by": "agents.classifier"
-  },
-  "ev_8cf4911fbb": {
-   "id": "ev_8cf4911fbb",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-   "value": 0.85,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_353c586d93b9",
-    "rule_ids": [
-     "R_BASE_MACRO"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
   "ev_e6b7642808": {
    "id": "ev_e6b7642808",
    "kind": "rule_hit",
@@ -5159,8 +5651,8 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_d9647ecfb5": {
-   "id": "ev_d9647ecfb5",
+  "ev_7d3a062543": {
+   "id": "ev_7d3a062543",
    "kind": "rule_hit",
    "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
    "value": 0.85,
@@ -5168,7 +5660,24 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_7a8bdca0a6b3",
+    "news_id": "n_2394794fd630",
+    "rule_ids": [
+     "R_BASE_MACRO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_d4f90e819b": {
+   "id": "ev_d4f90e819b",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
+   "value": 0.85,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_222e5352ce17",
     "rule_ids": [
      "R_BASE_MACRO"
     ]
@@ -5194,60 +5703,47 @@
    "source": "data/prices_daily.csv",
    "computed_by": "core.metrics.annualized_vol"
   },
-  "ev_7d3a062543": {
-   "id": "ev_7d3a062543",
+  "ev_ab12f8f210": {
+   "id": "ev_ab12f8f210",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-   "value": 0.85,
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
+   "value": 0.8,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_2394794fd630",
+    "news_id": "n_9374f4985c34",
     "rule_ids": [
-     "R_BASE_MACRO"
+     "R_BASE_DIVIDEND",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_AGGREGATOR"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_bf73fb2698": {
-   "id": "ev_bf73fb2698",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.85,
-   "unit": "score",
+  "ev_cacc0e5382": {
+   "id": "ev_cacc0e5382",
+   "kind": "event_study",
+   "statement": "Sur 20 dates ex-dividende (2021-12-17 au 2026-09-18), le mouvement médian de SPY de la veille à +5 jours de bourse a été de 0,34 % (p10 −3,7 %, p90 3,0 %, 60 % de cas positifs).",
+   "value": 0.0034161371066039337,
+   "unit": "fraction",
    "as_of": "2026-11-12",
    "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_124ba93fbb0b",
-    "rule_ids": [
-     "R_BASE_REGULATION_LEGAL",
-     "R_POS_WEIGHT_10"
-    ]
+    "asset": "SPY",
+    "event_type": "dividend_ex_date",
+    "from": "2021-12-17",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-09-18",
+    "window": "t-1 -> t+5 trading days"
    },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
   },
-  "ev_d4f90e819b": {
-   "id": "ev_d4f90e819b",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short.",
-   "value": 0.85,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_222e5352ce17",
-    "rule_ids": [
-     "R_BASE_MACRO"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_0741e2a6c5": {
-   "id": "ev_0741e2a6c5",
+  "ev_790da5bf63": {
+   "id": "ev_790da5bf63",
    "kind": "rule_hit",
    "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
    "value": 0.8,
@@ -5255,7 +5751,24 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_2e55d23a112c",
+    "news_id": "n_350727b33b34",
+    "rule_ids": [
+     "R_BASE_DIVIDEND"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_3b2d23a14c": {
+   "id": "ev_3b2d23a14c",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_be244f9497d5",
     "rule_ids": [
      "R_BASE_DIVIDEND"
     ]
@@ -5301,8 +5814,8 @@
    "source": "data/prices_daily.csv, data/snapshots/events_*.json",
    "computed_by": "core.event_study.historical_context"
   },
-  "ev_c7dcbdc565": {
-   "id": "ev_c7dcbdc565",
+  "ev_b2c81eb3a0": {
+   "id": "ev_b2c81eb3a0",
    "kind": "rule_hit",
    "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
    "value": 0.8,
@@ -5310,7 +5823,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_6f54407e760d",
+    "news_id": "n_7e95bcc615ad",
     "rule_ids": [
      "R_BASE_DIVIDEND"
     ]
@@ -5318,22 +5831,44 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_790da5bf63": {
-   "id": "ev_790da5bf63",
+  "ev_458be80d60": {
+   "id": "ev_458be80d60",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short.",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Dividendes : poids de base 0,80 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
    "value": 0.8,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_350727b33b34",
+    "news_id": "n_f540e6a6c776",
     "rule_ids": [
-     "R_BASE_DIVIDEND"
+     "R_BASE_DIVIDEND",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_AGGREGATOR"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_7f64ebcdf8": {
+   "id": "ev_7f64ebcdf8",
+   "kind": "event_study",
+   "statement": "Sur 60 dates ex-dividende (2021-12-01 au 2026-11-02), le mouvement médian de AGG de la veille à +5 jours de bourse a été de −0,19 % (p10 −1,1 %, p90 1,0 %, 42 % de cas positifs).",
+   "value": -0.0019252869384103755,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "AGG",
+    "event_type": "dividend_ex_date",
+    "from": "2021-12-01",
+    "macro_source": null,
+    "n_events": 60,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-11-02",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
   },
   "ev_2a5701c4ae": {
    "id": "ev_2a5701c4ae",
@@ -5390,36 +5925,20 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_6c87330a8b": {
-   "id": "ev_6c87330a8b",
+  "ev_349576d1d3": {
+   "id": "ev_349576d1d3",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation : poids de base 0,85 pour un horizon short. Source primaire (l'entreprise, un régulateur ou une banque centrale) — information de première main. Le titre ne nomme pas directement l'entreprise que tu détiens — le lien avec ta position est peut-être indirect.",
    "value": 0.75,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_d343b39f5881",
+    "news_id": "n_7a8bdca0a6b3",
     "rule_ids": [
-     "R_BASE_REGULATION_LEGAL"
-    ]
-   },
-   "source": "rules/relevance_rules.yaml",
-   "computed_by": "core.rules_engine.score_relevance"
-  },
-  "ev_bd16d11c6f": {
-   "id": "ev_bd16d11c6f",
-   "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille.",
-   "value": 0.75,
-   "unit": "score",
-   "as_of": "2026-11-12",
-   "inputs": {
-    "horizon_bucket": "short",
-    "news_id": "n_7dd3029dd3ef",
-    "rule_ids": [
-     "R_BASE_CONTROVERSY",
-     "R_POS_WEIGHT_10"
+     "R_BASE_MACRO",
+     "R_SOURCE_PRIMARY",
+     "R_MENTION_PASSING"
     ]
    },
    "source": "rules/relevance_rules.yaml",
@@ -5442,25 +5961,27 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_2c3ae66c65": {
-   "id": "ev_2c3ae66c65",
+  "ev_1ed32ee4a0": {
+   "id": "ev_1ed32ee4a0",
    "kind": "rule_hit",
-   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short.",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites : poids de base 0,75 pour un horizon short. Cette position pèse au moins 10 % de ton portefeuille. Source d'opinion ou agrégateur — à recouper avec une source primaire ou la presse établie.",
    "value": 0.75,
    "unit": "score",
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_c97ac55de31d",
+    "news_id": "n_124ba93fbb0b",
     "rule_ids": [
-     "R_BASE_REGULATION_LEGAL"
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_10",
+     "R_SOURCE_AGGREGATOR"
     ]
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_693b36b4e9": {
-   "id": "ev_693b36b4e9",
+  "ev_0f467fc2ab": {
+   "id": "ev_0f467fc2ab",
    "kind": "rule_hit",
    "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
    "value": 0.65,
@@ -5468,7 +5989,7 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_eb120861e9a1",
+    "news_id": "n_0e2fb8d56293",
     "rule_ids": [
      "R_BASE_CONTROVERSY"
     ]
@@ -5476,8 +5997,8 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_2f1aff14c4": {
-   "id": "ev_2f1aff14c4",
+  "ev_c797e11281": {
+   "id": "ev_c797e11281",
    "kind": "rule_hit",
    "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
    "value": 0.65,
@@ -5485,7 +6006,41 @@
    "as_of": "2026-11-12",
    "inputs": {
     "horizon_bucket": "short",
-    "news_id": "n_377c610fedaa",
+    "news_id": "n_6b3a4e3433fb",
+    "rule_ids": [
+     "R_BASE_CONTROVERSY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_66495b0b95": {
+   "id": "ev_66495b0b95",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_81a45c69d42e",
+    "rule_ids": [
+     "R_BASE_CONTROVERSY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4b8aaf5214": {
+   "id": "ev_4b8aaf5214",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverses : poids de base 0,65 pour un horizon short.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "short",
+    "news_id": "n_8e69c8793e5c",
     "rule_ids": [
      "R_BASE_CONTROVERSY"
     ]
