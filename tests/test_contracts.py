@@ -81,16 +81,27 @@ def test_robert_has_incoherent_nvda_20() -> None:
     assert len(coherence["rule_hits"]) >= 2
 
 
-def test_synthetic_news_is_flagged() -> None:
+def test_example_news_match_the_snapshot() -> None:
+    from core import snapshots
+
+    by_id = {r["id"]: r for r in snapshots.records("classified_news")}
     for name in FEEDS:
         for item in load(name)["items"]:
-            assert item["is_synthetic"] is True
+            src = by_id[item["news_id"]]
+            assert item["is_synthetic"] == src["is_synthetic"] and item["url"] == src["url"]
 
 
-def test_no_advice_vocabulary_in_examples() -> None:
+def test_no_advice_vocabulary_in_our_texts() -> None:
     banned = re.compile(r"\b(achète|achetez|vends|vendez|tu devrais|vous devriez)\b", re.IGNORECASE)
     for name in FEEDS:
-        assert not banned.search((EXAMPLES / name).read_text(encoding="utf-8"))
+        feed = load(name)
+        expls = [i["explanation"] for i in feed["items"]] + ([feed["coherence"]["explanation"]] if feed["coherence"] else [])
+        for e in expls:
+            assert not banned.search(e["summary"])
+            for c in e["claims"]:
+                assert not banned.search(c["text"]), c["text"]
+        for h in (feed["coherence"] or {}).get("rule_hits", []):
+            assert not banned.search(h["text"])
 
 
 def test_personas_validate() -> None:
