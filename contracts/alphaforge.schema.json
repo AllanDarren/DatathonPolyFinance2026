@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "alphaforge.schema.json",
   "title": "AlphaForgeContract",
-  "description": "AlphaForge AI contracts v0.1.0. Generated from core/models.py; do not edit by hand.",
-  "x-contract-version": "0.1.0",
+  "description": "AlphaForge AI contracts v0.2.0. Generated from core/models.py; do not edit by hand.",
+  "x-contract-version": "0.2.0",
   "anyOf": [
     {
       "$ref": "#/$defs/Profile"
@@ -43,6 +43,9 @@
     },
     {
       "$ref": "#/$defs/CoherenceResult"
+    },
+    {
+      "$ref": "#/$defs/ToolCall"
     },
     {
       "$ref": "#/$defs/FeedItem"
@@ -153,6 +156,21 @@
         },
         "explanation": {
           "$ref": "#/$defs/Explanation"
+        },
+        "agent_trace": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/ToolCall"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.2.0): orchestrator tool calls"
         }
       },
       "required": [
@@ -1327,6 +1345,71 @@
         "text"
       ],
       "title": "RuleHit",
+      "type": "object"
+    },
+    "ToolCall": {
+      "additionalProperties": false,
+      "description": "One tool call made by the orchestrator agent (shows the agentic side).",
+      "properties": {
+        "step": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "tool": {
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "error"
+          ],
+          "type": "string"
+        },
+        "forced": {
+          "description": "True when the code called the tool because the model did not",
+          "type": "boolean"
+        },
+        "planner": {
+          "description": "Model id that chose the call, or 'mock' offline",
+          "type": "string"
+        },
+        "duration_ms": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "step",
+        "tool",
+        "params",
+        "evidence_ids",
+        "status",
+        "forced",
+        "planner",
+        "duration_ms"
+      ],
+      "title": "ToolCall",
       "type": "object"
     },
     "Unanalyzed": {

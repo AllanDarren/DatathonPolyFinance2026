@@ -12,7 +12,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.1.0"
+CONTRACT_VERSION = "0.2.0"
 
 RiskTolerance = Literal["low", "low_moderate", "moderate", "high"]
 HorizonBucket = Literal["short", "medium", "long"]
@@ -211,11 +211,26 @@ class CoherenceMetrics(Contract):
     position_weight_after: float
 
 
+class ToolCall(Contract):
+    """One tool call made by the orchestrator agent (shows the agentic side)."""
+
+    step: int = Field(ge=1)
+    tool: str
+    params: dict[str, Any]
+    evidence_ids: list[str]
+    status: Literal["ok", "error"]
+    forced: bool = Field(description="True when the code called the tool because the model did not")
+    planner: str = Field(description="Model id that chose the call, or 'mock' offline")
+    duration_ms: int = Field(ge=0)
+    error: str | None = None
+
+
 class CoherenceResult(Contract):
     verdict: Literal["coherent", "tension", "incoherent"]
     rule_hits: list[RuleHit]
     metrics: CoherenceMetrics
     explanation: Explanation
+    agent_trace: list[ToolCall] | None = Field(default=None, description="Optional (v0.2.0): orchestrator tool calls")
 
 
 # --- Feed ------------------------------------------------------------------
@@ -324,6 +339,7 @@ TOP_LEVEL: tuple[type[BaseModel], ...] = (
     RuleHit,
     HistoricalContext,
     CoherenceResult,
+    ToolCall,
     FeedItem,
     FeedResponse,
     ProfileRequest,
