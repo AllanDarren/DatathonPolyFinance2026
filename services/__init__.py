@@ -15,8 +15,10 @@ from functools import cache
 from pathlib import Path
 from typing import Any
 
+from core import data as _data
 from core import portfolio as _portfolio
 from core import rules_engine as _rules
+from core import snapshots as _snapshots
 from core.errors import AlphaForgeError
 from core.models import CONTRACT_VERSION
 
@@ -87,8 +89,16 @@ def build_feed(
 
 
 def get_events(tickers: list[str] | None = None) -> list[dict[str, Any]]:
-    events = _copy(_example("feed_robert.json")["events"])
+    """Events from the latest snapshot: macro events always, ticker events filtered by `tickers`.
+
+    Without a snapshot, falls back to the A0 example events.
+    """
+    events = _snapshots.records("events", required=False) or _copy(_example("feed_robert.json")["events"])
     if tickers:
-        wanted = set(tickers)
+        wanted = {t.strip().upper() for t in tickers}
+        unknown = sorted(wanted - set(_data.universe_tickers()))
+        if unknown:
+            raise ServiceError("UNKNOWN_TICKER", f"Ticker(s) hors des 31 actifs: {', '.join(unknown)}.",
+                               details={"tickers": unknown})
         events = [e for e in events if e["scope"] == "macro" or wanted & set(e["tickers"])]
-    return events
+    return _copy(events)
