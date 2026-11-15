@@ -11,6 +11,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import re
 from typing import Any
 
@@ -50,6 +51,12 @@ KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
     ("price_commentary", ("shares", "stock", "falls", "rises", "jumps", "slides", "drops", "gains", "rally",
                           "record high", "sell-off", "session", "recule", "séance", "sommet", "bondit")),
 ]
+# Equivalent category ids in other taxonomies (e.g. role D's rules/taxonomy.yaml).
+ALIASES: dict[str, tuple[str, ...]] = {
+    "macro_rates": ("macro",), "mergers_acquisitions": ("merger_acquisition",),
+    "guidance_strategy": ("strategy_guidance",), "analyst_rating": ("analyst_opinion",),
+    "price_commentary": ("daily_price",),
+}
 _PATTERNS = {cat: re.compile(r"\b(?:" + "|".join(re.escape(w.strip()) for w in words) + ")", re.IGNORECASE)
              for cat, words in KEYWORDS}
 
@@ -78,9 +85,13 @@ def output_schema(taxonomy: Taxonomy) -> dict[str, Any]:
 
 
 def system_prompt(taxonomy: Taxonomy) -> tuple[str, str]:
+    """-> (system prompt, prompt_version). The version includes a hash of the taxonomy, since the
+    taxonomy is part of the prompt: changing rules/taxonomy.yaml invalidates cached classifications."""
     text, version = load_prompt("classifier")
     cats = "\n".join(f"- {c.id}: {c.definition} Examples: " + " | ".join(c.examples) for c in taxonomy.categories)
-    return render_prompt(text, categories=cats, controversy_types=", ".join(taxonomy.controversy_types)), version
+    prompt = render_prompt(text, categories=cats, controversy_types=", ".join(taxonomy.controversy_types))
+    tx = hashlib.sha1(taxonomy.model_dump_json().encode()).hexdigest()[:6]
+    return prompt, f"{version}+tx{tx}"
 
 
 def user_message(record: dict[str, Any]) -> list[Message]:
@@ -95,14 +106,16 @@ def keyword_classify(record: dict[str, Any], taxonomy: Taxonomy) -> dict[str, An
     ids = {c.id for c in taxonomy.categories}
     text = sanitize(record.get("title")).lower()
     category, matched = None, False
+    def resolve(cat_id: str) -> str | None:
+        return next((c for c in (cat_id, *ALIASES.get(cat_id, ())) if c in ids), None)
+
     for cat_id, _ in KEYWORDS:
-        if cat_id in ids and _PATTERNS[cat_id].search(text):
-            category, matched = cat_id, True
+        if resolve(cat_id) and _PATTERNS[cat_id].search(text):
+            category, matched = resolve(cat_id), True
             break
     if category is None:  # unmatched: generic market commentary (short-term noise), low confidence
         noise = [c.id for c in taxonomy.categories if c.horizon_relevance == "short_term_noise"]
-        category = "price_commentary" if "price_commentary" in noise else (noise[0] if noise else
-                                                                            taxonomy.categories[0].id)
+        category = resolve("price_commentary") or (noise[0] if noise else taxonomy.categories[0].id)
     controversy = category == "controversy"
     ctype = None
     if controversy:
