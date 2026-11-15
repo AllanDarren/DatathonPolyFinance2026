@@ -34,6 +34,7 @@ __all__ = [
     "parse_portfolio",
     "build_feed",
     "get_events",
+    "extract_preferences",
 ]
 
 
@@ -64,9 +65,21 @@ def get_personas() -> list[dict[str, Any]]:
     return _rules.load_personas()
 
 
-def score_profile(answers: dict[str, str]) -> dict[str, Any]:
-    """Questionnaire answers -> Profile, computed by rules (never by the LLM)."""
-    return _rules.score_profile(answers)
+def score_profile(answers: dict[str, str], confirmed_preferences: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Questionnaire answers (+ confirmed note preferences) -> Profile, computed by rules (never by the LLM)."""
+    return _rules.score_profile(answers, confirmed_preferences=confirmed_preferences)
+
+
+def extract_preferences(text: str) -> dict[str, Any]:
+    """Free-text note -> suggested preferences to confirm (PreferenceExtraction). Nothing is applied."""
+    from agents.llm import LLMUnavailableError, get_client
+    from agents.preferences import extract_preferences as _extract
+
+    try:
+        client = get_client()
+    except LLMUnavailableError:
+        client = None
+    return _extract(text, client)
 
 
 def parse_portfolio(csv_text: str) -> dict[str, Any]:

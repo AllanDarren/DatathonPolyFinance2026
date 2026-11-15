@@ -200,6 +200,7 @@ Resources:
         Portfolio:   {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /portfolio/parse}}
         Feed:        {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /feed}}
         Events:      {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: GET,  Path: /events}}
+        Preferences: {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /preferences/extract}}
       Tags: {project: alphaforge}
 
   # ---------- CloudWatch: one dashboard for the demo (no portfolio data is ever logged) ----------

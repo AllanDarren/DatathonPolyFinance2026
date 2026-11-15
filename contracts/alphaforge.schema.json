@@ -67,6 +67,12 @@
     },
     {
       "$ref": "#/$defs/Health"
+    },
+    {
+      "$ref": "#/$defs/PreferenceExtractRequest"
+    },
+    {
+      "$ref": "#/$defs/PreferenceExtraction"
     }
   ],
   "$defs": {
@@ -246,6 +252,37 @@
         "explanation"
       ],
       "title": "CoherenceResult",
+      "type": "object"
+    },
+    "ConfirmedPreferences": {
+      "additionalProperties": false,
+      "description": "Preferences extracted from the investor's note AND confirmed by them in the UI.",
+      "properties": {
+        "excluded_sectors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "interests": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "avoid_controversies": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "ConfirmedPreferences",
       "type": "object"
     },
     "Consideration": {
@@ -1492,6 +1529,102 @@
       "title": "Position",
       "type": "object"
     },
+    "PreferenceExtractRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1000,
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "PreferenceExtractRequest",
+      "type": "object"
+    },
+    "PreferenceExtraction": {
+      "additionalProperties": false,
+      "description": "Suggestions only: nothing is applied until the investor confirms them.",
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "suggestions": {
+          "items": {
+            "$ref": "#/$defs/PreferenceSuggestion"
+          },
+          "type": "array"
+        },
+        "rejected": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "generated_by": {
+          "enum": [
+            "bedrock",
+            "keywords"
+          ],
+          "type": "string"
+        },
+        "mentions_profile_change": {
+          "type": "boolean"
+        },
+        "notice_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "note",
+        "suggestions",
+        "rejected",
+        "generated_by",
+        "mentions_profile_change",
+        "notice_fr"
+      ],
+      "title": "PreferenceExtraction",
+      "type": "object"
+    },
+    "PreferenceSuggestion": {
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "excluded_sectors",
+            "interests",
+            "avoid_controversies"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "quote": {
+          "description": "Verbatim words of the note that justify the suggestion",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "value",
+        "label_fr",
+        "quote"
+      ],
+      "title": "PreferenceSuggestion",
+      "type": "object"
+    },
     "Preferences": {
       "additionalProperties": false,
       "properties": {
@@ -1618,6 +1751,21 @@
             "type": "string"
           },
           "type": "array"
+        },
+        "confirmed_from_note": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0): preferences added from the investor's note and confirmed"
         }
       },
       "required": [
@@ -1668,6 +1816,18 @@
             "type": "string"
           },
           "type": "object"
+        },
+        "confirmed_preferences": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ConfirmedPreferences"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.3.0)"
         }
       },
       "required": [

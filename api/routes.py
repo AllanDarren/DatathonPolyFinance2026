@@ -103,7 +103,12 @@ def _personas(_q: dict[str, str], _b: Any) -> Response:
 
 def _profile(_q: dict[str, str], body: Any) -> Response:
     validate("ProfileRequest", body)
-    return Response(200, _services().score_profile(body["answers"]))
+    return Response(200, _services().score_profile(body["answers"], body.get("confirmed_preferences")))
+
+
+def _preferences(_q: dict[str, str], body: Any) -> Response:
+    validate("PreferenceExtractRequest", body)
+    return Response(200, _services().extract_preferences(body["text"]))
 
 
 def _portfolio(_q: dict[str, str], body: Any) -> Response:
@@ -134,6 +139,7 @@ ROUTES: dict[tuple[str, str], tuple[Handler, bool]] = {
     ("POST", "/profile"): (_profile, True),
     ("POST", "/portfolio/parse"): (_portfolio, True),
     ("POST", "/feed"): (_feed, True),
+    ("POST", "/preferences/extract"): (_preferences, True),
     ("GET", "/events"): (_events, False),
 }
 PATHS = {p for _, p in ROUTES}

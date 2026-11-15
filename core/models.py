@@ -63,6 +63,8 @@ class Profile(Contract):
     monthly_expenses_cad: float | None
     base_currency: Literal["CAD"]
     inconsistencies: list[str]
+    confirmed_from_note: list[str] | None = Field(
+        default=None, description="Optional (v0.3.0): preferences added from the investor's note and confirmed")
 
 
 class Persona(Contract):
@@ -396,8 +398,39 @@ class FeedResponse(Contract):
 # --- Requests & errors -----------------------------------------------------
 
 
+class ConfirmedPreferences(Contract):
+    """Preferences extracted from the investor's note AND confirmed by them in the UI."""
+
+    excluded_sectors: list[str] = Field(default_factory=list)
+    interests: list[str] = Field(default_factory=list)
+    avoid_controversies: bool | None = None
+
+
 class ProfileRequest(Contract):
     answers: dict[str, str]
+    confirmed_preferences: ConfirmedPreferences | None = Field(default=None, description="Optional (v0.3.0)")
+
+
+class PreferenceExtractRequest(Contract):
+    text: str = Field(max_length=1000)
+
+
+class PreferenceSuggestion(Contract):
+    field: Literal["excluded_sectors", "interests", "avoid_controversies"]
+    value: str | bool
+    label_fr: str
+    quote: str = Field(description="Verbatim words of the note that justify the suggestion")
+
+
+class PreferenceExtraction(Contract):
+    """Suggestions only: nothing is applied until the investor confirms them."""
+
+    note: str
+    suggestions: list[PreferenceSuggestion]
+    rejected: list[str]
+    generated_by: Literal["bedrock", "keywords"]
+    mentions_profile_change: bool
+    notice_fr: str
 
 
 class PortfolioParseRequest(Contract):
@@ -449,4 +482,6 @@ TOP_LEVEL: tuple[type[BaseModel], ...] = (
     FeedRequest,
     ErrorResponse,
     Health,
+    PreferenceExtractRequest,
+    PreferenceExtraction,
 )

@@ -28,7 +28,8 @@
   },
   "monthly_expenses_cad": null,
   "base_currency": "CAD",
-  "inconsistencies": []
+  "inconsistencies": [],
+  "confirmed_from_note": null
  },
  "portfolio_summary": {
   "top_positions": [

@@ -105,6 +105,12 @@ def govern(profile: dict[str, Any], portfolio: dict[str, Any], consideration: di
             controls.append(_control("G_CONTROVERSY", "Controverses (préférence ESG)", "ok",
                                      f"Aucune nouvelle récente classée comme controverse pour {ticker}."))
 
+    # 4b. Preferences that came from the investor's own note (confirmed by them in the UI).
+    if profile.get("confirmed_from_note"):
+        controls.append(_control("G_NOTE_PREFERENCES", "Préférences tirées de ta note", "info",
+                                 "Appliquées parce que tu les as confirmées: " + "; ".join(profile["confirmed_from_note"])
+                                 + ". Ta note n'a rien changé d'autre (ni risque, ni horizon, ni verdict)."))
+
     # 5. Diversification.
     if diversification:
         status = {"overlap": "warning", "partial": "info", "new_exposure": "ok"}[diversification["verdict"]]

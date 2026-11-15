@@ -196,3 +196,20 @@ def test_local_server_same_contract_and_cors() -> None:
     bad = client.post("/portfolio/parse", json={"csv": ""})
     assert bad.status_code == 400 and bad.json()["error"]["code"]
     assert client.get("/nope").status_code == 404
+
+
+def test_preferences_extract_then_confirmed_profile() -> None:
+    r = dispatch("POST", "/preferences/extract", None, json.dumps({"text": "Pas de pétrole, et j'aime l'IA."}))
+    assert r.status == 200
+    _ok("PreferenceExtraction", r.body)
+    sug = {s["field"]: s["value"] for s in r.body["suggestions"]}
+    assert sug.get("excluded_sectors") == "fossil_fuels"
+    q = dispatch("GET", "/questionnaire", None, None).body
+    answers = {question["id"]: question["options"][0]["id"] for question in q["questions"]}
+    body = {"answers": answers, "confirmed_preferences": {"excluded_sectors": ["fossil_fuels"]}}
+    p = dispatch("POST", "/profile", None, json.dumps(body))
+    assert p.status == 200
+    _ok("Profile", p.body)
+    assert p.body["preferences"]["excluded_sectors"] == ["fossil_fuels"] and p.body["confirmed_from_note"]
+    bad = dispatch("POST", "/profile", None, json.dumps({**body, "confirmed_preferences": {"interests": ["x"]}}))
+    assert bad.status == 400 and bad.body["error"]["code"] == "INVALID_PREFERENCES"

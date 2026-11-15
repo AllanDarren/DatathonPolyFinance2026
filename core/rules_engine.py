@@ -180,8 +180,9 @@ def load_personas() -> list[dict[str, Any]]:
 def dump_profile(profile: Profile) -> dict[str, Any]:
     """Profile -> contract dict: optional `age` omitted when unknown, nullable fields kept."""
     out = profile.model_dump(mode="json")
-    if out.get("age") is None:
-        out.pop("age", None)
+    for optional in ("age", "confirmed_from_note"):
+        if out.get(optional) is None:
+            out.pop(optional, None)
     return out
 
 
@@ -304,8 +305,9 @@ def risk_from_points(points: float, rules: ProfileRules) -> str:
     return sorted(rules.risk_from_points, key=lambda t: t.max_points)[-1].value
 
 
-def score_profile(answers: dict[str, str], rules: RuleSet | None = None) -> dict[str, Any]:
-    """Questionnaire answers -> Profile contract dict (with inconsistencies)."""
+def score_profile(answers: dict[str, str], rules: RuleSet | None = None,
+                  confirmed_preferences: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Questionnaire answers (+ preferences confirmed from the investor's note) -> Profile contract dict."""
     rs = rules or load_rules()
     if not isinstance(answers, dict) or not all(isinstance(k, str) and isinstance(v, str) for k, v in answers.items()):
         raise AlphaForgeError("INVALID_ANSWERS", "Les réponses doivent être un objet {question_id: option_id}.")
@@ -348,6 +350,11 @@ def score_profile(answers: dict[str, str], rules: RuleSet | None = None) -> dict
     prefs.setdefault("excluded_sectors", [])
     prefs.setdefault("interests", [])
     prof.setdefault("monthly_expenses_cad", None)
+    if confirmed_preferences:
+        from core.preferences import apply_confirmed, describe_confirmed
+
+        apply_confirmed(prof, confirmed_preferences)
+        prof["confirmed_from_note"] = describe_confirmed(confirmed_preferences) or None
     prof.update({"profile_id": "custom", "label": "Mon profil", "source": "questionnaire", "base_currency": "CAD"})
     prof["inconsistencies"] = [c.text_fr for c in pr.inconsistency_checks if evaluate(c.when, prof).ok]
     try:
