@@ -1,57 +1,86 @@
-// Navigation identique sur tous les écrans : marque à gauche, liens au centre, profil dans le coin.
-// L'avertissement « simulation, pas un conseil » reste dans le pied de page (et sur l'accueil).
-import type { ReactNode } from 'react';
-import { DASHBOARD_TABS, useApp } from '../state/store';
+// En-tête minimal : le logo (retour au tableau de bord) à gauche, le profil dans le coin droit.
+// Le menu du profil offre « Mon profil » et « Déconnexion ». Les hypothèses et limites (exigées par
+// la consigne : sources, hypothèses, facteurs clés et limites) restent accessibles depuis le pied de page.
+import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useApp } from '../state/store';
 import { t } from '../strings';
 import { LimitsDrawer } from './LimitsDrawer';
 
+function ProfileMenu() {
+  const { profile, go, reset } = useApp();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDoc = (e: MouseEvent) => ref.current && !ref.current.contains(e.target as Node) && setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('mousedown', onDoc);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDoc);
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
+  if (!profile) return null;
+  const name = profile.label.split(/[—–-]/)[0]!.trim();
+  return (
+    <div className="profile-menu" ref={ref}>
+      <button
+        type="button"
+        className="profile-chip"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-label={`${t.nav.profileMenu} : ${name}`}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <span className="avatar" aria-hidden="true">{name.charAt(0).toUpperCase()}</span>
+        <span className="profile-chip-label">{name}</span>
+        <span aria-hidden="true" className="caret">▾</span>
+      </button>
+      {open && (
+        <ul className="menu" role="menu">
+          <li role="none">
+            <button type="button" role="menuitem" onClick={() => { setOpen(false); go('profile'); }}>
+              {t.nav.profile}
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" role="menuitem" onClick={() => { setOpen(false); reset(); }}>
+              {t.nav.logout}
+            </button>
+          </li>
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export function Layout({ children }: { children: ReactNode }) {
-  const { step, go, reset, setLimitsOpen, profile, portfolio } = useApp();
+  const { go, setLimitsOpen, profile, portfolio, step } = useApp();
   const ready = Boolean(profile && portfolio);
-  const onDashboard = DASHBOARD_TABS.includes(step);
   return (
     <div className="app">
       <a href="#main" className="skip-link">Aller au contenu</a>
       <header className="topbar">
-        <button type="button" className="brand" onClick={reset} aria-label={`${t.appName} — ${t.nav.restart}`}>
+        <button
+          type="button"
+          className="brand"
+          onClick={() => go(ready ? 'overview' : profile ? 'portfolio' : 'welcome')}
+          aria-label={ready ? `${t.appName} — ${t.nav.dashboard}` : t.appName}
+        >
           <img src="/favicon.svg" alt="" width={28} height={28} />
           <span>{t.appName}</span>
         </button>
-        <nav className="topnav" aria-label="Navigation principale">
-          <button
-            type="button"
-            className={`btn btn-ghost ${onDashboard ? 'nav-on' : ''}`}
-            aria-current={onDashboard ? 'page' : undefined}
-            disabled={!ready}
-            title={ready ? undefined : t.nav.dashboardLocked}
-            onClick={() => go('feed')}
-          >
-            {t.nav.dashboard}
-          </button>
-          <button type="button" className="btn btn-ghost" onClick={() => setLimitsOpen(true)}>{t.nav.limits}</button>
-          {step !== 'welcome' && (
-            <button type="button" className="btn btn-ghost" onClick={reset}>{t.nav.restart}</button>
-          )}
-        </nav>
-        <div className="profile-corner">
-          {profile ? (
-            <button
-              type="button"
-              className={`profile-chip ${step === 'profile' ? 'nav-on' : ''}`}
-              onClick={() => go('profile')}
-              aria-label={`${t.nav.profile} : ${profile.label}`}
-            >
-              <span className="avatar" aria-hidden="true">{profile.label.trim().charAt(0).toUpperCase()}</span>
-              <span className="profile-chip-label">{profile.label.split(/[—–-]/)[0]!.trim()}</span>
-            </button>
-          ) : (
-            <span className="muted small">{t.nav.noProfile}</span>
-          )}
-        </div>
+        {step !== 'welcome' && <ProfileMenu />}
       </header>
       <main id="main" className="main">{children}</main>
       <footer className="footer">
-        <p><span aria-hidden="true">ⓘ </span>{t.disclaimer} · {t.tagline}</p>
+        <p>
+          <span aria-hidden="true">ⓘ </span>{t.disclaimer} ·{' '}
+          <button type="button" className="link-btn" onClick={() => setLimitsOpen(true)}>{t.nav.limits}</button>
+        </p>
       </footer>
       <LimitsDrawer />
     </div>

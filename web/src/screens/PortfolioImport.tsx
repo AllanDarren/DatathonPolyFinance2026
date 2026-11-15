@@ -126,7 +126,7 @@ export function PortfolioImport() {
             </tfoot>
           </table>
           <div className="row-end">
-            <button type="button" className="btn btn-primary" onClick={() => go('feed')}>{t.portfolio.continue}</button>
+            <button type="button" className="btn btn-primary" onClick={() => go('overview')}>{t.portfolio.continue}</button>
           </div>
         </div>
       )}

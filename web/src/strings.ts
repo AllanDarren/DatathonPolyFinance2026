@@ -13,6 +13,8 @@ const fr = {
     compare: 'Comparer deux profils',
     dashboard: 'Tableau de bord',
     profile: 'Mon profil',
+    profileMenu: 'Menu du profil',
+    logout: 'Déconnexion',
     noProfile: 'Aucun profil',
     dashboardLocked: 'Choisis un profil et un portefeuille d’abord',
     back: 'Retour',

@@ -23,6 +23,8 @@ describe('parcours', () => {
     await user.click(screen.getByRole('button', { name: /portefeuille d’exemple de Robert/ }));
     expect(await screen.findByText('XBB.TO')).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Voir mon tableau de bord/ }));
+    expect(window.location.hash).toBe('#/apercu'); // on arrive sur « Mon portefeuille »
+    await user.click(await screen.findByRole('link', { name: /Mes nouvelles/ }));
     expect(await screen.findByText(/Fortis déclare son dividende/, {}, { timeout: 3000 })).toBeInTheDocument();
     expect(screen.getAllByText('exemple fictif').length).toBeGreaterThan(0);
 
@@ -45,6 +47,7 @@ describe('parcours', () => {
     await user.click(screen.getByRole('button', { name: /portefeuille d’exemple de Robert/ }));
     await screen.findByText('XBB.TO');
     await user.click(screen.getByRole('button', { name: /Voir mon tableau de bord/ }));
+    await user.click(await screen.findByRole('link', { name: /Mes nouvelles/ }));
     await screen.findByText(/Fortis déclare son dividende/, {}, { timeout: 3000 });
     expect(window.location.hash).toBe('#/fil');
 
@@ -79,6 +82,15 @@ describe('parcours', () => {
     expect(screen.getByText(/« pétrole »/)).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Voir mon profil' }));
     expect(await screen.findByText(/Préférences tirées de ta note/)).toBeInTheDocument();
+  });
+
+  it('menu du profil : Mon profil et Déconnexion', async () => {
+    const user = setup();
+    await user.click(await screen.findByRole('button', { name: /Charger Robert/ }));
+    await user.click(screen.getByRole('button', { name: /Menu du profil/ }));
+    await user.click(screen.getByRole('menuitem', { name: 'Déconnexion' }));
+    expect(await screen.findByRole('button', { name: /Charger Robert/ })).toBeInTheDocument();
+    expect(window.location.hash).toBe('#/');
   });
 
   it('aucun verbe d’ordre dans l’interface', async () => {

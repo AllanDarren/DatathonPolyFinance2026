@@ -13,8 +13,8 @@ import { FeedPage } from './FeedPage';
 import { OverviewPage } from './OverviewPage';
 
 const TABS: { step: Step; label: string; icon: string }[] = [
-  { step: 'feed', label: t.tabs.feed, icon: '☰' },
   { step: 'overview', label: t.tabs.overview, icon: '◔' },
+  { step: 'feed', label: t.tabs.feed, icon: '☰' },
   { step: 'consider', label: t.tabs.consider, icon: '⚖' },
   { step: 'compare', label: t.tabs.compare, icon: '⇄' },
   { step: 'calendar', label: t.tabs.calendar, icon: '▦' },
