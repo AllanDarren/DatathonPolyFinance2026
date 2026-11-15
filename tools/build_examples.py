@@ -54,8 +54,8 @@ PERSONAS: dict[str, dict[str, Any]] = {
             "limits": {"max_single_position": 0.25, "max_high_vol_share": 0.60},
             "monthly_expenses_cad": 3500,
         },
-        "portfolio": {"NVDA": 20000, "QQQ": 18000, "SHOP.TO": 12000, "BTC-USD": 12000, "MSFT": 10000,
-                      "XIU.TO": 8000, "TSLA": 7000, "CSU.TO": 7000, "ETH-USD": 6000},
+        "portfolio": {"NVDA": 20000, "QQQ": 20000, "SHOP.TO": 10000, "BTC-USD": 10000, "MSFT": 10000,
+                      "XIU.TO": 10000, "CSU.TO": 6000, "ETH-USD": 5000, "TSLA": 5000, "GLD": 4000},
         "consideration": None,
     },
     "mateo": {

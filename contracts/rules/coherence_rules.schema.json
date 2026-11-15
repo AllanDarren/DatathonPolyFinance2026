@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "coherence_rules.yaml.schema.json",
+  "description": "Format of rules/coherence_rules.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "CoherenceRule": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "type": "string"
+        },
+        "when": {
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "severity",
+        "when",
+        "text_fr"
+      ],
+      "title": "CoherenceRule",
+      "type": "object"
+    },
+    "Condition": {
+      "additionalProperties": false,
+      "description": "One comparison. Left side: `field` (dotted path) or `metric` (named metric).\nRight side: `value` (constant) or `value_from` / `limit_from` (dotted path).",
+      "properties": {
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "op": {
+          "enum": [
+            "==",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "in",
+            "not_in",
+            "contains",
+            "not_contains"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "default": null
+        },
+        "value_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limit_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "Verdict": {
+      "additionalProperties": false,
+      "properties": {
+        "incoherent_if_high_at_least": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "tension_if_medium_at_least": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "incoherent_if_high_at_least",
+        "tension_if_medium_at_least"
+      ],
+      "title": "Verdict",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "verdict": {
+      "$ref": "#/$defs/Verdict"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/CoherenceRule"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "verdict",
+    "rules"
+  ],
+  "title": "CoherenceRules",
+  "type": "object"
+}

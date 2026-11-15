@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "questionnaire.yaml.schema.json",
+  "description": "Format of rules/questionnaire.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "help": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "optional": {
+          "default": false,
+          "type": "boolean"
+        },
+        "options": {
+          "items": {
+            "$ref": "#/$defs/QuestionOption"
+          },
+          "minItems": 2,
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "options"
+      ],
+      "title": "Question",
+      "type": "object"
+    },
+    "QuestionOption": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "sets": {
+          "additionalProperties": true,
+          "description": "Profile fields set by this option (dotted paths)",
+          "type": "object"
+        },
+        "points": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Points added, e.g. {risk: 2}",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "title": "QuestionOption",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/Question"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "questions"
+  ],
+  "title": "Questionnaire",
+  "type": "object"
+}

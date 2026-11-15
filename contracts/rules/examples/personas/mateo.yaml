@@ -1,0 +1,23 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/personas/mateo.yaml (rôle D).
+profile_id: mateo
+label: Mateo, 41 ans, gestionnaire des opérations
+source: persona_preset
+age: 41
+horizon_years: 10
+horizon_bucket: medium
+risk_tolerance: moderate
+max_acceptable_loss_pct: 0.2
+objective: balanced
+experience: intermediate
+preferences:
+  avoid_controversies: true
+  excluded_sectors:
+  - Energy
+  interests:
+  - ESG
+limits:
+  max_single_position: 0.15
+  max_high_vol_share: 0.25
+monthly_expenses_cad: 4500
+base_currency: CAD
+inconsistencies: []

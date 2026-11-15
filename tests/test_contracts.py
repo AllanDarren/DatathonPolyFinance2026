@@ -102,7 +102,8 @@ def test_personas_validate() -> None:
 
 def test_facade_shapes() -> None:
     assert_valid("Health", services.health())
-    profile = services.score_profile({"q_horizon": "h_gt15"})
+    answers = {q["id"]: q["options"][0]["id"] for q in services.get_questionnaire()["questions"]}
+    profile = services.score_profile(answers)
     assert_valid("Profile", profile)
     portfolio = services.parse_portfolio("ticker,montant\nSPY,1000\n")
     assert_valid("Portfolio", portfolio)

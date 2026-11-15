@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "glossary.yaml.schema.json",
+  "description": "Format of rules/glossary.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "Term": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "definition_fr": {
+          "type": "string"
+        },
+        "example_fr": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "term",
+        "definition_fr"
+      ],
+      "title": "Term",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "terms": {
+      "items": {
+        "$ref": "#/$defs/Term"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "terms"
+  ],
+  "title": "Glossary",
+  "type": "object"
+}

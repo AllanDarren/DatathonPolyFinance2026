@@ -61,7 +61,7 @@
       "base_currency": "CAD",
       "inconsistencies": []
     },
-    "sample_portfolio_csv": "ticker,montant\nNVDA,20000\nQQQ,18000\nSHOP.TO,12000\nBTC-USD,12000\nMSFT,10000\nXIU.TO,8000\nTSLA,7000\nCSU.TO,7000\nETH-USD,6000\n"
+    "sample_portfolio_csv": "ticker,montant\nNVDA,20000\nQQQ,20000\nSHOP.TO,10000\nBTC-USD,10000\nMSFT,10000\nXIU.TO,10000\nCSU.TO,6000\nETH-USD,5000\nTSLA,5000\nGLD,4000\n"
   },
   {
     "id": "mateo",

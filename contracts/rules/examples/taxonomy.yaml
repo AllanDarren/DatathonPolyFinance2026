@@ -1,0 +1,64 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/taxonomy.yaml (rôle D).
+version: 1
+categories:
+  - id: earnings_results
+    label_fr: Résultats financiers
+    definition: Publication de résultats trimestriels ou annuels et de leurs chiffres clés.
+    horizon_relevance: structural
+    examples: [NVIDIA publie des revenus trimestriels record, RBC dépasse les attentes au troisième trimestre, Tesla rate les prévisions de bénéfice]
+  - id: dividend
+    label_fr: Dividende
+    definition: Annonce, hausse, baisse ou suspension d'un dividende ou d'une distribution.
+    horizon_relevance: structural
+    examples: [Fortis augmente son dividende pour la 52e année, Enbridge maintient sa distribution trimestrielle, Une banque suspend son dividende]
+  - id: guidance_strategy
+    label_fr: Stratégie et prévisions
+    definition: Prévisions financières de l'entreprise, plan stratégique, investissements majeurs.
+    horizon_relevance: structural
+    examples: [Shopify relève ses prévisions annuelles, CN annonce un plan d'investissement de 3 G$, Apple réduit ses prévisions de ventes]
+  - id: regulation_legal
+    label_fr: Réglementation et poursuites
+    definition: Décision d'un régulateur, nouvelle loi, poursuite ou enquête visant l'entreprise ou son secteur.
+    horizon_relevance: structural
+    examples: [La SEC approuve un nouveau type de FNB, Alphabet visée par une poursuite antitrust, Ottawa adopte une nouvelle règle bancaire]
+  - id: controversy
+    label_fr: Controverse
+    definition: Événement environnemental, social, de gouvernance ou de sécurité qui nuit à la réputation de l'entreprise.
+    horizon_relevance: structural
+    examples: [Fuite sur un pipeline d'Enbridge, Critiques d'actionnaires sur la rémunération du PDG, Rappel massif de véhicules pour sécurité]
+  - id: management_change
+    label_fr: Changement de direction
+    definition: Arrivée ou départ d'un dirigeant ou d'un membre du conseil.
+    horizon_relevance: structural
+    examples: [Le PDG de Manulife prend sa retraite, Nouvelle directrice financière chez TD, Départ surprise du chef de l'exploitation]
+  - id: mergers_acquisitions
+    label_fr: Fusions et acquisitions
+    definition: Achat, vente, fusion ou scission d'une entreprise ou d'une division.
+    horizon_relevance: structural
+    examples: [Couche-Tard propose de racheter un concurrent, Exxon conclut l'acquisition d'un producteur, Une banque vend sa filiale américaine]
+  - id: macro_rates
+    label_fr: Taux et inflation
+    definition: Décisions de taux des banques centrales, inflation, emploi et autres données macroéconomiques.
+    horizon_relevance: macro_context
+    examples: [La Banque du Canada baisse son taux directeur, L'inflation américaine ralentit en octobre, Le chômage remonte au Canada]
+  - id: analyst_rating
+    label_fr: Avis d'analystes
+    definition: Changement de recommandation ou de cible de cours par un analyste.
+    horizon_relevance: short_term_noise
+    examples: [Un analyste relève sa cible sur Microsoft, Une firme abaisse Tesla à « conserver », Nouvelle couverture de Shopify]
+  - id: price_commentary
+    label_fr: Commentaire sur le prix du jour
+    definition: Description du mouvement du cours d'un titre ou d'un indice sur une séance ou quelques jours.
+    horizon_relevance: short_term_noise
+    examples: [Le titre de NVIDIA recule de 3 % en séance, Le TSX termine en hausse, L'or touche un sommet de la semaine]
+  - id: rumor_hype
+    label_fr: Rumeur ou engouement
+    definition: Rumeur non confirmée, engouement sur les réseaux sociaux, spéculation.
+    horizon_relevance: short_term_noise
+    examples: [Rumeur de rachat dans le secteur bancaire, Bitcoin s'envole et les réseaux sociaux s'enflamment, Un titre populaire bondit sans nouvelle]
+  - id: product
+    label_fr: Produit
+    definition: Lancement, rappel ou évolution d'un produit ou d'un service.
+    horizon_relevance: structural
+    examples: [Apple dévoile un nouvel iPhone, Shopify lance des outils d'IA pour marchands, Microsoft intègre l'IA à Office]
+controversy_types: [environmental, social, governance, legal, safety, other]
