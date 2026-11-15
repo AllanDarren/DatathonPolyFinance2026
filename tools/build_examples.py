@@ -18,6 +18,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+from core.data import ASSET_CLASS_MAP
 from core.models import FeedResponse, Persona
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,16 +30,6 @@ NEWS_AS_OF = "2026-11-13"
 RETRIEVED_AT = "2026-11-13T12:00:00Z"
 HIGH_VOL = 0.30
 
-ASSET_CLASS_MAP = {
-    ("equity", "CAD"): "equity_ca",
-    ("equity", "USD"): "equity_us",
-    ("etf_equity", "CAD"): "equity_etf",
-    ("etf_equity", "USD"): "equity_etf",
-    ("etf_bond", "CAD"): "bond_etf",
-    ("etf_bond", "USD"): "bond_etf",
-    ("etf_commodity", "USD"): "gold_etf",
-    ("crypto", "USD"): "crypto",
-}
 
 PERSONAS: dict[str, dict[str, Any]] = {
     "robert": {

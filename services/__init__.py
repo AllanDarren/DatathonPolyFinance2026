@@ -15,6 +15,8 @@ from functools import cache
 from pathlib import Path
 from typing import Any
 
+from core import portfolio as _portfolio
+from core.errors import AlphaForgeError
 from core.models import CONTRACT_VERSION
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -33,18 +35,8 @@ __all__ = [
 ]
 
 
-class ServiceError(Exception):
-    """Business error; the API maps it to `{error: {code, message, details?}}`."""
-
-    def __init__(self, code: str, message: str, status: int = 400, details: dict[str, Any] | None = None) -> None:
-        super().__init__(message)
-        self.code, self.message, self.status, self.details = code, message, status, details
-
-    def to_dict(self) -> dict[str, Any]:
-        err: dict[str, Any] = {"code": self.code, "message": self.message}
-        if self.details:
-            err["details"] = self.details
-        return {"error": err}
+# Business errors: the API maps them to `{error: {code, message, details?}}` with `.status`.
+ServiceError = AlphaForgeError
 
 
 @cache
@@ -84,18 +76,10 @@ def score_profile(answers: dict[str, str]) -> dict[str, Any]:
 
 
 def parse_portfolio(csv_text: str) -> dict[str, Any]:
-    """A0 stub: returns Robert's example portfolio, shaped as a Portfolio."""
-    if not csv_text or not csv_text.strip():
-        raise ServiceError("INVALID_CSV", "Le fichier CSV est vide.")
-    summary = _example("feed_robert.json")["portfolio_summary"]
-    positions = _copy(summary["top_positions"])
-    return {
-        "base_currency": "CAD",
-        "total_amount": sum(p["amount"] for p in positions),
-        "positions": positions,
-        "unanalyzed": {"tickers": [], "weight": 0.0},
-        "warnings": ["Réponse d'exemple (A0): le vrai analyseur CSV arrive en A1."],
-    }
+    """CSV `ticker,montant` (CAD) -> Portfolio. Raises ServiceError (INVALID_CSV, UNKNOWN_TICKER)."""
+    if not isinstance(csv_text, str):
+        raise ServiceError("INVALID_CSV", "Le contenu CSV doit être du texte.")
+    return _portfolio.parse_portfolio(csv_text)
 
 
 def build_feed(
