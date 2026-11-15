@@ -1,0 +1,4867 @@
+{
+ "generated_at": "2026-11-15T00:00:00Z",
+ "data_as_of": "2026-11-12",
+ "news_as_of": "2026-11-15T01:24:36Z",
+ "profile": {
+  "profile_id": "mateo",
+  "label": "Mateo, 41 ans, gestionnaire des opérations",
+  "source": "persona_preset",
+  "age": 41,
+  "horizon_years": 10.0,
+  "horizon_bucket": "medium",
+  "risk_tolerance": "moderate",
+  "max_acceptable_loss_pct": 0.2,
+  "objective": "balanced",
+  "experience": "intermediate",
+  "preferences": {
+   "avoid_controversies": true,
+   "excluded_sectors": [
+    "Energy"
+   ],
+   "interests": [
+    "ESG"
+   ]
+  },
+  "limits": {
+   "max_single_position": 0.15,
+   "max_high_vol_share": 0.25
+  },
+  "monthly_expenses_cad": 4500.0,
+  "base_currency": "CAD",
+  "inconsistencies": []
+ },
+ "portfolio_summary": {
+  "top_positions": [
+   {
+    "ticker": "ESGV",
+    "amount": 25000.0,
+    "weight": 0.25,
+    "asset_class": "equity_etf",
+    "price_currency": "USD",
+    "in_universe": true
+   },
+   {
+    "ticker": "XBB.TO",
+    "amount": 20000.0,
+    "weight": 0.2,
+    "asset_class": "bond_etf",
+    "price_currency": "CAD",
+    "in_universe": true
+   },
+   {
+    "ticker": "XIU.TO",
+    "amount": 15000.0,
+    "weight": 0.15,
+    "asset_class": "equity_etf",
+    "price_currency": "CAD",
+    "in_universe": true
+   },
+   {
+    "ticker": "CNR.TO",
+    "amount": 8000.0,
+    "weight": 0.08,
+    "asset_class": "equity_ca",
+    "price_currency": "CAD",
+    "in_universe": true
+   },
+   {
+    "ticker": "GLD",
+    "amount": 7000.0,
+    "weight": 0.07,
+    "asset_class": "gold_etf",
+    "price_currency": "USD",
+    "in_universe": true
+   }
+  ],
+  "asset_class_weights": {
+   "equity_etf": 0.4,
+   "bond_etf": 0.2,
+   "equity_ca": 0.14,
+   "gold_etf": 0.07,
+   "equity_us": 0.19
+  },
+  "high_vol_share": 0.0,
+  "top3_concentration": 0.6
+ },
+ "items": [
+  {
+   "news_id": "n_38dd364a488f",
+   "title": "Enbridge posts record Q3 earnings, shares seen rebounding to low $50s within a year",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcktlUGNaM284Y2RpbmUxWVpsNERJSXR3amNHQXMxYUZqb01BQ0s2V0d2Qk9PTDhSTWR0eDRGN1p1cm91WEVjM1dWWjFMZHR6ZkRDUDY3eTVGQ3A5RGxjODQ4RVFoTXlmWUF3M0Q1d0Vpa3hlQ25xRnpYTjhnRi1ra1NvVWtUQnI2Zm82ZHVqQnNHTkE4c1ZyekN3ZW9aRlpkUTNKenJQQQ?oc=5",
+   "source": "Pluang",
+   "published_at": "2026-11-14T22:27:47Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c417b838ca"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": 0.006558,
+    "p10": -0.035526,
+    "p90": 0.043848,
+    "share_positive": 0.6316,
+    "events": [
+     {
+      "date": "2022-02-11",
+      "return": -0.021518
+     },
+     {
+      "date": "2022-05-06",
+      "return": 0.00369
+     },
+     {
+      "date": "2022-07-29",
+      "return": -0.027027
+     },
+     {
+      "date": "2022-11-04",
+      "return": 0.034502
+     },
+     {
+      "date": "2023-02-10",
+      "return": 0.006558
+     },
+     {
+      "date": "2023-05-05",
+      "return": -0.003512
+     },
+     {
+      "date": "2023-08-04",
+      "return": 0.014923
+     },
+     {
+      "date": "2023-11-03",
+      "return": 0.000868
+     },
+     {
+      "date": "2024-02-09",
+      "return": 0.025871
+     },
+     {
+      "date": "2024-05-10",
+      "return": -0.003873
+     },
+     {
+      "date": "2024-08-02",
+      "return": 0.029339
+     },
+     {
+      "date": "2024-11-01",
+      "return": 0.047831
+     },
+     {
+      "date": "2025-02-14",
+      "return": -0.069523
+     },
+     {
+      "date": "2025-05-09",
+      "return": -0.001613
+     },
+     {
+      "date": "2025-08-01",
+      "return": 0.043347
+     },
+     {
+      "date": "2025-11-07",
+      "return": 0.028198
+     },
+     {
+      "date": "2026-02-13",
+      "return": 0.029626
+     },
+     {
+      "date": "2026-05-08",
+      "return": 0.045853
+     },
+     {
+      "date": "2026-07-31",
+      "return": -0.076854
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_1750c484b0"
+   }
+  },
+  {
+   "news_id": "n_aad2ae842c78",
+   "title": "Enbridge Q3: The Market Isn't Paying Attention To The Near 6% Yield And $38 Billion Backlog",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZUQ1UW5sOUlMU0lhbkx0VHRpNUEwa2liM3JMWktuWlZMdXpRN3lmUFU2ZnFSTG00VS1PVWtxR1VWV0NTS1FoZUt3UGp3dTQzWE9qOW1IWFVsZFNiMWN2Q0FPbmhrTTBrRXQwdE5KM1dzME9YbTN6Mndfd0gyOHdTQ0ZOWnFRbWhscTF1dFVhMnlDVS1ibkdyc1lSUzljY25aMWR2aTQ4TkVXVWdWV3NpS0FFdFY1SnhnZFR5eTFIUHRIOWFhX1QxREZmaE1RX2xKTHc?oc=5",
+   "source": "Seeking Alpha",
+   "published_at": "2026-11-14T22:00:00Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bea3f86178"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": 0.006558,
+    "p10": -0.035526,
+    "p90": 0.043848,
+    "share_positive": 0.6316,
+    "events": [
+     {
+      "date": "2022-02-11",
+      "return": -0.021518
+     },
+     {
+      "date": "2022-05-06",
+      "return": 0.00369
+     },
+     {
+      "date": "2022-07-29",
+      "return": -0.027027
+     },
+     {
+      "date": "2022-11-04",
+      "return": 0.034502
+     },
+     {
+      "date": "2023-02-10",
+      "return": 0.006558
+     },
+     {
+      "date": "2023-05-05",
+      "return": -0.003512
+     },
+     {
+      "date": "2023-08-04",
+      "return": 0.014923
+     },
+     {
+      "date": "2023-11-03",
+      "return": 0.000868
+     },
+     {
+      "date": "2024-02-09",
+      "return": 0.025871
+     },
+     {
+      "date": "2024-05-10",
+      "return": -0.003873
+     },
+     {
+      "date": "2024-08-02",
+      "return": 0.029339
+     },
+     {
+      "date": "2024-11-01",
+      "return": 0.047831
+     },
+     {
+      "date": "2025-02-14",
+      "return": -0.069523
+     },
+     {
+      "date": "2025-05-09",
+      "return": -0.001613
+     },
+     {
+      "date": "2025-08-01",
+      "return": 0.043347
+     },
+     {
+      "date": "2025-11-07",
+      "return": 0.028198
+     },
+     {
+      "date": "2026-02-13",
+      "return": 0.029626
+     },
+     {
+      "date": "2026-05-08",
+      "return": 0.045853
+     },
+     {
+      "date": "2026-07-31",
+      "return": -0.076854
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_1750c484b0"
+   }
+  },
+  {
+   "news_id": "n_01de654bb000",
+   "title": "XOM Stock Quote Price and Forecast",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBwTGpYcml3bFRBNTBjWk9nNnRxQkxNbWtCc0s1VUNZcHQzVTJZRXN6WVA1UkhJZlVLODlua05LWmozZjJldGlHRF9PRzdHT00?oc=5",
+   "source": "CNN",
+   "published_at": "2026-11-13T23:11:40Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0ae7b67898"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_ea35eef5df9b",
+   "title": "What Is Driving Enbridge (TSX:ENB) Liquids Strategy Forward Today?",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSWI4Q2lkMGFHcC10dURCU2tQYjN3ckdiZ2I0ZDlCZTRnUUV1ZGstSG9iVTFFcFZKc09vdmVFNlhYaWMzd2VDeWtWUWJ6ZVlabEhaQkZSb2VlUkdRUDdCUzVmcmFiRnZVN2hSZ0dpLW1VS2NYUVltR2RkOVN3ak5NamlOaUFEOS1iVkRwTThxNE8tSDJJZ1Vnc3BrXzE5RmV1eTJGTkNabVE?oc=5",
+   "source": "Kalkine Media",
+   "published_at": "2026-11-13T21:39:00Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b0d0043978"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_9f38498b2c1a",
+   "title": "Canada Commits C$200M to Woodfibre LNG Expansion Boosting Enbrid",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQeUFsV0ZqbXdaTU83c1RhV3lXSjdCOWRJTE9QU2NjVldjR2dkb2VLR21yOEw1QUgxYjZIXzFTLS1ucHRDV29BSGFocUdFeVlTWjZGeWNxc0hvblRuTVFlbkFUa09mVC03YWFZX0MyTnJ6VWdYTElsdEVLMHRadU9XeFNpellwQlM0S3VEZDdFY3N1TDdJNlAxNkdqNWNlRHpwZ1FOeDBxYl9xSzFJbXNiYVl5ejByZFZDbnc?oc=5",
+   "source": "GuruFocus",
+   "published_at": "2026-11-13T15:24:38Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_4ce536ef10"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_13066311f8dd",
+   "title": "TSB investigates Alberta train derailment involving dangerous goods, but no reported leaks or fires",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLWJFWXJvaFpQblJLRGFEeXFlSFc0SWx5ZDRrWmZzNGV3TnNFbU5rcjNaT1czTVdNVC0xNDhWSTBHLVNWRWduV1plY0p1di10ZFA2emxjbDVsX3dJVVJjNHlPVGRaOU16VHRCVU0tUWNScGRtY2FpWXFNUnhWSl9Zd05hYkd3VUN1OHBB?oc=5",
+   "source": "CBC",
+   "published_at": "2026-11-11T22:38:34Z",
+   "tickers": [
+    "CNR.TO"
+   ],
+   "is_synthetic": false,
+   "category": "controversy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.08,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_CONTROVERSY",
+      "text": "Catégorie Controverse: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_PREF_CONTROVERSY",
+      "text": "Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.",
+      "delta": 0.4
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Controverse: pertinence 0,40 pour un horizon medium. Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_e9a8bab39b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "CNR.TO représente 8,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b5ee6e6f49"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de CNR.TO: 19,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9382522bf1"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_33f84d665a12",
+   "title": "Interest rates are rising again. The last hike cycle offers clues on what lies ahead",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMkw1TEJyUmZodHN0N01oWGNxYnBySlBqV1JzQWNpd3luWjdXemxwTExoWmZmcHFFbHNoUWM2Y2wybkpMR19lclM1MUlGS3hwUVVqUnFIN1J0V2FsQ3RDR3dmV3JrdVJtNFA4dGp4LUtxY1FtZkZLTlpEeGgzTl9mdlZfZDN2TGwyR29TNkd3RHV4WmpfZ2laSGR1WjNPaUwxNWpNR3hhaXRSa0lLTVp4X0JjcV9VWkRwVVg4eWNFVEF1SVF5T3dJSTIzYUUxZmFG?oc=5",
+   "source": "The Globe and Mail",
+   "published_at": "2026-11-05T08:00:00Z",
+   "tickers": [
+    "XBB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "macro_rates",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO_RATES",
+      "text": "Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_OVER_LIMIT",
+      "text": "Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "delta": 0.15,
+      "observed": 0.2,
+      "limit": 0.15
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bfd5c5c2fb"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9cdcd3572b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cc97b68de7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "rate_decision",
+    "asset": "XBB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 12,
+    "median_return": -0.000876,
+    "p10": -0.005472,
+    "p90": 0.005655,
+    "share_positive": 0.5,
+    "events": [
+     {
+      "date": "2025-06-04",
+      "return": -0.004597
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.005729
+     },
+     {
+      "date": "2025-09-17",
+      "return": -0.002105
+     },
+     {
+      "date": "2025-10-29",
+      "return": -0.005569
+     },
+     {
+      "date": "2025-12-10",
+      "return": 0.004278
+     },
+     {
+      "date": "2026-01-28",
+      "return": 0.000354
+     },
+     {
+      "date": "2026-03-18",
+      "return": -0.00391
+     },
+     {
+      "date": "2026-04-29",
+      "return": 0.00143
+     },
+     {
+      "date": "2026-06-10",
+      "return": 0.004989
+     },
+     {
+      "date": "2026-07-15",
+      "return": -0.002146
+     },
+     {
+      "date": "2026-09-02",
+      "return": -0.011236
+     },
+     {
+      "date": "2026-10-28",
+      "return": 0.009107
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 12 décisions de taux sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_f46a13dffa"
+   }
+  },
+  {
+   "news_id": "n_0c971647ace1",
+   "title": "Exxon Mobil Corporation Q3 2026 Earnings Call Summary",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWnZLQ2E0bkRpb0JBcGJZYlRMN25DNDZteFUwYnVtNm1pYTJWUndFZ2VCZkw5N2VjWFJfT0w1ZUhoZmp2YVNNTWhxRzh5dU9TWVotZm1WbXFtTllIOUM1MGRiVHBiOG1iVU8wcTQ3UVREU2RaZVpyR2xQcmhQOVJvZ3hDSjg2LW9OdUlCU2VqVHJ3UQ?oc=5",
+   "source": "Yahoo Finance",
+   "published_at": "2026-10-30T07:00:00Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d3570f4350"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "XOM",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.006824,
+    "p10": -0.063893,
+    "p90": 0.052003,
+    "share_positive": 0.55,
+    "events": [
+     {
+      "date": "2022-02-01",
+      "return": 0.056608
+     },
+     {
+      "date": "2022-04-29",
+      "return": 0.051491
+     },
+     {
+      "date": "2022-07-29",
+      "return": -0.045229
+     },
+     {
+      "date": "2022-10-28",
+      "return": 0.044259
+     },
+     {
+      "date": "2023-01-31",
+      "return": 0.011976
+     },
+     {
+      "date": "2023-04-28",
+      "return": -0.06976
+     },
+     {
+      "date": "2023-07-28",
+      "return": 0.018972
+     },
+     {
+      "date": "2023-10-27",
+      "return": 0.001673
+     },
+     {
+      "date": "2024-02-02",
+      "return": -0.006055
+     },
+     {
+      "date": "2024-04-26",
+      "return": -0.04393
+     },
+     {
+      "date": "2024-08-02",
+      "return": 0.016246
+     },
+     {
+      "date": "2024-11-01",
+      "return": 0.037078
+     },
+     {
+      "date": "2025-01-31",
+      "return": -0.006206
+     },
+     {
+      "date": "2025-05-02",
+      "return": 0.014464
+     },
+     {
+      "date": "2025-08-01",
+      "return": -0.043354
+     },
+     {
+      "date": "2025-10-31",
+      "return": 0.022059
+     },
+     {
+      "date": "2026-01-30",
+      "return": 0.060779
+     },
+     {
+      "date": "2026-05-01",
+      "return": -0.063241
+     },
+     {
+      "date": "2026-07-31",
+      "return": -0.025037
+     },
+     {
+      "date": "2026-10-30",
+      "return": -0.095041
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_feb95f015f"
+   }
+  },
+  {
+   "news_id": "n_2dc151f1b252",
+   "title": "Exxon, Chevron profits beat forecasts, refining margins surge during wars",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON2JIcGhXLURlX1ZHUDVac0IwV1BuN1puU1ljMVFoMUJPNWtZQ2FFdEVMY1ZoZ3pENFUtZEpXZ0ZRU2ZLTFVobHd2XzRiaUxuRFRESXVYNm9zNUUxLWliR1A0RHpTUlNjSUxOazBFSzFvUS1HVWVJX1VGeU41WkxDSjlLTHlQX0dEd1NqUzNna0dkMEZBYmZEd1JZaHhuVElEZFBLZFR0YVQ4V3BxVkhLbGxOMzlRWjU1RmZzRA?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-10-30T07:00:00Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.8,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6b190fba18"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "XOM",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.006824,
+    "p10": -0.063893,
+    "p90": 0.052003,
+    "share_positive": 0.55,
+    "events": [
+     {
+      "date": "2022-02-01",
+      "return": 0.056608
+     },
+     {
+      "date": "2022-04-29",
+      "return": 0.051491
+     },
+     {
+      "date": "2022-07-29",
+      "return": -0.045229
+     },
+     {
+      "date": "2022-10-28",
+      "return": 0.044259
+     },
+     {
+      "date": "2023-01-31",
+      "return": 0.011976
+     },
+     {
+      "date": "2023-04-28",
+      "return": -0.06976
+     },
+     {
+      "date": "2023-07-28",
+      "return": 0.018972
+     },
+     {
+      "date": "2023-10-27",
+      "return": 0.001673
+     },
+     {
+      "date": "2024-02-02",
+      "return": -0.006055
+     },
+     {
+      "date": "2024-04-26",
+      "return": -0.04393
+     },
+     {
+      "date": "2024-08-02",
+      "return": 0.016246
+     },
+     {
+      "date": "2024-11-01",
+      "return": 0.037078
+     },
+     {
+      "date": "2025-01-31",
+      "return": -0.006206
+     },
+     {
+      "date": "2025-05-02",
+      "return": 0.014464
+     },
+     {
+      "date": "2025-08-01",
+      "return": -0.043354
+     },
+     {
+      "date": "2025-10-31",
+      "return": 0.022059
+     },
+     {
+      "date": "2026-01-30",
+      "return": 0.060779
+     },
+     {
+      "date": "2026-05-01",
+      "return": -0.063241
+     },
+     {
+      "date": "2026-07-31",
+      "return": -0.025037
+     },
+     {
+      "date": "2026-10-30",
+      "return": -0.095041
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_feb95f015f"
+   }
+  },
+  {
+   "news_id": "n_140b39e1c4b9",
+   "title": "ENBRIDGE POSTPONES PIPELINE EXPANSION: Enbridge to Postpone Plans for Second Phase of Mainline Oil Pipeline Expansion Due to Lack of Federal Policy Change Certainty",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZGY5blExak5jVUJPWE1SNmhCRVIzVUlsaVNrUDJLM1RndFNzdnotUVN2NU1naUdsN01JQXlmSDNYQ1NJcVFlVjRLUHNMZXpCaU1WdF9GdXZYYTc3NlpqckhFaWtGVjB6bDZrRDR6NHRKTjVhWFdUV1ZLYy1yNTh5aWtiQUJDV0VocnV2SmlDOWZoUkNLS194RjFzeVdySTlfRUM1UWZWblF4Szcw?oc=5",
+   "source": "EnergyNow",
+   "published_at": "2026-11-14T12:06:12Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "macro_rates",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO_RATES",
+      "text": "Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f7a34b0217"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "rate_decision",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 12,
+    "median_return": 0.004739,
+    "p10": -0.028582,
+    "p90": 0.042169,
+    "share_positive": 0.6667,
+    "events": [
+     {
+      "date": "2025-06-04",
+      "return": -0.029717
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.04317
+     },
+     {
+      "date": "2025-09-17",
+      "return": 0.03316
+     },
+     {
+      "date": "2025-10-29",
+      "return": 0.00198
+     },
+     {
+      "date": "2025-12-10",
+      "return": -0.018369
+     },
+     {
+      "date": "2026-01-28",
+      "return": 0.051388
+     },
+     {
+      "date": "2026-03-18",
+      "return": 0.017708
+     },
+     {
+      "date": "2026-04-29",
+      "return": 0.019281
+     },
+     {
+      "date": "2026-06-10",
+      "return": -0.007998
+     },
+     {
+      "date": "2026-07-15",
+      "return": 0.007497
+     },
+     {
+      "date": "2026-09-02",
+      "return": -0.05387
+     },
+     {
+      "date": "2026-10-28",
+      "return": 0.000147
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 12 décisions de taux sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_fc58f1bd5e"
+   }
+  },
+  {
+   "news_id": "n_4ea7939222b2",
+   "title": "Canadian Natural Resources vs. Enbridge: The Better Dividend Stock to Buy Today",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPM2l4NW5IVGo2UktRQm84S2hRRlJzZWh6YlV2QU56Tk4yeXR4UHprTHROZ200SC1PZFdCZ1dnbUFMdV9zZGNRb0ZvLVNtdkttSmdsaDhYS1ZNY0k5MktrVm9wWWNCS3gzRnVjTHlUMk5wUWJCRnpVRmhVWXdYYzBsbm4yeVhsa3JMcTRkUWlTaElVbGRXdUJ2enJTdlI4VmlEdmtRVXVRZDhXVVdtd0E?oc=5",
+   "source": "The Motley Fool Canada",
+   "published_at": "2026-11-14T02:15:00Z",
+   "tickers": [
+    "CNQ.TO",
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_13df89225c"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_8417d127ff63",
+   "title": "Is ExxonMobil Holdings (XOM) Undervalued After Its $12.5b Guyana Longtail Approval?",
+   "url": "https://finance.yahoo.com/energy/articles/exxonmobil-holdings-xom-undervalued-12-011312124.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T01:13:12Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_2d605e97d4"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_8df20492a34c",
+   "title": "Sector Update: Energy Stocks Advance Premarket Friday",
+   "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-advance-premarket-142520549.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T14:25:20Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_65feae1e85"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_0e7053962260",
+   "title": "5 Best Stocks to Buy for a Rising Interest Rate Environment",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-best-stocks-buy-rising-130523215.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T13:05:23Z",
+   "tickers": [
+    "MSFT",
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_4c5bdf22b7"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_f154d520edfb",
+   "title": "US29250NCU72 Bond Yield and Price — BONDSCOM:US29250NCU72",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE83cmhlcEVZNkg5SFRXSW5KZjhjVGx6Z2hmZEdpTzR0bTk3MFU0VTlfa3N2UWRsLTRocG9VN09oRUFIalhPcXVoRmxlM1E1YUVOYk1yQ1p1RUMxQ3ZRTWVMdDBURDRuQ1kxWXc?oc=5",
+   "source": "TradingView",
+   "published_at": "2026-11-13T12:12:54Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "macro_rates",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO_RATES",
+      "text": "Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f713dd6d15"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "rate_decision",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 12,
+    "median_return": 0.004739,
+    "p10": -0.028582,
+    "p90": 0.042169,
+    "share_positive": 0.6667,
+    "events": [
+     {
+      "date": "2025-06-04",
+      "return": -0.029717
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.04317
+     },
+     {
+      "date": "2025-09-17",
+      "return": 0.03316
+     },
+     {
+      "date": "2025-10-29",
+      "return": 0.00198
+     },
+     {
+      "date": "2025-12-10",
+      "return": -0.018369
+     },
+     {
+      "date": "2026-01-28",
+      "return": 0.051388
+     },
+     {
+      "date": "2026-03-18",
+      "return": 0.017708
+     },
+     {
+      "date": "2026-04-29",
+      "return": 0.019281
+     },
+     {
+      "date": "2026-06-10",
+      "return": -0.007998
+     },
+     {
+      "date": "2026-07-15",
+      "return": 0.007497
+     },
+     {
+      "date": "2026-09-02",
+      "return": -0.05387
+     },
+     {
+      "date": "2026-10-28",
+      "return": 0.000147
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 12 décisions de taux sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_fc58f1bd5e"
+   }
+  },
+  {
+   "news_id": "n_d95bef68cc1b",
+   "title": "Enbridge (TSX:ENB): Can Execution Now Back Up The Latest Energy Sector Update?",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbWtRSFZWTnZFV2dUN0NKcFZpSjNVWUFQMlMzT1dNM3JXM0lTal92UWg5bVQ1d0xkcmplNTQyZHREZHQ2a2NES3ZGTjVWQzN5NF9YYXVmMVhIemdKZGRudXk4dWJMUnpDRW5IUURMWkdzMFZ6cExRS1JCV3Bfc0FIYXBSOEtjbGh3T3NhUERSYUFqaWpUaXduVWRES3hJaG9WRFA5Wmd4Z2JWd2hZWGY4SFdGSmJqZw?oc=5",
+   "source": "Kalkine Media",
+   "published_at": "2026-11-09T17:29:00Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_546b9e4154"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_63aa1216f1b9",
+   "title": "Enbridge Inc Reports Strong Q3 Results with Continued Growth and Strategic Acquisitions",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQcHBVZi1obVFvaDhZMzFqd3BJTGVRWTJBVkUwRjEwLWJfdlpHUlp6WElpOVVNQlNlYnFaREpMMl9PdVdJVlRMUE42dXpfQUliRGZiT0ZUVGJzcmY0QXEtS3JRZjN3b2RXSW9jdjBXZWJzNkEwejF2Z01QTTd5aXgxakZKanpMTFkxQlFHUENqQ0ozcjh4WkVvazNXd19ZbWpCa0ZPRTZrZ0FhZ004b1R2QU5MRTI?oc=5",
+   "source": "SSBCrack",
+   "published_at": "2026-11-09T15:51:19Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_677de0f08e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_aecff1352f37",
+   "title": "BlackRock Canada (TSX:XEI): What Do Monthly iShares Distributions Show?",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRFlNblpCQzltUHZfWEpYUXpWU2QwYldSQklaR1dDSXg3eFNnTVF0T0tzTmFaWU0xN3U2TFFtT2YtS1RvTTd5TzNLc1lieXRoVjk0NHByVUpzV3JTR3AxWFhrSFVfYmRPN3Y0bFM3NWlNakc3ZFFhdF96VEtweWFaXzVEMU9ySEptVVF1cThyd19GWFJwMjI4Z1dwYTZ5Z1E?oc=5",
+   "source": "Kalkine Media",
+   "published_at": "2026-10-21T07:00:00Z",
+   "tickers": [
+    "XBB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_OVER_LIMIT",
+      "text": "Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "delta": 0.15,
+      "observed": 0.2,
+      "limit": 0.15
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5aa8bf06e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9cdcd3572b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cc97b68de7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "XBB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 60,
+    "median_return": 0.002495,
+    "p10": -0.007159,
+    "p90": 0.014475,
+    "share_positive": 0.65,
+    "events": [
+     {
+      "date": "2021-11-23",
+      "return": 0.012155
+     },
+     {
+      "date": "2021-12-30",
+      "return": -0.018174
+     },
+     {
+      "date": "2022-01-25",
+      "return": -0.003102
+     },
+     {
+      "date": "2022-02-22",
+      "return": 0.015068
+     },
+     {
+      "date": "2022-03-25",
+      "return": 0.001574
+     },
+     {
+      "date": "2022-04-25",
+      "return": -0.005802
+     },
+     {
+      "date": "2022-05-24",
+      "return": -0.00078
+     },
+     {
+      "date": "2022-06-24",
+      "return": 0.010112
+     },
+     {
+      "date": "2022-07-25",
+      "return": 0.006251
+     },
+     {
+      "date": "2022-08-25",
+      "return": -0.00413
+     },
+     {
+      "date": "2022-09-23",
+      "return": -0.007038
+     },
+     {
+      "date": "2022-10-25",
+      "return": 0.027861
+     },
+     {
+      "date": "2022-11-21",
+      "return": 0.018183
+     },
+     {
+      "date": "2022-12-29",
+      "return": 0.013823
+     },
+     {
+      "date": "2023-01-25",
+      "return": 0.005635
+     },
+     {
+      "date": "2023-02-22",
+      "return": 0.006605
+     },
+     {
+      "date": "2023-03-22",
+      "return": -0.001826
+     },
+     {
+      "date": "2023-04-24",
+      "return": -0.003939
+     },
+     {
+      "date": "2023-05-24",
+      "return": 0.004698
+     },
+     {
+      "date": "2023-06-26",
+      "return": 0.005163
+     },
+     {
+      "date": "2023-07-25",
+      "return": -0.003659
+     },
+     {
+      "date": "2023-08-25",
+      "return": 0.01129
+     },
+     {
+      "date": "2023-09-25",
+      "return": -0.005611
+     },
+     {
+      "date": "2023-10-25",
+      "return": 0.007719
+     },
+     {
+      "date": "2023-11-21",
+      "return": 0.009004
+     },
+     {
+      "date": "2023-12-28",
+      "return": -0.012298
+     },
+     {
+      "date": "2024-01-25",
+      "return": 0.021348
+     },
+     {
+      "date": "2024-02-23",
+      "return": 0.008195
+     },
+     {
+      "date": "2024-03-22",
+      "return": -0.005281
+     },
+     {
+      "date": "2024-04-24",
+      "return": 0.001334
+     },
+     {
+      "date": "2024-05-22",
+      "return": -0.011097
+     },
+     {
+      "date": "2024-06-25",
+      "return": -0.014105
+     },
+     {
+      "date": "2024-07-26",
+      "return": 0.026593
+     },
+     {
+      "date": "2024-08-27",
+      "return": 0.004157
+     },
+     {
+      "date": "2024-09-24",
+      "return": 0.002375
+     },
+     {
+      "date": "2024-10-28",
+      "return": 0.004941
+     },
+     {
+      "date": "2024-11-21",
+      "return": 0.013902
+     },
+     {
+      "date": "2024-12-30",
+      "return": 0.001736
+     },
+     {
+      "date": "2025-01-28",
+      "return": 0.014411
+     },
+     {
+      "date": "2025-02-25",
+      "return": 0.015047
+     },
+     {
+      "date": "2025-03-26",
+      "return": 0.009425
+     },
+     {
+      "date": "2025-04-25",
+      "return": 0.002444
+     },
+     {
+      "date": "2025-05-22",
+      "return": 0.013917
+     },
+     {
+      "date": "2025-06-25",
+      "return": -0.004637
+     },
+     {
+      "date": "2025-07-28",
+      "return": 0.009332
+     },
+     {
+      "date": "2025-08-26",
+      "return": 0.005382
+     },
+     {
+      "date": "2025-09-24",
+      "return": 0.000703
+     },
+     {
+      "date": "2025-10-28",
+      "return": -0.004878
+     },
+     {
+      "date": "2025-11-19",
+      "return": 0.009181
+     },
+     {
+      "date": "2025-12-30",
+      "return": 0.000709
+     },
+     {
+      "date": "2026-01-27",
+      "return": -0.002826
+     },
+     {
+      "date": "2026-02-24",
+      "return": -0.004557
+     },
+     {
+      "date": "2026-03-26",
+      "return": 0.000358
+     },
+     {
+      "date": "2026-04-27",
+      "return": -0.008906
+     },
+     {
+      "date": "2026-05-21",
+      "return": 0.011535
+     },
+     {
+      "date": "2026-06-25",
+      "return": -0.003856
+     },
+     {
+      "date": "2026-07-28",
+      "return": 0.002546
+     },
+     {
+      "date": "2026-08-26",
+      "return": -0.008252
+     },
+     {
+      "date": "2026-09-24",
+      "return": 0.000403
+     },
+     {
+      "date": "2026-10-27",
+      "return": 0.003715
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 60 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_4b268190c3"
+   }
+  },
+  {
+   "news_id": "n_721abc66ddc2",
+   "title": "BlackRock® Canada Announces October Cash Distributions for the iShares® ETFs",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPc3ZFbXc4Q0JzV0M5enBob2QxYmdma2RhUVUtX056V1hJbnpuZDFOc1hsSUU4YkVmb19wRmZIZGI0Q0lDWHI2SnUzUHdXM0RmQ0lHR09HaGdma3VfaUdQdng0WkFpVVU1VUdENjk1bUxlN2wxTV9QUHpSaWw2VklORUtFRExXTUpOeVkwcUJZVVMyM1Y3bGJuaFlaaThzcEpfdDByTlh2b0xneGhidUNHZVFwV1dQa1UxVW52OVZyZ2UzbFRCZllYbnJKM0kzYmJWcFVmNTZWRVI2d2FvVmtZ?oc=5",
+   "source": "GlobeNewswire",
+   "published_at": "2026-10-20T07:00:00Z",
+   "tickers": [
+    "XBB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_OVER_LIMIT",
+      "text": "Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "delta": 0.15,
+      "observed": 0.2,
+      "limit": 0.15
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_bd134ca828"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XBB.TO représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9cdcd3572b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XBB.TO: 6,6 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_cc97b68de7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "XBB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 60,
+    "median_return": 0.002495,
+    "p10": -0.007159,
+    "p90": 0.014475,
+    "share_positive": 0.65,
+    "events": [
+     {
+      "date": "2021-11-23",
+      "return": 0.012155
+     },
+     {
+      "date": "2021-12-30",
+      "return": -0.018174
+     },
+     {
+      "date": "2022-01-25",
+      "return": -0.003102
+     },
+     {
+      "date": "2022-02-22",
+      "return": 0.015068
+     },
+     {
+      "date": "2022-03-25",
+      "return": 0.001574
+     },
+     {
+      "date": "2022-04-25",
+      "return": -0.005802
+     },
+     {
+      "date": "2022-05-24",
+      "return": -0.00078
+     },
+     {
+      "date": "2022-06-24",
+      "return": 0.010112
+     },
+     {
+      "date": "2022-07-25",
+      "return": 0.006251
+     },
+     {
+      "date": "2022-08-25",
+      "return": -0.00413
+     },
+     {
+      "date": "2022-09-23",
+      "return": -0.007038
+     },
+     {
+      "date": "2022-10-25",
+      "return": 0.027861
+     },
+     {
+      "date": "2022-11-21",
+      "return": 0.018183
+     },
+     {
+      "date": "2022-12-29",
+      "return": 0.013823
+     },
+     {
+      "date": "2023-01-25",
+      "return": 0.005635
+     },
+     {
+      "date": "2023-02-22",
+      "return": 0.006605
+     },
+     {
+      "date": "2023-03-22",
+      "return": -0.001826
+     },
+     {
+      "date": "2023-04-24",
+      "return": -0.003939
+     },
+     {
+      "date": "2023-05-24",
+      "return": 0.004698
+     },
+     {
+      "date": "2023-06-26",
+      "return": 0.005163
+     },
+     {
+      "date": "2023-07-25",
+      "return": -0.003659
+     },
+     {
+      "date": "2023-08-25",
+      "return": 0.01129
+     },
+     {
+      "date": "2023-09-25",
+      "return": -0.005611
+     },
+     {
+      "date": "2023-10-25",
+      "return": 0.007719
+     },
+     {
+      "date": "2023-11-21",
+      "return": 0.009004
+     },
+     {
+      "date": "2023-12-28",
+      "return": -0.012298
+     },
+     {
+      "date": "2024-01-25",
+      "return": 0.021348
+     },
+     {
+      "date": "2024-02-23",
+      "return": 0.008195
+     },
+     {
+      "date": "2024-03-22",
+      "return": -0.005281
+     },
+     {
+      "date": "2024-04-24",
+      "return": 0.001334
+     },
+     {
+      "date": "2024-05-22",
+      "return": -0.011097
+     },
+     {
+      "date": "2024-06-25",
+      "return": -0.014105
+     },
+     {
+      "date": "2024-07-26",
+      "return": 0.026593
+     },
+     {
+      "date": "2024-08-27",
+      "return": 0.004157
+     },
+     {
+      "date": "2024-09-24",
+      "return": 0.002375
+     },
+     {
+      "date": "2024-10-28",
+      "return": 0.004941
+     },
+     {
+      "date": "2024-11-21",
+      "return": 0.013902
+     },
+     {
+      "date": "2024-12-30",
+      "return": 0.001736
+     },
+     {
+      "date": "2025-01-28",
+      "return": 0.014411
+     },
+     {
+      "date": "2025-02-25",
+      "return": 0.015047
+     },
+     {
+      "date": "2025-03-26",
+      "return": 0.009425
+     },
+     {
+      "date": "2025-04-25",
+      "return": 0.002444
+     },
+     {
+      "date": "2025-05-22",
+      "return": 0.013917
+     },
+     {
+      "date": "2025-06-25",
+      "return": -0.004637
+     },
+     {
+      "date": "2025-07-28",
+      "return": 0.009332
+     },
+     {
+      "date": "2025-08-26",
+      "return": 0.005382
+     },
+     {
+      "date": "2025-09-24",
+      "return": 0.000703
+     },
+     {
+      "date": "2025-10-28",
+      "return": -0.004878
+     },
+     {
+      "date": "2025-11-19",
+      "return": 0.009181
+     },
+     {
+      "date": "2025-12-30",
+      "return": 0.000709
+     },
+     {
+      "date": "2026-01-27",
+      "return": -0.002826
+     },
+     {
+      "date": "2026-02-24",
+      "return": -0.004557
+     },
+     {
+      "date": "2026-03-26",
+      "return": 0.000358
+     },
+     {
+      "date": "2026-04-27",
+      "return": -0.008906
+     },
+     {
+      "date": "2026-05-21",
+      "return": 0.011535
+     },
+     {
+      "date": "2026-06-25",
+      "return": -0.003856
+     },
+     {
+      "date": "2026-07-28",
+      "return": 0.002546
+     },
+     {
+      "date": "2026-08-26",
+      "return": -0.008252
+     },
+     {
+      "date": "2026-09-24",
+      "return": 0.000403
+     },
+     {
+      "date": "2026-10-27",
+      "return": 0.003715
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 60 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_4b268190c3"
+   }
+  },
+  {
+   "news_id": "n_a38d3c7ec182",
+   "title": "How to Buy Exxon Stock (XOM) in 2026",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNbFVZNXd0YmwxRUJ5eDZfbWNkYWs3MGJxTU5ySzVQMnVnUUR1UTlqQXZXNHRNYmZndUtHYWFXU0ZhT2tXeXlsVEdJUXo1T2loZXJ0cHJkTU1QRUhWT0dPX3lJaWZsM2h4R0c2MGNxWm1hYl9vWTR4eEgtRGYxRUk4dEhfX1N5QkJ2?oc=5",
+   "source": "The Motley Fool",
+   "published_at": "2026-10-18T07:00:00Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9f6a95181e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_856bb7b93243",
+   "title": "Enbridge is a strong buy for IRA investors with steady dividends and 6% yield, despite some risks.",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPX1NQNnE3MFdrUzFZNEtySTlWa0Z2VWJYamlOakZ2T1dVX2Y5OUNIVm5LZ1E0M3otbHk4VVFzdk1uVHNBaVNEUzQxSms0a0ptYlduaERFeHJmdVhRanVMZEVtc2JBTFJXUDdFLWNGZmprMzVoWjV0WE5DVWF1ekNZUg?oc=5",
+   "source": "Pluang",
+   "published_at": "2026-11-14T14:43:02Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c2efcb9444"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": -0.002908,
+    "p10": -0.04441,
+    "p90": 0.032323,
+    "share_positive": 0.4737,
+    "events": [
+     {
+      "date": "2022-02-14",
+      "return": -0.037112
+     },
+     {
+      "date": "2022-05-12",
+      "return": 0.031522
+     },
+     {
+      "date": "2022-08-12",
+      "return": 0.009874
+     },
+     {
+      "date": "2022-11-14",
+      "return": -0.009705
+     },
+     {
+      "date": "2023-02-14",
+      "return": -0.04477
+     },
+     {
+      "date": "2023-05-12",
+      "return": -0.04432
+     },
+     {
+      "date": "2023-08-14",
+      "return": -0.029943
+     },
+     {
+      "date": "2023-11-14",
+      "return": 0.013068
+     },
+     {
+      "date": "2024-02-14",
+      "return": 0.03553
+     },
+     {
+      "date": "2024-05-14",
+      "return": -0.012706
+     },
+     {
+      "date": "2024-08-15",
+      "return": -0.002908
+     },
+     {
+      "date": "2024-11-15",
+      "return": 0.013322
+     },
+     {
+      "date": "2025-02-14",
+      "return": -0.069523
+     },
+     {
+      "date": "2025-05-15",
+      "return": 0.023509
+     },
+     {
+      "date": "2025-08-15",
+      "return": 0.01102
+     },
+     {
+      "date": "2025-11-14",
+      "return": 0.011719
+     },
+     {
+      "date": "2026-02-17",
+      "return": -0.007328
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.047563
+     },
+     {
+      "date": "2026-08-14",
+      "return": -0.013617
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_6ea5c28f9a"
+   }
+  },
+  {
+   "news_id": "n_6203010785d6",
+   "title": "3 Defensive Dividend Stocks for Retirees Worried About the Next Market Downturn",
+   "url": "https://247wallst.com/investing/2026/11/14/3-defensive-dividend-stocks-for-retirees-worried-about-the-next-market-downturn/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T14:20:00Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_852e141df6"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "ENB.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": -0.002908,
+    "p10": -0.04441,
+    "p90": 0.032323,
+    "share_positive": 0.4737,
+    "events": [
+     {
+      "date": "2022-02-14",
+      "return": -0.037112
+     },
+     {
+      "date": "2022-05-12",
+      "return": 0.031522
+     },
+     {
+      "date": "2022-08-12",
+      "return": 0.009874
+     },
+     {
+      "date": "2022-11-14",
+      "return": -0.009705
+     },
+     {
+      "date": "2023-02-14",
+      "return": -0.04477
+     },
+     {
+      "date": "2023-05-12",
+      "return": -0.04432
+     },
+     {
+      "date": "2023-08-14",
+      "return": -0.029943
+     },
+     {
+      "date": "2023-11-14",
+      "return": 0.013068
+     },
+     {
+      "date": "2024-02-14",
+      "return": 0.03553
+     },
+     {
+      "date": "2024-05-14",
+      "return": -0.012706
+     },
+     {
+      "date": "2024-08-15",
+      "return": -0.002908
+     },
+     {
+      "date": "2024-11-15",
+      "return": 0.013322
+     },
+     {
+      "date": "2025-02-14",
+      "return": -0.069523
+     },
+     {
+      "date": "2025-05-15",
+      "return": 0.023509
+     },
+     {
+      "date": "2025-08-15",
+      "return": 0.01102
+     },
+     {
+      "date": "2025-11-14",
+      "return": 0.011719
+     },
+     {
+      "date": "2026-02-17",
+      "return": -0.007328
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.047563
+     },
+     {
+      "date": "2026-08-14",
+      "return": -0.013617
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_6ea5c28f9a"
+   }
+  },
+  {
+   "news_id": "n_93a16c42351f",
+   "title": "What If the Fed Doubles the Rate Hike in December? These 5 Dividend Stocks Could Prosper",
+   "url": "https://247wallst.com/investing/2026/11/13/what-if-the-fed-doubles-the-rate-hike-in-december-these-5-dividend-stocks-could-prosper/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T13:13:17Z",
+   "tickers": [
+    "JPM",
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_3c0932f9d1"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "XOM",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": 0.005486,
+    "p10": -0.043023,
+    "p90": 0.042846,
+    "share_positive": 0.5789,
+    "events": [
+     {
+      "date": "2022-02-09",
+      "return": -0.012975
+     },
+     {
+      "date": "2022-05-12",
+      "return": 0.060877
+     },
+     {
+      "date": "2022-08-11",
+      "return": 0.042067
+     },
+     {
+      "date": "2022-11-14",
+      "return": -0.018312
+     },
+     {
+      "date": "2023-02-13",
+      "return": -0.059953
+     },
+     {
+      "date": "2023-05-15",
+      "return": 0.000953
+     },
+     {
+      "date": "2023-08-15",
+      "return": -0.026214
+     },
+     {
+      "date": "2023-11-14",
+      "return": 0.005486
+     },
+     {
+      "date": "2024-02-13",
+      "return": 0.025729
+     },
+     {
+      "date": "2024-05-14",
+      "return": 0.00761
+     },
+     {
+      "date": "2024-08-15",
+      "return": -0.027712
+     },
+     {
+      "date": "2024-11-14",
+      "return": 0.012035
+     },
+     {
+      "date": "2025-02-12",
+      "return": 0.011926
+     },
+     {
+      "date": "2025-05-15",
+      "return": -0.04205
+     },
+     {
+      "date": "2025-08-15",
+      "return": 0.045963
+     },
+     {
+      "date": "2025-11-14",
+      "return": -0.005774
+     },
+     {
+      "date": "2026-02-12",
+      "return": -0.046916
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.02089
+     },
+     {
+      "date": "2026-08-17",
+      "return": 0.031307
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_8ebcbc8248"
+   }
+  },
+  {
+   "news_id": "n_235f7cd482e1",
+   "title": "ExxonMobil Raised Its Dividend for the 44th Straight Year and Plans $20 Billion of Buybacks in 2027. Here's How It Can Afford Both.",
+   "url": "https://www.fool.com/investing/2026/11/13/exxon-raise-dividend-44-years-buybacks-2027/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T11:35:00Z",
+   "tickers": [
+    "NVDA",
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "dividend",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.7,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_DIVIDEND",
+      "text": "Catégorie Dividende: pertinence 0,40 pour un horizon medium.",
+      "delta": 0.4
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_87f1af55c6"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "dividend_ex_date",
+    "asset": "XOM",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 19,
+    "median_return": 0.005486,
+    "p10": -0.043023,
+    "p90": 0.042846,
+    "share_positive": 0.5789,
+    "events": [
+     {
+      "date": "2022-02-09",
+      "return": -0.012975
+     },
+     {
+      "date": "2022-05-12",
+      "return": 0.060877
+     },
+     {
+      "date": "2022-08-11",
+      "return": 0.042067
+     },
+     {
+      "date": "2022-11-14",
+      "return": -0.018312
+     },
+     {
+      "date": "2023-02-13",
+      "return": -0.059953
+     },
+     {
+      "date": "2023-05-15",
+      "return": 0.000953
+     },
+     {
+      "date": "2023-08-15",
+      "return": -0.026214
+     },
+     {
+      "date": "2023-11-14",
+      "return": 0.005486
+     },
+     {
+      "date": "2024-02-13",
+      "return": 0.025729
+     },
+     {
+      "date": "2024-05-14",
+      "return": 0.00761
+     },
+     {
+      "date": "2024-08-15",
+      "return": -0.027712
+     },
+     {
+      "date": "2024-11-14",
+      "return": 0.012035
+     },
+     {
+      "date": "2025-02-12",
+      "return": 0.011926
+     },
+     {
+      "date": "2025-05-15",
+      "return": -0.04205
+     },
+     {
+      "date": "2025-08-15",
+      "return": 0.045963
+     },
+     {
+      "date": "2025-11-14",
+      "return": -0.005774
+     },
+     {
+      "date": "2026-02-12",
+      "return": -0.046916
+     },
+     {
+      "date": "2026-05-15",
+      "return": 0.02089
+     },
+     {
+      "date": "2026-08-17",
+      "return": 0.031307
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 19 dates ex-dividende sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements.",
+     "Prix ajustés des dividendes: la baisse mécanique du jour ex-dividende est neutralisée."
+    ],
+    "evidence_id": "ev_8ebcbc8248"
+   }
+  },
+  {
+   "news_id": "n_d72d59a36970",
+   "title": "Exxon CEO: Diesel Is “the Key Crunch Point.” Its Refineries Just Earned $9.1 Billion",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcDhlMDdqaTFGQWhhQnB2V2lORmNZcDQ0aWU1MVkwRkFtanVOVjd1SzdaZDhMQk53MEYwYjZ1TFRIczFqRkNBenpuVWNXNXdNblE4aGxHeXNlTmlZSmE4SllXQldmQ0xzR1J4bGwyMHNjc0hTeHJlV0RqaUl5bXR6QklSYUxpRkRXQTlUcFVnTUVLR01NSEU4cVNIVUY1cW5NY096ZHhhSlY?oc=5",
+   "source": "TIKR.com",
+   "published_at": "2026-11-13T18:08:46Z",
+   "tickers": [
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "management_change",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.05,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MANAGEMENT_CHANGE",
+      "text": "Catégorie Changement de direction: pertinence 0,35 pour un horizon medium.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f5effbde2a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XOM représente 5,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_a303c4d134"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XOM: 26,7 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_d1d526356b"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_c329247fb17b",
+   "title": "Nasdaq Jumps Over 4% This Week as Chip Names Drive a Sharp Midweek Rally",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-jumps-over-4-week-183000764.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-11T18:30:00Z",
+   "tickers": [
+    "ENB.TO",
+    "RY.TO"
+   ],
+   "is_synthetic": false,
+   "category": "product",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_PRODUCT",
+      "text": "Catégorie Produit: pertinence 0,35 pour un horizon medium.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Produit: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_551b3aced9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_e8cf7862f3c4",
+   "title": "Enbridge’s CEO Transition: Should Dividend Investors Be Worried?",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdHV2cy1IT2xCbFJWX0duakFFZWk3S3l3a3d1QUYtdFJQRDQ1dHBMTlc2ODdyQVR1Y1hzWDZKOHNlVnpjRDQ4MlZRUU5kQ3VwMDE3X2NuRnZKcGh2S2dRUnItckZfd0U0ZFQ5ZWlTMll6X0JFYnR3dDREVVRKZWdRbVVSRlpsM2dnMGRZNUVKaHY4N29sUGdCTg?oc=5",
+   "source": "The Motley Fool Canada",
+   "published_at": "2026-10-30T07:00:00Z",
+   "tickers": [
+    "ENB.TO"
+   ],
+   "is_synthetic": false,
+   "category": "management_change",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.06,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MANAGEMENT_CHANGE",
+      "text": "Catégorie Changement de direction: pertinence 0,35 pour un horizon medium.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_EXCLUDED_SECTOR",
+      "text": "Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "delta": 0.3
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_ebd6f13e35"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "ENB.TO représente 6,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_008e64d16f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de ENB.TO: 16,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c5f0b96865"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_42baafb10a62",
+   "title": "How acquisitions and recurring revenue shape Descartes Systems Group Inc. (TSX:DSG), an S&P/TSX Composite Index constituent",
+   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOeHZnUWRfQ0ozNmcyU28xNEZKM1FQNjhGbHV3MjktOEJlV3VFbHVHLVgyTnJhSGxlMWc2NEJJUnNseDktckJReGlmS1JwNHgxWVFQMTRGYjBGeGpvck5zWngtc0RHVVJGamYycEpmNG83Zl9UT1JrbUlvYTQya0pTd1QwcXJLclFWSGx4V1JxMVl2UTVkbV8wNWpHUElUZGVKeXpwV1R3OFE1THo1MVNQaDZYZkZJNXAwRkNxSnp5VG5QbllyTjJMWlZsd1JTXzhrdU1hX01OalhfaXAxMWw1SWpSSDU4dw?oc=5",
+   "source": "kalkine.ca",
+   "published_at": "2026-10-28T07:00:00Z",
+   "tickers": [
+    "XIU.TO"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.55,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.15,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.15,
+      "limit": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,55 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7dec32ee63"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "XIU.TO représente 15,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b331b4e6d6"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de XIU.TO: 13,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f06aeb651a"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_99612df1928e",
+   "title": "3 Biotech Stocks With Revenue Up To 11%",
+   "url": "https://finance.yahoo.com/healthcare/articles/3-biotech-stocks-revenue-11-061542278.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T06:15:42Z",
+   "tickers": [
+    "JNJ"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.5,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.07,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,50 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_6188e7f13e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "JNJ représente 7,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b8d6c7907b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de JNJ: 18,1 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_22fc4f7c9c"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "JNJ",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.00923,
+    "p10": -0.030148,
+    "p90": 0.05266,
+    "share_positive": 0.65,
+    "events": [
+     {
+      "date": "2022-01-25",
+      "return": 0.048537
+     },
+     {
+      "date": "2022-04-19",
+      "return": 0.039514
+     },
+     {
+      "date": "2022-07-19",
+      "return": -0.003157
+     },
+     {
+      "date": "2022-10-18",
+      "return": 0.024731
+     },
+     {
+      "date": "2023-01-24",
+      "return": -0.029054
+     },
+     {
+      "date": "2023-04-18",
+      "return": -0.002957
+     },
+     {
+      "date": "2023-07-20",
+      "return": 0.094179
+     },
+     {
+      "date": "2023-10-17",
+      "return": -0.039993
+     },
+     {
+      "date": "2024-01-23",
+      "return": -0.022774
+     },
+     {
+      "date": "2024-04-16",
+      "return": 0.013348
+     },
+     {
+      "date": "2024-07-17",
+      "return": 0.034898
+     },
+     {
+      "date": "2024-10-15",
+      "return": 0.011448
+     },
+     {
+      "date": "2025-01-22",
+      "return": 0.02025
+     },
+     {
+      "date": "2025-04-15",
+      "return": 0.006608
+     },
+     {
+      "date": "2025-07-16",
+      "return": 0.089773
+     },
+     {
+      "date": "2025-10-14",
+      "return": 0.005134
+     },
+     {
+      "date": "2026-01-21",
+      "return": 0.043582
+     },
+     {
+      "date": "2026-04-14",
+      "return": -0.049588
+     },
+     {
+      "date": "2026-07-15",
+      "return": 0.007012
+     },
+     {
+      "date": "2026-10-13",
+      "return": -0.01657
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_56e2c846a8"
+   }
+  },
+  {
+   "news_id": "n_937799160057",
+   "title": "Gillette India's quarterly profit rises as cost savings cushion commodity pressures",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRi14V3pHa1QzY21ZU0hzZUVoZnpJR2J2WTl1TlB0WlBvQm1zSmduTlROelhpYm1Wdzc4bFFRSUZJSUFiY3JsdjB4X1VyT29aazJ1b25ZalBVRE5DemdydmhGVmZUeHJYVTZZSHJuWG45TGFZRVhjWVdRQUpDRk1WVlM2a2E3a3lMdzJ4Ti1MOWNqbGRpSjJzNTcxYUoySldFRnhjYm1JbFpaLUg3UGVzVWtuU2JWSXRoTW1DMV9rSWxHVGxYcU5z?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-11-13T08:28:04Z",
+   "tickers": [
+    "PG"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.5,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.07,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "delta": 0.5
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,50 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_00e6eb19c5"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "PG représente 7,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_728c7b3b07"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de PG: 18,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_3645d39a54"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "PG",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.016378,
+    "p10": -0.030359,
+    "p90": 0.036221,
+    "share_positive": 0.6,
+    "events": [
+     {
+      "date": "2022-01-19",
+      "return": 0.014509
+     },
+     {
+      "date": "2022-04-20",
+      "return": 0.005295
+     },
+     {
+      "date": "2022-07-29",
+      "return": -0.022559
+     },
+     {
+      "date": "2022-10-19",
+      "return": 0.033849
+     },
+     {
+      "date": "2023-01-19",
+      "return": -0.029877
+     },
+     {
+      "date": "2023-04-21",
+      "return": 0.036659
+     },
+     {
+      "date": "2023-07-28",
+      "return": 0.02084
+     },
+     {
+      "date": "2023-10-18",
+      "return": 0.036172
+     },
+     {
+      "date": "2024-01-23",
+      "return": 0.065129
+     },
+     {
+      "date": "2024-04-19",
+      "return": 0.025431
+     },
+     {
+      "date": "2024-07-30",
+      "return": -0.010828
+     },
+     {
+      "date": "2024-10-18",
+      "return": -0.017825
+     },
+     {
+      "date": "2025-01-22",
+      "return": 0.034156
+     },
+     {
+      "date": "2025-04-24",
+      "return": -0.034695
+     },
+     {
+      "date": "2025-07-29",
+      "return": -0.042009
+     },
+     {
+      "date": "2025-10-24",
+      "return": -0.00518
+     },
+     {
+      "date": "2026-01-22",
+      "return": 0.033577
+     },
+     {
+      "date": "2026-04-24",
+      "return": 0.018248
+     },
+     {
+      "date": "2026-07-29",
+      "return": -0.013971
+     },
+     {
+      "date": "2026-10-22",
+      "return": 0.030688
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_cb8d41e3a7"
+   }
+  }
+ ],
+ "hidden": {
+  "count": 435,
+  "by_reason": [
+   {
+    "reason": "Sujet déjà couvert par une nouvelle plus pertinente",
+    "count": 217
+   },
+   {
+    "reason": "Bruit de court terme pour ton horizon",
+    "count": 166
+   },
+   {
+    "reason": "Au-delà des 30 nouvelles les plus pertinentes",
+    "count": 52
+   }
+  ]
+ },
+ "coherence": null,
+ "events": [
+  {
+   "id": "evt_92ecc401027b",
+   "type": "dividend_ex_date",
+   "scope": "ticker",
+   "tickers": [
+    "XOM"
+   ],
+   "date": "2026-11-15",
+   "title": "XOM: prochaine date ex-dividende",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_9b24211e3b20",
+   "type": "dividend_ex_date",
+   "scope": "ticker",
+   "tickers": [
+    "JNJ"
+   ],
+   "date": "2026-11-23",
+   "title": "JNJ: prochaine date ex-dividende",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_9f4a6b332b87",
+   "type": "dividend_ex_date",
+   "scope": "ticker",
+   "tickers": [
+    "CNR.TO"
+   ],
+   "date": "2026-12-08",
+   "title": "CNR.TO: prochaine date ex-dividende",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_ccad04b25914",
+   "type": "rate_decision",
+   "scope": "macro",
+   "tickers": [],
+   "date": "2026-12-09",
+   "title": "Réserve fédérale (FOMC): décision de taux",
+   "is_estimated": false,
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  }
+ ],
+ "evidence": {
+  "ev_abecce4a93": {
+   "id": "ev_abecce4a93",
+   "kind": "portfolio_calc",
+   "statement": "ESGV représente 25,0 % du portefeuille analysé.",
+   "value": 0.25,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 25000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "ESGV"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_9cdcd3572b": {
+   "id": "ev_9cdcd3572b",
+   "kind": "portfolio_calc",
+   "statement": "XBB.TO représente 20,0 % du portefeuille analysé.",
+   "value": 0.2,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 20000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "XBB.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_b331b4e6d6": {
+   "id": "ev_b331b4e6d6",
+   "kind": "portfolio_calc",
+   "statement": "XIU.TO représente 15,0 % du portefeuille analysé.",
+   "value": 0.15,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 15000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "XIU.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_b5ee6e6f49": {
+   "id": "ev_b5ee6e6f49",
+   "kind": "portfolio_calc",
+   "statement": "CNR.TO représente 8,0 % du portefeuille analysé.",
+   "value": 0.08,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 8000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "CNR.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_f95a0e07dc": {
+   "id": "ev_f95a0e07dc",
+   "kind": "portfolio_calc",
+   "statement": "GLD représente 7,0 % du portefeuille analysé.",
+   "value": 0.07,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 7000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "GLD"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_b8d6c7907b": {
+   "id": "ev_b8d6c7907b",
+   "kind": "portfolio_calc",
+   "statement": "JNJ représente 7,0 % du portefeuille analysé.",
+   "value": 0.07,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 7000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "JNJ"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_728c7b3b07": {
+   "id": "ev_728c7b3b07",
+   "kind": "portfolio_calc",
+   "statement": "PG représente 7,0 % du portefeuille analysé.",
+   "value": 0.07,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 7000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "PG"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_008e64d16f": {
+   "id": "ev_008e64d16f",
+   "kind": "portfolio_calc",
+   "statement": "ENB.TO représente 6,0 % du portefeuille analysé.",
+   "value": 0.06,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 6000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "ENB.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_a303c4d134": {
+   "id": "ev_a303c4d134",
+   "kind": "portfolio_calc",
+   "statement": "XOM représente 5,0 % du portefeuille analysé.",
+   "value": 0.05,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 5000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "XOM"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_baa7c7403a": {
+   "id": "ev_baa7c7403a",
+   "kind": "portfolio_calc",
+   "statement": "Part des positions très volatiles (volatilité > 30 %): 0,0 %.",
+   "value": 0.0,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "threshold": 0.3,
+    "tickers": []
+   },
+   "source": "portefeuille fourni, data/prices_daily.csv",
+   "computed_by": "core.metrics.high_vol_share"
+  },
+  "ev_b11498220c": {
+   "id": "ev_b11498220c",
+   "kind": "portfolio_calc",
+   "statement": "Les trois plus grosses positions pèsent 60,0 % du portefeuille.",
+   "value": 0.6,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "tickers": [
+     "ESGV",
+     "XBB.TO",
+     "XIU.TO"
+    ]
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.top3_concentration"
+  },
+  "ev_c417b838ca": {
+   "id": "ev_c417b838ca",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_38dd364a488f",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_c5f0b96865": {
+   "id": "ev_c5f0b96865",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de ENB.TO: 16,1 %.",
+   "value": 0.16093301395457596,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "ENB.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_1750c484b0": {
+   "id": "ev_1750c484b0",
+   "kind": "event_study",
+   "statement": "Sur 19 publications de résultats (2022-02-11 au 2026-07-31), le mouvement médian de ENB.TO de la veille à +5 jours de bourse a été de 0,66 % (p10 −3,6 %, p90 4,4 %, 63 % de cas positifs).",
+   "value": 0.00655840094692417,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "ENB.TO",
+    "event_type": "earnings",
+    "from": "2022-02-11",
+    "macro_source": null,
+    "n_events": 19,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-07-31",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_bea3f86178": {
+   "id": "ev_bea3f86178",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_aad2ae842c78",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_0ae7b67898": {
+   "id": "ev_0ae7b67898",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_01de654bb000",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_d1d526356b": {
+   "id": "ev_d1d526356b",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de XOM: 26,7 %.",
+   "value": 0.2669203145251304,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "XOM",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_b0d0043978": {
+   "id": "ev_b0d0043978",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_ea35eef5df9b",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4ce536ef10": {
+   "id": "ev_4ce536ef10",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_9f38498b2c1a",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_e9a8bab39b": {
+   "id": "ev_e9a8bab39b",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Controverse: pertinence 0,40 pour un horizon medium. Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_13066311f8dd",
+    "rule_ids": [
+     "R_BASE_CONTROVERSY",
+     "R_PREF_CONTROVERSY"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_9382522bf1": {
+   "id": "ev_9382522bf1",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de CNR.TO: 19,9 %.",
+   "value": 0.19863278939612558,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "CNR.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_bfd5c5c2fb": {
+   "id": "ev_bfd5c5c2fb",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_33f84d665a12",
+    "rule_ids": [
+     "R_BASE_MACRO_RATES",
+     "R_POS_WEIGHT_20",
+     "R_OVER_LIMIT"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_cc97b68de7": {
+   "id": "ev_cc97b68de7",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de XBB.TO: 6,6 %.",
+   "value": 0.0664417800264345,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "XBB.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_f46a13dffa": {
+   "id": "ev_f46a13dffa",
+   "kind": "event_study",
+   "statement": "Sur 12 décisions de taux (2025-06-04 au 2026-10-28), le mouvement médian de XBB.TO de la veille à +5 jours de bourse a été de −0,09 % (p10 −0,5 %, p90 0,6 %, 50 % de cas positifs).",
+   "value": -0.000875637629386472,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "XBB.TO",
+    "event_type": "rate_decision",
+    "from": "2025-06-04",
+    "macro_source": "bankofcanada",
+    "n_events": 12,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-28",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_d3570f4350": {
+   "id": "ev_d3570f4350",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_0c971647ace1",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_feb95f015f": {
+   "id": "ev_feb95f015f",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-02-01 au 2026-10-30), le mouvement médian de XOM de la veille à +5 jours de bourse a été de 0,68 % (p10 −6,4 %, p90 5,2 %, 55 % de cas positifs).",
+   "value": 0.0068244039444247395,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "XOM",
+    "event_type": "earnings",
+    "from": "2022-02-01",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-30",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_6b190fba18": {
+   "id": "ev_6b190fba18",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,80 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.8,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_2dc151f1b252",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f7a34b0217": {
+   "id": "ev_f7a34b0217",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_140b39e1c4b9",
+    "rule_ids": [
+     "R_BASE_MACRO_RATES",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_fc58f1bd5e": {
+   "id": "ev_fc58f1bd5e",
+   "kind": "event_study",
+   "statement": "Sur 12 décisions de taux (2025-06-04 au 2026-10-28), le mouvement médian de ENB.TO de la veille à +5 jours de bourse a été de 0,47 % (p10 −2,9 %, p90 4,2 %, 67 % de cas positifs).",
+   "value": 0.0047385872192408085,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "ENB.TO",
+    "event_type": "rate_decision",
+    "from": "2025-06-04",
+    "macro_source": "bankofcanada",
+    "n_events": 12,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-28",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_13df89225c": {
+   "id": "ev_13df89225c",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_4ea7939222b2",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_2d605e97d4": {
+   "id": "ev_2d605e97d4",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_8417d127ff63",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_65feae1e85": {
+   "id": "ev_65feae1e85",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_8df20492a34c",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4c5bdf22b7": {
+   "id": "ev_4c5bdf22b7",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_0e7053962260",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f713dd6d15": {
+   "id": "ev_f713dd6d15",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Taux et inflation: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_f154d520edfb",
+    "rule_ids": [
+     "R_BASE_MACRO_RATES",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_546b9e4154": {
+   "id": "ev_546b9e4154",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_d95bef68cc1b",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_677de0f08e": {
+   "id": "ev_677de0f08e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_63aa1216f1b9",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_c5aa8bf06e": {
+   "id": "ev_c5aa8bf06e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_aecff1352f37",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_POS_WEIGHT_20",
+     "R_OVER_LIMIT"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4b268190c3": {
+   "id": "ev_4b268190c3",
+   "kind": "event_study",
+   "statement": "Sur 60 dates ex-dividende (2021-11-23 au 2026-10-27), le mouvement médian de XBB.TO de la veille à +5 jours de bourse a été de 0,25 % (p10 −0,7 %, p90 1,4 %, 65 % de cas positifs).",
+   "value": 0.002495000305362316,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "XBB.TO",
+    "event_type": "dividend_ex_date",
+    "from": "2021-11-23",
+    "macro_source": null,
+    "n_events": 60,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-27",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_bd134ca828": {
+   "id": "ev_bd134ca828",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Cette position pèse au moins 20 % de ton portefeuille. Cette position dépasse déjà la limite par titre prévue pour ton profil.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_721abc66ddc2",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_POS_WEIGHT_20",
+     "R_OVER_LIMIT"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_9f6a95181e": {
+   "id": "ev_9f6a95181e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_a38d3c7ec182",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_c2efcb9444": {
+   "id": "ev_c2efcb9444",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_856bb7b93243",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_6ea5c28f9a": {
+   "id": "ev_6ea5c28f9a",
+   "kind": "event_study",
+   "statement": "Sur 19 dates ex-dividende (2022-02-14 au 2026-08-14), le mouvement médian de ENB.TO de la veille à +5 jours de bourse a été de −0,29 % (p10 −4,4 %, p90 3,2 %, 47 % de cas positifs).",
+   "value": -0.0029077959067078663,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "ENB.TO",
+    "event_type": "dividend_ex_date",
+    "from": "2022-02-14",
+    "macro_source": null,
+    "n_events": 19,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-08-14",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_852e141df6": {
+   "id": "ev_852e141df6",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_6203010785d6",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_3c0932f9d1": {
+   "id": "ev_3c0932f9d1",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_93a16c42351f",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_8ebcbc8248": {
+   "id": "ev_8ebcbc8248",
+   "kind": "event_study",
+   "statement": "Sur 19 dates ex-dividende (2022-02-09 au 2026-08-17), le mouvement médian de XOM de la veille à +5 jours de bourse a été de 0,55 % (p10 −4,3 %, p90 4,3 %, 58 % de cas positifs).",
+   "value": 0.005486465183085931,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "XOM",
+    "event_type": "dividend_ex_date",
+    "from": "2022-02-09",
+    "macro_source": null,
+    "n_events": 19,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-08-17",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_87f1af55c6": {
+   "id": "ev_87f1af55c6",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,70 (élevée) pour ton profil. Catégorie Dividende: pertinence 0,40 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.7,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_235f7cd482e1",
+    "rule_ids": [
+     "R_BASE_DIVIDEND",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f5effbde2a": {
+   "id": "ev_f5effbde2a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_d72d59a36970",
+    "rule_ids": [
+     "R_BASE_MANAGEMENT_CHANGE",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_551b3aced9": {
+   "id": "ev_551b3aced9",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Produit: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_c329247fb17b",
+    "rule_ids": [
+     "R_BASE_PRODUCT",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_ebd6f13e35": {
+   "id": "ev_ebd6f13e35",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon medium. Ce titre appartient à un secteur que tu as dit vouloir éviter.",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_e8cf7862f3c4",
+    "rule_ids": [
+     "R_BASE_MANAGEMENT_CHANGE",
+     "R_EXCLUDED_SECTOR"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_7dec32ee63": {
+   "id": "ev_7dec32ee63",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,55 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon medium. Cette position pèse au moins 10 % de ton portefeuille.",
+   "value": 0.55,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_42baafb10a62",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_POS_WEIGHT_10"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f06aeb651a": {
+   "id": "ev_f06aeb651a",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de XIU.TO: 13,1 %.",
+   "value": 0.13062769328794735,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "XIU.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_6188e7f13e": {
+   "id": "ev_6188e7f13e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,50 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+   "value": 0.5,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_99612df1928e",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_22fc4f7c9c": {
+   "id": "ev_22fc4f7c9c",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de JNJ: 18,1 %.",
+   "value": 0.1809674233937511,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "JNJ",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_56e2c846a8": {
+   "id": "ev_56e2c846a8",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-01-25 au 2026-10-13), le mouvement médian de JNJ de la veille à +5 jours de bourse a été de 0,92 % (p10 −3,0 %, p90 5,3 %, 65 % de cas positifs).",
+   "value": 0.009229966542477985,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "JNJ",
+    "event_type": "earnings",
+    "from": "2022-01-25",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-13",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_00e6eb19c5": {
+   "id": "ev_00e6eb19c5",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,50 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,50 pour un horizon medium.",
+   "value": 0.5,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "medium",
+    "news_id": "n_937799160057",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_3645d39a54": {
+   "id": "ev_3645d39a54",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de PG: 18,5 %.",
+   "value": 0.18528543867844124,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "PG",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_cb8d41e3a7": {
+   "id": "ev_cb8d41e3a7",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-01-19 au 2026-10-22), le mouvement médian de PG de la veille à +5 jours de bourse a été de 1,64 % (p10 −3,0 %, p90 3,6 %, 60 % de cas positifs).",
+   "value": 0.01637806973801126,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "PG",
+    "event_type": "earnings",
+    "from": "2022-01-19",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-22",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  }
+ },
+ "disclaimers": [
+  "Simulation éducative: ce n'est pas un conseil financier personnalisé.",
+  "Aucune transaction réelle n'est effectuée."
+ ],
+ "limits": [
+  "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie.",
+  "Biais du survivant: les 31 actifs ont été choisis en 2026.",
+  "Un contexte historique n'est pas une prévision; une corrélation n'est pas une cause.",
+  "Pas de notes ESG ni de données fondamentales dans le jeu de départ.",
+  "On suppose un investisseur en dollars canadiens.",
+  "Classement des nouvelles fait hors ligne par mots-clés (mode démo sans modèle); il peut se tromper de catégorie.",
+  "Règles provisoires (exemples de référence): questionnaire.yaml, profile_rules.yaml, taxonomy.yaml, relevance_rules.yaml, coherence_rules.yaml, glossary.yaml, limits_texts.yaml.",
+  "Nouvelles publiques récupérées le 2026-11-15 (environ 30 jours d'historique)."
+ ]
+}

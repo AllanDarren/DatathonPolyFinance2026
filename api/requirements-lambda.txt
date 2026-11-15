@@ -1,0 +1,10 @@
+# Runtime deps for the Lambda zip, pinned to the versions role A's tests pass with.
+# boto3/botocore come from the Lambda runtime. python-dateutil must stay < 3 for botocore.
+pandas==2.3.3
+numpy==2.5.4
+pydantic==2.14.3
+PyYAML==6.0.3
+jsonschema==4.26.0
+python-dateutil==2.9.0.post0
+pytz==2026.6
+tzdata==2026.6

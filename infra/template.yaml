@@ -1,0 +1,264 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  AlphaForge AI (PolyFinances Datathon 2026) - educational simulation, not financial advice.
+  S3 (data + site), CloudFront (HTTPS site), API Gateway HTTP API + Lambda (thin API over services/),
+  Bedrock (classification, explanations, guardian), CloudWatch (logs, metrics, dashboard).
+
+Parameters:
+  LlmProvider:
+    Type: String
+    Default: bedrock
+    AllowedValues: [bedrock, mock]
+  BedrockModelId:
+    Type: String
+    Description: Model or inference profile id, verified by infra/scripts/check_bedrock.py
+  BedrockFoundationModelId:
+    Type: String
+    Description: Underlying foundation model id (same as BedrockModelId unless it is a us./global. profile)
+  SnapshotPrefix:
+    Type: String
+    Default: snapshots/
+  AppVersion:
+    Type: String
+    Default: dev
+  CodeZip:
+    Type: String
+    Default: ../.build/lambda.zip
+    Description: Local path, replaced by an S3 location by `aws cloudformation package`
+  BudgetEmail:
+    Type: String
+    Default: ""
+    Description: If set, creates a monthly cost budget with an email alert at 80 % of BudgetLimitUsd
+  BudgetLimitUsd:
+    Type: Number
+    Default: 25
+
+Conditions:
+  HasBudget: !Not [!Equals [!Ref BudgetEmail, ""]]
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [x86_64]
+
+Resources:
+  # ---------- S3: data (private, encrypted). Prefixes starter/ and snapshots/ ----------
+  DataBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      OwnershipControls:
+        Rules: [{ObjectOwnership: BucketOwnerEnforced}]
+      Tags: [{Key: project, Value: alphaforge}]
+
+  # ---------- S3 + CloudFront: static React site over HTTPS (default cloudfront.net domain) ----------
+  WebBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      OwnershipControls:
+        Rules: [{ObjectOwnership: BucketOwnerEnforced}]
+      Tags: [{Key: project, Value: alphaforge}]
+
+  WebOriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-web-oac"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  WebDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: AlphaForge AI web (simulation, not financial advice)
+        Enabled: true
+        DefaultRootObject: index.html
+        HttpVersion: http2and3
+        PriceClass: PriceClass_100
+        Origins:
+          - Id: web-s3
+            DomainName: !GetAtt WebBucket.RegionalDomainName
+            OriginAccessControlId: !GetAtt WebOriginAccessControl.Id
+            S3OriginConfig: {OriginAccessIdentity: ""}
+        DefaultCacheBehavior:
+          TargetOriginId: web-s3
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+          AllowedMethods: [GET, HEAD]
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6  # Managed-CachingOptimized
+          ResponseHeadersPolicyId: 67f7725c-6f97-4210-82d7-5512b31e9d03  # Managed-SecurityHeadersPolicy
+        CustomErrorResponses:  # single-page app: unknown paths serve index.html
+          - {ErrorCode: 403, ResponseCode: 200, ResponsePagePath: /index.html, ErrorCachingMinTTL: 0}
+          - {ErrorCode: 404, ResponseCode: 200, ResponsePagePath: /index.html, ErrorCachingMinTTL: 0}
+      Tags: [{Key: project, Value: alphaforge}]
+
+  WebBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: CloudFrontReadOnly
+            Effect: Allow
+            Principal: {Service: cloudfront.amazonaws.com}
+            Action: s3:GetObject
+            Resource: !Sub "${WebBucket.Arn}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${WebDistribution}"
+
+  # ---------- API Gateway HTTP API -> Lambda ----------
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: $default
+      DefaultRouteSettings:  # protects Bedrock quotas and cost during the demo
+        ThrottlingBurstLimit: 20
+        ThrottlingRateLimit: 10
+      CorsConfiguration:
+        AllowOrigins:
+          - !Sub "https://${WebDistribution.DomainName}"
+          - http://localhost:5173
+          - http://127.0.0.1:5173
+        AllowMethods: [GET, POST, OPTIONS]
+        AllowHeaders: [content-type]
+        ExposeHeaders: [x-alphaforge-version]
+        MaxAge: 600
+      Tags: {project: alphaforge}
+
+  ApiLogGroup:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Delete
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-api"
+      RetentionInDays: 7
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-api"
+      Description: AlphaForge API (api/handler.py -> services/)
+      CodeUri: !Ref CodeZip
+      Handler: api.handler.lambda_handler
+      MemorySize: 1769  # 1 full vCPU: pandas at cold start, parallel Bedrock calls
+      Timeout: 29       # HTTP API integration limit is 30 s
+      LoggingConfig:
+        LogGroup: !Ref ApiLogGroup
+        LogFormat: Text
+      Environment:
+        Variables:
+          LLM_PROVIDER: !Ref LlmProvider
+          BEDROCK_MODEL_ID: !Ref BedrockModelId
+          BEDROCK_REGION: !Ref AWS::Region
+          DATA_BUCKET: !Ref DataBucket
+          SNAPSHOT_PREFIX: !Ref SnapshotPrefix
+          APP_VERSION: !Ref AppVersion
+      Policies:
+        - Version: "2012-10-17"
+          Statement:
+            - Sid: ReadStarterAndSnapshots
+              Effect: Allow
+              Action: s3:GetObject
+              Resource:
+                - !Sub "${DataBucket.Arn}/starter/*"
+                - !Sub "${DataBucket.Arn}/${SnapshotPrefix}*"
+            - Sid: ListDataPrefixes
+              Effect: Allow
+              Action: s3:ListBucket
+              Resource: !GetAtt DataBucket.Arn
+              Condition:
+                StringLike:
+                  s3:prefix: [starter/*, !Sub "${SnapshotPrefix}*"]
+            - Sid: InvokeChosenModelOnly
+              Effect: Allow
+              Action: bedrock:InvokeModel
+              Resource:
+                - !Sub "arn:aws:bedrock:*::foundation-model/${BedrockFoundationModelId}"
+                - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/${BedrockModelId}"
+      Events:
+        Health:      {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: GET,  Path: /health}}
+        Questions:   {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: GET,  Path: /questionnaire}}
+        Personas:    {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: GET,  Path: /personas}}
+        Profile:     {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /profile}}
+        Portfolio:   {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /portfolio/parse}}
+        Feed:        {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: POST, Path: /feed}}
+        Events:      {Type: HttpApi, Properties: {ApiId: !Ref HttpApi, Method: GET,  Path: /events}}
+      Tags: {project: alphaforge}
+
+  # ---------- CloudWatch: one dashboard for the demo (no portfolio data is ever logged) ----------
+  Dashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Sub "${AWS::StackName}-demo"
+      DashboardBody: !Sub
+        - |
+          {"widgets":[
+            {"type":"metric","x":0,"y":0,"width":12,"height":6,"properties":{"title":"API: latence p50/p90 par route (ms)","region":"${AWS::Region}","view":"timeSeries","stat":"p90","period":60,
+              "metrics":[[{"expression":"SEARCH('{AlphaForge/API,route} MetricName=\"latency_ms\"', 'p90', 60)","id":"p90"}]]}},
+            {"type":"metric","x":12,"y":0,"width":12,"height":6,"properties":{"title":"Lambda: invocations, erreurs, durée","region":"${AWS::Region}","view":"timeSeries","period":60,
+              "metrics":[["AWS/Lambda","Invocations","FunctionName","${Fn}",{"stat":"Sum"}],[".","Errors",".",".",{"stat":"Sum"}],[".","Duration",".",".",{"stat":"p90","yAxis":"right"}]]}},
+            {"type":"metric","x":0,"y":6,"width":12,"height":6,"properties":{"title":"Bedrock: appels et jetons (${Model})","region":"${AWS::Region}","view":"timeSeries","period":300,
+              "metrics":[["AWS/Bedrock","Invocations","ModelId","${Model}",{"stat":"Sum"}],[".","InputTokenCount",".",".",{"stat":"Sum","yAxis":"right"}],[".","OutputTokenCount",".",".",{"stat":"Sum","yAxis":"right"}]]}},
+            {"type":"log","x":12,"y":6,"width":12,"height":6,"properties":{"title":"Dernières requêtes (route, statut, durée, outils de l'agent)","region":"${AWS::Region}","view":"table",
+              "query":"SOURCE '${Logs}' | filter event = 'request' | fields @timestamp, route, status, latency_ms, cold_start, error_code, tools.0, tools.1, tools.2 | sort @timestamp desc | limit 20"}}
+          ]}
+        - Fn: !Ref ApiFunction
+          Model: !Ref BedrockModelId
+          Logs: !Ref ApiLogGroup
+
+  # ---------- Cost guard (optional) ----------
+  CostBudget:
+    Type: AWS::Budgets::Budget
+    Condition: HasBudget
+    Properties:
+      Budget:
+        BudgetName: !Sub "${AWS::StackName}-monthly"
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit: {Amount: !Ref BudgetLimitUsd, Unit: USD}
+      NotificationsWithSubscribers:
+        - Notification: {NotificationType: ACTUAL, ComparisonOperator: GREATER_THAN, Threshold: 80, ThresholdType: PERCENTAGE}
+          Subscribers: [{SubscriptionType: EMAIL, Address: !Ref BudgetEmail}]
+        - Notification: {NotificationType: FORECASTED, ComparisonOperator: GREATER_THAN, Threshold: 100, ThresholdType: PERCENTAGE}
+          Subscribers: [{SubscriptionType: EMAIL, Address: !Ref BudgetEmail}]
+
+Outputs:
+  ApiUrl:
+    Description: Base URL of the API (VITE_API_URL)
+    Value: !GetAtt HttpApi.ApiEndpoint
+  WebUrl:
+    Description: Site URL (CloudFront, HTTPS)
+    Value: !Sub "https://${WebDistribution.DomainName}"
+  WebBucketName:
+    Value: !Ref WebBucket
+  DistributionId:
+    Value: !Ref WebDistribution
+  DataBucketName:
+    Value: !Ref DataBucket
+  FunctionName:
+    Value: !Ref ApiFunction
+  LogGroupName:
+    Value: !Ref ApiLogGroup
+  DashboardUrl:
+    Value: !Sub "https://${AWS::Region}.console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#dashboards:name=${AWS::StackName}-demo"

@@ -1,0 +1,4042 @@
+{
+ "generated_at": "2026-11-15T00:00:00Z",
+ "data_as_of": "2026-11-12",
+ "news_as_of": "2026-11-15T01:24:36Z",
+ "profile": {
+  "profile_id": "amira",
+  "label": "Amira, 26 ans, ingénieure logiciel",
+  "source": "persona_preset",
+  "age": 26,
+  "horizon_years": 20.0,
+  "horizon_bucket": "long",
+  "risk_tolerance": "high",
+  "max_acceptable_loss_pct": 0.35,
+  "objective": "growth",
+  "experience": "intermediate",
+  "preferences": {
+   "avoid_controversies": false,
+   "excluded_sectors": [],
+   "interests": [
+    "IA",
+    "technologie",
+    "crypto"
+   ]
+  },
+  "limits": {
+   "max_single_position": 0.25,
+   "max_high_vol_share": 0.6
+  },
+  "monthly_expenses_cad": 3500.0,
+  "base_currency": "CAD",
+  "inconsistencies": []
+ },
+ "portfolio_summary": {
+  "top_positions": [
+   {
+    "ticker": "NVDA",
+    "amount": 20000.0,
+    "weight": 0.2,
+    "asset_class": "equity_us",
+    "price_currency": "USD",
+    "in_universe": true
+   },
+   {
+    "ticker": "QQQ",
+    "amount": 20000.0,
+    "weight": 0.2,
+    "asset_class": "equity_etf",
+    "price_currency": "USD",
+    "in_universe": true
+   },
+   {
+    "ticker": "BTC-USD",
+    "amount": 10000.0,
+    "weight": 0.1,
+    "asset_class": "crypto",
+    "price_currency": "USD",
+    "in_universe": true
+   },
+   {
+    "ticker": "MSFT",
+    "amount": 10000.0,
+    "weight": 0.1,
+    "asset_class": "equity_us",
+    "price_currency": "USD",
+    "in_universe": true
+   },
+   {
+    "ticker": "SHOP.TO",
+    "amount": 10000.0,
+    "weight": 0.1,
+    "asset_class": "equity_ca",
+    "price_currency": "CAD",
+    "in_universe": true
+   }
+  ],
+  "asset_class_weights": {
+   "equity_us": 0.35,
+   "equity_etf": 0.3,
+   "crypto": 0.15,
+   "equity_ca": 0.16,
+   "gold_etf": 0.04
+  },
+  "high_vol_share": 0.56,
+  "top3_concentration": 0.5
+ },
+ "items": [
+  {
+   "news_id": "n_b96325b7d3ad",
+   "title": "Billionaires Back Jensen Huang—KoGuan Cuts Nvidia Investment Plans, Musk Pays Tribute",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOWVlfR2haUERjbHRfT0swV2otVEw3QmhEVlVobkpKU1FhclpCX1Yxa0g5Z0ZZUGUydnVmaVphLVhVLTM5d1UwZk84Zmp4YWNPTGo2bmIwWGxnMVRYOXk4b00xMlFxZXM5TUxIWHZHZHJyYTNBUjZUTXRxZE94QjR6NEd0NFp6Z0pNbVJ1VjR6a2s0YzM2djU5eHB3RkM2aV9hMm1DSml0VXo4Vjk4TS1mVy1ZS09FUFl2akJ4dC1oMjFkaDFIVmp0SXNVek41ZHViNzBCY0tUUWlzVWMtcExhVjdUbUtTUTJFTGpJUHJUV2c?oc=5",
+   "source": "Forbes",
+   "published_at": "2026-11-13T12:09:09Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.85,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_071a40b9fe"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_4de79dc76877",
+   "title": "Dow Jones Futures: Market Rally Shaky As Nvidia Earnings, Anthropic IPO Loom; What Should You Do?",
+   "url": "https://finance.yahoo.com/m/53e50dc8-f137-3f6c-bfd6-912334fef9f1/dow-jones-futures%3A-market.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-15T01:14:44Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f4a99d2d7a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "NVDA",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": -0.007443,
+    "p10": -0.105459,
+    "p90": 0.163888,
+    "share_positive": 0.45,
+    "events": [
+     {
+      "date": "2021-11-17",
+      "return": 0.081813
+     },
+     {
+      "date": "2022-02-16",
+      "return": -0.10368
+     },
+     {
+      "date": "2022-05-25",
+      "return": 0.212827
+     },
+     {
+      "date": "2022-08-24",
+      "return": -0.121471
+     },
+     {
+      "date": "2022-11-16",
+      "return": -0.00882
+     },
+     {
+      "date": "2023-02-22",
+      "return": 0.098911
+     },
+     {
+      "date": "2023-05-24",
+      "return": 0.295946
+     },
+     {
+      "date": "2023-08-23",
+      "return": 0.078742
+     },
+     {
+      "date": "2023-11-21",
+      "return": -0.045012
+     },
+     {
+      "date": "2024-02-21",
+      "return": 0.118226
+     },
+     {
+      "date": "2024-05-22",
+      "return": 0.158451
+     },
+     {
+      "date": "2024-08-28",
+      "return": -0.16438
+     },
+     {
+      "date": "2024-11-20",
+      "return": -0.079382
+     },
+     {
+      "date": "2025-02-26",
+      "return": -0.073679
+     },
+     {
+      "date": "2025-05-28",
+      "return": 0.04738
+     },
+     {
+      "date": "2025-08-27",
+      "return": -0.05562
+     },
+     {
+      "date": "2025-11-19",
+      "return": -0.006065
+     },
+     {
+      "date": "2026-02-25",
+      "return": -0.050869
+     },
+     {
+      "date": "2026-05-20",
+      "return": -0.028829
+     },
+     {
+      "date": "2026-08-26",
+      "return": 0.053321
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_21667de34d"
+   }
+  },
+  {
+   "news_id": "n_f4d02f03e692",
+   "title": "Nvidia Earnings Could Shift Focus To Cloudflare Stock And AI Cost Control",
+   "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-could-shift-focus-001832576.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-15T00:18:32Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_276e7f2162"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "NVDA",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": -0.007443,
+    "p10": -0.105459,
+    "p90": 0.163888,
+    "share_positive": 0.45,
+    "events": [
+     {
+      "date": "2021-11-17",
+      "return": 0.081813
+     },
+     {
+      "date": "2022-02-16",
+      "return": -0.10368
+     },
+     {
+      "date": "2022-05-25",
+      "return": 0.212827
+     },
+     {
+      "date": "2022-08-24",
+      "return": -0.121471
+     },
+     {
+      "date": "2022-11-16",
+      "return": -0.00882
+     },
+     {
+      "date": "2023-02-22",
+      "return": 0.098911
+     },
+     {
+      "date": "2023-05-24",
+      "return": 0.295946
+     },
+     {
+      "date": "2023-08-23",
+      "return": 0.078742
+     },
+     {
+      "date": "2023-11-21",
+      "return": -0.045012
+     },
+     {
+      "date": "2024-02-21",
+      "return": 0.118226
+     },
+     {
+      "date": "2024-05-22",
+      "return": 0.158451
+     },
+     {
+      "date": "2024-08-28",
+      "return": -0.16438
+     },
+     {
+      "date": "2024-11-20",
+      "return": -0.079382
+     },
+     {
+      "date": "2025-02-26",
+      "return": -0.073679
+     },
+     {
+      "date": "2025-05-28",
+      "return": 0.04738
+     },
+     {
+      "date": "2025-08-27",
+      "return": -0.05562
+     },
+     {
+      "date": "2025-11-19",
+      "return": -0.006065
+     },
+     {
+      "date": "2026-02-25",
+      "return": -0.050869
+     },
+     {
+      "date": "2026-05-20",
+      "return": -0.028829
+     },
+     {
+      "date": "2026-08-26",
+      "return": 0.053321
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_21667de34d"
+   }
+  },
+  {
+   "news_id": "n_dd55b15e8f77",
+   "title": "George Soros’ firm builds $340 million stake in a resurgent tech stock",
+   "url": "https://www.thestreet.com/investing/stocks/george-soros-firm-builds-340-million-stake-intel-resurgent-tech-stock?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T22:33:00Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8a0fb24fd3"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_bc0b8e15b01d",
+   "title": "3 AI Chip Stocks Retail Investors May Be Missing Beyond Nvidia",
+   "url": "https://finance.yahoo.com/technology/ai/articles/3-ai-chip-stocks-retail-220906408.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T22:09:06Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "product",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_PRODUCT",
+      "text": "Catégorie Produit: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Produit: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_60a73b54e9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_b1a5434a5726",
+   "title": "5 Dividend Stocks to Buy and Hold Forever",
+   "url": "https://www.fool.com/investing/2026/11/14/5-dividend-stocks-to-buy-and-hold-forever/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T21:35:00Z",
+   "tickers": [
+    "JNJ",
+    "NVDA",
+    "PG"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_dce79ab737"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_beb2805ac8b9",
+   "title": "The hottest job in AI right now may be counterintelligence as companies pay former spooks $500,000 to protect trade secrets",
+   "url": "https://finance.yahoo.com/technology/ai/articles/hottest-job-ai-now-may-203152085.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T20:31:52Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_99e4e11446"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_168e50f1b549",
+   "title": "Bitcoin Is Slumping, but Michael Saylor Says Strategy Can Create $10 Billion to $30 Billion in \"Digital Credit\"",
+   "url": "https://www.fool.com/investing/2026/11/14/michael-saylor-says-strategy-can-generate-10-billi/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T17:31:00Z",
+   "tickers": [
+    "BTC-USD"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_CRYPTO",
+      "text": "Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b631f0fd1d"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "BTC-USD représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c716c98017"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_baf6e07c21dc",
+   "title": "Microsoft says AI didn’t break Outlook — its own network upgrade did",
+   "url": "https://finance.yahoo.com/markets/article/microsoft-says-ai-didnt-break-outlook--its-own-network-upgrade-did-133858185.html",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T13:38:58Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_2bcc6a6c1f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_59e5980862b7",
+   "title": "Strategy's Michael Saylor Says Bitcoin Is Now a Bipartisan Issue That Crosses Party Lines. Here's Why He's Right.",
+   "url": "https://www.fool.com/investing/2026/11/14/strategys-michael-saylor-says-bitcoin-is-now-a-bip/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T12:02:00Z",
+   "tickers": [
+    "BTC-USD"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_CRYPTO",
+      "text": "Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_9fb23acc35"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "BTC-USD représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c716c98017"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_0ba9fa2306c8",
+   "title": "Nvidia exposed to possible lawsuits after Jensen Huang’s downfall",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObGtpTHJsZ0pHR0VpRUx2NlRFcVNnZ1ZvazVNR2tSR2dwcHUtb1MtLWVCTURERFl2QWR1RjNNWXZnVDZBeldsaVNHTzRuTzRZMjNibVdMSkJrclNTT1BucGFlX2RjWjVkTW8wWkJZSjhFTnZKX0QxVXdicl9IaDRGai1uVGw?oc=5",
+   "source": "Financial Times",
+   "published_at": "2026-11-14T11:00:09Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_b7ca463d56"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_5b29d7910895",
+   "title": "Outlook Went Down? Microsoft May Owe You Money",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4zb2FCTEh1bEhDekxUWXk2emZ4WGFjQi1wLWxBbm1uWi1GOEl6bldVRUlSd3VqNVNDWjJyZWRLZXV6dzB1OGhHMXpmWHE4RmZ1Vm4weEVvR21NR0VBYmlnUnUyVUNWaEtFNmVlWVhQb1VkTlhpVVQtSWxITnhZVlU?oc=5",
+   "source": "WIRED",
+   "published_at": "2026-11-14T07:00:00Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_5a4a10e53f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_d1b3ab353754",
+   "title": "Bessent accuses Lutnick of failing to prevent China from obtaining Nvidia chips",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdEdCMktMcUhKb3pUNmdCdjcxdTJrUVMzNlJkRmZHLWVBd0RoTWRuSlZHM09ySGwzYXo4U0FwZGdzNTdGOGYzRndsZ052cG1SakY0NEdLb1ZOOXhlbklZN3VYZzNUMGJWNFo0LTIzeTJUQWxRWlNvY21KZkxHNlZxVjZfOEFvazlaMDBWYUFNTHY1bkMxYkltVDZZYnZJeDBQRjlxZEJsMllyVGhYcUQ2aUttOA?oc=5",
+   "source": "PBS",
+   "published_at": "2026-11-13T23:50:51Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "product",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_PRODUCT",
+      "text": "Catégorie Produit: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Produit: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_4d8bd004b2"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_315927310d37",
+   "title": "Goldman Sachs Reportedly Sees AI Hyperscalers As ‘Relatively Defensive’ After Tech Selloff — Forecasts 14% S&P 500 Upside",
+   "url": "https://stocktwits.com/news-articles/markets/equity/goldman-sachs-reportedly-sees-ai-hyperscalers-as-relatively-defensive-after-tech-selloff-forecasts-14-s-and-p-500-upside/cNbRbfmR9fI?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T11:52:31Z",
+   "tickers": [
+    "QQQ"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_86c08c149a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "QQQ représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_3ee69ecaee"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de QQQ: 23,4 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7a5def53c7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_bfa899d2afb0",
+   "title": "Shopify (SHOP:CA) Strong Fundamentals Support Bullish Outlook Despite Technical Weakness",
+   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQbS1kckxnSjQwUm1COE9ZalRCRTdpbXJLQXN2YnlRTmZBbm5EZndYQWdIWDY4OUw1NTMyZFBCSEl1QWhRekZKRlpwWk4wNjZFNTNBenJwbE5BZFBiZm5VWWFHTk5VcFlrMzNnczFpY3NlMXhCYWtaOW5DUUU2M1R2aHNRcm9QTG9NZG5RTUJCVENtUGVaQ0k3ejhxc1F6bEM1RlBNT2Z2RXlhZTYxYnNyYjlSdENrNl9HTTJ4LTBmV2NzV01PMnhFeGVwcE94czUzYmpKMFpKcnNtSkJ2a0hPZ3R5dnBUVGU2SThfT1I0ajN6czZJSlNJbVFjM3dHVnc2VGc?oc=5",
+   "source": "The Globe and Mail",
+   "published_at": "2026-11-09T03:19:09Z",
+   "tickers": [
+    "SHOP.TO"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f7257b051a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "SHOP.TO représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0dea482881"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de SHOP.TO: 64,4 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f927354cb7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_152a76bc46ac",
+   "title": "Multi-Channel Selling: Strategy & Tools (2026)",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYjB1M0NMQXJHVVRIT3lKMjdsNGJiNjdvQ2ZNczZMSW43aWxNMlhCMEUycmVaTWYtRHByQ3pZMmV3bUdsblowLWM1WUdPUHNmVmlXa3NBUWdOMS1PN1BtVlJkR0I0SWN0M0xNTXRIazY2c0owTjBZT2kybVJ4SkcyQndDQk85VXlxUWt4M1hfN0JPYWNIYUJV?oc=5",
+   "source": "Shopify",
+   "published_at": "2026-11-06T08:00:00Z",
+   "tickers": [
+    "SHOP.TO"
+   ],
+   "is_synthetic": false,
+   "category": "guidance_strategy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.75,
+    "level": "high",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_GUIDANCE_STRATEGY",
+      "text": "Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long.",
+      "delta": 0.55
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_640f4d9c5d"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "SHOP.TO représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0dea482881"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de SHOP.TO: 64,4 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f927354cb7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_114076edf75d",
+   "title": "Nvidia's Ousted CEO Said a 1-Gigawatt Data Center Delay Costs $10 Billion a Quarter. Here's Why That Matters for Power Stocks.",
+   "url": "https://www.fool.com/investing/2026/11/14/nvidias-ousted-ceo-said-a-1-gigawatt-data-center/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-15T00:05:00Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "management_change",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MANAGEMENT_CHANGE",
+      "text": "Catégorie Changement de direction: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_fb31c5482b"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_f44b7c9bd9c2",
+   "title": "The Chinese spy allegation that toppled Nvidia's CEO is starting to look shaky",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWTNUMDdhTjZBOXhTMUpjTVZsdm9oM1hDRkdhblZHTTlEbzFlbVgxN0VtUVdXMlVNSDNaSldFTS1VdkhpUzBvZ0x4SUxRbWV5SHVMc0RUNmt3dUxUTHJEVGF3RHdxbER1V1dxVU9hY0g1dEpZdE1WVGVQNlFCRlY4S1VqaVN2aG9zazBGUDJwZWt1WHcwai14X0ZhNkhoeXNUcG83Zw?oc=5",
+   "source": "Business Insider",
+   "published_at": "2026-11-14T20:00:00Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "management_change",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MANAGEMENT_CHANGE",
+      "text": "Catégorie Changement de direction: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_87816b30f6"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_bb3ce6692fd5",
+   "title": "Bitcoin ETFs lose $1 billion for the second week in a row as crypto funds, except one, continue bleeding",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOd2RhQ3lIWVBkNjRaQ1ZucjBhNkItQ21qZi1NMFhuRE1Kd0FPMWhsb0F6eWVLVkpRVDZtSHJoQWdCQ0RacUNkdEJLQ1dHLVdHYzN4MkpUdU1od1FUcm8ybmdUdFEzb25BYTl0WUtJQy1oQ21nSnRybXBUbFExQmpmZDN2b3g2dTRZMjRHWE9FVlZ5UldzMVhMb0ZiWktmcjJHOElUYndGbG5XQS10dm5oLTlQQkphTEFTYUZubTVRbUpyV0pWV3VuV2ZESVpyOHdvSG9ieW5Bck9sTDFHUVhHZWY0WGJXYW9yelBHcA?oc=5",
+   "source": "The Block",
+   "published_at": "2026-11-14T17:50:00Z",
+   "tickers": [
+    "BTC-USD"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_CRYPTO",
+      "text": "Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f10932f6a1"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "BTC-USD représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c716c98017"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_11e8044d8dc1",
+   "title": "How the Nvidia scandal lifted the curtain on a loophole that’s giving China access to US chips",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUElic3FIZV9PSkhtTmZzSzlnYjdWa1BPWnBrM2s2Z201c2xvMUdMTk8tcUtKRU4zUnl2WnJMSFdJZlBxNzFubVpkbW4zRm5rcWYtNlVRWVNpSXNZOWJNSndtQWRLRzB2bzJUb2I5Ql9vTmZ2b25ObG4ybS1GUFdlVA?oc=5",
+   "source": "CNN",
+   "published_at": "2026-11-14T15:00:15Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "controversy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_CONTROVERSY",
+      "text": "Catégorie Controverse: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverse: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_4932740e8a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_cf8804024da2",
+   "title": "Jensen Huang reportedly gave up in final hours as Nvidia CEO — as his affair scandal wipes away more than $1T in value",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdTdlRHdoUlpJR0Qwd2RFUGY0YzZDZ0RYUzMzenlrODM0Sjl2YnNDNFkyenp0RzdCclI1Y2wwcUtIOURSRVc3Y3JEV2xPRWpFYlYxRFFjdXFKMlFDQlFTWUxJOXQ1ZDNXVWQ2TXA5Y3k2X2UtSlpMQjEyVk5QckYyT0dEWDlYcVBYNnZlVFlTd2pKR2duZkFwQVRQWmhFMG02?oc=5",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T13:30:00Z",
+   "tickers": [
+    "NVDA"
+   ],
+   "is_synthetic": false,
+   "category": "controversy",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_CONTROVERSY",
+      "text": "Catégorie Controverse: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverse: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_99af4e885e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_2f1e069c94e9",
+   "title": "Metaplanet Cuts 2026 Revenue Target 59%: Is the Bitcoin Playbook Running Dry?",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObmx3VTVnbEk0MkZQYUc2Wjl3b251by1wMmZnT2RsT2l1TjhQTTlNS1puN29XT0dEOWM5LUU4X2pNSEtqNWxMUm95RFluZW9XZVJuZFFZMTEyLUd3LTlTeGZOb215SFRhbU43UE5adWdvN2hzS2p0WVlNWFNWVUsxaEFQM0laVFZCWFZlQzA5Rm1IVmdUcExfbUNlUVpwSVdHaUE?oc=5",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T06:15:28Z",
+   "tickers": [
+    "BTC-USD"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_CRYPTO",
+      "text": "Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_ab17d3edb2"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "BTC-USD représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c716c98017"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_222dcd288498",
+   "title": "Insight Enterprises Inc (NSIT) (Q3 2026) Earnings Call Highlights: AI-Driven Demand Fuels 34% ...",
+   "url": "https://finance.yahoo.com/technology/ai/articles/insight-enterprises-inc-nsit-q3-010120715.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-14T01:01:20Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44933d0bce"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "MSFT",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": -0.003274,
+    "p10": -0.075962,
+    "p90": 0.085485,
+    "share_positive": 0.5,
+    "events": [
+     {
+      "date": "2022-01-25",
+      "return": 0.041806
+     },
+     {
+      "date": "2022-04-26",
+      "return": 0.003776
+     },
+     {
+      "date": "2022-07-26",
+      "return": 0.061778
+     },
+     {
+      "date": "2022-10-25",
+      "return": -0.077169
+     },
+     {
+      "date": "2023-01-24",
+      "return": 0.02156
+     },
+     {
+      "date": "2023-04-25",
+      "return": 0.083898
+     },
+     {
+      "date": "2023-07-25",
+      "return": -0.025412
+     },
+     {
+      "date": "2023-10-24",
+      "return": 0.026691
+     },
+     {
+      "date": "2024-01-30",
+      "return": -0.010324
+     },
+     {
+      "date": "2024-04-25",
+      "return": -0.027429
+     },
+     {
+      "date": "2024-07-30",
+      "return": -0.063553
+     },
+     {
+      "date": "2024-10-30",
+      "return": -0.027249
+     },
+     {
+      "date": "2025-01-29",
+      "return": -0.075827
+     },
+     {
+      "date": "2025-04-30",
+      "return": 0.099761
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.024133
+     },
+     {
+      "date": "2025-10-29",
+      "return": -0.064401
+     },
+     {
+      "date": "2026-01-28",
+      "return": -0.138146
+     },
+     {
+      "date": "2026-04-29",
+      "return": -0.03562
+     },
+     {
+      "date": "2026-07-29",
+      "return": 0.239253
+     },
+     {
+      "date": "2026-10-28",
+      "return": 0.046054
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_1cdeace33b"
+   }
+  },
+  {
+   "news_id": "n_ecf38a2a2318",
+   "title": "Shopify Falls 4.8% as Mixed Q3 Takeaways and Margin Questions Linger",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaVN0em9UNlJlalVEVGNOcG1fQ192WnBHVDlEYXJaNGdWSGM3ek5Sc2tCQW5ncXpUazU4SXVEYkIwc3ctZWl4SjdkbUFrOTB2VkxuX3R1SjdMSjFaMzdBSHk0R3Q5aGQzd1JMVUk1M1EzSUF0a19QX3RSVXBxQzU1NXlILUdNVUxrM2V1eC1mcnZDQ0V4MkdLbXlB?oc=5",
+   "source": "Moomoo",
+   "published_at": "2026-11-13T22:17:03Z",
+   "tickers": [
+    "SHOP.TO"
+   ],
+   "is_synthetic": false,
+   "category": "earnings_results",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_EARNINGS_RESULTS",
+      "text": "Catégorie Résultats financiers: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_add5b2407a"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "SHOP.TO représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_0dea482881"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de SHOP.TO: 64,4 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_f927354cb7"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "earnings",
+    "asset": "SHOP.TO",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 20,
+    "median_return": 0.021005,
+    "p10": -0.244217,
+    "p90": 0.298481,
+    "share_positive": 0.5,
+    "events": [
+     {
+      "date": "2022-02-16",
+      "return": -0.24898
+     },
+     {
+      "date": "2022-05-05",
+      "return": -0.252337
+     },
+     {
+      "date": "2022-07-27",
+      "return": 0.296387
+     },
+     {
+      "date": "2022-10-27",
+      "return": 0.175368
+     },
+     {
+      "date": "2023-02-15",
+      "return": -0.141275
+     },
+     {
+      "date": "2023-05-04",
+      "return": 0.347026
+     },
+     {
+      "date": "2023-08-02",
+      "return": -0.152868
+     },
+     {
+      "date": "2023-11-02",
+      "return": 0.233077
+     },
+     {
+      "date": "2024-02-13",
+      "return": -0.148553
+     },
+     {
+      "date": "2024-05-08",
+      "return": -0.243688
+     },
+     {
+      "date": "2024-08-07",
+      "return": 0.317328
+     },
+     {
+      "date": "2024-11-12",
+      "return": 0.164473
+     },
+     {
+      "date": "2025-02-11",
+      "return": 0.058992
+     },
+     {
+      "date": "2025-05-08",
+      "return": 0.172443
+     },
+     {
+      "date": "2025-08-06",
+      "return": 0.180521
+     },
+     {
+      "date": "2025-11-04",
+      "return": -0.083347
+     },
+     {
+      "date": "2026-02-11",
+      "return": -0.016982
+     },
+     {
+      "date": "2026-05-05",
+      "return": -0.210532
+     },
+     {
+      "date": "2026-08-05",
+      "return": 0.209734
+     },
+     {
+      "date": "2026-11-03",
+      "return": -0.043742
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 20 publications de résultats sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_60089d6fa2"
+   }
+  },
+  {
+   "news_id": "n_01ef8ad67a86",
+   "title": "Governments, courts, trains and hospitals hit by Microsoft outage in North America",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE91NTl0TFVhVnZTci0xcEFFenNKU3kyTXlIVGU1SzIzQi0wYkk2RlFvVUluQ3NLUS1jTjJFaWJyeXRrYk5CSUF0aWJCQ2FndmJ3b3o5RGQxQmZGUm8?oc=5",
+   "source": "BBC",
+   "published_at": "2026-11-13T18:53:48Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_23344a7f0d"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_96a4b2b01e5d",
+   "title": "The Stock Market's Early Rally Fades as Wholesale Inflation Hits 6.5%",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-markets-early-rally-fades-185155071.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T18:51:55Z",
+   "tickers": [
+    "NVDA",
+    "QQQ"
+   ],
+   "is_synthetic": false,
+   "category": "macro_rates",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO_RATES",
+      "text": "Catégorie Taux et inflation: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_608fe8a03f"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "rate_decision",
+    "asset": "NVDA",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 40,
+    "median_return": 0.019741,
+    "p10": -0.075866,
+    "p90": 0.131296,
+    "share_positive": 0.625,
+    "events": [
+     {
+      "date": "2021-12-15",
+      "return": 0.037513
+     },
+     {
+      "date": "2022-01-26",
+      "return": 0.130711
+     },
+     {
+      "date": "2022-03-16",
+      "return": 0.115831
+     },
+     {
+      "date": "2022-05-04",
+      "return": -0.151617
+     },
+     {
+      "date": "2022-06-15",
+      "return": 0.024564
+     },
+     {
+      "date": "2022-07-27",
+      "return": 0.142745
+     },
+     {
+      "date": "2022-09-21",
+      "return": -0.033394
+     },
+     {
+      "date": "2022-11-02",
+      "return": 0.017205
+     },
+     {
+      "date": "2022-12-14",
+      "return": -0.08693
+     },
+     {
+      "date": "2023-02-01",
+      "return": 0.136561
+     },
+     {
+      "date": "2023-03-22",
+      "return": 0.029963
+     },
+     {
+      "date": "2023-05-03",
+      "return": 0.023928
+     },
+     {
+      "date": "2023-06-14",
+      "return": 0.048827
+     },
+     {
+      "date": "2023-07-26",
+      "return": -0.030868
+     },
+     {
+      "date": "2023-09-20",
+      "return": -0.024173
+     },
+     {
+      "date": "2023-11-01",
+      "return": 0.14208
+     },
+     {
+      "date": "2023-12-13",
+      "return": 0.009526
+     },
+     {
+      "date": "2024-01-31",
+      "return": 0.116688
+     },
+     {
+      "date": "2024-03-20",
+      "return": 0.00953
+     },
+     {
+      "date": "2024-05-01",
+      "return": 0.046411
+     },
+     {
+      "date": "2024-06-12",
+      "return": 0.081631
+     },
+     {
+      "date": "2024-07-31",
+      "return": -0.046467
+     },
+     {
+      "date": "2024-09-18",
+      "return": 0.068518
+     },
+     {
+      "date": "2024-11-07",
+      "return": 0.007898
+     },
+     {
+      "date": "2024-12-18",
+      "return": 0.073165
+     },
+     {
+      "date": "2025-01-29",
+      "return": -0.032251
+     },
+     {
+      "date": "2025-03-19",
+      "return": -0.014468
+     },
+     {
+      "date": "2025-05-07",
+      "return": 0.192003
+     },
+     {
+      "date": "2025-06-18",
+      "return": 0.075632
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.022278
+     },
+     {
+      "date": "2025-09-17",
+      "return": 0.011951
+     },
+     {
+      "date": "2025-10-29",
+      "return": -0.028951
+     },
+     {
+      "date": "2025-12-10",
+      "return": -0.07585
+     },
+     {
+      "date": "2026-01-28",
+      "return": -0.076013
+     },
+     {
+      "date": "2026-03-18",
+      "return": -0.017864
+     },
+     {
+      "date": "2026-04-29",
+      "return": -0.02505
+     },
+     {
+      "date": "2026-06-17",
+      "return": -0.056265
+     },
+     {
+      "date": "2026-07-29",
+      "return": 0.112735
+     },
+     {
+      "date": "2026-09-16",
+      "return": 0.062874
+     },
+     {
+      "date": "2026-10-28",
+      "return": -0.08172
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 40 décisions de taux sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_7ededf2f1b"
+   }
+  },
+  {
+   "news_id": "n_c971af857984",
+   "title": "Stock Market Today: Nvidia Rebounds After Huang’s Exit as Treasury Yields Top 5%",
+   "url": "https://247wallst.com/investing/2026/11/13/stock-market-today-nvidia-rebounds-after-huangs-exit-as-treasury-yields-top-5/?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T14:15:44Z",
+   "tickers": [
+    "MSFT",
+    "NVDA",
+    "QQQ",
+    "SPY"
+   ],
+   "is_synthetic": false,
+   "category": "macro_rates",
+   "horizon_relevance": "macro_context",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.2,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MACRO_RATES",
+      "text": "Catégorie Taux et inflation: pertinence 0,35 pour un horizon long.",
+      "delta": 0.35
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_20",
+      "text": "Cette position pèse au moins 20 % de ton portefeuille.",
+      "delta": 0.2,
+      "observed": 0.2,
+      "limit": 0.2
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_7625707eeb"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "NVDA représente 20,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_8e308a24f9"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de NVDA: 51,9 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_44a14ae5be"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": {
+    "event_type": "rate_decision",
+    "asset": "NVDA",
+    "window": "veille de l'événement à +5 jours de bourse",
+    "n_events": 40,
+    "median_return": 0.019741,
+    "p10": -0.075866,
+    "p90": 0.131296,
+    "share_positive": 0.625,
+    "events": [
+     {
+      "date": "2021-12-15",
+      "return": 0.037513
+     },
+     {
+      "date": "2022-01-26",
+      "return": 0.130711
+     },
+     {
+      "date": "2022-03-16",
+      "return": 0.115831
+     },
+     {
+      "date": "2022-05-04",
+      "return": -0.151617
+     },
+     {
+      "date": "2022-06-15",
+      "return": 0.024564
+     },
+     {
+      "date": "2022-07-27",
+      "return": 0.142745
+     },
+     {
+      "date": "2022-09-21",
+      "return": -0.033394
+     },
+     {
+      "date": "2022-11-02",
+      "return": 0.017205
+     },
+     {
+      "date": "2022-12-14",
+      "return": -0.08693
+     },
+     {
+      "date": "2023-02-01",
+      "return": 0.136561
+     },
+     {
+      "date": "2023-03-22",
+      "return": 0.029963
+     },
+     {
+      "date": "2023-05-03",
+      "return": 0.023928
+     },
+     {
+      "date": "2023-06-14",
+      "return": 0.048827
+     },
+     {
+      "date": "2023-07-26",
+      "return": -0.030868
+     },
+     {
+      "date": "2023-09-20",
+      "return": -0.024173
+     },
+     {
+      "date": "2023-11-01",
+      "return": 0.14208
+     },
+     {
+      "date": "2023-12-13",
+      "return": 0.009526
+     },
+     {
+      "date": "2024-01-31",
+      "return": 0.116688
+     },
+     {
+      "date": "2024-03-20",
+      "return": 0.00953
+     },
+     {
+      "date": "2024-05-01",
+      "return": 0.046411
+     },
+     {
+      "date": "2024-06-12",
+      "return": 0.081631
+     },
+     {
+      "date": "2024-07-31",
+      "return": -0.046467
+     },
+     {
+      "date": "2024-09-18",
+      "return": 0.068518
+     },
+     {
+      "date": "2024-11-07",
+      "return": 0.007898
+     },
+     {
+      "date": "2024-12-18",
+      "return": 0.073165
+     },
+     {
+      "date": "2025-01-29",
+      "return": -0.032251
+     },
+     {
+      "date": "2025-03-19",
+      "return": -0.014468
+     },
+     {
+      "date": "2025-05-07",
+      "return": 0.192003
+     },
+     {
+      "date": "2025-06-18",
+      "return": 0.075632
+     },
+     {
+      "date": "2025-07-30",
+      "return": 0.022278
+     },
+     {
+      "date": "2025-09-17",
+      "return": 0.011951
+     },
+     {
+      "date": "2025-10-29",
+      "return": -0.028951
+     },
+     {
+      "date": "2025-12-10",
+      "return": -0.07585
+     },
+     {
+      "date": "2026-01-28",
+      "return": -0.076013
+     },
+     {
+      "date": "2026-03-18",
+      "return": -0.017864
+     },
+     {
+      "date": "2026-04-29",
+      "return": -0.02505
+     },
+     {
+      "date": "2026-06-17",
+      "return": -0.056265
+     },
+     {
+      "date": "2026-07-29",
+      "return": 0.112735
+     },
+     {
+      "date": "2026-09-16",
+      "return": 0.062874
+     },
+     {
+      "date": "2026-10-28",
+      "return": -0.08172
+     }
+    ],
+    "caveats": [
+     "Échantillon limité: 40 décisions de taux sur une seule période de 5 ans.",
+     "Les fenêtres peuvent chevaucher d'autres nouvelles ou événements; aucune ne se chevauche entre elles.",
+     "Biais du survivant: actif choisi en 2026 parmi des titres qui ont réussi.",
+     "Ce n'est pas une prévision: dans des situations comparables, on a observé ces mouvements."
+    ],
+    "evidence_id": "ev_7ededf2f1b"
+   }
+  },
+  {
+   "news_id": "n_0e7053962260",
+   "title": "5 Best Stocks to Buy for a Rising Interest Rate Environment",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/5-best-stocks-buy-rising-130523215.html?.tsrc=rss",
+   "source": "Yahoo Finance",
+   "published_at": "2026-11-13T13:05:23Z",
+   "tickers": [
+    "MSFT",
+    "XOM"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_93e28d6d2e"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_c06ce3a9544f",
+   "title": "Microsoft says November security updates cause printing issues",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORWFPNG5EOTRrelRtX3VWRWJYNG5QenRTNm96ZGE4UnVJd1B5VEQweTAzYVh0dlZnemZiSVZYSWc2M0FsdnRWd282blVDT1AtRkoyMHMzcWc1SWV0QnQ0Z09sUUFmTXN5UWJ4Qk41VG9FUTNuWFlNaGtDYzBYbFVjZnNfbDFUNGY2X002OFp1eG5CQkFLQlU0WkFWS2l5UDZrLVp5Rk02dFFFZFRxZS1KX9IBtgFBVV95cUxPX24yeFJFS0xPX0JwOHpSdUtyS2V3RjF2c0RoVFBTN1VuUjdoNk9mbDBzRVhjQ1lfSGJOV2RpS2pVOXFqQUdSSmRKS200SktlR29JcXZwTVhRY0NzMnk2LUE1X0wwT0h1R3FuVE1sVEtmQnhIZTk0TXVmWTNlajVnbFNfSl8yMzA1d2RweHJDQzVZRlJJWjhuLW9DajJ4TXBETjA5ZktFLWJlSkJvMkJnWnlqeEF4Zw?oc=5",
+   "source": "BleepingComputer",
+   "published_at": "2026-11-13T12:27:40Z",
+   "tickers": [
+    "MSFT"
+   ],
+   "is_synthetic": false,
+   "category": "regulation_legal",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_REGULATION_LEGAL",
+      "text": "Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_TECH",
+      "text": "Sujet lié à un de tes centres d'intérêt (technologie).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_539d16af14"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "MSFT représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_330d01ad79"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de MSFT: 28,5 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_561cb2eea0"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  },
+  {
+   "news_id": "n_bdd396d6d3b5",
+   "title": "SpaceX-Tesla merger talks put 30,000 bitcoin back in focus",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdEdURUU2eTU3MTIzN2V0a2FYNVZhUVVYX0p1VnpYR2lrcW5mak9LRW9YdmgtbmFfYk1oZU1PX3lNWGhsLXEyWXBmLWNpeEoxa3FlMkstRFU3LXNtaFZwOXNCRE5lMjY0a3ZXMnpJWXk3cWpCY2hxOTRoM1pITTFWOUtUZ203aFg1QWVaUGdUdHhDRS02Vlo0TTM2SHV1T1FMMV9IUw?oc=5",
+   "source": "CoinDesk",
+   "published_at": "2026-11-13T05:33:10Z",
+   "tickers": [
+    "BTC-USD",
+    "TSLA"
+   ],
+   "is_synthetic": false,
+   "category": "mergers_acquisitions",
+   "horizon_relevance": "structural",
+   "relevance": {
+    "score": 0.65,
+    "level": "medium",
+    "shown": true,
+    "position_weight": 0.1,
+    "rule_hits": [
+     {
+      "rule_id": "R_BASE_MERGERS_ACQUISITIONS",
+      "text": "Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long.",
+      "delta": 0.45
+     },
+     {
+      "rule_id": "R_POS_WEIGHT_10",
+      "text": "Cette position pèse au moins 10 % de ton portefeuille.",
+      "delta": 0.1,
+      "observed": 0.1,
+      "limit": 0.1
+     },
+     {
+      "rule_id": "R_INTEREST_CRYPTO",
+      "text": "Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "delta": 0.1
+     }
+    ]
+   },
+   "explanation": {
+    "summary": "",
+    "claims": [
+     {
+      "text": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_3304cecd58"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "BTC-USD représente 10,0 % du portefeuille analysé.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_c716c98017"
+      ],
+      "verified": "supported"
+     },
+     {
+      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "label": "fact",
+      "evidence_ids": [
+       "ev_674a9d529f"
+      ],
+      "verified": "supported"
+     }
+    ],
+    "generated_by": "template",
+    "guardian": {
+     "status": "passed",
+     "flags": []
+    }
+   },
+   "historical_context": null
+  }
+ ],
+ "hidden": {
+  "count": 803,
+  "by_reason": [
+   {
+    "reason": "Bruit de court terme pour ton horizon",
+    "count": 506
+   },
+   {
+    "reason": "Sujet déjà couvert par une nouvelle plus pertinente",
+    "count": 244
+   },
+   {
+    "reason": "Au-delà des 30 nouvelles les plus pertinentes",
+    "count": 53
+   }
+  ]
+ },
+ "coherence": null,
+ "events": [
+  {
+   "id": "evt_a79021305291",
+   "type": "earnings",
+   "scope": "ticker",
+   "tickers": [
+    "NVDA"
+   ],
+   "date": "2026-11-17",
+   "title": "NVDA: publication des résultats (date prévue)",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_49a6b3f49760",
+   "type": "dividend_ex_date",
+   "scope": "ticker",
+   "tickers": [
+    "MSFT"
+   ],
+   "date": "2026-11-18",
+   "title": "MSFT: prochaine date ex-dividende",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_ccad04b25914",
+   "type": "rate_decision",
+   "scope": "macro",
+   "tickers": [],
+   "date": "2026-12-09",
+   "title": "Réserve fédérale (FOMC): décision de taux",
+   "is_estimated": false,
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  },
+  {
+   "id": "evt_0b79436569e2",
+   "type": "dividend_ex_date",
+   "scope": "ticker",
+   "tickers": [
+    "CSU.TO"
+   ],
+   "date": "2026-12-17",
+   "title": "CSU.TO: prochaine date ex-dividende",
+   "is_estimated": true,
+   "source": "Yahoo Finance (yfinance)",
+   "retrieved_at": "2026-11-15T01:26:37Z"
+  }
+ ],
+ "evidence": {
+  "ev_8e308a24f9": {
+   "id": "ev_8e308a24f9",
+   "kind": "portfolio_calc",
+   "statement": "NVDA représente 20,0 % du portefeuille analysé.",
+   "value": 0.2,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 20000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "NVDA"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_3ee69ecaee": {
+   "id": "ev_3ee69ecaee",
+   "kind": "portfolio_calc",
+   "statement": "QQQ représente 20,0 % du portefeuille analysé.",
+   "value": 0.2,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 20000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "QQQ"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_c716c98017": {
+   "id": "ev_c716c98017",
+   "kind": "portfolio_calc",
+   "statement": "BTC-USD représente 10,0 % du portefeuille analysé.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 10000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "BTC-USD"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_330d01ad79": {
+   "id": "ev_330d01ad79",
+   "kind": "portfolio_calc",
+   "statement": "MSFT représente 10,0 % du portefeuille analysé.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 10000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "MSFT"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_0dea482881": {
+   "id": "ev_0dea482881",
+   "kind": "portfolio_calc",
+   "statement": "SHOP.TO représente 10,0 % du portefeuille analysé.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 10000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "SHOP.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_cecd3fe2fa": {
+   "id": "ev_cecd3fe2fa",
+   "kind": "portfolio_calc",
+   "statement": "XIU.TO représente 10,0 % du portefeuille analysé.",
+   "value": 0.1,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 10000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "XIU.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_db63b2a624": {
+   "id": "ev_db63b2a624",
+   "kind": "portfolio_calc",
+   "statement": "CSU.TO représente 6,0 % du portefeuille analysé.",
+   "value": 0.06,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 6000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "CSU.TO"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_6bf3d47336": {
+   "id": "ev_6bf3d47336",
+   "kind": "portfolio_calc",
+   "statement": "ETH-USD représente 5,0 % du portefeuille analysé.",
+   "value": 0.05,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 5000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "ETH-USD"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_d8628e169e": {
+   "id": "ev_d8628e169e",
+   "kind": "portfolio_calc",
+   "statement": "TSLA représente 5,0 % du portefeuille analysé.",
+   "value": 0.05,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 5000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "TSLA"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_3cc5e64a1a": {
+   "id": "ev_3cc5e64a1a",
+   "kind": "portfolio_calc",
+   "statement": "GLD représente 4,0 % du portefeuille analysé.",
+   "value": 0.04,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "amount": 4000.0,
+    "analyzed_total": 100000.0,
+    "ticker": "GLD"
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.position_weight"
+  },
+  "ev_6d329236c6": {
+   "id": "ev_6d329236c6",
+   "kind": "portfolio_calc",
+   "statement": "Part des positions très volatiles (volatilité > 30 %): 56,0 %.",
+   "value": 0.56,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "threshold": 0.3,
+    "tickers": [
+     "NVDA",
+     "BTC-USD",
+     "SHOP.TO",
+     "CSU.TO",
+     "ETH-USD",
+     "TSLA"
+    ]
+   },
+   "source": "portefeuille fourni, data/prices_daily.csv",
+   "computed_by": "core.metrics.high_vol_share"
+  },
+  "ev_422db9ce25": {
+   "id": "ev_422db9ce25",
+   "kind": "portfolio_calc",
+   "statement": "Les trois plus grosses positions pèsent 50,0 % du portefeuille.",
+   "value": 0.5,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "tickers": [
+     "NVDA",
+     "QQQ",
+     "BTC-USD"
+    ]
+   },
+   "source": "portefeuille fourni",
+   "computed_by": "core.metrics.top3_concentration"
+  },
+  "ev_071a40b9fe": {
+   "id": "ev_071a40b9fe",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,85 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.85,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_b96325b7d3ad",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_44a14ae5be": {
+   "id": "ev_44a14ae5be",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de NVDA: 51,9 %.",
+   "value": 0.5193841282934746,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "NVDA",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_f4a99d2d7a": {
+   "id": "ev_f4a99d2d7a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_4de79dc76877",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_21667de34d": {
+   "id": "ev_21667de34d",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2021-11-17 au 2026-08-26), le mouvement médian de NVDA de la veille à +5 jours de bourse a été de −0,74 % (p10 −10,5 %, p90 16,4 %, 45 % de cas positifs).",
+   "value": -0.0074428147067615025,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "NVDA",
+    "event_type": "earnings",
+    "from": "2021-11-17",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-08-26",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_276e7f2162": {
+   "id": "ev_276e7f2162",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_f4d02f03e692",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_8a0fb24fd3": {
+   "id": "ev_8a0fb24fd3",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_dd55b15e8f77",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_60a73b54e9": {
+   "id": "ev_60a73b54e9",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Produit: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_bc0b8e15b01d",
+    "rule_ids": [
+     "R_BASE_PRODUCT",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_dce79ab737": {
+   "id": "ev_dce79ab737",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_b1a5434a5726",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_99e4e11446": {
+   "id": "ev_99e4e11446",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_beb2805ac8b9",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_b631f0fd1d": {
+   "id": "ev_b631f0fd1d",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_168e50f1b549",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_CRYPTO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_674a9d529f": {
+   "id": "ev_674a9d529f",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de BTC-USD: 50,8 %.",
+   "value": 0.5075564690018627,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 365,
+    "n_returns": 1826,
+    "returns": "daily adj_close",
+    "ticker": "BTC-USD",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_2bcc6a6c1f": {
+   "id": "ev_2bcc6a6c1f",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_baf6e07c21dc",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_561cb2eea0": {
+   "id": "ev_561cb2eea0",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de MSFT: 28,5 %.",
+   "value": 0.28450884744323657,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "MSFT",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_9fb23acc35": {
+   "id": "ev_9fb23acc35",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_59e5980862b7",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_CRYPTO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_b7ca463d56": {
+   "id": "ev_b7ca463d56",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_0ba9fa2306c8",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_5a4a10e53f": {
+   "id": "ev_5a4a10e53f",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_5b29d7910895",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4d8bd004b2": {
+   "id": "ev_4d8bd004b2",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Produit: pertinence 0,45 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_d1b3ab353754",
+    "rule_ids": [
+     "R_BASE_PRODUCT",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_86c08c149a": {
+   "id": "ev_86c08c149a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille.",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_315927310d37",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_20"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_7a5def53c7": {
+   "id": "ev_7a5def53c7",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de QQQ: 23,4 %.",
+   "value": 0.2335857512510542,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "USD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "QQQ",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_f7257b051a": {
+   "id": "ev_f7257b051a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_bfa899d2afb0",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f927354cb7": {
+   "id": "ev_f927354cb7",
+   "kind": "metric",
+   "statement": "Volatilité annualisée de SHOP.TO: 64,4 %.",
+   "value": 0.6444177377977415,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "currency": "CAD",
+    "days_per_year": 252,
+    "n_returns": 1254,
+    "returns": "daily adj_close",
+    "ticker": "SHOP.TO",
+    "window": "2021-11-12/2026-11-12"
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.metrics.annualized_vol"
+  },
+  "ev_640f4d9c5d": {
+   "id": "ev_640f4d9c5d",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,75 (élevée) pour ton profil. Catégorie Stratégie et prévisions: pertinence 0,55 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.75,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_152a76bc46ac",
+    "rule_ids": [
+     "R_BASE_GUIDANCE_STRATEGY",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_fb31c5482b": {
+   "id": "ev_fb31c5482b",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_114076edf75d",
+    "rule_ids": [
+     "R_BASE_MANAGEMENT_CHANGE",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_87816b30f6": {
+   "id": "ev_87816b30f6",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Changement de direction: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_f44b7c9bd9c2",
+    "rule_ids": [
+     "R_BASE_MANAGEMENT_CHANGE",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_f10932f6a1": {
+   "id": "ev_f10932f6a1",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_bb3ce6692fd5",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_CRYPTO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_4932740e8a": {
+   "id": "ev_4932740e8a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverse: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_11e8044d8dc1",
+    "rule_ids": [
+     "R_BASE_CONTROVERSY",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_99af4e885e": {
+   "id": "ev_99af4e885e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Controverse: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_cf8804024da2",
+    "rule_ids": [
+     "R_BASE_CONTROVERSY",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_ab17d3edb2": {
+   "id": "ev_ab17d3edb2",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_2f1e069c94e9",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_CRYPTO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_44933d0bce": {
+   "id": "ev_44933d0bce",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_222dcd288498",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_1cdeace33b": {
+   "id": "ev_1cdeace33b",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-01-25 au 2026-10-28), le mouvement médian de MSFT de la veille à +5 jours de bourse a été de −0,33 % (p10 −7,6 %, p90 8,5 %, 50 % de cas positifs).",
+   "value": -0.0032740426564537017,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "MSFT",
+    "event_type": "earnings",
+    "from": "2022-01-25",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-28",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_add5b2407a": {
+   "id": "ev_add5b2407a",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Résultats financiers: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_ecf38a2a2318",
+    "rule_ids": [
+     "R_BASE_EARNINGS_RESULTS",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_60089d6fa2": {
+   "id": "ev_60089d6fa2",
+   "kind": "event_study",
+   "statement": "Sur 20 publications de résultats (2022-02-16 au 2026-11-03), le mouvement médian de SHOP.TO de la veille à +5 jours de bourse a été de 2,10 % (p10 −24,4 %, p90 29,8 %, 50 % de cas positifs).",
+   "value": 0.021004996831042455,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "SHOP.TO",
+    "event_type": "earnings",
+    "from": "2022-02-16",
+    "macro_source": null,
+    "n_events": 20,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-11-03",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_23344a7f0d": {
+   "id": "ev_23344a7f0d",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_01ef8ad67a86",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_608fe8a03f": {
+   "id": "ev_608fe8a03f",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_96a4b2b01e5d",
+    "rule_ids": [
+     "R_BASE_MACRO_RATES",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_7ededf2f1b": {
+   "id": "ev_7ededf2f1b",
+   "kind": "event_study",
+   "statement": "Sur 40 décisions de taux (2021-12-15 au 2026-10-28), le mouvement médian de NVDA de la veille à +5 jours de bourse a été de 1,97 % (p10 −7,6 %, p90 13,1 %, 62 % de cas positifs).",
+   "value": 0.0197412713341798,
+   "unit": "fraction",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "asset": "NVDA",
+    "event_type": "rate_decision",
+    "from": "2021-12-15",
+    "macro_source": "federalreserve",
+    "n_events": 40,
+    "prices": "adj_close (listing currency)",
+    "to": "2026-10-28",
+    "window": "t-1 -> t+5 trading days"
+   },
+   "source": "data/prices_daily.csv, data/snapshots/events_*.json",
+   "computed_by": "core.event_study.historical_context"
+  },
+  "ev_7625707eeb": {
+   "id": "ev_7625707eeb",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Taux et inflation: pertinence 0,35 pour un horizon long. Cette position pèse au moins 20 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_c971af857984",
+    "rule_ids": [
+     "R_BASE_MACRO_RATES",
+     "R_POS_WEIGHT_20",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_93e28d6d2e": {
+   "id": "ev_93e28d6d2e",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_0e7053962260",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_539d16af14": {
+   "id": "ev_539d16af14",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Réglementation et poursuites: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (technologie).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_c06ce3a9544f",
+    "rule_ids": [
+     "R_BASE_REGULATION_LEGAL",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_TECH"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_3304cecd58": {
+   "id": "ev_3304cecd58",
+   "kind": "rule_hit",
+   "statement": "Pertinence 0,65 (moyenne) pour ton profil. Catégorie Fusions et acquisitions: pertinence 0,45 pour un horizon long. Cette position pèse au moins 10 % de ton portefeuille. Sujet lié à un de tes centres d'intérêt (cryptomonnaies).",
+   "value": 0.65,
+   "unit": "score",
+   "as_of": "2026-11-12",
+   "inputs": {
+    "horizon_bucket": "long",
+    "news_id": "n_bdd396d6d3b5",
+    "rule_ids": [
+     "R_BASE_MERGERS_ACQUISITIONS",
+     "R_POS_WEIGHT_10",
+     "R_INTEREST_CRYPTO"
+    ]
+   },
+   "source": "rules/relevance_rules.yaml",
+   "computed_by": "core.rules_engine.score_relevance"
+  }
+ },
+ "disclaimers": [
+  "Simulation éducative: ce n'est pas un conseil financier personnalisé.",
+  "Aucune transaction réelle n'est effectuée."
+ ],
+ "limits": [
+  "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie.",
+  "Biais du survivant: les 31 actifs ont été choisis en 2026.",
+  "Un contexte historique n'est pas une prévision; une corrélation n'est pas une cause.",
+  "Pas de notes ESG ni de données fondamentales dans le jeu de départ.",
+  "On suppose un investisseur en dollars canadiens.",
+  "Classement des nouvelles fait hors ligne par mots-clés (mode démo sans modèle); il peut se tromper de catégorie.",
+  "Règles provisoires (exemples de référence): questionnaire.yaml, profile_rules.yaml, taxonomy.yaml, relevance_rules.yaml, coherence_rules.yaml, glossary.yaml, limits_texts.yaml.",
+  "Nouvelles publiques récupérées le 2026-11-15 (environ 30 jours d'historique)."
+ ]
+}

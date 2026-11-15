@@ -1,0 +1,22 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/personas/robert.yaml (rôle D).
+profile_id: robert
+label: Robert, 59 ans, proche de la retraite
+source: persona_preset
+age: 59
+horizon_years: 4
+horizon_bucket: short
+risk_tolerance: low_moderate
+max_acceptable_loss_pct: 0.1
+objective: capital_preservation
+experience: intermediate
+preferences:
+  avoid_controversies: false
+  excluded_sectors: []
+  interests:
+  - dividendes
+limits:
+  max_single_position: 0.1
+  max_high_vol_share: 0.1
+monthly_expenses_cad: 5000
+base_currency: CAD
+inconsistencies: []

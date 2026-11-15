@@ -1,0 +1,4 @@
+{"news": [
+ {"title": "Nvidia reports record data center revenue", "publisher": "Reuters", "link": "https://example.org/r1", "providerPublishTime": 1794600000, "relatedTickers": ["NVDA", "MSFT", "ANTH.PVT"]},
+ {"title": "Chipmakers rally", "publisher": "Bloomberg", "link": "https://example.org/r2", "providerPublishTime": 1794500000, "relatedTickers": ["AMD"]}
+]}
