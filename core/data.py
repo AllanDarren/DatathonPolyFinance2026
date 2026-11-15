@@ -13,6 +13,7 @@ from __future__ import annotations
 import os
 from functools import cache
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
 
@@ -48,7 +49,7 @@ def _read_csv(name: str, **kwargs: object) -> pd.DataFrame:
 
 
 @cache
-def load_universe() -> pd.DataFrame:
+def _load_starter_universe() -> pd.DataFrame:
     """31 assets indexed by ticker, with the contract `asset_class` and `price_currency`."""
     df = _read_csv("assets_universe.csv")
     if df["ticker"].duplicated().any():
@@ -60,6 +61,61 @@ def load_universe() -> pd.DataFrame:
         raise DataError(f"Classe d'actif inconnue: {exc}.") from exc
     df = df.rename(columns={"currency": "price_currency"}).set_index("ticker")
     return df
+
+
+# --- assets downloaded on demand (ingest/market.py) ---------------------------------
+# Registered in memory for the life of the process (a cache, never persisted with user data).
+# Every registered asset carries its quality report: core/quality.py gates every number.
+_EXTRAS: dict[str, dict[str, Any]] = {}
+_VERSION = [0]  # bumped whenever the loaded data changes (memoized metrics are keyed on it)
+
+
+def version() -> int:
+    return _VERSION[0]
+_UNIVERSE_WITH_EXTRAS: dict[int, pd.DataFrame] = {}
+MAX_EXTRAS = 64
+
+
+def register_extra_asset(ticker: str, meta: dict[str, Any], prices: pd.DataFrame, quality: dict[str, Any]) -> None:
+    """Add an asset downloaded on demand. `meta`: name, sector, market, asset_class, price_currency,
+    source, retrieved_at. `prices`: same columns as prices_daily.csv (one ticker)."""
+    if ticker in _load_starter_universe().index:
+        raise ValueError(f"{ticker} fait déjà partie du jeu de départ")
+    if len(_EXTRAS) >= MAX_EXTRAS and ticker not in _EXTRAS:
+        _EXTRAS.pop(next(iter(_EXTRAS)))
+    df = prices.copy()
+    df["date"] = pd.to_datetime(df["date"])
+    _EXTRAS[ticker] = {"meta": dict(meta), "prices": df.sort_values("date").reset_index(drop=True), "quality": quality}
+    _UNIVERSE_WITH_EXTRAS.clear()
+    _VERSION[0] += 1
+
+
+def extra_asset(ticker: str) -> dict[str, Any] | None:
+    return _EXTRAS.get(ticker)
+
+
+def starter_tickers() -> list[str]:
+    return list(_load_starter_universe().index)
+
+
+def is_starter(ticker: str) -> bool:
+    return ticker in _load_starter_universe().index
+
+
+def load_universe() -> pd.DataFrame:
+    """Starter universe, plus the assets registered on demand (same columns)."""
+    base = _load_starter_universe()
+    if not _EXTRAS:
+        return base
+    key = hash(tuple(_EXTRAS))
+    if key not in _UNIVERSE_WITH_EXTRAS:
+        rows = pd.DataFrame([{"ticker": t, "name": e["meta"].get("name", t), "sector": e["meta"].get("sector", ""),
+                              "market": e["meta"].get("market", ""), "asset_class": e["meta"]["asset_class"],
+                              "price_currency": e["meta"]["price_currency"], "starter_asset_class": "on_demand"}
+                             for t, e in _EXTRAS.items()]).set_index("ticker")
+        _UNIVERSE_WITH_EXTRAS.clear()
+        _UNIVERSE_WITH_EXTRAS[key] = pd.concat([base, rows[[c for c in rows.columns if c in base.columns]]])
+    return _UNIVERSE_WITH_EXTRAS[key]
 
 
 def universe_tickers() -> list[str]:
@@ -80,7 +136,7 @@ def load_prices() -> pd.DataFrame:
         raise DataError("Lignes (date, ticker) en double dans prices_daily.csv.")
     if (df["adj_close"] <= 0).any():
         raise DataError("Prix ajustés nuls ou négatifs dans prices_daily.csv.")
-    uni = load_universe()
+    uni = _load_starter_universe()
     unknown = set(df["ticker"]) - set(uni.index)
     if unknown:
         raise DataError(f"Tickers hors univers dans prices_daily.csv: {sorted(unknown)}.")
@@ -90,8 +146,17 @@ def load_prices() -> pd.DataFrame:
     return df.sort_values(["ticker", "date"]).reset_index(drop=True)
 
 
-@cache
 def _price_series(ticker: str, field: str) -> pd.Series:
+    extra = _EXTRAS.get(ticker)
+    if extra is not None:
+        s = extra["prices"].set_index("date")[field].astype(float)
+        s.name = ticker
+        return s
+    return _starter_price_series(ticker, field)
+
+
+@cache
+def _starter_price_series(ticker: str, field: str) -> pd.Series:
     df = load_prices()
     s = df.loc[df["ticker"] == ticker].set_index("date")[field]
     if s.empty:
@@ -175,5 +240,11 @@ def data_as_of() -> str:
 
 def clear_caches() -> None:
     """For tests that switch DATA_DIR."""
-    for fn in (load_universe, load_prices, _price_series, load_fx, load_corporate_actions, load_macro):
+    for fn in (_load_starter_universe, load_prices, _starter_price_series, load_fx, load_corporate_actions, load_macro):
         fn.cache_clear()
+    _EXTRAS.clear()
+    _UNIVERSE_WITH_EXTRAS.clear()
+    _VERSION[0] += 1
+    from core import quality  # local import: quality depends on data
+
+    quality.clear_cache()

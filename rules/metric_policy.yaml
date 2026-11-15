@@ -6,7 +6,9 @@ annualized_vol:
   periods_per_year: 252
   high_vol_threshold: 0.3
   comparison: strictly_greater
-  crypto_caveat: 252 retenu pour v0; 365 fourni comme contrôle de sensibilité, sans substitution silencieuse.
+  crypto_periods_per_year: 365
+  crypto_caveat: 'Décision d''équipe du 2026-11-15 : les cryptos cotent 7 jours sur 7, donc 365 est affiché; 252 est
+    conservé comme contrôle de sensibilité (inputs.sensitivity_252 de la preuve), sans substitution silencieuse.'
 currencies:
   profile_base: CAD
   reference_basis: listing

@@ -209,6 +209,14 @@ def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: 
     """CoherenceResult contract dict (with agent_trace) for a considered purchase."""
     ticker = str(consideration.get("ticker", "")).strip().upper()
     cons = {"ticker": ticker, "intended_weight": consideration.get("intended_weight")}
+    from core import quality
+
+    if ticker in data.load_universe().index:
+        q = quality.asset_quality(ticker)
+        if q["status"] == "blocking":
+            raise AlphaForgeError("INSUFFICIENT_DATA",
+                                  f"Données de {ticker} insuffisantes pour un verdict fiable : " + " ".join(q["warnings_fr"]),
+                                  status=422, details={"data_quality": quality.public(q)})
     engine.check_coherence(profile, portfolio, cons, EvidenceRegistry())  # validate inputs early (raises)
     weight = float(cons["intended_weight"])  # type: ignore[arg-type]
     offline = client is None or (isinstance(client, MockClient) and client.planner is None)
@@ -267,6 +275,8 @@ def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: 
         "governance": governance,
         "what_would_change": changes,
         "weight_grid": grid,
+        "data_quality": quality.public(quality.asset_quality(ticker)),
+        "asset_origin": "starter_dataset" if data.is_starter(ticker) else "on_demand",
     }
 
 

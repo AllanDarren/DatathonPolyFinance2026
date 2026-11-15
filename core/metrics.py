@@ -8,7 +8,9 @@ currency unless `currency="CAD"` is given. Fractions are between 0 and 1
 
 from __future__ import annotations
 
+import functools
 import math
+from collections.abc import Callable
 from typing import Any
 
 import numpy as np
@@ -22,6 +24,34 @@ PRICES_SRC = "data/prices_daily.csv"
 HIGH_VOL_THRESHOLD = 0.30  # default; the rules files may override it
 TRADING_DAYS = {"crypto": 365}  # every other asset class: 252
 DEFAULT_TRADING_DAYS = 252
+
+
+_MEMO: dict[tuple[Any, ...], Any] = {}
+_MEMO_MAX = 4096
+
+
+def _memo(fn: Callable[..., Any]) -> Callable[..., Any]:
+    """Memoize a pure metric on (args, data version): same data, same result, computed once.
+
+    Portfolio arguments are keyed on their (ticker, weight, amount) tuples."""
+
+    def key_of(v: Any) -> Any:
+        if isinstance(v, dict) and "positions" in v:
+            return tuple((p["ticker"], round(float(p["weight"]), 9), round(float(p["amount"]), 4),
+                          p.get("in_universe", True)) for p in v["positions"])
+        return v
+
+    @functools.wraps(fn)
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        key = (fn.__name__, data.version(), tuple(key_of(a) for a in args),
+               tuple(sorted((k, key_of(v)) for k, v in kwargs.items())))
+        if key not in _MEMO:
+            if len(_MEMO) >= _MEMO_MAX:
+                _MEMO.clear()
+            _MEMO[key] = fn(*args, **kwargs)
+        return _MEMO[key]
+
+    return wrapper
 
 
 def _check_ticker(ticker: str) -> None:
@@ -58,6 +88,7 @@ def _ev(kind: str, statement: str, value: Any, unit: str | None, inputs: dict[st
 # --- single-asset metrics -------------------------------------------------------
 
 
+@_memo
 def annualized_vol(ticker: str, currency: str = "native") -> MetricResult:
     """Std-dev of daily adj_close returns x sqrt(days per year): 252, or 365 for crypto (7/7)."""
     s = _series(ticker, currency)
@@ -66,8 +97,13 @@ def annualized_vol(ticker: str, currency: str = "native") -> MetricResult:
     vol = float(r.std(ddof=1) * math.sqrt(days))
     inputs = {"ticker": ticker, "window": _window(s), "returns": "daily adj_close", "days_per_year": days,
               "currency": _ccy_label(ticker, currency), "n_returns": int(len(r))}
-    return MetricResult(vol, _ev("metric", f"Volatilité annualisée de {ticker}: {format_pct(vol)}.", vol, "fraction",
-                                 inputs, "annualized_vol"))
+    statement = f"Volatilité annualisée de {ticker}: {format_pct(vol)}."
+    if days != DEFAULT_TRADING_DAYS:  # crypto trades 7/7: 365 shown, 252 kept as a sensitivity check
+        alt = float(r.std(ddof=1) * math.sqrt(DEFAULT_TRADING_DAYS))
+        inputs["sensitivity_252"] = round(alt, 6)
+        statement = (f"Volatilité annualisée de {ticker}: {format_pct(vol)} sur {days} jours "
+                     f"(cotation 7 jours sur 7; {format_pct(alt)} avec la convention de 252 jours).")
+    return MetricResult(vol, _ev("metric", statement, vol, "fraction", inputs, "annualized_vol"))
 
 
 def _drawdown_path(s: pd.Series) -> tuple[float, pd.Timestamp, pd.Timestamp, pd.Timestamp | None]:
@@ -81,6 +117,7 @@ def _drawdown_path(s: pd.Series) -> tuple[float, pd.Timestamp, pd.Timestamp, pd.
     return float(dd.min()), peak_date, trough, recovery
 
 
+@_memo
 def max_drawdown(ticker: str, currency: str = "native") -> MetricResult:
     """Worst peak-to-trough fall over the window (negative fraction)."""
     s = _series(ticker, currency)
@@ -101,6 +138,7 @@ def max_drawdown_abs(ticker: str, currency: str = "native") -> MetricResult:
                                inputs, "max_drawdown_abs"))
 
 
+@_memo
 def recovery_days(ticker: str, currency: str = "native") -> MetricResult:
     """Calendar days from the max-drawdown trough back to the previous peak; None if never recovered."""
     s = _series(ticker, currency)
@@ -119,6 +157,7 @@ def _year_end_prices(s: pd.Series) -> pd.Series:
     return s.groupby(s.index.year).last()
 
 
+@_memo
 def calendar_year_return(ticker: str, year: int, currency: str = "native") -> MetricResult:
     """Return of a calendar year: last price of `year` / last price of `year - 1` - 1."""
     s = _series(ticker, currency)
@@ -139,6 +178,7 @@ def complete_years(ticker: str) -> list[int]:
     return [y for y in range(first + 1, last)]
 
 
+@_memo
 def worst_calendar_year_return(ticker: str, currency: str = "native") -> MetricResult:
     """Worst complete calendar-year return in the window."""
     years = complete_years(ticker)
@@ -150,6 +190,7 @@ def worst_calendar_year_return(ticker: str, currency: str = "native") -> MetricR
                                "fraction", inputs, "worst_calendar_year_return"))
 
 
+@_memo
 def return_5y(ticker: str, currency: str = "native") -> MetricResult:
     """Total adj_close return over the full window."""
     s = _series(ticker, currency)
@@ -159,6 +200,7 @@ def return_5y(ticker: str, currency: str = "native") -> MetricResult:
                                "fraction", inputs, "return_5y"))
 
 
+@_memo
 def dividend_yield_ttm(ticker: str) -> MetricResult:
     """Dividends with ex-date in the last 365 days / last close (same currency)."""
     _check_ticker(ticker)
@@ -252,11 +294,13 @@ def top3_concentration(portfolio: dict[str, Any]) -> MetricResult:
                                source="portefeuille fourni"))
 
 
+@_memo
 def _monthly_returns_cad(ticker: str) -> pd.Series:
     s = data.price_series(ticker, "adj_close", "CAD")
     return s.resample("ME").last().pct_change().dropna()
 
 
+@_memo
 def corr_to_portfolio(portfolio: dict[str, Any], ticker: str) -> MetricResult:
     """Correlation of monthly CAD returns of `ticker` with the rest of the portfolio (weights rescaled)."""
     _check_ticker(ticker)
@@ -277,6 +321,7 @@ def corr_to_portfolio(portfolio: dict[str, Any], ticker: str) -> MetricResult:
                                source="portefeuille fourni, data/prices_daily.csv"))
 
 
+@_memo
 def monthly_correlation(a: str, b: str) -> MetricResult:
     """Correlation of monthly returns (listing currency) between two assets."""
     _check_ticker(a)

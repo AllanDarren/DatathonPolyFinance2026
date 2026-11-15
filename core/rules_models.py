@@ -276,6 +276,19 @@ class LanguagePolicy(RulesModel):
     review_notes: list[str] = Field(default_factory=list)
 
 
+class DataQualityRules(RulesModel):
+    version: int
+    min_years: float = Field(gt=0)
+    max_missing_share: float = Field(ge=0, le=1)
+    warn_missing_share: float = Field(ge=0, le=1)
+    stale_run_days: int = Field(ge=2)
+    blocking_stale_run_days: int = Field(ge=2)
+    outlier_sigma: float = Field(gt=0)
+    outlier_abs_return: float = Field(gt=0)
+    max_stale_last_days: int = Field(ge=0)
+    reference_calendars: dict[str, str]
+
+
 RULE_FILES: dict[str, type[BaseModel]] = {
     "questionnaire.yaml": Questionnaire,
     "profile_rules.yaml": ProfileRules,
@@ -287,5 +300,6 @@ RULE_FILES: dict[str, type[BaseModel]] = {
     "instrument_risks.yaml": InstrumentRisks,
     "source_tiers.yaml": SourceTiers,
     "language_policy.yaml": LanguagePolicy,
+    "data_quality.yaml": DataQualityRules,
 }
 PERSONA_MODEL = Profile

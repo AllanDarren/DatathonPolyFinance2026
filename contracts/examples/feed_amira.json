@@ -410,10 +410,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -494,10 +494,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -1557,10 +1557,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de ETH-USD: 68,5 %.",
+      "text": "Volatilité annualisée de ETH-USD: 68,5 % sur 365 jours (cotation 7 jours sur 7; 56,9 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_07c1b6a890"
+       "ev_bd32b6763b"
       ],
       "verified": "supported"
      }
@@ -1736,10 +1736,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de ETH-USD: 68,5 %.",
+      "text": "Volatilité annualisée de ETH-USD: 68,5 % sur 365 jours (cotation 7 jours sur 7; 56,9 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_07c1b6a890"
+       "ev_bd32b6763b"
       ],
       "verified": "supported"
      }
@@ -1994,10 +1994,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -2160,10 +2160,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -2431,10 +2431,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de ETH-USD: 68,5 %.",
+      "text": "Volatilité annualisée de ETH-USD: 68,5 % sur 365 jours (cotation 7 jours sur 7; 56,9 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_07c1b6a890"
+       "ev_bd32b6763b"
       ],
       "verified": "supported"
      }
@@ -2772,10 +2772,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -2857,10 +2857,10 @@
       "verified": "supported"
      },
      {
-      "text": "Volatilité annualisée de BTC-USD: 50,8 %.",
+      "text": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
       "label": "fact",
       "evidence_ids": [
-       "ev_674a9d529f"
+       "ev_a0d38c67d9"
       ],
       "verified": "supported"
      }
@@ -3228,10 +3228,10 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_674a9d529f": {
-   "id": "ev_674a9d529f",
+  "ev_a0d38c67d9": {
+   "id": "ev_a0d38c67d9",
    "kind": "metric",
-   "statement": "Volatilité annualisée de BTC-USD: 50,8 %.",
+   "statement": "Volatilité annualisée de BTC-USD: 50,8 % sur 365 jours (cotation 7 jours sur 7; 42,2 % avec la convention de 252 jours).",
    "value": 0.5075564690018627,
    "unit": "fraction",
    "as_of": "2026-11-12",
@@ -3240,6 +3240,7 @@
     "days_per_year": 365,
     "n_returns": 1826,
     "returns": "daily adj_close",
+    "sensitivity_252": 0.421734,
     "ticker": "BTC-USD",
     "window": "2021-11-12/2026-11-12"
    },
@@ -3488,10 +3489,10 @@
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
   },
-  "ev_07c1b6a890": {
-   "id": "ev_07c1b6a890",
+  "ev_bd32b6763b": {
+   "id": "ev_bd32b6763b",
    "kind": "metric",
-   "statement": "Volatilité annualisée de ETH-USD: 68,5 %.",
+   "statement": "Volatilité annualisée de ETH-USD: 68,5 % sur 365 jours (cotation 7 jours sur 7; 56,9 % avec la convention de 252 jours).",
    "value": 0.684823044456712,
    "unit": "fraction",
    "as_of": "2026-11-12",
@@ -3500,6 +3501,7 @@
     "days_per_year": 365,
     "n_returns": 1826,
     "returns": "daily adj_close",
+    "sensitivity_252": 0.569026,
     "ticker": "ETH-USD",
     "window": "2021-11-12/2026-11-12"
    },
@@ -3816,6 +3818,160 @@
    },
    "source": "rules/relevance_rules.yaml",
    "computed_by": "core.rules_engine.score_relevance"
+  },
+  "ev_cc1bd8c838": {
+   "id": "ev_cc1bd8c838",
+   "kind": "metric",
+   "statement": "Qualité des données de NVDA : aucune anomalie détectée (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 37,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+    "ticker": "NVDA",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_e1d6d1c8f9": {
+   "id": "ev_e1d6d1c8f9",
+   "kind": "metric",
+   "statement": "Qualité des données de BTC-USD : aucune anomalie détectée (1827 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 582,
+    "missing_days": 0,
+    "n_obs": 1827,
+    "origin": "starter_dataset",
+    "reference_calendar": "tous les jours (cryptoactif)",
+    "ticker": "BTC-USD",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_d4d74f472e": {
+   "id": "ev_d4d74f472e",
+   "kind": "metric",
+   "statement": "Qualité des données de MSFT : utilisables, avec avertissements (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "warning",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 37,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+    "ticker": "MSFT",
+    "warnings": [
+     "1 mouvement(s) quotidien(s) inhabituel(s) propre(s) à ce titre, à vérifier (ex. 2026-07-30 : 15,5 %)."
+    ]
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_8cc50f4f17": {
+   "id": "ev_8cc50f4f17",
+   "kind": "metric",
+   "statement": "Qualité des données de QQQ : aucune anomalie détectée (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 37,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+    "ticker": "QQQ",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_aee858fe26": {
+   "id": "ev_aee858fe26",
+   "kind": "metric",
+   "statement": "Qualité des données de ETH-USD : aucune anomalie détectée (1827 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 582,
+    "missing_days": 0,
+    "n_obs": 1827,
+    "origin": "starter_dataset",
+    "reference_calendar": "tous les jours (cryptoactif)",
+    "ticker": "ETH-USD",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_096171f929": {
+   "id": "ev_096171f929",
+   "kind": "metric",
+   "statement": "Qualité des données de SPY : aucune anomalie détectée (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 37,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+    "ticker": "SPY",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_54a52fc795": {
+   "id": "ev_54a52fc795",
+   "kind": "metric",
+   "statement": "Qualité des données de XBB.TO : aucune anomalie détectée (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 0,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de XIU.TO (pas de calendrier officiel)",
+    "ticker": "XBB.TO",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
+  },
+  "ev_2cf41c7e6e": {
+   "id": "ev_2cf41c7e6e",
+   "kind": "metric",
+   "statement": "Qualité des données de SHOP.TO : aucune anomalie détectée (1255 cotations, 2021-11-12 à 2026-11-12).",
+   "value": "ok",
+   "unit": null,
+   "as_of": "2026-11-12",
+   "inputs": {
+    "fx_filled_days": 0,
+    "missing_days": 0,
+    "n_obs": 1255,
+    "origin": "starter_dataset",
+    "reference_calendar": "jours de cotation de XIU.TO (pas de calendrier officiel)",
+    "ticker": "SHOP.TO",
+    "warnings": []
+   },
+   "source": "data/prices_daily.csv",
+   "computed_by": "core.quality.asset_quality"
   }
  },
  "disclaimers": [
@@ -3840,5 +3996,222 @@
   "Une estimation ou une nouvelle synthétique reste explicitement étiquetée.",
   "Un classement pertinent ne signifie pas une recommandation d’achat ou de vente.",
   "Nouvelles publiques récupérées le 2026-11-15 (environ 30 jours d'historique)."
+ ],
+ "data_quality": [
+  {
+   "ticker": "NVDA",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 37,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [
+    "37 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+   "evidence_id": "ev_cc1bd8c838"
+  },
+  {
+   "ticker": "BTC-USD",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1827,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 582,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [
+    "582 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "tous les jours (cryptoactif)",
+   "evidence_id": "ev_e1d6d1c8f9"
+  },
+  {
+   "ticker": "MSFT",
+   "status": "warning",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [
+    {
+     "date": "2026-07-30",
+     "return": 0.155067
+    }
+   ],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 37,
+   "odd_splits": [],
+   "warnings_fr": [
+    "1 mouvement(s) quotidien(s) inhabituel(s) propre(s) à ce titre, à vérifier (ex. 2026-07-30 : 15,5 %)."
+   ],
+   "notes_fr": [
+    "37 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+   "evidence_id": "ev_d4d74f472e"
+  },
+  {
+   "ticker": "QQQ",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [
+    {
+     "date": "2025-04-09",
+     "return": 0.120031
+    }
+   ],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 37,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [
+    "1 forte(s) variation(s) partagée(s) par tout le marché le même jour (ex. 2025-04-09) : événement de marché, pas une erreur de données.",
+    "37 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+   "evidence_id": "ev_8cc50f4f17"
+  },
+  {
+   "ticker": "ETH-USD",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1827,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 582,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [
+    "582 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "tous les jours (cryptoactif)",
+   "evidence_id": "ev_aee858fe26"
+  },
+  {
+   "ticker": "SPY",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [
+    {
+     "date": "2025-04-09",
+     "return": 0.105019
+    }
+   ],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 37,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [
+    "1 forte(s) variation(s) partagée(s) par tout le marché le même jour (ex. 2025-04-09) : événement de marché, pas une erreur de données.",
+    "37 jour(s) convertis en CAD avec le dernier taux USD/CAD publié (jours fériés canadiens, fins de semaine)."
+   ],
+   "reference_calendar": "jours de cotation de SPY (pas de calendrier officiel)",
+   "evidence_id": "ev_096171f929"
+  },
+  {
+   "ticker": "XBB.TO",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 0,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [],
+   "reference_calendar": "jours de cotation de XIU.TO (pas de calendrier officiel)",
+   "evidence_id": "ev_54a52fc795"
+  },
+  {
+   "ticker": "SHOP.TO",
+   "status": "ok",
+   "origin": "starter_dataset",
+   "source": "data/prices_daily.csv",
+   "retrieved_at": null,
+   "first_date": "2021-11-12",
+   "last_date": "2026-11-12",
+   "n_obs": 1255,
+   "years": 5.0,
+   "missing_days": 0,
+   "missing_share": 0.0,
+   "stale_runs": [],
+   "outliers": [],
+   "ohlc_issues": 0,
+   "zero_volume_days": 0,
+   "fx_filled_days": 0,
+   "odd_splits": [],
+   "warnings_fr": [],
+   "notes_fr": [],
+   "reference_calendar": "jours de cotation de XIU.TO (pas de calendrier officiel)",
+   "evidence_id": "ev_2cf41c7e6e"
+  }
  ]
 }

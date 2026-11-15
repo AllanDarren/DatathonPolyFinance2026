@@ -1,0 +1,14 @@
+version: 1
+# Seuils du contrôle de qualité des données (core/quality.py). Ils s'appliquent au jeu de départ
+# comme aux données téléchargées à la demande. Aucun calcul n'est fait sur des données « bloquantes ».
+min_years: 2.0                 # moins d'historique -> bloquant
+max_missing_share: 0.05        # part de jours de cotation attendus mais absents -> bloquant au-delà
+warn_missing_share: 0.01       # avertissement au-delà
+stale_run_days: 5              # n clôtures identiques d'affilée -> avertissement
+blocking_stale_run_days: 20    # au-delà -> bloquant
+outlier_sigma: 8.0             # |rendement| > 8 écarts-types -> mouvement aberrant signalé
+outlier_abs_return: 0.40       # ou |rendement| > 40 % en un jour
+max_stale_last_days: 10        # dernière cotation trop ancienne (jours) -> avertissement
+reference_calendars:           # jours de cotation de référence, faute de calendrier officiel
+  CAD: XIU.TO
+  USD: SPY

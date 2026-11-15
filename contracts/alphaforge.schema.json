@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "alphaforge.schema.json",
   "title": "AlphaForgeContract",
-  "description": "AlphaForge AI contracts v0.3.0. Generated from core/models.py; do not edit by hand.",
-  "x-contract-version": "0.3.0",
+  "description": "AlphaForge AI contracts v0.4.0. Generated from core/models.py; do not edit by hand.",
+  "x-contract-version": "0.4.0",
   "anyOf": [
     {
       "$ref": "#/$defs/Profile"
@@ -243,6 +243,34 @@
           ],
           "default": null,
           "description": "Optional (v0.3.0): verdict of the same rules for each tested weight"
+        },
+        "data_quality": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QualityReport"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.4.0): quality of the asset"
+        },
+        "asset_origin": {
+          "anyOf": [
+            {
+              "enum": [
+                "starter_dataset",
+                "on_demand"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.4.0)"
         }
       },
       "required": [
@@ -852,6 +880,21 @@
             "type": "string"
           },
           "type": "array"
+        },
+        "data_quality": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/QualityReport"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional (v0.4.0): quality report of each analyzed position"
         }
       },
       "required": [
@@ -1834,6 +1877,163 @@
         "answers"
       ],
       "title": "ProfileRequest",
+      "type": "object"
+    },
+    "QualityReport": {
+      "additionalProperties": false,
+      "description": "Data-quality gate of one asset (core/quality.py). No verdict is computed on 'blocking' data.",
+      "properties": {
+        "ticker": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "ok",
+            "warning",
+            "blocking"
+          ],
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "starter_dataset",
+            "on_demand"
+          ],
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "retrieved_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "first_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "last_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "n_obs": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "years": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "missing_days": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "missing_share": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "stale_runs": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "outliers": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "ohlc_issues": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "zero_volume_days": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "fx_filled_days": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "odd_splits": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "warnings_fr": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "notes_fr": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "reference_calendar": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ticker",
+        "status",
+        "origin",
+        "source",
+        "retrieved_at",
+        "first_date",
+        "last_date",
+        "n_obs",
+        "years",
+        "missing_days",
+        "missing_share",
+        "stale_runs",
+        "outliers",
+        "ohlc_issues",
+        "zero_volume_days",
+        "fx_filled_days",
+        "odd_splits",
+        "warnings_fr",
+        "notes_fr",
+        "reference_calendar",
+        "evidence_id"
+      ],
+      "title": "QualityReport",
       "type": "object"
     },
     "Relevance": {

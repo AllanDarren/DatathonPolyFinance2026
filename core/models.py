@@ -12,7 +12,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.3.0"
+CONTRACT_VERSION = "0.4.0"
 
 RiskTolerance = Literal["low", "low_moderate", "moderate", "high"]
 HorizonBucket = Literal["short", "medium", "long"]
@@ -303,6 +303,32 @@ class WeightGridPoint(Contract):
     rule_ids: list[str]
 
 
+class QualityReport(Contract):
+    """Data-quality gate of one asset (core/quality.py). No verdict is computed on 'blocking' data."""
+
+    ticker: str
+    status: Literal["ok", "warning", "blocking"]
+    origin: Literal["starter_dataset", "on_demand"]
+    source: str
+    retrieved_at: str | None
+    first_date: str | None
+    last_date: str | None
+    n_obs: int = Field(ge=0)
+    years: float = Field(ge=0)
+    missing_days: int = Field(ge=0)
+    missing_share: float = Field(ge=0, le=1)
+    stale_runs: list[dict[str, Any]]
+    outliers: list[dict[str, Any]]
+    ohlc_issues: int = Field(ge=0)
+    zero_volume_days: int = Field(ge=0)
+    fx_filled_days: int = Field(ge=0)
+    odd_splits: list[dict[str, Any]]
+    warnings_fr: list[str]
+    notes_fr: list[str]
+    reference_calendar: str | None
+    evidence_id: str
+
+
 class CoherenceResult(Contract):
     verdict: Literal["coherent", "tension", "incoherent"]
     rule_hits: list[RuleHit]
@@ -315,6 +341,8 @@ class CoherenceResult(Contract):
     what_would_change: list[WhatWouldChange] | None = Field(default=None, description="Optional (v0.3.0)")
     weight_grid: list[WeightGridPoint] | None = Field(
         default=None, description="Optional (v0.3.0): verdict of the same rules for each tested weight")
+    data_quality: QualityReport | None = Field(default=None, description="Optional (v0.4.0): quality of the asset")
+    asset_origin: Literal["starter_dataset", "on_demand"] | None = Field(default=None, description="Optional (v0.4.0)")
 
 
 # --- Feed ------------------------------------------------------------------
@@ -393,6 +421,8 @@ class FeedResponse(Contract):
     evidence: dict[str, Evidence] = Field(description="Every cited evidence, by id")
     disclaimers: list[str]
     limits: list[str]
+    data_quality: list[QualityReport] | None = Field(
+        default=None, description="Optional (v0.4.0): quality report of each analyzed position")
 
 
 # --- Requests & errors -----------------------------------------------------

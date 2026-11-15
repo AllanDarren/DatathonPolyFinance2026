@@ -284,6 +284,7 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
     if portfolio["unanalyzed"]["tickers"]:
         limits.append("Positions hors des 31 actifs non analysées: " + ", ".join(portfolio["unanalyzed"]["tickers"]) + ".")
 
+    data_quality = _positions_quality(portfolio, fb.registry)  # registers the quality evidence first
     return {
         "generated_at": generated_at or _now(),
         "data_as_of": data.data_as_of(),
@@ -295,10 +296,32 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
                    "by_reason": [{"reason": r, "count": c} for r, c in sorted(hidden.items(), key=lambda x: -x[1])]},
         "coherence": coherence,
         "events": sorted(events, key=lambda e: (e["date"], e["id"])),
-        "evidence": fb.registry.to_dict(_cited(summary_ids, items, coherence)),
+        "evidence": fb.registry.to_dict(_cited(summary_ids, items, coherence) | _quality_ids(portfolio)),
         "disclaimers": list(lt.disclaimers),
         "limits": limits,
+        "data_quality": data_quality,
     }
+
+
+def _positions_quality(portfolio: dict[str, Any], registry: EvidenceRegistry) -> list[dict[str, Any]]:
+    """Quality report of each analyzed position (its evidence is registered and returned)."""
+    from core import quality
+
+    out = []
+    for p in sorted(portfolio["positions"], key=lambda x: -x["weight"]):
+        if not p.get("in_universe", True):
+            continue
+        q = quality.asset_quality(p["ticker"])
+        registry.add(q["evidence"])
+        out.append(quality.public(q))
+    return out
+
+
+def _quality_ids(portfolio: dict[str, Any]) -> set[str]:
+    from core import quality
+
+    return {quality.asset_quality(p["ticker"])["evidence"]["id"] for p in portfolio["positions"]
+            if p.get("in_universe", True)}
 
 
 def _neg_date(iso: str) -> float:

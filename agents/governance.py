@@ -39,6 +39,18 @@ def govern(profile: dict[str, Any], portfolio: dict[str, Any], consideration: di
         "Aucune transaction n'est exécutée et ce verdict n'est pas un conseil personnalisé: il applique les règles "
         "du prototype à ton profil déclaré.")]
 
+    # 0. Data quality of the considered asset (core/quality.py). Blocking data never reaches this point.
+    from core import quality
+
+    q = quality.asset_quality(ticker)
+    q_id = registry.add(q["evidence"])
+    origin = "téléchargées à la demande" if q["origin"] == "on_demand" else "du jeu de départ"
+    detail = (f"Données {origin} ({q['source']}) : " + (" ".join(q["warnings_fr"]) if q["warnings_fr"]
+                                                         else "aucune anomalie détectée.")
+              + (" " + " ".join(q["notes_fr"]) if q["notes_fr"] else ""))
+    controls.append(_control("G_DATA_QUALITY", "Qualité des données", "warning" if q["status"] == "warning" else "ok",
+                             detail, [q_id]))
+
     # 1. Profile limits (coherence rules).
     hits = coherence.get("rule_hits", [])
     rule_ev = coherence.get("rule_evidence", {})

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "data_quality.yaml.schema.json",
+  "description": "Format of rules/data_quality.yaml (role D). Generated from core/rules_models.py.",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "min_years": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "max_missing_share": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "warn_missing_share": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "stale_run_days": {
+      "minimum": 2,
+      "type": "integer"
+    },
+    "blocking_stale_run_days": {
+      "minimum": 2,
+      "type": "integer"
+    },
+    "outlier_sigma": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "outlier_abs_return": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "max_stale_last_days": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "reference_calendars": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "min_years",
+    "max_missing_share",
+    "warn_missing_share",
+    "stale_run_days",
+    "blocking_stale_run_days",
+    "outlier_sigma",
+    "outlier_abs_return",
+    "max_stale_last_days",
+    "reference_calendars"
+  ],
+  "title": "DataQualityRules",
+  "type": "object"
+}
