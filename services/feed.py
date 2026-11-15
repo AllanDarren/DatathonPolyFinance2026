@@ -16,7 +16,7 @@ from typing import Any
 from pydantic import ValidationError
 
 from agents.explainer import explain, template_explanation
-from agents.llm import LLMClient, MockClient, get_client
+from agents.llm import LLMClient, LLMUnavailableError, MockClient, get_client
 from agents.orchestrator import consider
 from core import data, event_study, metrics, snapshots
 from core import rules_engine as engine
@@ -168,7 +168,12 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
         raise AlphaForgeError("EMPTY_PORTFOLIO", "Le portefeuille ne contient aucune position analysable.")
     if consideration is not None:
         consideration = _validate(Consideration, consideration, "INVALID_CONSIDERATION", "Demande « J'envisage d'acheter »")
-    client = client if client is not None else get_client()
+    llm_note = None
+    if client is None:
+        try:
+            client = get_client()
+        except LLMUnavailableError as exc:  # misconfigured or unreachable model: degrade to templates
+            client, llm_note = None, f"Modèle de langage indisponible ({exc}); explications réduites aux preuves."
     fb = FeedBuilder(profile, portfolio, client)
     before = set(fb.registry.to_dict())
     summary = portfolio_summary(portfolio, fb.registry, fb.threshold)
@@ -233,6 +238,8 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
 
     lt = fb.rules.limits_texts
     limits = list(lt.limits)
+    if llm_note:
+        limits.append(llm_note)
     if snap and snap["report"].get("model_id") == "mock-keywords":
         limits.append("Classement des nouvelles fait hors ligne par mots-clés (mode démo sans modèle); "
                       "il peut se tromper de catégorie.")
