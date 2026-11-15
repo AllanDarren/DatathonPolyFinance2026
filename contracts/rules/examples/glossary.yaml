@@ -1,0 +1,5 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/glossary.yaml (rôle D).
+terms:
+  - {id: volatility, term: Volatilité, definition_fr: "Ampleur des variations de prix d'un placement. Plus elle est élevée, plus le prix bouge.", example_fr: "Une volatilité de 50 % signifie des variations bien plus fortes qu'un FNB d'obligations."}
+  - {id: max_drawdown, term: Perte maximale, definition_fr: "Pire baisse entre un sommet et le creux qui suit.", example_fr: "−66 % veut dire que 100 $ sont tombés à 34 $ au pire moment."}
+  - {id: horizon, term: Horizon, definition_fr: "Nombre d'années avant d'avoir besoin de l'argent."}

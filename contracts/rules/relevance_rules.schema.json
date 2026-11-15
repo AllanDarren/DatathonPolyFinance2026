@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relevance_rules.yaml.schema.json",
+  "description": "Format of rules/relevance_rules.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "Condition": {
+      "additionalProperties": false,
+      "description": "One comparison. Left side: `field` (dotted path) or `metric` (named metric).\nRight side: `value` (constant) or `value_from` / `limit_from` (dotted path).",
+      "properties": {
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "op": {
+          "enum": [
+            "==",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "in",
+            "not_in",
+            "contains",
+            "not_contains"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "default": null
+        },
+        "value_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limit_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "Modifier": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "when": {
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "add": {
+          "type": "number"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "when",
+        "add",
+        "text_fr"
+      ],
+      "title": "Modifier",
+      "type": "object"
+    },
+    "PositionBonus": {
+      "additionalProperties": false,
+      "properties": {
+        "min_weight": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "add": {
+          "type": "number"
+        },
+        "text_fr": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "min_weight",
+        "add"
+      ],
+      "title": "PositionBonus",
+      "type": "object"
+    },
+    "Thresholds": {
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "number"
+        },
+        "high": {
+          "type": "number"
+        },
+        "medium": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "show",
+        "high"
+      ],
+      "title": "Thresholds",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "base_weights": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "base_rule_text_fr": {
+      "type": "string"
+    },
+    "position_weight_bonus": {
+      "items": {
+        "$ref": "#/$defs/PositionBonus"
+      },
+      "type": "array"
+    },
+    "modifiers": {
+      "items": {
+        "$ref": "#/$defs/Modifier"
+      },
+      "type": "array"
+    },
+    "thresholds": {
+      "$ref": "#/$defs/Thresholds"
+    },
+    "hidden_reasons_fr": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Optional texts: keys 'short_term_noise' and 'low_relevance'",
+      "type": "object"
+    }
+  },
+  "required": [
+    "version",
+    "base_weights",
+    "base_rule_text_fr",
+    "thresholds"
+  ],
+  "title": "RelevanceRules",
+  "type": "object"
+}

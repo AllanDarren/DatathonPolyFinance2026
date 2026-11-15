@@ -19,10 +19,12 @@ from typing import Any
 from pydantic.json_schema import models_json_schema
 
 from core.models import CONTRACT_VERSION, TOP_LEVEL
+from core.rules_models import RULE_FILES
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTRACTS_DIR = ROOT / "contracts"
 BUNDLE = CONTRACTS_DIR / "alphaforge.schema.json"
+RULES_SCHEMAS_DIR = CONTRACTS_DIR / "rules"
 
 
 def _strip_property_titles(node: Any, parent_key: str | None = None) -> Any:
@@ -61,19 +63,37 @@ def render() -> str:
     return json.dumps(build_bundle(), indent=2, ensure_ascii=False) + "\n"
 
 
+def render_rules() -> dict[Path, str]:
+    """One schema per rule file of role D: contracts/rules/<file>.schema.json."""
+    out = {}
+    for name, model in RULE_FILES.items():
+        schema = model.model_json_schema(mode="validation")
+        schema = {"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": f"{name}.schema.json",
+                  "description": f"Format of rules/{name} (role D). Generated from core/rules_models.py.",
+                  **_strip_property_titles(schema)}
+        out[RULES_SCHEMAS_DIR / f"{name.removesuffix('.yaml')}.schema.json"] = (
+            json.dumps(schema, indent=2, ensure_ascii=False) + "\n")
+    return out
+
+
+def all_files() -> dict[Path, str]:
+    return {BUNDLE: render(), **render_rules()}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="fail if contracts/ is out of date")
     args = parser.parse_args()
-    text = render()
+    files = all_files()
+    stale = [p for p, text in files.items() if not p.exists() or p.read_text(encoding="utf-8") != text]
     if args.check:
-        if not BUNDLE.exists() or BUNDLE.read_text(encoding="utf-8") != text:
-            print(f"stale: {BUNDLE.relative_to(ROOT)} (run python -m tools.export_schemas)")
-            return 1
-        return 0
-    CONTRACTS_DIR.mkdir(exist_ok=True)
-    BUNDLE.write_text(text, encoding="utf-8")
-    print(f"wrote {BUNDLE.relative_to(ROOT)}")
+        for p in stale:
+            print(f"stale: {p.relative_to(ROOT)} (run python -m tools.export_schemas)")
+        return 1 if stale else 0
+    RULES_SCHEMAS_DIR.mkdir(parents=True, exist_ok=True)
+    for p, text in files.items():
+        p.write_text(text, encoding="utf-8")
+    print(f"wrote {len(files)} schema files")
     return 0
 
 

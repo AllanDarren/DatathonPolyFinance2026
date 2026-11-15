@@ -1,0 +1,39 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/profile_rules.yaml (rôle D).
+version: 1
+horizon_buckets:
+  - {id: short, max_years: 5}
+  - {id: medium, max_years: 12}
+  - {id: long, max_years: 100}
+risk_from_points:                # somme des points risk du questionnaire (0 à 11)
+  - {max_points: 3, value: low}
+  - {max_points: 6, value: low_moderate}
+  - {max_points: 8, value: moderate}
+  - {max_points: 99, value: high}
+limits_by_risk:
+  low:          {max_single_position: 0.08, max_high_vol_share: 0.05}
+  low_moderate: {max_single_position: 0.10, max_high_vol_share: 0.10}
+  moderate:     {max_single_position: 0.15, max_high_vol_share: 0.25}
+  high:         {max_single_position: 0.25, max_high_vol_share: 0.60}
+high_vol_threshold: 0.30
+defaults:
+  horizon_years: 10
+  objective: balanced
+  experience: beginner
+  max_acceptable_loss_pct: 0.10
+  monthly_expenses_cad: null
+  preferences.avoid_controversies: false
+  preferences.excluded_sectors: []
+  preferences.interests: []
+inconsistency_checks:
+  - id: I_HIGH_RISK_SHORT
+    when: [{field: risk_tolerance, op: '==', value: high}, {field: horizon_years, op: '<=', value: 3}]
+    text_fr: Tolérance au risque élevée, mais horizon court.
+  - id: I_PRESERVE_HIGH_LOSS
+    when: [{field: objective, op: '==', value: capital_preservation}, {field: max_acceptable_loss_pct, op: '>=', value: 0.20}]
+    text_fr: Tu veux préserver ton capital, mais tu dis accepter une forte baisse.
+  - id: I_GROWTH_SHORT
+    when: [{field: objective, op: '==', value: growth}, {field: horizon_years, op: '<=', value: 3}]
+    text_fr: Objectif de croissance, mais horizon de moins de 3 ans.
+  - id: I_BEGINNER_HIGH_RISK
+    when: [{field: experience, op: '==', value: beginner}, {field: risk_tolerance, op: '==', value: high}]
+    text_fr: Tolérance au risque élevée alors que tu débutes.

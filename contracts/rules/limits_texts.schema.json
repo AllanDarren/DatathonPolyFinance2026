@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "limits_texts.yaml.schema.json",
+  "description": "Format of rules/limits_texts.yaml (role D). Generated from core/rules_models.py.",
+  "additionalProperties": false,
+  "properties": {
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "disclaimers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "limits",
+    "disclaimers"
+  ],
+  "title": "LimitsTexts",
+  "type": "object"
+}

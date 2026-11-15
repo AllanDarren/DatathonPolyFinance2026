@@ -2,7 +2,7 @@
 # (dev, deploy, deploy-web, destroy, smoke).
 PY ?= python3
 
-.PHONY: test lint contracts examples
+.PHONY: test lint contracts examples validate-rules
 
 test:
 	$(PY) -m tools.export_schemas --check
@@ -16,3 +16,6 @@ contracts:
 
 examples:
 	$(PY) -m tools.build_examples
+
+validate-rules:
+	$(PY) -m tools.validate_rules

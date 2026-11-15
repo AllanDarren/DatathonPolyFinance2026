@@ -16,12 +16,12 @@ from pathlib import Path
 from typing import Any
 
 from core import portfolio as _portfolio
+from core import rules_engine as _rules
 from core.errors import AlphaForgeError
 from core.models import CONTRACT_VERSION
 
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = ROOT / "contracts" / "examples"
-RULES = ROOT / "rules"
 
 __all__ = [
     "ServiceError",
@@ -53,26 +53,18 @@ def health() -> dict[str, Any]:
 
 
 def get_questionnaire() -> dict[str, Any]:
-    """Content of rules/questionnaire.yaml as JSON (empty placeholder until role D ships it)."""
-    path = RULES / "questionnaire.yaml"
-    if path.exists():
-        import yaml
-
-        return yaml.safe_load(path.read_text(encoding="utf-8"))
-    return {"version": 1, "questions": []}
+    """Content of rules/questionnaire.yaml as JSON (reference example until role D ships it)."""
+    return _copy(_rules.load_rules().raw_questionnaire)
 
 
 def get_personas() -> list[dict[str, Any]]:
-    return _copy(_example("personas.json"))
+    """Personas from rules/personas/ (reference examples until role D ships them)."""
+    return _rules.load_personas()
 
 
 def score_profile(answers: dict[str, str]) -> dict[str, Any]:
-    """A0 stub: returns the Mateo example profile tagged as a questionnaire result."""
-    if not isinstance(answers, dict):
-        raise ServiceError("INVALID_ANSWERS", "Les réponses doivent être un objet {question_id: option_id}.")
-    profile = _copy(_example("feed_mateo.json")["profile"])
-    profile.update({"profile_id": "custom", "label": "Mon profil", "source": "questionnaire"})
-    return profile
+    """Questionnaire answers -> Profile, computed by rules (never by the LLM)."""
+    return _rules.score_profile(answers)
 
 
 def parse_portfolio(csv_text: str) -> dict[str, Any]:

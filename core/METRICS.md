@@ -52,3 +52,22 @@ Recalcul indépendant (script séparé, pandas) des valeurs de la section 6 du c
 - Les métriques sur un actif sont en devise de cotation par défaut; pour un investisseur en CAD, l'expérience réelle d'un actif américain diffère (effet de change). `currency="CAD"` est disponible.
 - `adj_close` est rétro-ajusté: un nouveau téléchargement peut changer les valeurs anciennes.
 - La volatilité de la crypto (365 jours) et celle des actions (252 jours) sont annualisées chacune sur ses propres jours de cotation.
+
+## Métriques des règles de cohérence
+
+Utilisables dans `rules/coherence_rules.yaml` (`metric: …`), calculées pour l'actif envisagé par `core.rules_engine.coherence_metrics`:
+
+| Nom | Définition | Format de `{observed}` |
+| --- | --- | --- |
+| `position_weight_after` | Poids visé après l'ajout | % |
+| `annualized_vol`, `max_drawdown`, `max_drawdown_abs`, `worst_calendar_year_return`, `return_5y`, `dividend_yield_ttm` | Voir le tableau principal | % |
+| `worst_calendar_year_loss_abs` | Perte de la pire année civile (0 si aucune année négative) | % |
+| `recovery_days` / `recovery_years` | Temps de récupération après la pire chute (vide si jamais retrouvé: la règle ne se déclenche pas) | jours / ans |
+| `is_high_vol` | Vrai si volatilité > `high_vol_threshold` de `profile_rules.yaml` | — |
+| `asset_class` | Classe d'actif | — |
+| `high_vol_share_after` | Part des positions très volatiles après l'ajout (les autres montants inchangés) | % |
+| `top3_concentration_after` | Poids des trois plus grosses positions après l'ajout | % |
+| `crypto_share_after` | Part des cryptomonnaies après l'ajout | % |
+| `corr_to_portfolio` | Corrélation mensuelle (CAD) avec le portefeuille actuel | nombre |
+
+Portefeuille après l'ajout: les montants des autres positions restent fixes et la position envisagée est portée à `intended_weight` du nouveau total.

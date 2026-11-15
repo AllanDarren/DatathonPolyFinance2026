@@ -42,24 +42,24 @@
       },
       {
         "ticker": "QQQ",
-        "amount": 18000.0,
-        "weight": 0.18,
+        "amount": 20000.0,
+        "weight": 0.2,
         "asset_class": "equity_etf",
         "price_currency": "USD",
         "in_universe": true
       },
       {
         "ticker": "SHOP.TO",
-        "amount": 12000.0,
-        "weight": 0.12,
+        "amount": 10000.0,
+        "weight": 0.1,
         "asset_class": "equity_ca",
         "price_currency": "CAD",
         "in_universe": true
       },
       {
         "ticker": "BTC-USD",
-        "amount": 12000.0,
-        "weight": 0.12,
+        "amount": 10000.0,
+        "weight": 0.1,
         "asset_class": "crypto",
         "price_currency": "USD",
         "in_universe": true
@@ -74,12 +74,13 @@
       }
     ],
     "asset_class_weights": {
-      "equity_us": 0.37,
-      "equity_etf": 0.26,
-      "equity_ca": 0.19,
-      "crypto": 0.18
+      "equity_us": 0.35,
+      "equity_etf": 0.3,
+      "equity_ca": 0.16,
+      "crypto": 0.15,
+      "gold_etf": 0.04
     },
-    "high_vol_share": 0.64,
+    "high_vol_share": 0.56,
     "top3_concentration": 0.5
   },
   "items": [
@@ -169,7 +170,7 @@
         "score": 0.55,
         "level": "medium",
         "shown": true,
-        "position_weight": 0.12,
+        "position_weight": 0.1,
         "rule_hits": [
           {
             "rule_id": "R_BASE_PRODUCT",
@@ -180,7 +181,7 @@
             "rule_id": "R_POS_WEIGHT_10",
             "text": "Position de 10 % ou plus du portefeuille.",
             "delta": 0.1,
-            "observed": 0.12,
+            "observed": 0.1,
             "limit": 0.1
           }
         ]
@@ -206,7 +207,7 @@
             "verified": "supported"
           },
           {
-            "text": "SHOP.TO représente 12,0 % de ton portefeuille, avec une volatilité annualisée de 64,4 % sur 5 ans.",
+            "text": "SHOP.TO représente 10,0 % de ton portefeuille, avec une volatilité annualisée de 64,4 % sur 5 ans.",
             "label": "fact",
             "evidence_ids": [
               "ev_012",
@@ -309,7 +310,7 @@
         "score": 0.45,
         "level": "low",
         "shown": true,
-        "position_weight": 0.07,
+        "position_weight": 0.06,
         "rule_hits": [
           {
             "rule_id": "R_BASE_EARNINGS_RESULTS",
@@ -339,7 +340,7 @@
             "verified": "supported"
           },
           {
-            "text": "CSU.TO représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 30,5 % sur 5 ans.",
+            "text": "CSU.TO représente 6,0 % de ton portefeuille, avec une volatilité annualisée de 30,5 % sur 5 ans.",
             "label": "fact",
             "evidence_ids": [
               "ev_025",
@@ -476,7 +477,7 @@
         "score": 0.35,
         "level": "low",
         "shown": true,
-        "position_weight": 0.07,
+        "position_weight": 0.05,
         "rule_hits": [
           {
             "rule_id": "R_BASE_CONTROVERSY",
@@ -506,7 +507,7 @@
             "verified": "supported"
           },
           {
-            "text": "TSLA représente 7,0 % de ton portefeuille, avec une volatilité annualisée de 59,6 % sur 5 ans.",
+            "text": "TSLA représente 5,0 % de ton portefeuille, avec une volatilité annualisée de 59,6 % sur 5 ans.",
             "label": "fact",
             "evidence_ids": [
               "ev_030",
@@ -533,11 +534,11 @@
     }
   ],
   "hidden": {
-    "count": 3,
+    "count": 4,
     "by_reason": [
       {
         "reason": "Bruit de court terme pour ton horizon",
-        "count": 3
+        "count": 4
       }
     ]
   },
@@ -717,13 +718,13 @@
     "ev_012": {
       "id": "ev_012",
       "kind": "portfolio_calc",
-      "statement": "SHOP.TO représente 12,0 % du portefeuille analysé.",
-      "value": 0.12,
+      "statement": "SHOP.TO représente 10,0 % du portefeuille analysé.",
+      "value": 0.1,
       "unit": "fraction",
       "as_of": "2026-11-12",
       "inputs": {
         "ticker": "SHOP.TO",
-        "amount": 12000,
+        "amount": 10000,
         "total": 100000.0
       },
       "source": "portefeuille fourni",
@@ -904,13 +905,13 @@
     "ev_025": {
       "id": "ev_025",
       "kind": "portfolio_calc",
-      "statement": "CSU.TO représente 7,0 % du portefeuille analysé.",
-      "value": 0.07,
+      "statement": "CSU.TO représente 6,0 % du portefeuille analysé.",
+      "value": 0.06,
       "unit": "fraction",
       "as_of": "2026-11-12",
       "inputs": {
         "ticker": "CSU.TO",
-        "amount": 7000,
+        "amount": 6000,
         "total": 100000.0
       },
       "source": "portefeuille fourni",
@@ -976,13 +977,13 @@
     "ev_030": {
       "id": "ev_030",
       "kind": "portfolio_calc",
-      "statement": "TSLA représente 7,0 % du portefeuille analysé.",
-      "value": 0.07,
+      "statement": "TSLA représente 5,0 % du portefeuille analysé.",
+      "value": 0.05,
       "unit": "fraction",
       "as_of": "2026-11-12",
       "inputs": {
         "ticker": "TSLA",
-        "amount": 7000,
+        "amount": 5000,
         "total": 100000.0
       },
       "source": "portefeuille fourni",

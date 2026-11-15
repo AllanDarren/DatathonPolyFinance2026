@@ -1,0 +1,39 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/relevance_rules.yaml (rôle D).
+version: 1
+base_weights:                    # horizon_bucket -> id de catégorie -> poids de 0 à 1
+  short:  {earnings_results: 0.50, dividend: 0.60, guidance_strategy: 0.40, regulation_legal: 0.45, controversy: 0.40, management_change: 0.30, mergers_acquisitions: 0.40, macro_rates: 0.70, analyst_rating: 0.15, price_commentary: 0.05, rumor_hype: 0.05, product: 0.20}
+  medium: {earnings_results: 0.50, dividend: 0.40, guidance_strategy: 0.50, regulation_legal: 0.45, controversy: 0.40, management_change: 0.35, mergers_acquisitions: 0.45, macro_rates: 0.45, analyst_rating: 0.15, price_commentary: 0.05, rumor_hype: 0.05, product: 0.35}
+  long:   {earnings_results: 0.45, dividend: 0.25, guidance_strategy: 0.55, regulation_legal: 0.45, controversy: 0.35, management_change: 0.35, mergers_acquisitions: 0.45, macro_rates: 0.35, analyst_rating: 0.10, price_commentary: 0.05, rumor_hype: 0.05, product: 0.45}
+base_rule_text_fr: "Catégorie {category}: pertinence {weight} pour un horizon {horizon_bucket}."
+position_weight_bonus:           # paliers sur le poids de la position (le plus haut atteint s'applique)
+  - {min_weight: 0.20, add: 0.20, text_fr: "Cette position pèse au moins 20 % de ton portefeuille."}
+  - {min_weight: 0.10, add: 0.10, text_fr: "Cette position pèse au moins 10 % de ton portefeuille."}
+modifiers:
+  - id: R_PREF_CONTROVERSY
+    when: [{field: profile.preferences.avoid_controversies, op: '==', value: true}, {field: item.controversy, op: '==', value: true}]
+    add: 0.40
+    text_fr: Controverse liée à un titre que tu détiens, et tu as dit vouloir les éviter.
+  - id: R_EXCLUDED_SECTOR
+    when: [{field: position.sector, op: in, value_from: profile.preferences.excluded_sectors}]
+    add: 0.30
+    text_fr: Ce titre appartient à un secteur que tu as dit vouloir éviter.
+  - id: R_HIGH_VOL_SHORT
+    when: [{field: profile.horizon_bucket, op: '==', value: short}, {field: position.is_high_vol, op: '==', value: true}]
+    add: 0.15
+    text_fr: Position très volatile alors que ton horizon est court.
+  - id: R_OVER_LIMIT
+    when: [{field: position.weight, op: '>', value_from: profile.limits.max_single_position}]
+    add: 0.15
+    text_fr: Cette position dépasse déjà la limite par titre prévue pour ton profil.
+  - id: R_INTEREST_CRYPTO
+    when: [{field: profile.preferences.interests, op: contains, value: crypto}, {field: position.asset_class, op: '==', value: crypto}]
+    add: 0.10
+    text_fr: Sujet lié à un de tes centres d'intérêt (cryptomonnaies).
+  - id: R_INTEREST_TECH
+    when: [{field: profile.preferences.interests, op: contains, value: technologie}, {field: position.sector, op: '==', value: Information Technology}]
+    add: 0.10
+    text_fr: Sujet lié à un de tes centres d'intérêt (technologie).
+thresholds: {show: 0.35, high: 0.70}
+hidden_reasons_fr:
+  short_term_noise: Bruit de court terme pour ton horizon
+  low_relevance: Pertinence trop faible pour ton profil

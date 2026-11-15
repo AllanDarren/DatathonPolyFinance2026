@@ -1,0 +1,10 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/limits_texts.yaml (rôle D).
+limits:
+  - "Une seule fenêtre de 5 ans (2021-11-12 au 2026-11-12): hausse des taux, marché porté par la technologie."
+  - "Biais du survivant: les 31 actifs ont été choisis en 2026."
+  - "Un contexte historique n'est pas une prévision; une corrélation n'est pas une cause."
+  - "Pas de notes ESG ni de données fondamentales dans le jeu de départ."
+  - "On suppose un investisseur en dollars canadiens."
+disclaimers:
+  - "Simulation éducative: ce n'est pas un conseil financier personnalisé."
+  - "Aucune transaction réelle n'est effectuée."

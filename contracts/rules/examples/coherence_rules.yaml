@@ -1,0 +1,29 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/coherence_rules.yaml (rôle D).
+# Métriques disponibles: voir core/METRICS.md (section « Métriques des règles de cohérence »).
+version: 1
+verdict: {incoherent_if_high_at_least: 1, tension_if_medium_at_least: 1}
+rules:
+  - id: C_MAX_SINGLE
+    severity: high
+    when: [{metric: position_weight_after, op: '>', limit_from: profile.limits.max_single_position}]
+    text_fr: "Cette position dépasserait la limite de {limit} par titre prévue pour ton profil (valeur: {observed})."
+  - id: C_HIGH_VOL_SHARE
+    severity: high
+    when: [{metric: is_high_vol, op: '==', value: true}, {metric: high_vol_share_after, op: '>', limit_from: profile.limits.max_high_vol_share}]
+    text_fr: "La part d'actifs très volatils atteindrait {observed}, au-delà de la limite de {limit} prévue pour ton profil."
+  - id: C_CRYPTO_LOW_RISK
+    severity: high
+    when: [{metric: asset_class, op: '==', value: crypto}, {field: profile.risk_tolerance, op: in, value: [low, low_moderate]}]
+    text_fr: "Une cryptomonnaie est peu compatible avec une tolérance au risque faible."
+  - id: C_DRAWDOWN_VS_LOSS
+    severity: medium
+    when: [{metric: max_drawdown_abs, op: '>', limit_from: profile.max_acceptable_loss_pct}]
+    text_fr: "La pire chute historique de ce titre ({observed}) dépasse la perte que tu dis pouvoir accepter ({limit})."
+  - id: C_RECOVERY_VS_HORIZON
+    severity: medium
+    when: [{metric: recovery_years, op: '>', limit_from: profile.horizon_years}]
+    text_fr: "Après sa pire chute, ce titre a mis {observed} à se rétablir, plus que ton horizon ({limit})."
+  - id: C_TOP3_CONCENTRATION
+    severity: low
+    when: [{metric: top3_concentration_after, op: '>', value: 0.60}]
+    text_fr: "Tes trois plus grosses positions représenteraient {observed} du portefeuille."

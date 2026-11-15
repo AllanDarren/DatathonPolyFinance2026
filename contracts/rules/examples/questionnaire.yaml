@@ -1,0 +1,59 @@
+# EXEMPLE de référence (rôle A) — le vrai fichier est rules/questionnaire.yaml (rôle D).
+version: 1
+questions:
+  - id: q_horizon
+    text: Dans combien d'années auras-tu besoin d'une partie importante de cet argent?
+    help: Pense à la retraite, à un achat important ou à un projet.
+    options:
+      - {id: h_lt3, label: Moins de 3 ans, sets: {horizon_years: 2}}
+      - {id: h_3_5, label: 3 à 5 ans, sets: {horizon_years: 4}}
+      - {id: h_6_12, label: 6 à 12 ans, sets: {horizon_years: 9}}
+      - {id: h_gt12, label: Plus de 12 ans, sets: {horizon_years: 20}}
+  - id: q_drop
+    text: Ton portefeuille perd 20 % en trois mois. Que fais-tu?
+    options:
+      - {id: d_sell, label: Je vends tout pour limiter les dégâts, points: {risk: 0}}
+      - {id: d_partial, label: J'en vends une partie, points: {risk: 1}}
+      - {id: d_hold, label: Je ne touche à rien, points: {risk: 2}}
+      - {id: d_buy, label: J'en profite pour en racheter, points: {risk: 3}}
+  - id: q_objective
+    text: Quel est ton objectif principal pour cet argent?
+    options:
+      - {id: o_preserve, label: Préserver mon capital, sets: {objective: capital_preservation}, points: {risk: 0}}
+      - {id: o_income, label: Obtenir un revenu régulier, sets: {objective: income}, points: {risk: 1}}
+      - {id: o_balanced, label: Un équilibre entre croissance et stabilité, sets: {objective: balanced}, points: {risk: 2}}
+      - {id: o_growth, label: Faire croître mon capital à long terme, sets: {objective: growth}, points: {risk: 3}}
+  - id: q_loss
+    text: Sur une année, quelle baisse de ton portefeuille pourrais-tu accepter sans changer tes plans?
+    options:
+      - {id: l_5, label: 5 % au plus, sets: {max_acceptable_loss_pct: 0.05}, points: {risk: 0}}
+      - {id: l_10, label: Environ 10 %, sets: {max_acceptable_loss_pct: 0.10}, points: {risk: 1}}
+      - {id: l_20, label: Environ 20 %, sets: {max_acceptable_loss_pct: 0.20}, points: {risk: 2}}
+      - {id: l_35, label: 35 % ou plus, sets: {max_acceptable_loss_pct: 0.35}, points: {risk: 3}}
+  - id: q_experience
+    text: Quelle est ton expérience des placements?
+    options:
+      - {id: e_beginner, label: Je débute, sets: {experience: beginner}, points: {risk: 0}}
+      - {id: e_intermediate, label: J'ai déjà quelques placements, sets: {experience: intermediate}, points: {risk: 1}}
+      - {id: e_advanced, label: Je suis les marchés de près, sets: {experience: advanced}, points: {risk: 2}}
+  - id: q_ethics
+    text: As-tu des préférences éthiques pour tes placements?
+    options:
+      - {id: x_none, label: Aucune en particulier, sets: {preferences.avoid_controversies: false}}
+      - {id: x_controversy, label: Éviter les entreprises impliquées dans des controverses, sets: {preferences.avoid_controversies: true}}
+      - {id: x_energy, label: Éviter les controverses et le secteur de l'énergie fossile, sets: {preferences.avoid_controversies: true, preferences.excluded_sectors: [Energy]}}
+  - id: q_interests
+    text: Quel thème t'intéresse le plus?
+    options:
+      - {id: i_none, label: Aucun en particulier, sets: {preferences.interests: []}}
+      - {id: i_tech, label: Technologie et IA, sets: {preferences.interests: [technologie, IA]}}
+      - {id: i_crypto, label: Cryptomonnaies, sets: {preferences.interests: [crypto]}}
+      - {id: i_dividends, label: Dividendes et revenus, sets: {preferences.interests: [dividendes]}}
+  - id: q_expenses
+    text: Combien dépenses-tu environ par mois? (facultatif)
+    help: Sert seulement à traduire une baisse en mois de dépenses.
+    optional: true
+    options:
+      - {id: m_lt3k, label: Moins de 3 000 $, sets: {monthly_expenses_cad: 2500}}
+      - {id: m_3_5k, label: 3 000 à 5 000 $, sets: {monthly_expenses_cad: 4000}}
+      - {id: m_gt5k, label: Plus de 5 000 $, sets: {monthly_expenses_cad: 6000}}

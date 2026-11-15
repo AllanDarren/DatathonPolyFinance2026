@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "profile_rules.yaml.schema.json",
+  "description": "Format of rules/profile_rules.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "Condition": {
+      "additionalProperties": false,
+      "description": "One comparison. Left side: `field` (dotted path) or `metric` (named metric).\nRight side: `value` (constant) or `value_from` / `limit_from` (dotted path).",
+      "properties": {
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "op": {
+          "enum": [
+            "==",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "in",
+            "not_in",
+            "contains",
+            "not_contains"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "default": null
+        },
+        "value_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limit_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "op"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "HorizonBucketRule": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "short",
+            "medium",
+            "long"
+          ],
+          "type": "string"
+        },
+        "max_years": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "max_years"
+      ],
+      "title": "HorizonBucketRule",
+      "type": "object"
+    },
+    "InconsistencyCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "when": {
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "text_fr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "when",
+        "text_fr"
+      ],
+      "title": "InconsistencyCheck",
+      "type": "object"
+    },
+    "Limits": {
+      "additionalProperties": false,
+      "properties": {
+        "max_single_position": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "max_high_vol_share": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "max_single_position",
+        "max_high_vol_share"
+      ],
+      "title": "Limits",
+      "type": "object"
+    },
+    "RiskTier": {
+      "additionalProperties": false,
+      "properties": {
+        "max_points": {
+          "type": "number"
+        },
+        "value": {
+          "enum": [
+            "low",
+            "low_moderate",
+            "moderate",
+            "high"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "max_points",
+        "value"
+      ],
+      "title": "RiskTier",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "horizon_buckets": {
+      "items": {
+        "$ref": "#/$defs/HorizonBucketRule"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "risk_from_points": {
+      "items": {
+        "$ref": "#/$defs/RiskTier"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "limits_by_risk": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Limits"
+      },
+      "propertyNames": {
+        "enum": [
+          "low",
+          "low_moderate",
+          "moderate",
+          "high"
+        ]
+      },
+      "type": "object"
+    },
+    "inconsistency_checks": {
+      "items": {
+        "$ref": "#/$defs/InconsistencyCheck"
+      },
+      "type": "array"
+    },
+    "defaults": {
+      "additionalProperties": true,
+      "description": "Profile fields used when no answer sets them",
+      "type": "object"
+    },
+    "high_vol_threshold": {
+      "default": 0.3,
+      "exclusiveMaximum": 5,
+      "exclusiveMinimum": 0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "version",
+    "horizon_buckets",
+    "risk_from_points",
+    "limits_by_risk"
+  ],
+  "title": "ProfileRules",
+  "type": "object"
+}

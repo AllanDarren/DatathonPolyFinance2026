@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "taxonomy.yaml.schema.json",
+  "description": "Format of rules/taxonomy.yaml (role D). Generated from core/rules_models.py.",
+  "$defs": {
+    "Category": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "label_fr": {
+          "type": "string"
+        },
+        "definition": {
+          "type": "string"
+        },
+        "horizon_relevance": {
+          "enum": [
+            "structural",
+            "macro_context",
+            "short_term_noise"
+          ],
+          "type": "string"
+        },
+        "examples": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "label_fr",
+        "definition",
+        "horizon_relevance",
+        "examples"
+      ],
+      "title": "Category",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "categories": {
+      "items": {
+        "$ref": "#/$defs/Category"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "controversy_types": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "categories",
+    "controversy_types"
+  ],
+  "title": "Taxonomy",
+  "type": "object"
+}
