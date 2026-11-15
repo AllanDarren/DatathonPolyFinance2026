@@ -22,10 +22,6 @@ Parameters:
   AppVersion:
     Type: String
     Default: dev
-  CodeZip:
-    Type: String
-    Default: ../.build/lambda.zip
-    Description: Local path, replaced by an S3 location by `aws cloudformation package`
   BudgetEmail:
     Type: String
     Default: ""
@@ -159,7 +155,7 @@ Resources:
     Properties:
       FunctionName: !Sub "${AWS::StackName}-api"
       Description: AlphaForge API (api/handler.py -> services/)
-      CodeUri: !Ref CodeZip
+      CodeUri: ../.build/lambda.zip  # built by scripts/build_lambda.py, uploaded by `aws cloudformation package`
       Handler: api.handler.lambda_handler
       MemorySize: 1769  # 1 full vCPU: pandas at cold start, parallel Bedrock calls
       Timeout: 29       # HTTP API integration limit is 30 s
