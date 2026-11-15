@@ -1,0 +1,158 @@
+version: 1
+questions:
+- id: q_horizon
+  text: Dans combien d’années auras-tu besoin d’une partie importante de cet argent?
+  options:
+  - id: h_lt3
+    label: Moins de 3 ans
+    sets:
+      horizon_years: 2
+  - id: h_3_5
+    label: 3 à 5 ans
+    sets:
+      horizon_years: 4
+  - id: h_6_12
+    label: 6 à 12 ans
+    sets:
+      horizon_years: 10
+  - id: h_13_15
+    label: 13 à 15 ans
+    sets:
+      horizon_years: 14
+  - id: h_gt15
+    label: Plus de 15 ans
+    sets:
+      horizon_years: 20
+- id: q_drop
+  text: Une baisse de 20 % survient en trois mois. Quelle réaction te décrit le mieux?
+  options:
+  - id: d_exit
+    label: Une perte de 5 % serait déjà difficile
+    sets:
+      max_acceptable_loss_pct: 0.05
+    points:
+      risk: 0
+  - id: d_reduce
+    label: Je limiterais mon exposition; je tolère environ 8 % sur un an
+    sets:
+      max_acceptable_loss_pct: 0.08
+    points:
+      risk: 4
+  - id: d_hold
+    label: Je réexaminerais la situation; je tolère environ 15 % sur un an
+    sets:
+      max_acceptable_loss_pct: 0.15
+    points:
+      risk: 7
+  - id: d_accept
+    label: Je pourrais supporter de fortes variations; environ 35 % sur un an
+    sets:
+      max_acceptable_loss_pct: 0.35
+    points:
+      risk: 10
+  help: Une réponse décrit une préférence déclarée, jamais une garantie de perte maximale.
+- id: q_objective
+  text: Quel est ton objectif principal?
+  options:
+  - id: o_preserve
+    label: Préserver le capital
+    sets:
+      objective: capital_preservation
+  - id: o_income
+    label: Obtenir un revenu
+    sets:
+      objective: income
+  - id: o_balanced
+    label: Équilibrer croissance et stabilité
+    sets:
+      objective: balanced
+  - id: o_growth
+    label: Chercher la croissance à long terme
+    sets:
+      objective: growth
+- id: q_experience
+  text: Quelle est ton expérience des placements?
+  options:
+  - id: e_beginner
+    label: Je débute
+    sets:
+      experience: beginner
+  - id: e_intermediate
+    label: Je connais les produits courants
+    sets:
+      experience: intermediate
+  - id: e_advanced
+    label: Je comprends les risques des produits suivis
+    sets:
+      experience: advanced
+  help: 'L’expérience ne rend pas une perte plus supportable : elle ne donne aucun point de risque.'
+- id: q_ethics
+  text: Quelles préférences éthiques veux-tu appliquer?
+  options:
+  - id: p_none
+    label: Aucune exclusion déclarée
+    sets:
+      preferences.avoid_controversies: false
+      preferences.excluded_sectors: []
+  - id: p_avoid
+    label: Faire ressortir les controverses
+    sets:
+      preferences.avoid_controversies: true
+      preferences.excluded_sectors: []
+  - id: p_fossil
+    label: Éviter les controverses et exclure les combustibles fossiles
+    sets:
+      preferences.avoid_controversies: true
+      preferences.excluded_sectors:
+      - fossil_fuels
+  - id: p_tobacco
+    label: Éviter les controverses et exclure le tabac
+    sets:
+      preferences.avoid_controversies: true
+      preferences.excluded_sectors:
+      - tobacco
+  help: ESG désigne les enjeux environnementaux, sociaux et de gouvernance. Une préférence ne certifie aucun actif.
+- id: q_interests
+  text: Quel ensemble de sujets t’intéresse le plus?
+  options:
+  - id: i_ai_crypto
+    label: IA, technologies émergentes et cryptos
+    sets:
+      preferences.interests:
+      - ai
+      - emerging_technology
+      - crypto
+  - id: i_esg
+    label: Environnement, social et gouvernance
+    sets:
+      preferences.interests:
+      - esg
+  - id: i_income
+    label: Revenus et dividendes
+    sets:
+      preferences.interests:
+      - income
+  - id: i_general
+    label: Aucun sujet particulier
+    sets:
+      preferences.interests: []
+- id: q_expenses
+  text: Quelles sont tes dépenses mensuelles approximatives en CAD? (facultatif)
+  options:
+  - id: x_skip
+    label: Je préfère ne pas répondre
+    sets:
+      monthly_expenses_cad: null
+  - id: x_2000
+    label: 2 000 CAD
+    sets:
+      monthly_expenses_cad: 2000
+  - id: x_3500
+    label: 3 500 CAD
+    sets:
+      monthly_expenses_cad: 3500
+  - id: x_5000
+    label: 5 000 CAD
+    sets:
+      monthly_expenses_cad: 5000
+  help: Choisir la valeur la plus proche; elle sert seulement à illustrer un scénario de perte.

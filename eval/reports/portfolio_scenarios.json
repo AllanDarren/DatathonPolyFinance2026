@@ -1,0 +1,308 @@
+[
+  {
+    "profile_id": "robert",
+    "basis": "listing",
+    "scenario": "baseline",
+    "weights": {
+      "ZST.TO": 0.35,
+      "XBB.TO": 0.2,
+      "AGG": 0.1,
+      "XIU.TO": 0.1,
+      "SPY": 0.1,
+      "FTS.TO": 0.05,
+      "RY.TO": 0.05,
+      "GLD": 0.05
+    },
+    "high_vol_share": 0,
+    "high_vol_tickers": [],
+    "top3_concentration": 0.65,
+    "oversized_tickers": [
+      "ZST.TO",
+      "XBB.TO"
+    ],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  },
+  {
+    "profile_id": "robert",
+    "basis": "listing",
+    "scenario": "NVDA_final_20pct",
+    "weights": {
+      "ZST.TO": 0.27999999999999997,
+      "XBB.TO": 0.16000000000000003,
+      "AGG": 0.08000000000000002,
+      "XIU.TO": 0.08000000000000002,
+      "SPY": 0.08000000000000002,
+      "FTS.TO": 0.04000000000000001,
+      "RY.TO": 0.04000000000000001,
+      "GLD": 0.04000000000000001,
+      "NVDA": 0.2
+    },
+    "high_vol_share": 0.2,
+    "high_vol_tickers": [
+      "NVDA"
+    ],
+    "top3_concentration": 0.64,
+    "oversized_tickers": [
+      "ZST.TO",
+      "XBB.TO",
+      "NVDA"
+    ],
+    "metrics": {
+      "max_drawdown_abs": 0.6633508107071912,
+      "recovery_days": 542,
+      "position_weight_after": 0.2,
+      "high_vol_share": 0.2,
+      "top3_concentration": 0.64,
+      "asset_class": "equity_us"
+    },
+    "rule_ids": [
+      "C_MAX_SINGLE",
+      "C_HIGH_VOL_SHARE",
+      "C_DRAWDOWN_VS_LOSS"
+    ],
+    "verdict": "incoherent"
+  },
+  {
+    "profile_id": "amira",
+    "basis": "listing",
+    "scenario": "baseline",
+    "weights": {
+      "NVDA": 0.2,
+      "MSFT": 0.15,
+      "QQQ": 0.15,
+      "BTC-USD": 0.15,
+      "ETH-USD": 0.1,
+      "SHOP.TO": 0.05,
+      "SPY": 0.1,
+      "XBB.TO": 0.1
+    },
+    "high_vol_share": 0.5,
+    "high_vol_tickers": [
+      "NVDA",
+      "BTC-USD",
+      "ETH-USD",
+      "SHOP.TO"
+    ],
+    "top3_concentration": 0.5,
+    "oversized_tickers": [],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  },
+  {
+    "profile_id": "amira",
+    "basis": "listing",
+    "scenario": "NVDA_final_20pct",
+    "weights": {
+      "MSFT": 0.15,
+      "QQQ": 0.15,
+      "BTC-USD": 0.15,
+      "ETH-USD": 0.10000000000000002,
+      "SHOP.TO": 0.05000000000000001,
+      "SPY": 0.10000000000000002,
+      "XBB.TO": 0.10000000000000002,
+      "NVDA": 0.2
+    },
+    "high_vol_share": 0.5,
+    "high_vol_tickers": [
+      "BTC-USD",
+      "ETH-USD",
+      "SHOP.TO",
+      "NVDA"
+    ],
+    "top3_concentration": 0.5,
+    "oversized_tickers": [],
+    "metrics": {
+      "max_drawdown_abs": 0.6633508107071912,
+      "recovery_days": 542,
+      "position_weight_after": 0.2,
+      "high_vol_share": 0.5,
+      "top3_concentration": 0.5,
+      "asset_class": "equity_us"
+    },
+    "rule_ids": [
+      "C_DRAWDOWN_VS_LOSS"
+    ],
+    "verdict": "tension"
+  },
+  {
+    "profile_id": "mateo",
+    "basis": "listing",
+    "scenario": "baseline",
+    "weights": {
+      "ESGV": 0.3,
+      "XBB.TO": 0.2,
+      "ZST.TO": 0.15,
+      "XIU.TO": 0.1,
+      "MSFT": 0.1,
+      "JNJ": 0.05,
+      "CNR.TO": 0.05,
+      "GLD": 0.05
+    },
+    "high_vol_share": 0,
+    "high_vol_tickers": [],
+    "top3_concentration": 0.65,
+    "oversized_tickers": [
+      "ESGV",
+      "XBB.TO"
+    ],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  },
+  {
+    "profile_id": "robert",
+    "basis": "CAD",
+    "scenario": "baseline",
+    "weights": {
+      "ZST.TO": 0.35,
+      "XBB.TO": 0.2,
+      "AGG": 0.1,
+      "XIU.TO": 0.1,
+      "SPY": 0.1,
+      "FTS.TO": 0.05,
+      "RY.TO": 0.05,
+      "GLD": 0.05
+    },
+    "high_vol_share": 0,
+    "high_vol_tickers": [],
+    "top3_concentration": 0.65,
+    "oversized_tickers": [
+      "ZST.TO",
+      "XBB.TO"
+    ],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  },
+  {
+    "profile_id": "robert",
+    "basis": "CAD",
+    "scenario": "NVDA_final_20pct",
+    "weights": {
+      "ZST.TO": 0.27999999999999997,
+      "XBB.TO": 0.16000000000000003,
+      "AGG": 0.08000000000000002,
+      "XIU.TO": 0.08000000000000002,
+      "SPY": 0.08000000000000002,
+      "FTS.TO": 0.04000000000000001,
+      "RY.TO": 0.04000000000000001,
+      "GLD": 0.04000000000000001,
+      "NVDA": 0.2
+    },
+    "high_vol_share": 0.2,
+    "high_vol_tickers": [
+      "NVDA"
+    ],
+    "top3_concentration": 0.64,
+    "oversized_tickers": [
+      "ZST.TO",
+      "XBB.TO",
+      "NVDA"
+    ],
+    "metrics": {
+      "max_drawdown_abs": 0.6345780519513389,
+      "recovery_days": 535,
+      "position_weight_after": 0.2,
+      "high_vol_share": 0.2,
+      "top3_concentration": 0.64,
+      "asset_class": "equity_us"
+    },
+    "rule_ids": [
+      "C_MAX_SINGLE",
+      "C_HIGH_VOL_SHARE",
+      "C_DRAWDOWN_VS_LOSS"
+    ],
+    "verdict": "incoherent"
+  },
+  {
+    "profile_id": "amira",
+    "basis": "CAD",
+    "scenario": "baseline",
+    "weights": {
+      "NVDA": 0.2,
+      "MSFT": 0.15,
+      "QQQ": 0.15,
+      "BTC-USD": 0.15,
+      "ETH-USD": 0.1,
+      "SHOP.TO": 0.05,
+      "SPY": 0.1,
+      "XBB.TO": 0.1
+    },
+    "high_vol_share": 0.5,
+    "high_vol_tickers": [
+      "NVDA",
+      "BTC-USD",
+      "ETH-USD",
+      "SHOP.TO"
+    ],
+    "top3_concentration": 0.5,
+    "oversized_tickers": [],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  },
+  {
+    "profile_id": "amira",
+    "basis": "CAD",
+    "scenario": "NVDA_final_20pct",
+    "weights": {
+      "MSFT": 0.15,
+      "QQQ": 0.15,
+      "BTC-USD": 0.15,
+      "ETH-USD": 0.10000000000000002,
+      "SHOP.TO": 0.05000000000000001,
+      "SPY": 0.10000000000000002,
+      "XBB.TO": 0.10000000000000002,
+      "NVDA": 0.2
+    },
+    "high_vol_share": 0.5,
+    "high_vol_tickers": [
+      "BTC-USD",
+      "ETH-USD",
+      "SHOP.TO",
+      "NVDA"
+    ],
+    "top3_concentration": 0.5,
+    "oversized_tickers": [],
+    "metrics": {
+      "max_drawdown_abs": 0.6345780519513389,
+      "recovery_days": 535,
+      "position_weight_after": 0.2,
+      "high_vol_share": 0.5,
+      "top3_concentration": 0.5,
+      "asset_class": "equity_us"
+    },
+    "rule_ids": [
+      "C_DRAWDOWN_VS_LOSS"
+    ],
+    "verdict": "tension"
+  },
+  {
+    "profile_id": "mateo",
+    "basis": "CAD",
+    "scenario": "baseline",
+    "weights": {
+      "ESGV": 0.3,
+      "XBB.TO": 0.2,
+      "ZST.TO": 0.15,
+      "XIU.TO": 0.1,
+      "MSFT": 0.1,
+      "JNJ": 0.05,
+      "CNR.TO": 0.05,
+      "GLD": 0.05
+    },
+    "high_vol_share": 0,
+    "high_vol_tickers": [],
+    "top3_concentration": 0.65,
+    "oversized_tickers": [
+      "ESGV",
+      "XBB.TO"
+    ],
+    "metrics": null,
+    "rule_ids": [],
+    "verdict": null
+  }
+]

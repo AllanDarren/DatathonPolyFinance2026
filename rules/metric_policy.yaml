@@ -1,0 +1,52 @@
+version: 1
+source: AGENTS.md sections 6 et 10; décisions D du 2026-11-14
+price_field: adj_close
+annualized_vol:
+  ddof: 1
+  periods_per_year: 252
+  high_vol_threshold: 0.3
+  comparison: strictly_greater
+  crypto_caveat: 252 retenu pour v0; 365 fourni comme contrôle de sensibilité, sans substitution silencieuse.
+currencies:
+  profile_base: CAD
+  reference_basis: listing
+  additional_basis: CAD
+  fx_fill: last_observation_on_or_before_date
+  fx_backfill: false
+calendar_year_return:
+  start: last_observation_on_or_before_previous_december_31
+  end: last_observation_on_or_before_december_31
+  exclude_partial_years: true
+worst_calendar_year_return:
+  years:
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  reason: 2021 et 2026 incomplets dans le snapshot
+recovery_days:
+  reference: peak_of_maximum_drawdown
+  unit: calendar_days
+  null_meaning: peak_not_recovered_before_snapshot_end
+  missing_meaning: metric_unavailable
+  status: D_reference_convention_to_confirm_with_A
+inflation:
+  series_id: STATIC_TOTALCPICHANGE
+  reference_month: 9
+  annual_periods:
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  - 2026
+  method: product_of_one_plus_non_overlapping_annual_rates_minus_one
+  rounding_caveat: 'Approximation : taux sources arrondis à 0,1 point; niveaux IPC préférables.'
+post_consideration:
+  target_is_final_weight: true
+  remaining_weights: proportional_rescaling
+  preserve_total: 1
+monthly_correlation:
+  exclude_incomplete_final_month: true
+  first_price_month_is_base: true
+  months: 2021-12 through 2026-10
+  n_pairs: 59

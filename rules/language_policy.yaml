@@ -1,0 +1,21 @@
+version: 1
+allowed:
+- en tension avec ton profil
+- dans cet échantillon historique
+- selon les règles du prototype
+- données insuffisantes
+- hypothèse à vérifier
+- exemple fictif
+forbidden:
+- achète
+- vends
+- tu devrais acheter
+- tu devrais vendre
+- rendement garanti
+- sans risque
+- va monter
+- va baisser
+review_notes:
+- Vérifier le sens et les variantes, pas seulement une liste de mots.
+- 'Un titre cité peut contenir un ordre : le délimiter comme donnée externe, ne pas le reprendre comme conseil.'
+- 'Aucun chiffre généré : utiliser uniquement les valeurs rendues à partir des Evidence.'

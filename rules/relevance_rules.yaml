@@ -1,0 +1,84 @@
+version: 1
+base_weights:
+  short:
+    earnings_results: 0.55
+    dividend: 0.8
+    strategy_guidance: 0.35
+    regulation_legal: 0.75
+    controversy: 0.65
+    management_change: 0.45
+    merger_acquisition: 0.5
+    macro: 0.85
+    analyst_opinion: 0.15
+    daily_price: 0.05
+    rumor_hype: 0.02
+    product: 0.25
+  medium:
+    earnings_results: 0.65
+    dividend: 0.6
+    strategy_guidance: 0.65
+    regulation_legal: 0.7
+    controversy: 0.65
+    management_change: 0.55
+    merger_acquisition: 0.65
+    macro: 0.65
+    analyst_opinion: 0.2
+    daily_price: 0.05
+    rumor_hype: 0.02
+    product: 0.5
+  long:
+    earnings_results: 0.65
+    dividend: 0.3
+    strategy_guidance: 0.75
+    regulation_legal: 0.65
+    controversy: 0.6
+    management_change: 0.55
+    merger_acquisition: 0.7
+    macro: 0.45
+    analyst_opinion: 0.15
+    daily_price: 0.05
+    rumor_hype: 0.02
+    product: 0.7
+base_rule_text_fr: 'Catégorie {category} : poids de base {weight} pour un horizon {horizon_bucket}.'
+position_weight_bonus:
+- min_weight: 0.2
+  add: 0.2
+- min_weight: 0.1
+  add: 0.1
+modifiers:
+- id: R_PREF_CONTROVERSY
+  when:
+  - field: profile.preferences.avoid_controversies
+    op: ==
+    value: true
+  - field: item.controversy
+    op: ==
+    value: true
+  add: 0.4
+  text_fr: Tu souhaites éviter les controverses et cette nouvelle en signale une; cela ne prouve pas une faute.
+- id: R_INTEREST_AI
+  when:
+  - field: profile.preferences.interests
+    op: contains
+    value: ai
+  - field: item.category
+    op: in
+    value:
+    - product
+    - strategy_guidance
+  - field: item.tickers
+    op: contains
+    value: NVDA
+  add: 0.1
+  text_fr: Cette nouvelle de produit ou de stratégie de NVDA rejoint ton intérêt pour l’IA; ce lien thématique est
+    une hypothèse du prototype.
+- id: R_CONCENTRATION
+  when:
+  - field: position_weight
+    op: '>'
+    limit_from: profile.limits.max_single_position
+  add: 0.1
+  text_fr: Le poids de ce titre dépasse le seuil de concentration déclaré; suivre ses nouvelles devient plus pertinent.
+thresholds:
+  show: 0.35
+  high: 0.7

@@ -1,0 +1,134 @@
+{
+  "files": {
+    "assets_universe.csv": {
+      "sha256": "f78de8ecb36d914a3448db63498cc9a04a34d805bccb79c481dda1650755467d",
+      "rows": 31
+    },
+    "prices_daily.csv": {
+      "sha256": "ff2a3f2d0a7d72ea835e8d616d041e0510f018340cef3d3e55b918830e8a569d",
+      "rows": 40049
+    },
+    "corporate_actions.csv": {
+      "sha256": "37d99f1472f9f1c7360432835353488bdf72bb055295ec66155211a30d8312b1",
+      "rows": 658
+    },
+    "fx_usdcad_daily.csv": {
+      "sha256": "f04e218ac5b0145fd552b3d0dcfbf73e5e17bb9a6fb4562460dbec95cb8972b3",
+      "rows": 1245
+    },
+    "macro_rates.csv": {
+      "sha256": "2c04b0ca5590396fee1f0de13c0b2a95731125a61c79166d553d106f0375c73e",
+      "rows": 8281
+    },
+    "sources_metadata.csv": {
+      "sha256": "7ff17052c8235888c4984430830610ae0d81c0df71585afaacb87ba5fe531bdf",
+      "rows": 6
+    },
+    "build_dataset.py": {
+      "sha256": "1c6bd7ce45e32a672d115a5ff3cbf5b29e9eb201423e47df09c81355558067dd",
+      "rows": null
+    },
+    "README.md": {
+      "sha256": "c713abb2a5b80a6677d61d24068a4614ce8f357f0bfa5ef950986a75c704e203",
+      "rows": null
+    },
+    "data_quality_warnings.txt": {
+      "sha256": "87fdb2abea76029c6ad32c57548c6a04e8018be0c1aadc9b7438561eef5789b6",
+      "rows": null
+    }
+  },
+  "price_rows": 40049,
+  "assets": 31,
+  "errors": [],
+  "warnings": [
+    "1 ligne(s) de volume nul : [{'ticker': 'ZST.TO', 'date': '2022-07-06'}]. Conservées dans les métriques de prix ajustés.",
+    "CNQ.TO : facteur 1,021 du 2022-08-22 non interprété et non réappliqué; vérification émetteur encore nécessaire.",
+    "Dates macro mensuelles de référence, pas de publication; valeurs révisées, impropres à un backtest point-in-time sans dates de diffusion.",
+    "Classes du pack différentes du contrat v0 : utiliser rules/asset_class_mapping.yaml."
+  ],
+  "zero_volume": [
+    {
+      "ticker": "ZST.TO",
+      "date": "2022-07-06"
+    }
+  ],
+  "fx_carried_forward_rows": {
+    "AAPL": 37,
+    "AGG": 37,
+    "AMZN": 37,
+    "BTC-USD": 582,
+    "ESGV": 37,
+    "ETH-USD": 582,
+    "GLD": 37,
+    "GOOGL": 37,
+    "JNJ": 37,
+    "JPM": 37,
+    "MSFT": 37,
+    "NVDA": 37,
+    "PG": 37,
+    "QQQ": 37,
+    "SPY": 37,
+    "TLT": 37,
+    "TSLA": 37,
+    "XOM": 37
+  },
+  "macro_coverage": [
+    {
+      "series_id": "BD.CDN.10YR.DQ.YLD",
+      "rows": 1245,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-12"
+    },
+    {
+      "series_id": "BD.CDN.2YR.DQ.YLD",
+      "rows": 1245,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-12"
+    },
+    {
+      "series_id": "CPIAUCSL",
+      "rows": 59,
+      "first_date": "2021-11-01",
+      "last_date": "2026-10-01"
+    },
+    {
+      "series_id": "DFF",
+      "rows": 1826,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-11"
+    },
+    {
+      "series_id": "DGS10",
+      "rows": 1248,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-10"
+    },
+    {
+      "series_id": "DGS2",
+      "rows": 1248,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-10"
+    },
+    {
+      "series_id": "STATIC_TOTALCPICHANGE",
+      "rows": 58,
+      "first_date": "2021-12-01",
+      "last_date": "2026-09-01"
+    },
+    {
+      "series_id": "UNRATE",
+      "rows": 59,
+      "first_date": "2021-11-01",
+      "last_date": "2026-10-01"
+    },
+    {
+      "series_id": "V39079",
+      "rows": 1293,
+      "first_date": "2021-11-12",
+      "last_date": "2026-11-12"
+    }
+  ],
+  "checks": 22,
+  "independent_checks_passed": true,
+  "application_validation": "pending_no_application"
+}

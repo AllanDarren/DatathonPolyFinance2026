@@ -67,6 +67,7 @@ Utilisables dans `rules/coherence_rules.yaml` (`metric: …`), calculées pour l
 | `asset_class` | Classe d'actif | — |
 | `high_vol_share_after` | Part des positions très volatiles après l'ajout (les autres montants inchangés) | % |
 | `top3_concentration_after` | Poids des trois plus grosses positions après l'ajout | % |
+| `high_vol_share`, `top3_concentration` | Noms de la section 10, lus dans une règle de cohérence comme les valeurs après l'ajout (`…_after`) | % |
 | `crypto_share_after` | Part des cryptomonnaies après l'ajout | % |
 | `corr_to_portfolio` | Corrélation mensuelle (CAD) avec le portefeuille actuel | nombre |
 

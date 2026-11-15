@@ -1,0 +1,68 @@
+version: 1
+cases:
+- id: amira
+  answers:
+    q_horizon: h_gt15
+    q_drop: d_accept
+    q_objective: o_growth
+    q_experience: e_advanced
+    q_ethics: p_none
+    q_interests: i_ai_crypto
+    q_expenses: x_skip
+  expected_profile: rules/personas/amira.yaml
+  compare_fields:
+  - horizon_years
+  - horizon_bucket
+  - risk_tolerance
+  - max_acceptable_loss_pct
+  - objective
+  - experience
+  - preferences
+  - limits
+  - monthly_expenses_cad
+  - base_currency
+  - inconsistencies
+- id: mateo
+  answers:
+    q_horizon: h_6_12
+    q_drop: d_hold
+    q_objective: o_balanced
+    q_experience: e_intermediate
+    q_ethics: p_fossil
+    q_interests: i_esg
+    q_expenses: x_skip
+  expected_profile: rules/personas/mateo.yaml
+  compare_fields:
+  - horizon_years
+  - horizon_bucket
+  - risk_tolerance
+  - max_acceptable_loss_pct
+  - objective
+  - experience
+  - preferences
+  - limits
+  - monthly_expenses_cad
+  - base_currency
+  - inconsistencies
+- id: robert
+  answers:
+    q_horizon: h_3_5
+    q_drop: d_reduce
+    q_objective: o_preserve
+    q_experience: e_beginner
+    q_ethics: p_none
+    q_interests: i_income
+    q_expenses: x_skip
+  expected_profile: rules/personas/robert.yaml
+  compare_fields:
+  - horizon_years
+  - horizon_bucket
+  - risk_tolerance
+  - max_acceptable_loss_pct
+  - objective
+  - experience
+  - preferences
+  - limits
+  - monthly_expenses_cad
+  - base_currency
+  - inconsistencies

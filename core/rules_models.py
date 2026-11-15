@@ -37,7 +37,8 @@ class Condition(RulesModel):
     def _one_side_each(self) -> Condition:
         if (self.field is None) == (self.metric is None):
             raise ValueError("indique soit « field », soit « metric » (un seul des deux)")
-        rights = [self.value is not None, self.value_from is not None, self.limit_from is not None]
+        # `value: null` is a legitimate constant (e.g. recovery_days == null): count it when explicitly set.
+        rights = ["value" in self.model_fields_set, self.value_from is not None, self.limit_from is not None]
         if sum(rights) != 1:
             raise ValueError("indique exactement un de « value », « value_from » ou « limit_from »")
         return self
