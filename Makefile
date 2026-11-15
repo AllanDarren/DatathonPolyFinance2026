@@ -2,7 +2,7 @@
 # (dev, deploy, deploy-web, destroy, smoke).
 PY ?= python3
 
-.PHONY: test lint contracts examples validate-rules
+.PHONY: test lint contracts examples validate-rules eval classify ingest
 
 test:
 	$(PY) -m tools.export_schemas --check
@@ -19,3 +19,12 @@ examples:
 
 validate-rules:
 	$(PY) -m tools.validate_rules
+
+eval:
+	$(PY) -m tools.run_eval
+
+classify:
+	$(PY) -m agents.classify_batch
+
+ingest:
+	$(PY) -m ingest.run --google
