@@ -29,5 +29,5 @@ make upload-data    # rafraîchir les snapshots sur S3, sans redéployer
 make destroy        # tout retirer, après confirmation
 ```
 
-Variables: `BEDROCK_MODEL_ID` (voir `docs/AWS_STATUS.md`), `AWS_REGION` (`us-east-1`), `STACK_NAME`
+Variables: `BEDROCK_MODEL_ID` (voir `docs/AWS_STATUS.md`; retenu: `us.anthropic.claude-sonnet-4-6`), `AWS_REGION` (`us-east-1`), `STACK_NAME`
 (`alphaforge`), `BUDGET_EMAIL` (optionnel: alerte de coût). Détails: `docs/AWS.md`, `docs/architecture.md`.

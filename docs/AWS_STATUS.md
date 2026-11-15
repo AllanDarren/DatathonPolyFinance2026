@@ -23,9 +23,10 @@ Audit du 2026-11-14, refait avec `make check-aws` (ou `python infra/scripts/chec
 
 Les modèles Anthropic ne sont disponibles qu'en profil d'inférence (`us.` ou `global.`), pas en appel direct.
 
-**Recommandation pour `BEDROCK_MODEL_ID`: `us.anthropic.claude-haiku-4-5-20251001-v1:0`.** Rapide, accepte
-`temperature: 0`, sortie structurée fiable, quotas larges. Repli: `amazon.nova-micro-v1:0` (appel direct, le
-moins cher). `BEDROCK_REGION=us-east-1`.
+**Modèle retenu par l'équipe: `BEDROCK_MODEL_ID=us.anthropic.claude-sonnet-4-6`, `BEDROCK_REGION=us-east-1`.**
+Accepte `temperature: 0`, sortie structurée fiable. Replis testés: `us.anthropic.claude-haiku-4-5-20251001-v1:0`
+(plus rapide et moins cher) puis `amazon.nova-micro-v1:0` (appel direct, le moins cher). Changer de modèle
+demande seulement `BEDROCK_MODEL_ID=... make deploy` (la politique IAM suit le modèle).
 
 ## Quotas relevés (us-east-1)
 
