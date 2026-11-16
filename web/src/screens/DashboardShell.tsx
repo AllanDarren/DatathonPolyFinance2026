@@ -7,7 +7,6 @@ import { formatDate } from '../lib/format';
 import { useApp, type Step } from '../state/store';
 import { t } from '../strings';
 import { CalendarPage } from './CalendarPage';
-import { Compare } from './Compare';
 import { ConsiderPage } from './ConsiderPage';
 import { FeedPage } from './FeedPage';
 import { OverviewPage } from './OverviewPage';
@@ -15,7 +14,6 @@ import { OverviewPage } from './OverviewPage';
 const TITLES: Partial<Record<Step, string>> = {
   feed: t.tabs.feed,
   consider: t.tabs.consider,
-  compare: t.tabs.compare,
   calendar: t.tabs.calendar,
 };
 
@@ -49,9 +47,7 @@ export function DashboardShell({ tab }: { tab: Step }) {
           <h1 className="page-title">{title}</h1>
         </header>
       )}
-      {tab === 'compare' ? (
-        <Compare />
-      ) : tab === 'consider' ? (
+      {tab === 'consider' ? (
         <ConsiderPage />
       ) : error && !feed ? (
         <ErrorBox error={error} onRetry={() => setTick((n) => n + 1)} />

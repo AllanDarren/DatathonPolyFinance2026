@@ -340,7 +340,7 @@ export function buildFeedMock(profile: Profile, portfolio: Portfolio, considerat
     events: eventsFor(portfolio.positions.map((p) => p.ticker)),
     evidence: book.all,
     disclaimers: [
-      t.disclaimer,
+      'Simulation éducative — pas un conseil financier.',
       'Mode simulé : les nouvelles affichées sont des exemples fictifs.',
       'Aucune transaction, aucune recommandation d’achat ou de vente.',
     ],

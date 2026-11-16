@@ -19,7 +19,6 @@ const ICONS: Record<string, ReactNode> = {
   overview: <path d="M12 3a9 9 0 1 0 9 9h-9z M14 3.3A9 9 0 0 1 20.7 10H14z" />,
   feed: <path d="M4 7h16M4 12h11M4 17h7" />,
   consider: <path d="M12 4v16M6 8h12M6 8l-3 6h6zM18 8l-3 6h6z" />,
-  compare: <path d="M4 9h14l-3-3M20 15H6l3 3" />,
   calendar: <path d="M4 7h16v13H4zM4 11h16M8 4v4M16 4v4" />,
 };
 
@@ -27,7 +26,6 @@ const NAV: { step: Step; label: string }[] = [
   { step: 'overview', label: t.tabs.overview },
   { step: 'feed', label: t.tabs.feed },
   { step: 'consider', label: t.tabs.consider },
-  { step: 'compare', label: t.tabs.compare },
   { step: 'calendar', label: t.tabs.calendar },
 ];
 
@@ -129,7 +127,6 @@ function Footer() {
   const { setLimitsOpen } = useApp();
   return (
     <footer className="footer">
-      <span className="mono">{t.disclaimer}</span>
       <button type="button" className="link-btn mono" onClick={() => setLimitsOpen(true)}>{t.nav.limits}</button>
     </footer>
   );

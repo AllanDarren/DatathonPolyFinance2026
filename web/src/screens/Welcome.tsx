@@ -84,7 +84,6 @@ export function Welcome() {
               {t.welcome.tryExample}
             </button>
           </div>
-          <p className="mono muted small">{t.disclaimer}</p>
         </div>
 
         <figure className="demo-feed" aria-label={t.welcome.demoTag}>

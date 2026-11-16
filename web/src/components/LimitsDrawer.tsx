@@ -25,8 +25,6 @@ export function LimitsDrawer() {
           <p className="muted">{t.limits.empty}</p>
         ) : (
           <>
-            <h3 className="h-small">{t.limits.disclaimers}</h3>
-            <ul>{feed.disclaimers.map((d, i) => <li key={i}>{d}</li>)}</ul>
             <h3 className="h-small">{t.limits.limits}</h3>
             <ul>{feed.limits.map((d, i) => <li key={i}>{d}</li>)}</ul>
           </>

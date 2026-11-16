@@ -4,13 +4,11 @@
 const fr = {
   appName: 'AlphaForge AI',
   tagline: 'Moins d’information, plus de pertinence.',
-  disclaimer: 'Simulation éducative — pas un conseil financier.',
   syntheticBadge: 'exemple fictif',
 
   nav: {
     restart: 'Recommencer',
     limits: 'Hypothèses et limites',
-    compare: 'Comparer deux profils',
     dashboard: 'Tableau de bord',
     profile: 'Mon profil',
     profileMenu: 'Menu du profil',
@@ -208,7 +206,6 @@ const fr = {
     feed: 'Mes nouvelles',
     overview: 'Mon portefeuille',
     consider: 'Tester un achat',
-    compare: 'Comparer deux profils',
     calendar: 'Calendrier',
   },
 
@@ -356,22 +353,9 @@ const fr = {
     notForecast: 'Ce n’est pas une prévision.',
   },
 
-  compare: {
-    title: 'Comparer deux profils',
-    lead: 'Même journée de nouvelles, deux profils : ce qui compte n’est pas pareil.',
-    left: 'Profil de gauche',
-    right: 'Profil de droite',
-    samePortfolio: 'Même portefeuille pour les deux',
-    ownPortfolio: 'Portefeuille propre à chaque profil',
-    consider: 'Même achat envisagé',
-    none: 'aucun',
-    shown: 'affichées',
-    hidden: 'masquées',
-  },
 
   limits: {
     title: 'Hypothèses et limites',
-    disclaimers: 'Avertissements',
     limits: 'Limites',
     close: 'Fermer',
     empty: 'Les limites s’afficheront après le calcul de ton fil.',

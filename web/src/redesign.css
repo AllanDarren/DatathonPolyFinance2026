@@ -259,3 +259,4 @@ th.ticker, td.ticker { background: none; }
 .source-list dd { margin: 0; font-size: .92rem; color: var(--muted); }
 @media (max-width: 1080px) { .source-list { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .source-list { grid-template-columns: 1fr; } }
+.footer { justify-content: flex-end; }

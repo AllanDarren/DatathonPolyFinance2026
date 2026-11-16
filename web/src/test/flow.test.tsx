@@ -10,9 +10,9 @@ function setup() {
 }
 
 describe('parcours', () => {
-  it('l’avertissement de simulation est toujours visible', () => {
+  it('les hypothèses et limites restent accessibles depuis le pied de page', () => {
     setup();
-    expect(screen.getAllByText(/pas un conseil financier/).length).toBeGreaterThan(0);
+    expect(screen.getByRole('button', { name: 'Hypothèses et limites' })).toBeInTheDocument();
   });
 
   it('Robert : persona → profil → portefeuille → fil, avec « Pourquoi? »', async () => {

@@ -6,10 +6,10 @@ import type { Consideration, FeedResponse, Persona, Portfolio, Profile } from '.
 
 export type Step =
   | 'welcome' | 'questionnaire' | 'profile' | 'portfolio'
-  | 'feed' | 'overview' | 'consider' | 'compare' | 'calendar';
+  | 'feed' | 'overview' | 'consider' | 'calendar';
 
 /** Onglets du tableau de bord (une action principale par onglet). */
-export const DASHBOARD_TABS: Step[] = ['feed', 'overview', 'consider', 'compare', 'calendar'];
+export const DASHBOARD_TABS: Step[] = ['feed', 'overview', 'consider', 'calendar'];
 
 const HASH: Record<Step, string> = {
   welcome: '#/',
@@ -19,7 +19,6 @@ const HASH: Record<Step, string> = {
   feed: '#/fil',
   overview: '#/apercu',
   consider: '#/tester',
-  compare: '#/comparer',
   calendar: '#/calendrier',
 };
 const BY_HASH: Record<string, Step> = Object.fromEntries(Object.entries(HASH).map(([k, v]) => [v, k as Step]));
