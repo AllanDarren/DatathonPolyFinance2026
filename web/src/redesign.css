@@ -252,3 +252,10 @@ th.ticker, td.ticker { background: none; }
   .pos-table td:nth-child(5), .pos-table thead th:nth-child(5) { display: none; }
 }
 .badge { white-space: nowrap; }
+.stat-asof { margin: .8rem 0 0; }
+.source-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 1.6rem 0 0; }
+.source-list > div { border-left: 2px solid var(--brand); padding: .1rem 0 .1rem .9rem; }
+.source-list dt { font-size: .74rem; color: var(--brand); margin-bottom: .25rem; }
+.source-list dd { margin: 0; font-size: .92rem; color: var(--muted); }
+@media (max-width: 1080px) { .source-list { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .source-list { grid-template-columns: 1fr; } }

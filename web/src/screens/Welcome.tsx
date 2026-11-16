@@ -112,13 +112,25 @@ export function Welcome() {
         </figure>
       </section>
 
-      <section className="stat-row" aria-label="Nos principes">
-        {t.welcome.stats.map((s) => (
-          <div key={s.label} className="stat-cell">
-            <span className={`stat-big mono ${s.accent ? 'accent' : ''}`}>{s.value}</span>
-            <span className="stat-txt">{s.label}</span>
-          </div>
-        ))}
+      <section aria-labelledby="sources-title">
+        <div className="stat-row">
+          {t.welcome.stats.map((s) => (
+            <div key={s.label} className="stat-cell">
+              <span className={`stat-big mono ${s.accent ? 'accent' : ''}`}>{s.value}</span>
+              <span className="stat-txt">{s.label}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mono muted small stat-asof">{t.welcome.statsAsOf}</p>
+        <h2 id="sources-title" className="sr-only">{t.welcome.sourcesTitle}</h2>
+        <dl className="source-list">
+          {t.welcome.sources.map((s) => (
+            <div key={s.k}>
+              <dt className="mono">{s.k}</dt>
+              <dd>{s.v}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="home-personas" ref={personasRef} aria-labelledby="personas-title">
