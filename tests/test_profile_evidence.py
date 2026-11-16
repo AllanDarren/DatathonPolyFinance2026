@@ -49,3 +49,16 @@ def test_purchase_explanation_gets_profile_and_french_values() -> None:
     assert cited  # template explanation still cites evidence offline
     rendered = " ".join(format_value(e) for e in reg.to_dict().values())
     assert not any(code in rendered.split() for code in INTERNAL_CODES)
+
+
+def test_diversification_is_stated_by_code_verbatim() -> None:
+    persona = _persona("amira")
+    portfolio = parse_portfolio(persona["sample_portfolio_csv"])
+    reg = EvidenceRegistry()
+    res = consider(persona["profile"], portfolio, {"ticker": "NVDA", "intended_weight": 0.2}, reg, None)
+    verdict_id = res["diversification"]["evidence_ids"][0]
+    div_claims = [c for c in res["explanation"]["claims"] if verdict_id in c["evidence_ids"]]
+    assert len(div_claims) == 1
+    claim = div_claims[0]
+    assert claim["text"] == reg.get(verdict_id)["statement"]
+    assert claim["label"] == "fact" and claim["verified"] == "supported"

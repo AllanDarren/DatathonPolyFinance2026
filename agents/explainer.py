@@ -96,3 +96,21 @@ def explain(evidence_ids: list[str], registry: EvidenceRegistry, *, context: str
         fallback["guardian"]["status"] = "flagged"
         return fallback
     return {"summary": summary, "claims": rev.claims, "generated_by": "bedrock", "guardian": rev.guardian}
+
+
+def with_diversification_claim(explanation: dict[str, Any], verdict_id: str, registry: EvidenceRegistry) -> dict[str, Any]:
+    """Append the diversification verdict as a code-written fact (its evidence statement, verbatim).
+
+    Goes through the same deterministic check as template claims. Any claim the writer still made
+    about diversification is left as is (the guardian already checked it).
+    """
+    ev = registry.get(verdict_id)
+    if ev is None:
+        return explanation
+    rev = review([Draft(template=str(ev["statement"]), label="fact", evidence_ids=[verdict_id], origin="template")],
+                 registry)
+    if not rev.claims:
+        return explanation
+    out = dict(explanation)
+    out["claims"] = [*explanation["claims"], *rev.claims]
+    return out

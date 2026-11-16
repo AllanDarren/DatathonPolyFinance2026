@@ -16,7 +16,7 @@ import time
 from collections.abc import Callable
 from typing import Any
 
-from agents.explainer import explain
+from agents.explainer import explain, with_diversification_claim
 from agents.governance import govern
 from agents.llm import LLMClient, LLMUnavailableError, MockClient
 from agents.prompts import load_prompt, render_prompt
@@ -254,14 +254,23 @@ def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: 
                                     [i for c in governance["controls"] for i in c["evidence_ids"]]))
 
     profile_ids = engine.profile_evidence(profile, registry)  # citable profile facts, in French
-    explain_ids = list(box.evidence_ids) + [c["evidence_id"] for c in changes[:1]] + profile_ids
+    # Diversification is stated by code, verbatim from its evidence: the writer kept misreading
+    # correlations ("nouvelle source de risque" read as less diversification). The writer gets
+    # every other piece of evidence.
+    div_ids = set(box.diversification["evidence_ids"]) if box.diversification else set()
+    # A "what would change" item without a value (no weight changes the verdict) would print "n.d.".
+    change_ids = [c["evidence_id"] for c in changes[:1]
+                  if (registry.get(c["evidence_id"]) or {}).get("value") is not None]
+    explain_ids = [i for i in [*box.evidence_ids, *change_ids, *profile_ids] if i not in div_ids]
     context = json.dumps({"task": "coherence of a considered purchase", "ticker": ticker,
                           "intended_weight": format_pct(weight, 0), "verdict": res["verdict"],
-                          "diversification": DIVERSIFICATION_FR[box.diversification["verdict"]] if box.diversification else None,
                           "profile_evidence": profile_ids,
-                          "note": "Cite the profile only through profile_evidence; never write internal codes."},
+                          "note": ("Cite the profile only through profile_evidence; never write internal codes. "
+                                   "Do not discuss diversification or correlation: it is stated separately.")},
                          ensure_ascii=False)
     explanation = explain(explain_ids, registry, context=context, client=client)
+    if box.diversification:
+        explanation = with_diversification_claim(explanation, box.diversification["evidence_ids"][0], registry)
     box.trace.append(_internal_step(box, "explain_and_guard",
                                     [i for c in explanation["claims"] for i in c["evidence_ids"]]))
     g = explanation["guardian"]
