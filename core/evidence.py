@@ -136,6 +136,8 @@ def format_value(ev: dict[str, Any]) -> str:
         return f"{_fr_number(value, 0)}{NBSP}jours"
     if unit == "CAD":
         return f"{_fr_number(value, 0)}{NBSP}$"
+    if unit == "ans":
+        return f"{_fr_number(value, 0)}{NBSP}ans"
     if unit == "count":
         return _fr_number(value, 0)
     if unit == "correlation" or unit == "score":

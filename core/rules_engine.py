@@ -577,3 +577,39 @@ def check_coherence(profile: dict[str, Any], portfolio: dict[str, Any], consider
         "metric_evidence": ev_ids,
         "rule_evidence": hit_ev,
     }
+
+
+RISK_FR = {"low": "faible", "low_moderate": "faible à modérée", "moderate": "modérée", "high": "élevée"}
+
+
+def profile_evidence(profile: dict[str, Any], registry: EvidenceRegistry) -> list[str]:
+    """The profile facts an explanation may cite (risk, horizon, acceptable loss), in plain French.
+
+    The profile is the output of the profile rules (score_profile or a persona preset), hence kind
+    "rule_hit". Without these, a sentence like "en tension avec ton horizon de 4 ans" cites nothing
+    and the guardian rightly flags it.
+    """
+    src = "profil (rules/questionnaire.yaml, rules/profile_rules.yaml)" if profile.get("source") == "questionnaire" \
+        else f"profil d'exemple (rules/personas/{profile.get('profile_id')}.yaml)"
+    risk = RISK_FR.get(profile["risk_tolerance"], profile["risk_tolerance"])
+    facts = [
+        ("risk_tolerance", f"Ta tolérance au risque : {risk}.", risk, None),
+        ("horizon_years", f"Ton horizon de placement : {profile['horizon_years']:g} ans.", profile["horizon_years"], "ans"),
+        ("max_acceptable_loss_pct",
+         f"La perte annuelle que tu dis pouvoir accepter : {format_pct(profile['max_acceptable_loss_pct'], 0)}.",
+         profile["max_acceptable_loss_pct"], "fraction"),
+        ("limits.max_single_position",
+         f"La limite par titre prévue pour ton profil : {format_pct(profile['limits']['max_single_position'], 0)}.",
+         profile["limits"]["max_single_position"], "fraction"),
+        ("limits.max_high_vol_share",
+         f"La part maximale de titres très volatils prévue pour ton profil : "
+         f"{format_pct(profile['limits']['max_high_vol_share'], 0)}.",
+         profile["limits"]["max_high_vol_share"], "fraction"),
+    ]
+    ids = []
+    for field, stmt, value, unit in facts:
+        ids.append(registry.add(make_evidence(
+            kind="rule_hit", statement=stmt, value=value, unit=unit, as_of=data.data_as_of(),
+            inputs={"field": field, "profile_id": profile.get("profile_id")}, source=src,
+            computed_by="core.rules_engine.profile_evidence")))
+    return ids

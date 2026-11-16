@@ -17,6 +17,8 @@ from core.evidence import EvidenceRegistry, format_num, format_pct, make_evidenc
 
 ASSET_CLASS_FR = {"equity_ca": "actions canadiennes", "equity_us": "actions américaines", "equity_etf": "FNB d'actions",
                   "bond_etf": "FNB d'obligations", "gold_etf": "or", "crypto": "cryptoactifs"}
+DIVERSIFICATION_FR = {"overlap": "exposition en grande partie en double", "partial": "diversification partielle",
+                      "new_exposure": "nouvelle source de risque"}
 SOURCE = "portefeuille fourni, data/prices_daily.csv, data/assets_universe.csv"
 
 
@@ -101,8 +103,8 @@ def diversification_impact(portfolio: dict[str, Any], ticker: str, intended_weig
         text = (f"{ticker} diversifie en partie: corrélation de {format_num(corr_rest)} avec le reste du portefeuille "
                 f"(entre {format_num(new_exposure_corr)} et {format_num(overlap_corr)}).{extra}{partner}")
     verdict_ev = make_evidence(
-        kind="portfolio_calc", statement=text, value=verdict, unit=None, as_of=data.data_as_of(),
-        inputs={"ticker": ticker, "intended_weight": intended_weight, "max_corr_ticker": top["ticker"] if top else None,
+        kind="portfolio_calc", statement=text, value=DIVERSIFICATION_FR[verdict], unit=None, as_of=data.data_as_of(),
+        inputs={"verdict": verdict, "ticker": ticker, "intended_weight": intended_weight, "max_corr_ticker": top["ticker"] if top else None,
                 "max_corr": top["correlation"] if top else None, "corr_to_portfolio": corr_rest,
                 "new_asset_class": new_class, "already_held": already_held, "overlap_corr": overlap_corr,
                 "new_exposure_corr": new_exposure_corr},
