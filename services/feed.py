@@ -247,7 +247,10 @@ def build_feed(profile: Any, portfolio: Any, consideration: Any = None, *, clien
         explain_ids[item["news_id"]] = ids
 
     offline = isinstance(client, MockClient) and client.responder is None
-    llm_ids = set() if offline else {i["news_id"] for i in items[:MAX_LLM_ITEMS]}
+    # With a consideration, the model's time goes to the purchase test (the screen shows only the
+    # verdict): news items keep their rule-and-evidence explanation, so the request stays under the
+    # ~29 s API Gateway limit. The main feed (no consideration) still gets model-written explanations.
+    llm_ids = set() if offline or consideration else {i["news_id"] for i in items[:MAX_LLM_ITEMS]}
 
     def write(item: dict[str, Any]) -> dict[str, Any]:
         ids = explain_ids[item["news_id"]]

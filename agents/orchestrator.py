@@ -202,6 +202,11 @@ def _llm_loop(client: LLMClient, box: Toolbox, ticker: str, weight: float) -> No
                 calls += 1
             results.append({"toolResult": {"toolUseId": use["toolUseId"], "content": [{"json": out}]}})
         messages.append({"role": "user", "content": results})
+        # Nothing left to gather: skip the closing turn (the model's final text is never used,
+        # and it cost several seconds on the ~29 s request budget).
+        used = {t["tool"] for t in box.trace}
+        if calls >= MAX_TOOL_CALLS or all(t["toolSpec"]["name"] in used for t in TOOLS):
+            break
 
 
 def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: dict[str, Any],
