@@ -16,7 +16,7 @@ import time
 from collections.abc import Callable
 from typing import Any
 
-from agents.explainer import explain
+from agents.explainer import explain, with_diversification_claim
 from agents.governance import govern
 from agents.llm import LLMClient, LLMUnavailableError, MockClient
 from agents.prompts import load_prompt, render_prompt
@@ -253,13 +253,18 @@ def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: 
     box.trace.append(_internal_step(box, "governance_review",
                                     [i for c in governance["controls"] for i in c["evidence_ids"]]))
 
-    explain_ids = list(box.evidence_ids) + [c["evidence_id"] for c in changes[:1]]
+    # Diversification is stated by code, verbatim from its evidence: the writer kept misreading
+    # correlations ("nouvelle source de risque" read as less diversification).
+    div_ids = set(box.diversification["evidence_ids"]) if box.diversification else set()
+    explain_ids = [i for i in [*box.evidence_ids, *[c["evidence_id"] for c in changes[:1]]] if i not in div_ids]
     context = json.dumps({"task": "coherence of a considered purchase", "ticker": ticker,
                           "intended_weight": format_pct(weight, 0), "verdict": res["verdict"],
-                          "diversification": box.diversification["verdict"] if box.diversification else None,
+                          "note": "Do not discuss diversification or correlation: it is stated separately.",
                           "profile": {"horizon_years": profile["horizon_years"],
                                       "risk_tolerance": profile["risk_tolerance"]}}, ensure_ascii=False)
     explanation = explain(explain_ids, registry, context=context, client=client)
+    if box.diversification:
+        explanation = with_diversification_claim(explanation, box.diversification["evidence_ids"][0], registry)
     box.trace.append(_internal_step(box, "explain_and_guard",
                                     [i for c in explanation["claims"] for i in c["evidence_ids"]]))
     g = explanation["guardian"]
