@@ -65,7 +65,7 @@ describe('parcours', () => {
 
   it('questionnaire : la note libre propose des préférences à confirmer', async () => {
     const user = setup();
-    await user.click(await screen.findByRole('button', { name: /Répondre au questionnaire/ }));
+    await user.click(await screen.findByRole('button', { name: /Trouver mon profil/ }));
     await screen.findByRole('button', { name: 'Suivante' });
     // première option de chaque question jusqu'à la note
     for (;;) {

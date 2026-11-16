@@ -51,37 +51,34 @@ export function NewsCard({ item, compact = false }: { item: FeedItem; compact?: 
   const reason = mainReason(item);
   const n = item.cluster?.size ?? 1;
   return (
-    <article className={`news-card ${item.relevance.shown ? '' : 'news-card-hidden'} ${compact ? 'news-card-compact' : ''}`}>
+    <article className={`news-card rel-${item.relevance.level} ${item.relevance.shown ? '' : 'news-card-hidden'} ${compact ? 'news-card-compact' : ''}`}>
       <header className="news-head">
+        {item.tickers.slice(0, 4).map((tk) => <span key={tk} className="ticker">{tk}</span>)}
         <RelevanceBadge level={item.relevance.level} />
         {item.is_synthetic && <SyntheticBadge />}
         <SourceTierBadge item={item} />
         {n > 1 && <span className="badge badge-cluster" title={item.cluster?.sources.join(', ')}>{t.card.sources(n)}</span>}
+        <time className="news-time mono" dateTime={item.published_at}>{formatDate(item.published_at)}</time>
       </header>
       <h3 className="news-title">{item.title}</h3>
       {reason && item.relevance.shown && (
-        <p className="news-reason"><span className="muted">{t.card.whyHere}</span> {reason}</p>
+        <p className="news-reason"><span aria-hidden="true">→ </span><span className="sr-only">{t.card.whyHere} </span>{reason}</p>
       )}
-      <p className="news-meta">
-        <span>{item.source}</span> · <time dateTime={item.published_at}>{formatDate(item.published_at)}</time>
-        {' · '}<span>{categoryLabel(item.category)}</span>
-        {item.tickers.length > 0 && (
-          <>
-            {' · '}
-            {item.tickers.slice(0, 4).map((tk) => <span key={tk} className="ticker">{tk}</span>)}
-          </>
-        )}
-      </p>
       {!item.relevance.shown && item.explanation.summary && (
         <p className="news-hidden-reason"><span aria-hidden="true">⦸ </span>{item.explanation.summary}</p>
       )}
-      <div className="news-actions">
-        <button type="button" className="btn btn-why" aria-haspopup="dialog" onClick={() => setOpen(true)}>
-          {t.card.why}
-        </button>
-        <a className="btn btn-ghost" href={item.url} target="_blank" rel="noreferrer noopener">
-          {t.card.openSource} <span aria-hidden="true">↗</span>
-        </a>
+      <div className="news-foot">
+        <p className="news-meta">
+          <span>{item.source}</span> · <span>{categoryLabel(item.category)}</span> · <span>{t.horizonRelevance[item.horizon_relevance]}</span>
+        </p>
+        <div className="news-actions">
+          <button type="button" className="btn btn-why" aria-haspopup="dialog" onClick={() => setOpen(true)}>
+            {t.card.why}
+          </button>
+          <a className="btn btn-ghost" href={item.url} target="_blank" rel="noreferrer noopener">
+            {t.card.openSource} <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
       {open && <WhyDrawer item={item} onClose={() => setOpen(false)} />}
     </article>
