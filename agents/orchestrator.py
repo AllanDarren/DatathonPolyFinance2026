@@ -22,7 +22,7 @@ from agents.llm import LLMClient, LLMUnavailableError, MockClient
 from agents.prompts import load_prompt, render_prompt
 from core import data, event_study, metrics
 from core import rules_engine as engine
-from core.diversification import diversification_impact
+from core.diversification import DIVERSIFICATION_FR, diversification_impact
 from core.instruments import instrument_risks
 from core.sensitivity import what_would_change
 from core.errors import AlphaForgeError
@@ -253,12 +253,14 @@ def consider(profile: dict[str, Any], portfolio: dict[str, Any], consideration: 
     box.trace.append(_internal_step(box, "governance_review",
                                     [i for c in governance["controls"] for i in c["evidence_ids"]]))
 
-    explain_ids = list(box.evidence_ids) + [c["evidence_id"] for c in changes[:1]]
+    profile_ids = engine.profile_evidence(profile, registry)  # citable profile facts, in French
+    explain_ids = list(box.evidence_ids) + [c["evidence_id"] for c in changes[:1]] + profile_ids
     context = json.dumps({"task": "coherence of a considered purchase", "ticker": ticker,
                           "intended_weight": format_pct(weight, 0), "verdict": res["verdict"],
-                          "diversification": box.diversification["verdict"] if box.diversification else None,
-                          "profile": {"horizon_years": profile["horizon_years"],
-                                      "risk_tolerance": profile["risk_tolerance"]}}, ensure_ascii=False)
+                          "diversification": DIVERSIFICATION_FR[box.diversification["verdict"]] if box.diversification else None,
+                          "profile_evidence": profile_ids,
+                          "note": "Cite the profile only through profile_evidence; never write internal codes."},
+                         ensure_ascii=False)
     explanation = explain(explain_ids, registry, context=context, client=client)
     box.trace.append(_internal_step(box, "explain_and_guard",
                                     [i for c in explanation["claims"] for i in c["evidence_ids"]]))
