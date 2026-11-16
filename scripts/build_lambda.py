@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / ".build"
 PKG = BUILD / "lambda"
 ZIP = BUILD / "lambda.zip"
-CODE_DIRS = ["api", "core", "agents", "services", "contracts", "rules"]
+CODE_DIRS = ["api", "core", "agents", "services", "ingest", "contracts", "rules"]
 STRIP_DIRS = {"tests", "test", "__pycache__", "benchmarks"}
 LIMIT_UNZIPPED = 250 * 1024 * 1024
 

@@ -83,6 +83,7 @@ def _download(ticker: str, start: str, end: str) -> tuple[pd.DataFrame, dict[str
     """yfinance call (isolated so tests can replace it). Returns (prices, info)."""
     import yfinance as yf
 
+    yf.set_tz_cache_location(str(cache_dir()))  # Lambda: only /tmp is writable
     tk = yf.Ticker(ticker)
     hist = tk.history(start=start, end=end, auto_adjust=False, actions=True, timeout=TIMEOUT_S)
     md = tk.history_metadata or {}

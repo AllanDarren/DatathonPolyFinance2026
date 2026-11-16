@@ -260,3 +260,13 @@ th.ticker, td.ticker { background: none; }
 @media (max-width: 1080px) { .source-list { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .source-list { grid-template-columns: 1fr; } }
 .footer { justify-content: flex-end; }
+
+.consider-result { grid-template-columns: 1fr; }
+.how-checked { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-top: .5rem; }
+.how-checked > summary { cursor: pointer; padding: 1rem 1.3rem; font-weight: 600; list-style: none; display: flex; align-items: center; gap: .6rem; }
+.how-checked > summary::-webkit-details-marker { display: none; }
+.how-checked > summary::before { content: "+"; font-family: var(--mono); color: var(--brand); width: 1rem; }
+.how-checked[open] > summary::before { content: "−"; }
+.how-checked-body { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0 1.3rem 1.3rem; }
+.how-checked-body .panel { margin: 0; background: var(--surface-2); }
+@media (max-width: 960px) { .how-checked-body { grid-template-columns: 1fr; } }

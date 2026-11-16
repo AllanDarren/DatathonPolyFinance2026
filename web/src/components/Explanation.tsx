@@ -80,7 +80,7 @@ export function GuardianStatus({ guardian }: { guardian: Explanation['guardian']
 export function ExplanationView({ explanation }: { explanation: Explanation }) {
   return (
     <div className="explanation">
-      {explanation.summary ? <p className="expl-summary">{explanation.summary}</p> : <p className="muted">{t.card.noSummary}</p>}
+      {explanation.summary && <p className="expl-summary">{explanation.summary}</p>}
       <ClaimList claims={explanation.claims} />
       <div className="expl-foot">
         <GuardianStatus guardian={explanation.guardian} />

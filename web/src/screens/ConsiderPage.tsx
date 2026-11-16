@@ -10,7 +10,6 @@ import {
 import { VerdictCard } from '../components/ConsiderPanel';
 import { EvidenceProvider } from '../components/Evidence';
 import { ErrorBox, Skeleton } from '../components/Feedback';
-import { DataQualityView, QualityBadge } from '../components/DataQuality';
 import { useApp } from '../state/store';
 import { t } from '../strings';
 import type { AssetSearchResult, Consideration } from '../types/contracts';
@@ -127,9 +126,7 @@ export function ConsiderPage() {
                 >
                   <span className="ticker">{r.ticker}</span> {r.name}
                   <span className="muted small"> {r.exchange}</span>
-                  <span className={`badge ${r.in_starter_dataset ? 'tier-primary' : r.supported ? 'badge-cluster' : 'tier-aggregator'}`}>
-                    {r.in_starter_dataset ? t.consider.verified : r.supported ? t.consider.onDemand : t.consider.notSupported}
-                  </span>
+                  {!r.supported && <span className="badge tier-aggregator">{t.consider.notSupported}</span>}
                 </button>
               </li>
             ))}
@@ -145,24 +142,23 @@ export function ConsiderPage() {
         <EvidenceProvider evidence={considerFeed.evidence}>
           <div className="consider-result">
             <div className="consider-main">
-              {res.data_quality && (
-                <p className="small">
-                  <QualityBadge q={res.data_quality} /> {t.quality.status[res.data_quality.status]}
-                </p>
-              )}
               <VerdictCard result={res} ticker={consideration.ticker} />
               {res.what_would_change && (
                 <WhatWouldChangeView changes={res.what_would_change} grid={res.weight_grid} current={consideration.intended_weight} />
               )}
               {res.diversification && <DiversificationView d={res.diversification} />}
               {res.instrument_risks && <InstrumentRisksView r={res.instrument_risks} />}
-              {res.data_quality && <DataQualityView q={res.data_quality} />}
-            </div>
-            <div className="consider-side">
-              {res.governance && <GovernanceChecks governance={res.governance} />}
-              {res.agent_trace && res.agent_trace.length > 0 && <AgentTimeline trace={res.agent_trace} />}
             </div>
           </div>
+          {(res.governance || (res.agent_trace && res.agent_trace.length > 0)) && (
+            <details className="how-checked">
+              <summary>{t.consider.howChecked}</summary>
+              <div className="how-checked-body">
+                {res.governance && <GovernanceChecks governance={res.governance} />}
+                {res.agent_trace && res.agent_trace.length > 0 && <AgentTimeline trace={res.agent_trace} />}
+              </div>
+            </details>
+          )}
         </EvidenceProvider>
       )}
     </div>

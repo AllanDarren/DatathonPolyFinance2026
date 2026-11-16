@@ -339,6 +339,7 @@ const fr = {
     searching: 'Recherche…',
     emptyTicker: 'Indique un titre.',
     agentsWorking: 'Les agents rassemblent les preuves…',
+    howChecked: 'Voir comment ce verdict a été vérifié (contrôles et étapes des agents)',
   },
 
   history: {
