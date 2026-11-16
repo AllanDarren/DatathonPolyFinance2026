@@ -34,6 +34,27 @@ KEYWORDS: list[tuple[str, Any, str]] = [
     ("interests", "income", r"dividende\w*|revenu\w* (r[ée]gulier|passif)\w*|income"),
     ("avoid_controversies", True, r"controvers\w*|scandale\w*|[ée]thique\w*|[ée]viter les entreprises"),
 ]
+# An exclusion needs an explicit wish to avoid, just before the quoted words (same clause).
+# "je veux investir dans le pétrole" must never become "exclude fossil fuels".
+AVOID_CUE = re.compile(
+    r"[ée]vit\w*|exclu\w*|\bsans\b|\bpas\b|\bplus\b de|\baucun\w*|\bjamais\b|\bni\b|refus\w*|boycott\w*"
+    r"|\bhors\b|[ée]loign\w*|contre\b|\bavoid\w*|\bexclud\w*|\bno\b|\bnot\b|\bwithout\b|\bnever\b",
+    re.IGNORECASE,
+)
+CUE_WINDOW = 40  # characters before the quote, cut at the last clause break
+
+
+def has_avoid_cue(note: str, quote: str) -> bool:
+    """True if the note expresses avoidance right before `quote` (deterministic polarity check)."""
+    low = note.lower()
+    pos = low.find(quote.lower())
+    if pos < 0:
+        return False
+    before = low[max(0, pos - CUE_WINDOW):pos]
+    before = re.split(r"[.;!?\n]|\bmais\b|\bbut\b", before)[-1]
+    return bool(AVOID_CUE.search(before + " " + quote.lower()))
+
+
 PROFILE_CHANGE = re.compile(r"risque|horizon|retraite|dans \d+ ans|\d+\s?(?:k|000)\s?\$|perte", re.IGNORECASE)
 
 
@@ -86,6 +107,9 @@ def extract_preferences(text: str, client: LLMClient | None = None) -> dict[str,
         valid_value = (value is True) if field == "avoid_controversies" else value in allowed.get(field, [])
         if not valid_value or not quote or quote.lower() not in low:
             rejected.append(f"{field}={value} (citation absente de la note)")
+            continue
+        if field == "excluded_sectors" and not has_avoid_cue(note, quote):
+            rejected.append(f"{field}={value} (aucune volonté d'éviter exprimée avant « {quote} »)")
             continue
         if (field, value) in seen:
             continue

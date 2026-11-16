@@ -84,3 +84,36 @@ def test_note_preferences_show_up_in_governance_but_not_in_verdict() -> None:
     b = orchestrator.consider(with_note, pf, cons, EvidenceRegistry(), None)
     assert a["verdict"] == b["verdict"]
     assert "G_NOTE_PREFERENCES" in {c["id"] for c in b["governance"]["controls"]}
+
+
+@pytest.mark.parametrize("note", [
+    "je veux investir dans le pétrole",
+    "J'aime le pétrole et les pipelines.",
+    "I want to invest in oil",
+])
+def test_positive_mention_of_a_sector_is_never_an_exclusion(note: str) -> None:
+    out = extract_preferences(note)
+    assert not [s for s in out["suggestions"] if s["field"] == "excluded_sectors"]
+
+
+@pytest.mark.parametrize("note", [
+    "Je veux éviter le pétrole.",
+    "Pas de pétrole pour moi.",
+    "Exclure les combustibles fossiles",
+    "Sans pétrole ni tabac s'il te plaît",
+])
+def test_avoidance_wording_still_excludes(note: str) -> None:
+    out = extract_preferences(note)
+    assert ("excluded_sectors", "fossil_fuels") in {(s["field"], s["value"]) for s in out["suggestions"]}
+
+
+def test_model_exclusion_without_avoidance_is_rejected_by_code() -> None:
+    client = MockClient(responder=lambda s, m, sch: {"suggestions": [
+        {"field": "excluded_sectors", "value": "fossil_fuels", "quote": "pétrole"}], "mentions_profile_change": False})
+    out = extract_preferences("je veux investir dans le pétrole", client)
+    assert out["suggestions"] == [] and any("éviter" in r for r in out["rejected"])
+
+
+def test_avoidance_in_another_clause_does_not_leak() -> None:
+    out = extract_preferences("Pas de crypto, mais j'aime le pétrole.")
+    assert not [s for s in out["suggestions"] if s["field"] == "excluded_sectors"]
