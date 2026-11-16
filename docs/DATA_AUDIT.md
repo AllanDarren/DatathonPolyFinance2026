@@ -42,7 +42,7 @@ Le secteur simplifié `Energy` permet d’identifier ENB.TO, CNQ.TO et XOM comme
 
 ## Résultats remarquables
 
-Les rendements 2022, chutes et corrélations de référence sont proches des estimations du contexte. Les volatilités recalculées avec écart-type échantillonnal ×√252 sont SPY **17,3335 %**, NVDA **51,9384 %**, Bitcoin **42,1734 %**. Les valeurs exploratoires 15 %, 50 % et 54 % d’AGENTS.md ne doivent pas être utilisées comme résultats calculés. Pour Bitcoin, ×√365 donne environ **50,76 %** : cela ne justifie pas de changer discrètement la convention v0.
+Les rendements 2022, chutes et corrélations de référence sont proches des estimations du contexte. Les volatilités recalculées avec écart-type échantillonnal ×√252 sont SPY **17,3335 %**, NVDA **51,9384 %**, Bitcoin **42,1734 %**. Les valeurs exploratoires 15 %, 50 % et 54 % du cahier des charges commun ne doivent pas être utilisées comme résultats calculés. Pour Bitcoin, ×√365 donne environ **50,76 %** : cela ne justifie pas de changer discrètement la convention v0.
 
 L’inflation canadienne septembre 2021–septembre 2026 est approximativement **19,0220 %** par `(1+6,9/100)×(1+3,8/100)×(1+1,6/100)×(1+2,4/100)×(1+3,1/100)−1`. Ces cinq périodes annuelles sont adjacentes, sans chevauchement. Les taux sont arrondis; ne pas présenter ce résultat comme une mesure exacte issue de niveaux d’IPC.
 

@@ -1,4 +1,4 @@
-"""Evidence objects, registry and value formatting (CLAUDE.md section 9).
+"""Evidence objects, registry and value formatting (see docs/TECH_DOC.md, explainability).
 
 Every computed number shown to the user is an Evidence. Ids are content-addressed
 (`ev_` + short hash of computed_by + inputs), so the same computation always gets

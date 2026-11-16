@@ -1,4 +1,4 @@
-"""A2 golden tests. Reference values from CLAUDE.md section 6, revalidated by an
+"""A2 golden tests. Reference values from the team's exploration (docs/VALIDATION.md), revalidated by an
 independent computation (2026-11-14). Tolerances: 0.5 pt for returns/vol, 0.02 for
 correlations. Volatility: daily returns x sqrt(252), or sqrt(365) for crypto (team
 decision 2026-11-14); the context's vol references came from monthly returns.

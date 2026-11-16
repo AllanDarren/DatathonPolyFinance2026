@@ -22,4 +22,4 @@ Types: `Profile`, `Persona`, `Position`, `Portfolio`, `Consideration`, `NewsReco
 - Synthetic: all news items (`is_synthetic: true`, source "Exemple fictif").
 
 The real pipeline (A7) will regenerate these files without changing their shape.
-Any breaking change follows the `[contract]` procedure in CLAUDE.md.
+Any breaking change goes through a PR titled `[contract] …` that updates schemas, examples and generated models together, approved by the API and front-end owners.

@@ -1,5 +1,5 @@
 version: 1
-source: AGENTS.md sections 6 et 10; décisions D du 2026-11-14
+source: cahier des charges commun (données et métriques); décisions D du 2026-11-14
 price_field: adj_close
 annualized_vol:
   ddof: 1

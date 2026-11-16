@@ -31,7 +31,7 @@ Les sources sont les snapshots fournis dans `../alphaforge_starter`; les calculs
 | WEIGHT_robert | 35.000000 % | 35.000000 % | 0 | À mesurer | Accord local |
 | WEIGHT_mateo | 30.000000 % | 30.000000 % | 0 | À mesurer | Accord local |
 
-Le détail des méthodes, sources, écarts aux estimations d’AGENTS.md et valeurs brutes est dans `eval/reports/market_validation.csv`. Les colonnes applicatives y sont volontairement vides : aucune API ni sortie Evidence n’est disponible. Aucune comparaison avec l’application n’est déclarée réussie.
+Le détail des méthodes, sources, écarts aux estimations du cahier des charges commun de l’équipe et valeurs brutes est dans `eval/reports/market_validation.csv`. Les colonnes applicatives y sont volontairement vides : aucune API ni sortie Evidence n’est disponible. Aucune comparaison avec l’application n’est déclarée réussie.
 
 ## Méthodes et unités
 
@@ -47,7 +47,7 @@ Le détail des méthodes, sources, écarts aux estimations d’AGENTS.md et vale
 
 ## Écarts signalés à la reprise de A
 
-Les estimations exploratoires de volatilité dans AGENTS.md ne correspondent pas au snapshot sous la convention v0 : SPY 15 % contre **17,3335 %**, NVDA 50 % contre **51,9384 %**, Bitcoin 54 % contre **42,1734 %**. L’écart est respectivement de +2,3335, +1,9384 et −11,8266 points. La tolérance de 0,5 point utilisée ici pour signalement n’est pas une calibration empirique : la comparaison des deux méthodes exactes prévaut. Ces écarts sont consignés pour A; aucun message externe n’a été envoyé.
+Les estimations exploratoires de volatilité du cahier des charges commun de l’équipe ne correspondent pas au snapshot sous la convention v0 : SPY 15 % contre **17,3335 %**, NVDA 50 % contre **51,9384 %**, Bitcoin 54 % contre **42,1734 %**. L’écart est respectivement de +2,3335, +1,9384 et −11,8266 points. La tolérance de 0,5 point utilisée ici pour signalement n’est pas une calibration empirique : la comparaison des deux méthodes exactes prévaut. Ces écarts sont consignés pour A; aucun message externe n’a été envoyé.
 
 ## Tableur prêt pour revue
 
@@ -65,6 +65,6 @@ python3 eval/audit_starter.py --data-dir ../alphaforge_starter
 make validate-rules
 ```
 
-Les deux scripts Python passent. `make validate-rules` reste indisponible, car la cible et les schémas appartiennent aux livraisons A/B encore absentes. La structure est relue contre la section 11 d’AGENTS.md.
+Les deux scripts Python passent, et `make validate-rules` valide tous les fichiers de `rules/` contre les schémas de `contracts/rules/` (0 avertissement).
 
 Pour terminer D7 au sens strict : relecture du classeur par une personne, valeurs de l’application et Evidence, écarts et explications. Rendements : tolérance de reprise 0,5 point; corrélations : 0,02; poids exacts : 1e-10 en fraction. Toute différence de devise, bornes, calendrier ou annualisation doit être expliquée avant validation. D11 reste la relecture des explications réellement générées, indisponibles à ce stade.

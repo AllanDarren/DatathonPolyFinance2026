@@ -1,4 +1,4 @@
-"""Named metrics v0 (CLAUDE.md section 10). See core/METRICS.md.
+"""Named metrics v0. See core/METRICS.md.
 
 Every public function returns a `MetricResult(value, evidence)`. Pure and
 deterministic: same data, same output. Returns use `adj_close` in the listing

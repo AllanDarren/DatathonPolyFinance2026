@@ -4,7 +4,7 @@ Les fichiers de `rules/` sont lus par `core/rules_engine.py`. Avant chaque PR: `
 Les messages disent quel fichier, à quel endroit, ce qui ne va pas et comment corriger.
 
 - `*.schema.json`: le format exact de chaque fichier (généré depuis `core/rules_models.py`).
-- `examples/`: un jeu complet et valide, conforme à la section 11 de CLAUDE.md. **Point de départ
+- `examples/`: un jeu complet et valide, conforme au format des fichiers de règles. **Point de départ
   conseillé**: copie `examples/` vers `rules/`, puis modifie. Tant qu'un fichier manque dans `rules/`,
   l'application utilise celui de `examples/` (avertissement de `make validate-rules`).
 
@@ -37,7 +37,7 @@ Repères dans les textes: pertinence `{category}`, `{weight}`, `{horizon_bucket}
 cohérence `{limit}`, `{observed}`, `{ticker}` (formatés par le code, ex.: « 20 % »).
 
 **Piège YAML**: un texte qui contient « : » doit être entre guillemets
-(`text_fr: "Limite: {limit}"`). L'exemple de la section 11 de CLAUDE.md a ce piège.
+(`text_fr: "Limite: {limit}"`). L'exemple initial du cahier des charges avait ce piège.
 
 ## Ajouts au format de la section 11 (tous facultatifs)
 

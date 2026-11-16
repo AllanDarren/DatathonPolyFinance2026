@@ -1,4 +1,4 @@
-"""Contract models v0 (CLAUDE.md section 8).
+"""Contract models v0 (JSON Schemas in contracts/).
 
 These Pydantic models are the single source of the JSON Schemas in `contracts/`.
 Regenerate the schemas with `python -m tools.export_schemas` after any change, and

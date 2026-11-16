@@ -2,7 +2,7 @@
 
 | Date (Montréal) | Décision | Raison | Responsable / état |
 | --- | --- | --- | --- |
-| 2026-11-14 | Utiliser le contexte commun d’AGENTS.md en l’absence de CLAUDE.md | Source fournie par l’équipe | D, appliqué |
+| 2026-11-14 | Utiliser le cahier des charges commun de l’équipe comme référence | Source fournie par l’équipe | D, appliqué |
 | 2026-11-14 | Limiter la livraison à rules/, eval/ et docs/ de D | Respect de la propriété des dossiers | D, appliqué |
 | 2026-11-14 | Fixer 100 000 CAD par portefeuille fictif | Comparaisons lisibles, même base | D, appliqué |
 | 2026-11-14 | Risque dérivé de la réaction déclarée, pas de l’expérience | Éviter qu’expérience signifie capacité de perte | D, hypothèse de prototype |

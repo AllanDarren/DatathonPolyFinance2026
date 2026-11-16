@@ -10,7 +10,7 @@ Le code doit déterminer le profil, calculer les métriques et appliquer les rè
 
 ## Sources, actifs et traitements
 
-La liste d’actifs prévue est celle d’AGENTS.md : dix actions canadiennes, dix américaines, neuf FNB et deux cryptos. Les fichiers attendus sont `assets_universe.csv`, `prices_daily.csv`, `corporate_actions.csv`, `fx_usdcad_daily.csv`, `macro_rates.csv` et `sources_metadata.csv`. Les métadonnées fournies identifient Yahoo Finance via yfinance, la Banque du Canada et FRED; dates de collecte et limites sont présentes. L’audit local conserve leurs empreintes, sans recertification de chaque observation auprès des fournisseurs. Les taux USD/CAD sont prévus via la Banque du Canada, les séries macro canadiennes et FRED selon le contexte commun.
+La liste d’actifs prévue est celle du cahier des charges commun de l’équipe : dix actions canadiennes, dix américaines, neuf FNB et deux cryptos. Les fichiers attendus sont `assets_universe.csv`, `prices_daily.csv`, `corporate_actions.csv`, `fx_usdcad_daily.csv`, `macro_rates.csv` et `sources_metadata.csv`. Les métadonnées fournies identifient Yahoo Finance via yfinance, la Banque du Canada et FRED; dates de collecte et limites sont présentes. L’audit local conserve leurs empreintes, sans recertification de chaque observation auprès des fournisseurs. Les taux USD/CAD sont prévus via la Banque du Canada, les séries macro canadiennes et FRED selon le contexte commun.
 
 Les montants des CSV sont déjà en CAD. Pour une série de prix USD, `P_CAD(t) = adj_close_USD(t) × FX_USDCAD(t)`; reporter seulement le dernier FX connu. Ne pas confondre une performance USD et CAD. Les données réelles devront être vérifiées pour doublons, valeurs invalides, dates et observations manquantes, sans remplir artificiellement les rendements des actions le week-end.
 
@@ -25,7 +25,7 @@ Les montants des CSV sont déjà en CAD. Pour une série de prix USD, `P_CAD(t) 
 - Inflation cumulée : rapport de niveaux d’IPC comparables moins 1. Ne pas sommer ni multiplier des taux annuels qui se chevauchent. Les cinq taux de septembre 2022 à septembre 2026 couvrent des années adjacentes : leur produit donne environ 19,0220 % depuis septembre 2021, sous réserve de l’arrondi des taux. Ne pas multiplier les taux annuels de tous les mois.
 - Contexte d’événement : de la dernière séance avant l’événement à la cinquième séance après; l’heure de publication et les événements hors séance doivent être traités explicitement par A. Médiane et centiles sur les cas valides, au moins huit cas, limites visibles.
 
-Les choix de règles, l’ordre d’application et les unités sont détaillés dans INTEGRATION_D.md. Les seuils sont une politique pédagogique du prototype. Les portefeuilles n’ont pas été optimisés et ne constituent pas des allocations proposées à une personne réelle.
+Les choix de règles, l’ordre d’application et les unités sont détaillés dans les fichiers de `rules/` et leurs schémas (`contracts/rules/`). Les seuils sont une politique pédagogique du prototype. Les portefeuilles n’ont pas été optimisés et ne constituent pas des allocations proposées à une personne réelle.
 
 ## Exemple de conclusion reliée aux preuves
 

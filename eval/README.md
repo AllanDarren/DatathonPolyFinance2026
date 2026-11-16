@@ -27,4 +27,4 @@ Les deux nouveaux fichiers `rules/asset_class_mapping.yaml` et `rules/metric_pol
 - `ANNOTATION_GUIDE.md` : annotation des vraies nouvelles quand A fournit l’export.
 - `demo_common_portfolio.csv` : portefeuille fictif commun pour isoler l’effet Robert/Amira, total 100 000 CAD et NVDA à 10 %.
 
-Voir `docs/AFTER_MERGE.md` pour les commandes et la revue humaine restante.
+Commandes : `make eval` (évaluation du classifieur, rapport dans `eval/reports/`) et `make validate-rules`.

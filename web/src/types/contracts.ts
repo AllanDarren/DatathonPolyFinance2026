@@ -1,4 +1,4 @@
-// Types des contrats v0 (section 8 de CLAUDE.md / contexte commun).
+// Types des contrats v0 (miroir des JSON Schemas de contracts/).
 // Provisoire : dès que le rôle A publie contracts/*.schema.json, `npm run gen:types`
 // génère src/types/generated/ et ce fichier ne fera que ré-exporter ces types.
 // Ne pas modifier à la main sans passer par la procédure « [contract] ».

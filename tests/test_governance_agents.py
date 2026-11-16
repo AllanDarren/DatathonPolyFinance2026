@@ -37,7 +37,7 @@ def test_qqq_next_to_spy_is_an_overlap() -> None:
     d = diversification_impact(pf, "QQQ", 0.10, EvidenceRegistry())
     assert d["verdict"] == "overlap"
     assert d["correlations"][0]["ticker"] == "SPY"
-    assert d["correlations"][0]["correlation"] == pytest.approx(0.91, abs=0.02)  # CLAUDE.md reference value
+    assert d["correlations"][0]["correlation"] == pytest.approx(0.91, abs=0.02)  # team reference value
 
 
 def test_new_asset_class_correlated_is_only_partial() -> None:

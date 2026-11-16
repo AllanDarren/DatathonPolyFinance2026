@@ -1,4 +1,4 @@
-"""Schemas of role D's rule files (CLAUDE.md section 11).
+"""Schemas of role D's rule files (rules/, see contracts/rules/).
 
 Pydantic models are the source; `python -m tools.export_schemas` also writes
 `contracts/rules/<file>.schema.json`. Conditions (`when`) are lists of comparisons

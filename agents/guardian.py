@@ -1,4 +1,4 @@
-"""Explanation guardian (CLAUDE.md section 9).
+"""Explanation guardian (see docs/TECH_DOC.md, explainability).
 
 Two passes per claim:
 1. deterministic: cited evidence exists, every {{ev_id}} marker is cited, label is

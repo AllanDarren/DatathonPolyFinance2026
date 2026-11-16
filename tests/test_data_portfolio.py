@@ -53,7 +53,7 @@ def test_cad_conversion() -> None:
 
 
 def test_spy_5y_return_in_cad_matches_reference() -> None:
-    # CLAUDE.md: SPY +73.2 % in USD, +96.5 % in CAD (tolerance 0.5 pt) - to revalidate.
+    # Team reference value: SPY +73.2 % in USD, +96.5 % in CAD (tolerance 0.5 pt) - to revalidate.
     usd = data.price_series("SPY")
     cad = data.price_series("SPY", currency="CAD")
     assert usd.iloc[-1] / usd.iloc[0] - 1 == pytest.approx(0.732, abs=0.005)

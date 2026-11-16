@@ -1,7 +1,7 @@
 """Load and validate the starter dataset (data/), convert prices to CAD.
 
 Pure reads, cached once per process (Lambda keeps them warm). `DATA_DIR` overrides
-the folder. Traps handled here (CLAUDE.md section 6):
+the folder. Traps handled here:
 - prices are in listing currency (.TO = CAD, rest USD) -> convert with USD/CAD;
 - the FX file has no rows on Canadian holidays -> carry the last rate forward
   (backward `asof` lookup, documented in `fx_rate_on`);
