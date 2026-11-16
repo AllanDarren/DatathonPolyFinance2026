@@ -1,7 +1,9 @@
 # web/ — Interface AlphaForge AI (rôle C)
 
-React 18 + Vite + TypeScript strict, Recharts, Vitest. Aucun `localStorage`, aucun cookie, aucune analytique :
-l'état vit en mémoire le temps de la session.
+React 18 + Vite + TypeScript strict, Recharts, Vitest. Aucun cookie, aucune analytique. L'état de l'écran vit
+en mémoire ; le compte (profil, portefeuille, briefs) est gardé côté serveur. Le navigateur ne conserve que la
+session : courriel et jeton de rafraîchissement Cognito, dans `localStorage` si « rester connecté » (30 jours au plus),
+sinon dans `sessionStorage`. Jamais le mot de passe ni le portefeuille. Voir `src/auth/` et `src/state/account.tsx`.
 
 ## Démarrer
 

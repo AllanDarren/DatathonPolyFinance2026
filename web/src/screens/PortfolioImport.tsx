@@ -20,7 +20,7 @@ export function PortfolioImport() {
     setBusy(true);
     setError(null);
     try {
-      setPortfolio(await api.parsePortfolio(csv));
+      setPortfolio(await api.parsePortfolio(csv), csv);
     } catch (e) {
       setPortfolio(null);
       setError(e);

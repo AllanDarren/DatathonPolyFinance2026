@@ -6,6 +6,38 @@ const fr = {
   tagline: 'Moins d’information, plus de pertinence.',
   syntheticBadge: 'exemple fictif',
 
+  auth: {
+    title: 'Ton compte',
+    signInTab: 'Se connecter',
+    signUpTab: 'Créer un compte',
+    signInTitle: 'Content de te revoir',
+    signUpTitle: 'Crée ton compte',
+    signInLead: 'Retrouve ton profil, ton portefeuille et tes derniers briefs.',
+    signUpLead: 'Ton profil, ton portefeuille et tes briefs seront gardés pour ta prochaine visite.',
+    email: 'Courriel',
+    password: 'Mot de passe',
+    confirm: 'Confirme le mot de passe',
+    passwordRule: 'Au moins 8 caractères, avec une majuscule, une minuscule et un chiffre.',
+    remember: 'Rester connecté (30 jours au plus sur cet appareil)',
+    signInSubmit: 'Se connecter',
+    signUpSubmit: 'Créer mon compte',
+    busy: 'Un instant…',
+    noAccount: 'Pas encore de compte?',
+    hasAccount: 'Déjà un compte?',
+    privacy: 'Ne saisis que des montants fictifs ou les tiens : aucune donnée bancaire, aucune connexion à un compte. Mot de passe géré par Amazon Cognito, jamais stocké par AlphaForge.',
+    localMode: 'Mode développement local : comptes gardés en mémoire de l’onglet, sans Cognito.',
+    loadingAccount: 'Chargement de ton compte…',
+    syncError: 'Sauvegarde impossible pour l’instant : tes dernières modifications pourraient ne pas être gardées.',
+    signedInAs: (email: string) => `Connecté : ${email}`,
+  },
+
+  briefs: {
+    title: 'Mes derniers briefs',
+    empty: 'Aucun brief sauvegardé pour l’instant. Ton fil de nouvelles sera gardé ici à chaque calcul.',
+    open: 'Ouvrir',
+    item: (shown: number, hidden: number) => `${shown} nouvelles retenues · ${hidden} écartées`,
+  },
+
   nav: {
     restart: 'Recommencer',
     limits: 'Hypothèses et limites',

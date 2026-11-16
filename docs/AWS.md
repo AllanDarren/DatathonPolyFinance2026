@@ -11,12 +11,16 @@ Chaque service a un rôle réel dans le produit. Aucun n'est là pour décorer. 
 | **Amazon S3** (2 buckets privés, chiffrés) | Données: jeu de départ (`starter/`) et snapshots de nouvelles et d'événements (`snapshots/`), lus par la Lambda au démarrage à froid. Site: build statique de `web/` | Les données sont versionnées hors du code: on rafraîchit les snapshots (`make upload-data`) sans redéployer | Console S3: contenu des deux buckets; journal `cold_start` (`data_source: s3://...`) |
 | **Amazon CloudFront** | Sert le site en HTTPS (domaine `cloudfront.net`, aucun domaine acheté), avec accès au bucket par OAC seulement | Le bucket du site reste privé; HTTPS sans certificat à gérer | URL `WebUrl`; le bucket refuse un accès direct |
 | **Amazon CloudWatch** | Journaux structurés (une ligne JSON par requête, sans portefeuille ni nouvelle), métriques personnalisées par route (format EMF), tableau de bord de démo | Observabilité et preuve de fonctionnement pour le jury | Tableau de bord `alphaforge-demo` (lien `DashboardUrl`); Logs Insights sur `/aws/lambda/alphaforge-api` |
+| **Amazon Cognito** | Comptes utilisateurs (courriel + mot de passe) : inscription, connexion, session renouvelée, révocation à la déconnexion. Jetons vérifiés par l'authorizer JWT d'API Gateway sur les routes `/me…` | Chaque utilisateur retrouve ses données à la reconnexion ; les mots de passe sont gérés par Cognito, jamais par notre code | Console Cognito, pool `alphaforge-users` ; `curl $ApiUrl/me` sans jeton -> 401 |
+| **Amazon DynamoDB** | Table des comptes : profil, portefeuille analysé et index des derniers briefs, par `sub` Cognito | Lecture et écriture par clé en quelques ms, payé à la requête | Console DynamoDB, table `UserDataTableName` |
+| **Amazon S3** (bucket utilisateurs) | CSV déposé et briefs complets (`users/<sub>/…`), privé et chiffré | Un brief pèse 120 à 180 Ko : sa place est dans S3, l'index dans DynamoDB | Console S3, préfixe `users/` |
 | **IAM** | Rôle d'exécution de la Lambda au moindre privilège: `bedrock:InvokeModel` sur le seul modèle choisi, `s3:GetObject` sur les seuls préfixes `starter/` et `snapshots/` | Sécurité | Console IAM, politique du rôle de la fonction |
 | **CloudFormation** | Crée et retire tout (`make deploy`, `make destroy`) | Reproductible dans un autre compte | Console CloudFormation, pile `alphaforge` |
 | **AWS Budgets** (optionnel) | Alerte courriel à 80 % d'un budget mensuel | Surveiller les coûts | Créé seulement si `BUDGET_EMAIL` est défini |
 
-Non utilisés, volontairement: bases de données (aucun portefeuille n'est stocké), Cognito (pas
-d'authentification, hors périmètre), Route 53 (aucun domaine), instances EC2 ou GPU.
+Non utilisés, volontairement: Route 53 (aucun domaine), instances EC2 ou GPU, SES (le compte d'atelier ne
+l'autorise pas : les comptes sont confirmés par un déclencheur Cognito). Depuis l'ajout des comptes, seuls le
+profil, le portefeuille déposé et les briefs de l'utilisateur connecté sont stockés, sous son identifiant.
 
 ## Décisions
 
