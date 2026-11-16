@@ -172,8 +172,7 @@ def cmd_deploy_web(c: dict[str, str]) -> None:
     npm = shutil.which("npm")
     if not npm:
         raise SystemExit("npm introuvable.")
-    env = {**os.environ, "VITE_API_URL": out["ApiUrl"], "VITE_MOCK": "0", "VITE_AUTH": "cognito",
-           "VITE_COGNITO_REGION": c["region"], "VITE_COGNITO_CLIENT_ID": out["UserPoolClientId"]}
+    env = {**os.environ, "VITE_API_URL": out["ApiUrl"], "VITE_MOCK": "0"}
     if not (web / "node_modules").exists():
         subprocess.run([npm, "ci"], cwd=web, check=True, env=env)
     subprocess.run([npm, "run", "build"], cwd=web, check=True, env=env)
@@ -205,13 +204,12 @@ def _empty_bucket(name: str) -> None:
 def cmd_destroy(c: dict[str, str], yes: str | None) -> None:
     out = outputs(c, quiet=True)
     print(f"ATTENTION: supprime la pile « {c['stack']} » ({c['region']}), le site, l'API et les buckets "
-          f"{out.get('DataBucketName')}, {out.get('WebBucketName')} et {out.get('UserDataBucketName')} avec leur contenu, "
-          f"ainsi que les comptes Cognito et la table {out.get('UserDataTableName')}.")
+          f"{out.get('DataBucketName')} et {out.get('WebBucketName')} avec leur contenu.")
     answer = yes if yes is not None else (input(f"Tape le nom de la pile ({c['stack']}) pour confirmer: ")
                                           if sys.stdin.isatty() else "")
     if answer != c["stack"]:
         raise SystemExit("Annulé (confirmation absente ou différente).")
-    for key in ("DataBucketName", "WebBucketName", "UserDataBucketName"):
+    for key in ("DataBucketName", "WebBucketName"):
         if out.get(key):
             _empty_bucket(out[key])
     aws("cloudformation", "delete-stack", "--stack-name", c["stack"], "--region", c["region"])

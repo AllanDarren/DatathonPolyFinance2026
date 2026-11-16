@@ -1,12 +1,11 @@
-// État de l'écran en mémoire (aucun cookie). Le compte (profil, portefeuille, briefs) est conservé côté serveur,
-// lié à l'utilisateur connecté (state/account.tsx) ; le navigateur ne garde que la session (auth/session.ts).
+// État en mémoire uniquement (aucun localStorage, aucun cookie).
 // Navigation par hash (#/fil, #/tester…) : le bouton Retour fonctionne et chaque écran a un lien direct.
 // Après un rechargement, l'état est vide : un écran qui exige un profil renvoie à l'accueil.
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Consideration, FeedResponse, Persona, Portfolio, Profile } from '../types/contracts';
 
 export type Step =
-  | 'welcome' | 'login' | 'questionnaire' | 'profile' | 'portfolio'
+  | 'welcome' | 'questionnaire' | 'profile' | 'portfolio'
   | 'feed' | 'overview' | 'consider' | 'calendar';
 
 /** Onglets du tableau de bord (une action principale par onglet). */
@@ -14,7 +13,6 @@ export const DASHBOARD_TABS: Step[] = ['feed', 'overview', 'consider', 'calendar
 
 const HASH: Record<Step, string> = {
   welcome: '#/',
-  login: '#/connexion',
   questionnaire: '#/questionnaire',
   profile: '#/profil',
   portfolio: '#/portefeuille',
@@ -38,7 +36,6 @@ type AppState = {
   persona: Persona | null;
   profile: Profile | null;
   portfolio: Portfolio | null;
-  portfolioCsv: string | null; // texte déposé, sauvegardé tel quel dans le compte
   feed: FeedResponse | null;
   consideration: Consideration | null;
   considerFeed: FeedResponse | null; // résultat du test d'achat : ne modifie jamais le fil principal
@@ -49,9 +46,7 @@ type AppActions = {
   go: (step: Step) => void;
   choosePersona: (persona: Persona) => void;
   setProfile: (profile: Profile) => void;
-  setPortfolio: (portfolio: Portfolio | null, csv?: string | null) => void;
-  /** Recharge l'état depuis le compte (connexion) et va à l'étape utile. */
-  hydrate: (s: Pick<AppState, 'persona' | 'profile' | 'portfolio' | 'portfolioCsv' | 'feed'>) => void;
+  setPortfolio: (portfolio: Portfolio | null) => void;
   setFeed: (feed: FeedResponse | null) => void;
   setConsiderResult: (consideration: Consideration | null, feed: FeedResponse | null) => void;
   setLimitsOpen: (open: boolean) => void;
@@ -59,7 +54,7 @@ type AppActions = {
 };
 
 const initial: AppState = {
-  step: 'welcome', persona: null, profile: null, portfolio: null, portfolioCsv: null, feed: null,
+  step: 'welcome', persona: null, profile: null, portfolio: null, feed: null,
   consideration: null, considerFeed: null, limitsOpen: false,
 };
 
@@ -97,22 +92,7 @@ export function AppProvider({ children, initialState }: { children: ReactNode; i
         window.location.hash = HASH.profile;
       },
       setProfile: (profile) => patch({ profile, feed: null, consideration: null, considerFeed: null }),
-      setPortfolio: (portfolio, csv = null) =>
-        patch({ portfolio, portfolioCsv: portfolio ? csv : null, feed: null, consideration: null, considerFeed: null }),
-      hydrate: (h) => {
-        setState((s) => {
-          const next = { ...s, ...h, consideration: null, considerFeed: null };
-          const wanted = stepFromHash(window.location.hash);
-          // Retour d'un utilisateur : on reprend là où il en était (tableau de bord, sinon import).
-          const target: Step = next.profile && next.portfolio
-            ? (DASHBOARD_TABS.includes(wanted) ? wanted : 'overview')
-            : next.profile ? (wanted === 'questionnaire' || wanted === 'profile' ? wanted : 'portfolio')
-            : wanted === 'login' ? 'welcome' : wanted;
-          const step = guard(target, next);
-          if (window.location.hash !== HASH[step]) window.history.replaceState(null, '', HASH[step]);
-          return { ...next, step };
-        });
-      },
+      setPortfolio: (portfolio) => patch({ portfolio, feed: null, consideration: null, considerFeed: null }),
       setFeed: (feed) => patch({ feed }),
       setConsiderResult: (consideration, considerFeed) => patch({ consideration, considerFeed }),
       setLimitsOpen: (limitsOpen) => patch({ limitsOpen }),

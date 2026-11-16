@@ -21,40 +21,28 @@ from fastapi import FastAPI, Request  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from fastapi.responses import JSONResponse, Response  # noqa: E402
 
-from api.routes import ROUTES, USER_ROUTES, dispatch  # noqa: E402
-
-LOCAL_TOKEN_PREFIX = "Bearer local."
-
-
-def _local_user(request: Request) -> str | None:
-    """Local development only: `Authorization: Bearer local.<id>` stands in for the Cognito token.
-    The deployed API never reads this header: API Gateway verifies the real JWT (api/handler.py)."""
-    auth = request.headers.get("authorization", "")
-    if not auth.startswith(LOCAL_TOKEN_PREFIX):
-        return None
-    uid = auth[len(LOCAL_TOKEN_PREFIX):].strip()
-    return uid if uid and len(uid) <= 128 and all(c.isalnum() or c in "._@+-" for c in uid) else None
+from api.routes import ROUTES, dispatch  # noqa: E402
 
 app = FastAPI(title="AlphaForge AI (local)", description="Simulation éducative, pas un conseil financier.",
               docs_url="/docs", redoc_url=None)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=os.environ.get("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(","),
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["content-type", "authorization"],
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["content-type"],
     max_age=600,
 )
 
 
 async def _serve(request: Request) -> Response:
-    body = (await request.body()).decode("utf-8", errors="replace") if request.method in ("POST", "PUT") else None
-    resp = dispatch(request.method, request.url.path, dict(request.query_params), body, user_id=_local_user(request))
+    body = (await request.body()).decode("utf-8", errors="replace") if request.method == "POST" else None
+    resp = dispatch(request.method, request.url.path, dict(request.query_params), body)
     if resp.status == 204 or resp.body is None:
         return Response(status_code=resp.status)
     return JSONResponse(resp.body, status_code=resp.status, headers={"cache-control": "no-store"})
 
 
-for (_method, _path), _ in [*ROUTES.items(), *USER_ROUTES.items()]:
+for (_method, _path), _ in ROUTES.items():
     app.add_api_route(_path, _serve, methods=[_method], include_in_schema=True, name=f"{_method} {_path}")
 
 

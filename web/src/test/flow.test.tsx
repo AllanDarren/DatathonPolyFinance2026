@@ -1,9 +1,11 @@
-import { screen, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderApp } from './renderApp';
+import { App } from '../App';
+import { AppProvider } from '../state/store';
 
 function setup() {
-  renderApp(); // chaque test repart de l'accueil, avec une session de test ouverte
+  window.location.hash = ''; // chaque test repart de l'accueil (la navigation passe par le hash)
+  render(<AppProvider><App /></AppProvider>);
   return userEvent.setup();
 }
 
@@ -64,7 +66,7 @@ describe('parcours', () => {
   it('questionnaire : la note libre propose des préférences à confirmer', async () => {
     const user = setup();
     await user.click(await screen.findByRole('button', { name: /Trouver mon profil/ }));
-    await screen.findByRole('button', { name: 'Suivante' }, { timeout: 3000 });
+    await screen.findByRole('button', { name: 'Suivante' });
     // première option de chaque question jusqu'à la note
     for (;;) {
       const next = screen.queryByRole('button', { name: 'Suivante' });

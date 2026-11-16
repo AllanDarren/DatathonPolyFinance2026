@@ -1,12 +1,10 @@
 import { Term } from '../components/Term';
-import { formatDate, formatPct } from '../lib/format';
-import { useAccount } from '../state/account';
+import { formatPct } from '../lib/format';
 import { useApp } from '../state/store';
 import { t } from '../strings';
 
 export function ProfileResult() {
   const { profile, go } = useApp();
-  const account = useAccount();
   if (!profile) return null;
   const p = profile;
   const L = t.labels;
@@ -49,22 +47,6 @@ export function ProfileResult() {
       <div className="row-end">
         <button type="button" className="btn btn-primary" onClick={() => go('portfolio')}>{t.profile.continue}</button>
       </div>
-      <h2 className="h-small">{t.briefs.title}</h2>
-      {account.briefs.length === 0 ? (
-        <p className="muted small">{t.briefs.empty}</p>
-      ) : (
-        <ul className="brief-list">
-          {account.briefs.map((b) => (
-            <li key={b.brief_id}>
-              <span>
-                <strong>{formatDate(b.saved_at)}</strong>
-                <span className="muted small"> · {t.briefs.item(b.shown, b.hidden)}</span>
-              </span>
-              <button type="button" className="btn btn-ghost" onClick={() => void account.openBrief(b.brief_id)}>{t.briefs.open}</button>
-            </li>
-          ))}
-        </ul>
-      )}
     </section>
   );
 }

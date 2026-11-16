@@ -47,14 +47,6 @@ def _log(record: dict[str, Any]) -> None:
     print(json.dumps(record, ensure_ascii=False))
 
 
-def _verified_user(event: dict[str, Any]) -> str | None:
-    """Cognito `sub` of the caller, as verified by the API Gateway JWT authorizer (signature, issuer,
-    audience, expiry). Present only on /me routes, which API Gateway refuses without a valid token."""
-    claims = (((event.get("requestContext") or {}).get("authorizer") or {}).get("jwt") or {}).get("claims") or {}
-    sub = claims.get("sub")
-    return sub if isinstance(sub, str) and sub else None
-
-
 def lambda_handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
     global _COLD
     t0 = time.perf_counter()
@@ -65,7 +57,7 @@ def lambda_handler(event: dict[str, Any], context: Any) -> dict[str, Any]:
     if body is not None and event.get("isBase64Encoded"):
         body = base64.b64decode(body).decode("utf-8", errors="replace")
 
-    resp = dispatch(method, path, event.get("queryStringParameters") or {}, body, user_id=_verified_user(event))
+    resp = dispatch(method, path, event.get("queryStringParameters") or {}, body)
 
     duration = int((time.perf_counter() - t0) * 1000)
     route = route_key(method, path)

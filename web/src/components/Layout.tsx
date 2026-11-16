@@ -2,8 +2,6 @@
 // portefeuille connus, une barre latérale (sections du tableau de bord + profil en bas, avec son menu).
 // Les hypothèses et limites restent accessibles partout depuis le pied de page.
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { useAuth } from '../auth/AuthProvider';
-import { useAccount } from '../state/account';
 import { DASHBOARD_TABS, hrefFor, useApp, type Step } from '../state/store';
 import { t } from '../strings';
 import { LimitsDrawer } from './LimitsDrawer';
@@ -33,7 +31,6 @@ const NAV: { step: Step; label: string }[] = [
 
 function ProfileMenu({ variant }: { variant: 'chip' | 'card' }) {
   const { profile, go, reset } = useApp();
-  const auth = useAuth();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -49,9 +46,9 @@ function ProfileMenu({ variant }: { variant: 'chip' | 'card' }) {
     };
   }, [open]);
 
-  if (!profile && !auth.user) return null;
-  const name = profile ? profile.label.split(/[—–-]/)[0]!.trim() : auth.user!.email;
-  const risk = profile ? t.labels.risk[profile.risk_tolerance] ?? profile.risk_tolerance : '';
+  if (!profile) return null;
+  const name = profile.label.split(/[—–-]/)[0]!.trim();
+  const risk = t.labels.risk[profile.risk_tolerance] ?? profile.risk_tolerance;
   return (
     <div className={`profile-menu profile-menu-${variant}`} ref={ref}>
       <button
@@ -65,22 +62,19 @@ function ProfileMenu({ variant }: { variant: 'chip' | 'card' }) {
         <span className="avatar" aria-hidden="true">{name.charAt(0).toUpperCase()}</span>
         <span className="profile-txt">
           <span className="profile-chip-label">{name}</span>
-          {variant === 'card' && profile && <span className="profile-sub">{t.shell.profileSub(profile.horizon_years, risk)}</span>}
+          {variant === 'card' && <span className="profile-sub">{t.shell.profileSub(profile.horizon_years, risk)}</span>}
         </span>
         <span aria-hidden="true" className="caret">{variant === 'card' ? '⋯' : '▾'}</span>
       </button>
       {open && (
         <ul className="menu" role="menu">
-          {auth.user && <li role="none" className="menu-note small muted">{t.auth.signedInAs(auth.user.email)}</li>}
-          {profile && (
-            <li role="none">
-              <button type="button" role="menuitem" onClick={() => { setOpen(false); go('profile'); }}>
-                {t.nav.profile}
-              </button>
-            </li>
-          )}
           <li role="none">
-            <button type="button" role="menuitem" onClick={() => { setOpen(false); reset(); void auth.signOut(); }}>
+            <button type="button" role="menuitem" onClick={() => { setOpen(false); go('profile'); }}>
+              {t.nav.profile}
+            </button>
+          </li>
+          <li role="none">
+            <button type="button" role="menuitem" onClick={() => { setOpen(false); reset(); }}>
               {t.nav.logout}
             </button>
           </li>
@@ -138,15 +132,8 @@ function Footer() {
   );
 }
 
-function SyncNotice() {
-  const { syncError } = useAccount();
-  if (!syncError) return null;
-  return <p className="sync-notice" role="status"><span aria-hidden="true">⚠ </span>{t.auth.syncError}</p>;
-}
-
 export function Layout({ children }: { children: ReactNode }) {
   const { go, profile, portfolio, step } = useApp();
-  const auth = useAuth();
   const ready = Boolean(profile && portfolio);
   const inDashboard = ready && DASHBOARD_TABS.includes(step);
 
@@ -156,7 +143,6 @@ export function Layout({ children }: { children: ReactNode }) {
         <a href="#main" className="skip-link">Aller au contenu</a>
         <Sidebar />
         <div className="shell-main">
-          <SyncNotice />
           <main id="main" className="main">{children}</main>
           <Footer />
         </div>
@@ -178,16 +164,12 @@ export function Layout({ children }: { children: ReactNode }) {
           <Logo />
           <span>AlphaForge</span>
         </button>
-        {step === 'welcome' && auth.status !== 'signedIn' ? (
-          <span className="topbar-actions">
-            <button type="button" className="btn btn-ghost" onClick={() => go('login')}>{t.auth.signInTab}</button>
-            <button type="button" className="btn btn-light" onClick={() => go('questionnaire')}>{t.welcome.start}</button>
-          </span>
+        {step === 'welcome' ? (
+          <button type="button" className="btn btn-light" onClick={() => go('questionnaire')}>{t.welcome.start}</button>
         ) : (
           <ProfileMenu variant="chip" />
         )}
       </header>
-      <SyncNotice />
       <main id="main" className={`main ${step === 'welcome' ? 'main-wide' : ''}`}>{children}</main>
       <Footer />
       <LimitsDrawer />

@@ -402,20 +402,3 @@ select, input:not([type=radio]):not([type=checkbox]) {
 .q-box-warning { background: var(--warn-bg); color: var(--warn-ink); }
 .q-box-blocking { background: var(--bad-bg); color: var(--bad-ink); }
 .q-dot { display: inline-grid; place-items: center; width: 1.3rem; height: 1.3rem; border-radius: 50%; font-size: .75rem; font-weight: 700; }
-
-/* Compte */
-.auth { max-width: 440px; }
-.auth-tabs { display: flex; gap: .25rem; background: var(--surface-2); border-radius: 8px; padding: .25rem; margin-bottom: 1rem; }
-.auth-tabs button { flex: 1; font: inherit; font-size: .9rem; border: 0; border-radius: 6px; padding: .45rem; background: transparent; color: var(--muted); cursor: pointer; }
-.auth-tabs button.on { background: var(--surface); color: var(--text); font-weight: 600; box-shadow: var(--shadow); }
-.auth-title { font-size: 1.35rem; }
-.auth-form { display: grid; gap: .75rem; margin: 1rem 0; }
-.auth-form label:not(.check) { display: flex; flex-direction: column; gap: .25rem; font-size: .88rem; color: var(--muted); }
-.auth-form label.check { display: flex; gap: .5rem; align-items: center; font-size: .9rem; }
-.auth-form p { margin: 0; }
-.auth-foot { margin-top: .5rem; }
-.topbar-actions { display: flex; gap: .5rem; align-items: center; }
-.menu-note { padding: .4rem .75rem; border-bottom: 1px solid var(--line); word-break: break-all; }
-.sync-notice { margin: .5rem auto 0; max-width: 1200px; padding: .5rem 1rem; border-radius: 8px; background: var(--warn-bg); color: var(--warn-ink); font-size: .88rem; }
-.brief-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .4rem; }
-.brief-list li { display: flex; justify-content: space-between; align-items: center; gap: .5rem; background: var(--surface-2); border-radius: 8px; padding: .4rem .7rem; }
